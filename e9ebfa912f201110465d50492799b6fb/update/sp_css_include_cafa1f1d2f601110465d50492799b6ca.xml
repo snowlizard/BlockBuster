@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include">
+    <sp_css_include action="INSERT_OR_UPDATE">
+        <name>MachineStd.otf</name>
+        <source>local</source>
+        <sp_css display_value="MachineStd.otf">40da575d2f601110465d50492799b6b9</sp_css>
+        <sys_class_name>sp_css_include</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-07 01:34:43</sys_created_on>
+        <sys_id>cafa1f1d2f601110465d50492799b6ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>MachineStd.otf</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_css_include_cafa1f1d2f601110465d50492799b6ca</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-07 01:52:11</sys_updated_on>
+        <url/>
+    </sp_css_include>
+</record_update>
