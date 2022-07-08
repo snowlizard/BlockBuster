@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Movies" max_length="40" name="x_809069_bbuster_movies" type="collection">
+        <element label="Actors" max_length="300" name="actors" type="string_full_utf8"/>
+        <element label="Director(s)" max_length="255" name="director_s" type="string_full_utf8"/>
+        <element label="Genre" max_length="255" name="genre" type="string_full_utf8"/>
+        <element label="Metascore" max_length="40" name="metascore" type="integer"/>
+        <element label="Plot" max_length="500" name="plot" type="string_full_utf8"/>
+        <element label="Poster" max_length="1024" name="poster" type="url"/>
+        <element label="Release date" max_length="100" name="release_date" type="string"/>
+        <element label="Title" max_length="200" name="title" type="string_full_utf8"/>
+        <element label="Year" max_length="40" name="year" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_809069_bbuster.movies_user" name="x_809069_bbuster.movies_user">86c158b52f601110465d50492799b681</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-08 00:12:40</sys_created_on>
+        <sys_id>4ac150f52f601110465d50492799b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>86c158b52f601110465d50492799b681</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_embedded_help_role_4ac150f52f601110465d50492799b6f9</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-08 00:12:40</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
