@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.categories-container{
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-container{
+  margin: 5px;
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>categories</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Categories</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-08 01:59:44</sys_created_on>
+        <sys_id>964a687d2fa01110465d50492799b637</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Categories</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_widget_964a687d2fa01110465d50492799b637</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-08 03:47:09</sys_updated_on>
+        <template><![CDATA[<div class="categories-container">
+  
+	<div class="category-container">
+    <a>
+    	<span>All</span>
+    </a>
+  </div>
+  
+  	<div class="category-container">
+    <a>
+    	<span>Action</span>
+    </a>
+  </div>
+  
+  	<div class="category-container">
+    <a>
+    	<span>Comedy</span>
+    </a>
+  </div>
+  
+  	<div class="category-container">
+    <a>
+    	<span>Drama</span>
+    </a>
+  </div>
+  
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sp_widget_964a687d2fa01110465d50492799b637</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.categories-container{
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-container{
+  margin: 5px;
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;categories&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;Categories&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-08 01:59:44&lt;/sys_created_on&gt;&lt;sys_id&gt;964a687d2fa01110465d50492799b637&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_name&gt;Categories&lt;/sys_name&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_964a687d2fa01110465d50492799b637&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-08 03:47:09&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="categories-container"&gt;
+  
+	&lt;div class="category-container"&gt;
+    &lt;a&gt;
+    	&lt;span&gt;All&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  	&lt;div class="category-container"&gt;
+    &lt;a&gt;
+    	&lt;span&gt;Action&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  	&lt;div class="category-container"&gt;
+    &lt;a&gt;
+    	&lt;span&gt;Comedy&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  	&lt;div class="category-container"&gt;
+    &lt;a&gt;
+    	&lt;span&gt;Drama&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-792393156</payload_hash>
+        <record_name>Categories</record_name>
+        <reverted_from/>
+        <source>85f467d52fa01110465d50492799b6ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-08 03:47:09</sys_created_on>
+        <sys_id>3bd2c9b12f241110465d50492799b646</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181dbeb23290000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-08 03:47:09</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>33d2c9b13f241110054899b98a2a4446</update_guid>
+        <update_guid_history>33d2c9b13f241110054899b98a2a4446:-792393156,19d2c5f18d241110bbfa7616f6c82ed5:-558637517,00a2c9b1b924111035f22eb8f8c3cd9f:439272614,c47281f1a2241110d97334840fdd0c33:421711488,17424db154241110478f3c8c65ebd037:245273895,584201b1c92411102a46a6a6579c5b27:1909378935,63020db11024111081c09e888f5626db:1560222295,51f189b561e01110ddcc0ef27161bb35:-704642137,8ee101b1e924111006601a44305ece31:-158588023,9381c97196241110a68e62daa224d52f:335421663,2d4101b1be2411109318b2c60a915020:-775221466,20843cb581e011102688a65bfa4204d0:1926940356,9b1430fd98a01110a548164e49f7f54f:-740893351,caf3f47d01a01110cb9c4360220166b9:1315570475,2ad3b0b51ae01110a08e480c5ecedaf2:1310200171,0b9ba47d0ca01110648515763add31cf:-880342289,9a4a687d7da0111035b6a5440ab17039:1372193178</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Categories">df5ba20a2f201110465d50492799b613</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-09 06:02:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>0a467cabc02946058a90f67e570eb6d9</sys_id>
+        <sys_metadata>964a687d2fa01110465d50492799b637</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Categories</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_widget_964a687d2fa01110465d50492799b637</sys_update_name>
+        <sys_update_version display_value="sp_widget_964a687d2fa01110465d50492799b637">3bd2c9b12f241110465d50492799b646</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-09 06:02:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

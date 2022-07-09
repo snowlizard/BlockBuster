@@ -25,7 +25,7 @@ $text-muted:#979797;
         <enable_ais>false</enable_ais>
         <enable_favorites>false</enable_favorites>
         <hide_portal_name>false</hide_portal_name>
-        <homepage display_value="index">46cc384147532100ba13a5554ee49009</homepage>
+        <homepage display_value="b_index">3e0a687d2fa01110465d50492799b60d</homepage>
         <icon/>
         <kb_knowledge_base/>
         <kb_knowledge_page/>
@@ -44,14 +44,14 @@ $text-muted:#979797;
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-06 23:41:05</sys_created_on>
         <sys_id>48b003192f201110465d50492799b6c8</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>BlockBuster</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_portal_48b003192f201110465d50492799b6c8</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 01:18:48</sys_updated_on>
+        <sys_updated_on>2022-07-09 21:11:54</sys_updated_on>
         <theme display_value="BlockBuster">d8ed36552f201110465d50492799b6a7</theme>
         <title>BlockBuster</title>
         <ts_index_group/>
