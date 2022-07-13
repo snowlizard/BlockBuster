@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name>height:100vh;</container_class_name>
+        <name>Index - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="b_index">3e0a687d2fa01110465d50492799b60d</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-08 01:58:40</sys_created_on>
+        <sys_id>fa0a687d2fa01110465d50492799b610</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Index - Container 1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_container_fa0a687d2fa01110465d50492799b610</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-09 21:39:28</sys_updated_on>
+        <title/>
+        <width>container-fluid</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sp_container_fa0a687d2fa01110465d50492799b610</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name>height:100vh;</container_class_name><name>Index - Container 1</name><order>1</order><sp_page display_value="b_index">3e0a687d2fa01110465d50492799b60d</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>jgonzalez</sys_created_by><sys_created_on>2022-07-08 01:58:40</sys_created_on><sys_id>fa0a687d2fa01110465d50492799b610</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Index - Container 1</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sp_container_fa0a687d2fa01110465d50492799b610</sys_update_name><sys_updated_by>jgonzalez</sys_updated_by><sys_updated_on>2022-07-09 21:39:28</sys_updated_on><title/><width>container-fluid</width></sp_container></record_update>]]></payload>
+        <payload_hash>1287022015</payload_hash>
+        <record_name>Index - Container 1</record_name>
+        <reverted_from/>
+        <source>85f467d52fa01110465d50492799b6ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-09 21:39:28</sys_created_on>
+        <sys_id>e9e1cad62f601110465d50492799b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181e4e73ddd0000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-09 21:39:28</sys_updated_on>
+        <type>Container</type>
+        <update_guid>e1e1cad677601110c5e42d80ba0357fd</update_guid>
+        <update_guid_history>e1e1cad677601110c5e42d80ba0357fd:1287022015,e9018296e760111043a7a334691db01c:1087032028,fee04696696011107178379337c50898:1630728982,37b00296956011108f5a197854983509:1955199609,60604696ca6011108ee1fd82ed99ad7d:1588836142,5d40c256f4601110e9a61b0d6d8e67c9:290726644,3a0a687df6a01110fd5c61283a4bac12:700554123</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Index - Container 1">4f76321b2f241110465d50492799b67d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-13 04:03:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>6239f73f5f0f47028ba42a356b7c58c4</sys_id>
+        <sys_metadata>fa0a687d2fa01110465d50492799b610</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Index - Container 1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_container_fa0a687d2fa01110465d50492799b610</sys_update_name>
+        <sys_update_version display_value="sp_container_fa0a687d2fa01110465d50492799b610">e9e1cad62f601110465d50492799b6fd</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-13 04:03:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Index - Container 1">fa0a687d2fa01110465d50492799b610</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-08 01:59:04</sys_created_on>
+        <sys_id>ec2a60f12fa01110465d50492799b676</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_row_ec2a60f12fa01110465d50492799b676</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-09 21:37:37</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sp_row_ec2a60f12fa01110465d50492799b676</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>1</order><sp_column/><sp_container display_value="Index - Container 1">fa0a687d2fa01110465d50492799b610</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>jgonzalez</sys_created_by><sys_created_on>2022-07-08 01:59:04</sys_created_on><sys_id>ec2a60f12fa01110465d50492799b676</sys_id><sys_mod_count>2</sys_mod_count><sys_name>1</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sp_row_ec2a60f12fa01110465d50492799b676</sys_update_name><sys_updated_by>jgonzalez</sys_updated_by><sys_updated_on>2022-07-09 21:37:37</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>1874739004</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>85f467d52fa01110465d50492799b6ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-09 21:37:37</sys_created_on>
+        <sys_id>0e7186d62f601110465d50492799b64c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181e4e589020000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-09 21:37:37</sys_updated_on>
+        <type>Row</type>
+        <update_guid>067186d6ce60111025adab9ed2dd414c</update_guid>
+        <update_guid_history>067186d6ce60111025adab9ed2dd414c:1874739004,df61c656a0601110c99b44a7a19b1b23:-1443026108,e42a60f111a011105ed88e164097b978:1874739004</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">c376321b2f241110465d50492799b67a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-13 04:03:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>40a0afbff8434e5d90dc95ac57bdd9e1</sys_id>
+        <sys_metadata>ec2a60f12fa01110465d50492799b676</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_row_ec2a60f12fa01110465d50492799b676</sys_update_name>
+        <sys_update_version display_value="sp_row_ec2a60f12fa01110465d50492799b676">0e7186d62f601110465d50492799b64c</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-13 04:03:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
