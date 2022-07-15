@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Key Attributes" section_id="a693f0c02fb01110465d50492799b66c" sys_domain="global" table="u_cmdb_ci_movie" version="3" view="cmdb_workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>aa93f0c02fb01110465d50492799b66d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>1</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>a293f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location</element>
+            <position>2</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>2693f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>install_status</element>
+            <position>3</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>a693f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>2a93f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_discovered</element>
+            <position>5</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>aa93f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>support_group</element>
+            <position>6</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>2e93f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>serial_number</element>
+            <position>7</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>ae93f0c02fb01110465d50492799b66e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_tag</element>
+            <position>8</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>2293f0c02fb01110465d50492799b66f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_id>a293f0c02fb01110465d50492799b66f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Key Attributes" display_value="Key Attributes" name="u_cmdb_ci_movie" sys_domain="global" view="169d5a872300001009d5110d96bf6537">a693f0c02fb01110465d50492799b66c</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:46</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Key Attributes</caption>
+            <header>false</header>
+            <name>u_cmdb_ci_movie</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-15 02:26:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a693f0c02fb01110465d50492799b66c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>u_cmdb_ci_movie</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+            <sys_update_name>sys_ui_section_a693f0c02fb01110465d50492799b66c</sys_update_name>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-15 02:26:47</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="CMDB Agent Workspace" name="cmdb_workspace">169d5a872300001009d5110d96bf6537</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
