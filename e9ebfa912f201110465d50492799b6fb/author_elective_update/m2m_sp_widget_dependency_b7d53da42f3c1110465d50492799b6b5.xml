@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="movieModal">8a65b5a42f3c1110465d50492799b632</sp_dependency>
+        <sp_widget display_value="Movie list">faf37ace2f201110465d50492799b60b</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-16 20:33:16</sys_created_on>
+        <sys_id>b7d53da42f3c1110465d50492799b6b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>movieModal.Movie list</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_b7d53da42f3c1110465d50492799b6b5</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-16 20:33:16</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>m2m_sp_widget_dependency_b7d53da42f3c1110465d50492799b6b5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="movieModal">8a65b5a42f3c1110465d50492799b632</sp_dependency><sp_widget display_value="Movie list">faf37ace2f201110465d50492799b60b</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>jgonzalez</sys_created_by><sys_created_on>2022-07-16 20:33:16</sys_created_on><sys_id>b7d53da42f3c1110465d50492799b6b5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>movieModal.Movie list</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>m2m_sp_widget_dependency_b7d53da42f3c1110465d50492799b6b5</sys_update_name><sys_updated_by>jgonzalez</sys_updated_by><sys_updated_on>2022-07-16 20:33:16</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>184092583</payload_hash>
+        <record_name>movieModal.Movie list</record_name>
+        <reverted_from/>
+        <source>8471fc002fb01110465d50492799b6b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-16 20:33:16</sys_created_on>
+        <sys_id>3fd53da42f3c1110465d50492799b6b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18208b725440000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-16 20:33:16</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>77d53da45b3c11108066d05411a52cb7</update_guid>
+        <update_guid_history>77d53da45b3c11108066d05411a52cb7:184092583</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="movieModal.Movie list">a4f57da42f3c1110465d50492799b6dd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-16 20:33:35</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>b2de89aa133c46069159244ca5a677c1</sys_id>
+        <sys_metadata>b7d53da42f3c1110465d50492799b6b5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>movieModal.Movie list</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_b7d53da42f3c1110465d50492799b6b5</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_b7d53da42f3c1110465d50492799b6b5">3fd53da42f3c1110465d50492799b6b7</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-16 20:33:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

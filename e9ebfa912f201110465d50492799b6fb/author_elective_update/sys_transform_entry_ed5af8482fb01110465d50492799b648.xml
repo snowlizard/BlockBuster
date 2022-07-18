@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="DELETE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="cmdb_ci_movieTransform_map">6117bcc02fb01110465d50492799b697</map>
+        <reference_value_field/>
+        <source_field>u_year</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_809069_bbuster_moviesettable</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-15 02:56:11</sys_created_on>
+        <sys_id>ed5af8482fb01110465d50492799b648</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_year</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_transform_entry_ed5af8482fb01110465d50492799b648</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-15 02:56:11</sys_updated_on>
+        <target_field>u_year</target_field>
+        <target_table>x_809069_bbuster_u_cmdb_ci_movie</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sys_transform_entry_ed5af8482fb01110465d50492799b648</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_entry"&gt;&lt;sys_transform_entry action="INSERT_OR_UPDATE"&gt;&lt;choice_action&gt;create&lt;/choice_action&gt;&lt;coalesce&gt;false&lt;/coalesce&gt;&lt;coalesce_case_sensitive&gt;false&lt;/coalesce_case_sensitive&gt;&lt;coalesce_empty_fields&gt;false&lt;/coalesce_empty_fields&gt;&lt;date_format&gt;yyyy-MM-dd HH:mm:ss&lt;/date_format&gt;&lt;map display_value="cmdb_ci_movieTransform_map"&gt;6117bcc02fb01110465d50492799b697&lt;/map&gt;&lt;reference_value_field/&gt;&lt;source_field&gt;u_year&lt;/source_field&gt;&lt;source_script&gt;&lt;![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]&gt;&lt;/source_script&gt;&lt;source_table&gt;x_809069_bbuster_moviesettable&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_entry&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-15 02:56:11&lt;/sys_created_on&gt;&lt;sys_id&gt;ed5af8482fb01110465d50492799b648&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;u_year&lt;/sys_name&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_entry_ed5af8482fb01110465d50492799b648&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-15 02:56:11&lt;/sys_updated_on&gt;&lt;target_field&gt;u_year&lt;/target_field&gt;&lt;target_table&gt;x_809069_bbuster_u_cmdb_ci_movie&lt;/target_table&gt;&lt;use_source_script&gt;false&lt;/use_source_script&gt;&lt;/sys_transform_entry&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>92586012</payload_hash>
+        <record_name>u_year</record_name>
+        <reverted_from/>
+        <source>8471fc002fb01110465d50492799b6b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-15 02:56:11</sys_created_on>
+        <sys_id>a15af8482fb01110465d50492799b64a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>181ffc8fe760000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-15 02:56:11</sys_updated_on>
+        <type>Field Map</type>
+        <update_guid>e95af84892b01110b1fe49af1f3d6349</update_guid>
+        <update_guid_history>e95af84892b01110b1fe49af1f3d6349:92586012</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-16 20:06:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_entry">sys_transform_entry</sys_db_object>
+        <sys_id>08c304ee05ef4485813752b46da009b9</sys_id>
+        <sys_metadata>ed5af8482fb01110465d50492799b648</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_year</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_transform_entry_ed5af8482fb01110465d50492799b648</sys_update_name>
+        <sys_update_version display_value="sys_transform_entry_ed5af8482fb01110465d50492799b648">a15af8482fb01110465d50492799b64a</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-16 20:06:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

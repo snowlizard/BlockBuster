@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="u_year" table="x_809069_bbuster_u_cmdb_ci_movie">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="year" table="x_809069_bbuster_u_cmdb_ci_movie">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -27,14 +27,14 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>u_year</element>
+        <element>year</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">integer_date</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
+        <max_length>4</max_length>
         <name>x_809069_bbuster_u_cmdb_ci_movie</name>
         <next_element/>
         <primary>false</primary>
@@ -52,16 +52,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-15 02:39:19</sys_created_on>
-        <sys_id>d276bc442fb01110465d50492799b6c4</sys_id>
+        <sys_created_on>2022-07-16 20:04:04</sys_created_on>
+        <sys_id>94fee1202f3c1110465d50492799b63f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Year</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sys_dictionary_x_809069_bbuster_u_cmdb_ci_movie_u_year</sys_update_name>
+        <sys_update_name>sys_dictionary_x_809069_bbuster_u_cmdb_ci_movie_year</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-15 02:39:19</sys_updated_on>
+        <sys_updated_on>2022-07-16 20:04:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

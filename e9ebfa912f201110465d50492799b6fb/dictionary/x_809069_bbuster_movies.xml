@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Movies" max_length="40" name="x_809069_bbuster_movies" type="collection">
+    <element label="Movies" max_length="40" name="x_809069_bbuster_movies" sizeclass="34" type="collection">
         <element label="Actors" max_length="300" name="actors" type="string_full_utf8"/>
         <element label="Director(s)" max_length="255" name="director_s" type="string_full_utf8"/>
         <element label="Genre" max_length="255" name="genre" type="string_full_utf8"/>

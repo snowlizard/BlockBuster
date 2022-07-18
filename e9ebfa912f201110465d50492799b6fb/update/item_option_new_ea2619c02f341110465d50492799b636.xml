@@ -39,12 +39,12 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>poster_link</name>
-        <order/>
+        <name>delivery_address</name>
+        <order>300</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Poster Link</question_text>
+        <question_text>Delivery address</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -52,7 +52,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference/>
+        <reference>cmn_location</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -66,19 +66,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-07 03:51:21</sys_created_on>
-        <sys_id>2b3af31d2fe01110465d50492799b67d</sys_id>
+        <sys_created_on>2022-07-15 04:58:51</sys_created_on>
+        <sys_id>ea2619c02f341110465d50492799b636</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Poster Link</sys_name>
+        <sys_name>Delivery address</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>item_option_new_2b3af31d2fe01110465d50492799b67d</sys_update_name>
+        <sys_update_name>item_option_new_ea2619c02f341110465d50492799b636</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 03:51:21</sys_updated_on>
+        <sys_updated_on>2022-07-15 04:58:51</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>27</type>
+        <type>8</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -94,22 +94,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=2b3af31d2fe01110465d50492799b67d"/>
-    <fx_price action="delete_multiple" query="id=2b3af31d2fe01110465d50492799b67d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=ea2619c02f341110465d50492799b636"/>
+    <fx_price action="delete_multiple" query="id=ea2619c02f341110465d50492799b636"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>2b3af31d2fe01110465d50492799b67d</id>
+        <id>ea2619c02f341110465d50492799b636</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-07 03:51:21</sys_created_on>
-        <sys_id>633af31d2fe01110465d50492799b67f</sys_id>
+        <sys_created_on>2022-07-15 04:58:51</sys_created_on>
+        <sys_id>e266d9c02f341110465d50492799b625</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 03:51:21</sys_updated_on>
+        <sys_updated_on>2022-07-15 04:58:51</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -117,16 +117,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>2b3af31d2fe01110465d50492799b67d</id>
+        <id>ea2619c02f341110465d50492799b636</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-07 03:51:21</sys_created_on>
-        <sys_id>2b3af31d2fe01110465d50492799b67e</sys_id>
+        <sys_created_on>2022-07-15 04:58:51</sys_created_on>
+        <sys_id>9a66d9c02f341110465d50492799b624</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 03:51:21</sys_updated_on>
+        <sys_updated_on>2022-07-15 04:58:51</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

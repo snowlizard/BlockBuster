@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="8e9de5ac2ff81110465d50492799b658" sys_domain="global" table="x_809069_bbuster_u_cmdb_ci_movie" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_title</element>
+            <position>0</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>c00e69ac2ff81110465d50492799b6ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_actors</element>
+            <position>1</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>c40e69ac2ff81110465d50492799b6ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_directors</element>
+            <position>2</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>c80e69ac2ff81110465d50492799b6ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_genre</element>
+            <position>3</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>cc0e69ac2ff81110465d50492799b6ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_plot</element>
+            <position>4</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>c00e69ac2ff81110465d50492799b6cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_poster</element>
+            <position>5</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>c40e69ac2ff81110465d50492799b6cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_rating</element>
+            <position>6</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>000ea1ec2ff81110465d50492799b682</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_release_date</element>
+            <position>7</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>040ea1ec2ff81110465d50492799b682</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_year</element>
+            <position>8</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>080ea1ec2ff81110465d50492799b682</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_metascore</element>
+            <position>9</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:58:53</sys_created_on>
+            <sys_id>0c0ea1ec2ff81110465d50492799b682</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:58:53</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>year</element>
+            <position>10</position>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 20:04:05</sys_created_on>
+            <sys_id>d43fa5202f3c1110465d50492799b6b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_809069_bbuster_u_cmdb_ci_movie" sys_domain="global" view="Default view">8e9de5ac2ff81110465d50492799b658</sys_ui_section>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 20:04:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>true</header>
+            <name>x_809069_bbuster_u_cmdb_ci_movie</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-16 19:57:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8e9de5ac2ff81110465d50492799b658</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_809069_bbuster_u_cmdb_ci_movie</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+            <sys_update_name>sys_ui_section_8e9de5ac2ff81110465d50492799b658</sys_update_name>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-16 19:57:06</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

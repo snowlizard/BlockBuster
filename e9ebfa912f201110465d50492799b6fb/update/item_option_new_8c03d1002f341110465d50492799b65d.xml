@@ -27,7 +27,7 @@
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table/>
+        <list_table>x_809069_bbuster_u_cmdb_ci_movie</list_table>
         <lookup_label/>
         <lookup_price/>
         <lookup_table/>
@@ -39,12 +39,12 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>year</name>
-        <order>100</order>
+        <name>select_movies_to_rent</name>
+        <order/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Year</question_text>
+        <question_text>Select movies to rent</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -66,23 +66,23 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-07 03:47:10</sys_created_on>
-        <sys_id>612937d92fe01110465d50492799b623</sys_id>
+        <sys_created_on>2022-07-15 04:46:29</sys_created_on>
+        <sys_id>8c03d1002f341110465d50492799b65d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Year</sys_name>
+        <sys_name>Select movies to rent</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>item_option_new_612937d92fe01110465d50492799b623</sys_update_name>
+        <sys_update_name>item_option_new_8c03d1002f341110465d50492799b65d</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 03:47:10</sys_updated_on>
+        <sys_updated_on>2022-07-15 04:46:29</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>9</type>
+        <type>21</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
@@ -94,22 +94,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=612937d92fe01110465d50492799b623"/>
-    <fx_price action="delete_multiple" query="id=612937d92fe01110465d50492799b623"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=8c03d1002f341110465d50492799b65d"/>
+    <fx_price action="delete_multiple" query="id=8c03d1002f341110465d50492799b65d"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>612937d92fe01110465d50492799b623</id>
+        <id>8c03d1002f341110465d50492799b65d</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-07 03:47:10</sys_created_on>
-        <sys_id>164933d92fe01110465d50492799b68e</sys_id>
+        <sys_created_on>2022-07-15 04:46:29</sys_created_on>
+        <sys_id>9593d5002f341110465d50492799b615</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 03:47:10</sys_updated_on>
+        <sys_updated_on>2022-07-15 04:46:29</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -117,16 +117,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>612937d92fe01110465d50492799b623</id>
+        <id>8c03d1002f341110465d50492799b65d</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-07 03:47:10</sys_created_on>
-        <sys_id>da4933d92fe01110465d50492799b68d</sys_id>
+        <sys_created_on>2022-07-15 04:46:29</sys_created_on>
+        <sys_id>9d93d5002f341110465d50492799b613</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 03:47:10</sys_updated_on>
+        <sys_updated_on>2022-07-15 04:46:29</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

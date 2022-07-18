@@ -17,17 +17,17 @@
         <source_table>x_809069_bbuster_moviesettable</source_table>
         <sys_class_name>sys_transform_entry</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-15 02:56:11</sys_created_on>
-        <sys_id>ed5af8482fb01110465d50492799b648</sys_id>
+        <sys_created_on>2022-07-16 20:06:41</sys_created_on>
+        <sys_id>56cfad202f3c1110465d50492799b604</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>u_year</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sys_transform_entry_ed5af8482fb01110465d50492799b648</sys_update_name>
+        <sys_update_name>sys_transform_entry_56cfad202f3c1110465d50492799b604</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-15 02:56:11</sys_updated_on>
-        <target_field>u_year</target_field>
+        <sys_updated_on>2022-07-16 20:06:41</sys_updated_on>
+        <target_field>year</target_field>
         <target_table>x_809069_bbuster_u_cmdb_ci_movie</target_table>
         <use_source_script>false</use_source_script>
     </sys_transform_entry>

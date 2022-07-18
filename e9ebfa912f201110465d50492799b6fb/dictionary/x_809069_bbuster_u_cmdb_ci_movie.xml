@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="Movie" max_length="40" name="x_809069_bbuster_u_cmdb_ci_movie" type="collection">
-        <element label="Actors" max_length="40" name="u_actors" type="string"/>
-        <element label="Director(s)" max_length="40" name="u_directors" type="string"/>
-        <element label="Genre" max_length="40" name="u_genre" type="string"/>
+    <element extends="cmdb_ci" label="Movie" max_length="40" name="x_809069_bbuster_u_cmdb_ci_movie" sizeclass="25" type="collection">
+        <element label="Actors" max_length="233" name="u_actors" type="string"/>
+        <element label="Director(s)" max_length="233" name="u_directors" type="string"/>
+        <element label="Genre" max_length="100" name="u_genre" type="string"/>
         <element label="Metascore" max_length="40" name="u_metascore" type="string"/>
-        <element label="Plot" max_length="500" name="u_plot" type="multi_small"/>
+        <element label="Plot" max_length="1000" name="u_plot" type="string_full_utf8"/>
         <element label="Poster" max_length="40" name="u_poster" type="url"/>
         <element label="Rating" max_length="40" name="u_rating" type="string"/>
         <element label="Release Date" max_length="40" name="u_release_date" type="string"/>
         <element display="true" label="Title" max_length="125" name="u_title" type="string_full_utf8"/>
-        <element label="Year" max_length="40" name="u_year" type="integer_date"/>
+        <element label="Year" max_length="4" name="year" type="string"/>
     </element>
 </database>

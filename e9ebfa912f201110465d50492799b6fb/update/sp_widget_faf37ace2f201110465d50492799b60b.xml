@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($rootScope, $scope) {
+        <client_script><![CDATA[api.controller=function($rootScope, $scope, spUtil, $uibModal, spModal) {
   /* widget controller */
   var c = this;
 	
 	c.movies = c.data.movies;
 	
+	//-- listen for
 	$rootScope.$on('filterGenre', function(e, arg){
 		if(arg){
 			c.movies = c.data.movies.filter(function(item){
@@ -17,6 +18,23 @@
 		else c.movies = c.data.movies;
 	});
 	
+	c.openModal = function(movie) {
+		c.modalInstance = $uibModal.open({
+			templateUrl: 'movieModal',
+			scope: $scope,
+			size: 'lg',
+			controllerAs: 'modalC',
+			controller: function() {
+				var modalC = this;
+				modalC.movie = movie;
+				modalC.modalInstance = c.modalInstance;
+			}
+		});
+	}
+	
+	c.closeModal = function(){
+		c.modalInstance.close();
+	}
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.movie-list-container{
@@ -42,6 +60,10 @@
   margin: 10px;
 }
 
+.movie-container:hover{
+  box-shadow: 1px 1px 10px rgba(204, 201, 184, 0.8);
+}
+
 .movie-poster{
   width: 100%;
   height:100%;
@@ -63,16 +85,23 @@
 	// -- Get movies from server
 	var movies = [];
 	
-	var gr = new GlideRecord('x_809069_bbuster_movies');
+	var gr = new GlideRecord('x_809069_bbuster_u_cmdb_ci_movie');
 	gr.query();
 	
 	while(gr.next()){
 		var object = {};
-		object.poster = gr.getValue('poster');
-		object.genre  = gr.getValue('genre');
+		object.poster = gr.getValue('u_poster');
+		object.genre  = gr.getValue('u_genre');
+		object.title  = gr.getValue('u_title');
+		object.rating = gr.getValue('u_rating');
+		object.plot   = gr.getValue('u_plot');
+		object.actors = gr.getValue('u_actors');
+		object.year   = gr.getValue('year');
+		object.directors    = gr.getValue('u_directors');
+		object.metascore    = gr.getValue('u_metascore');
+		object.release_date = gr.getValue('u_release_date');
 		movies.push(object);
 	}
-	
 	data.movies = movies;
 	// -----------
 	
@@ -82,18 +111,19 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-09 06:39:49</sys_created_on>
         <sys_id>faf37ace2f201110465d50492799b60b</sys_id>
-        <sys_mod_count>112</sys_mod_count>
+        <sys_mod_count>145</sys_mod_count>
         <sys_name>Movie list</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_faf37ace2f201110465d50492799b60b</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-14 02:03:54</sys_updated_on>
+        <sys_updated_on>2022-07-18 03:26:29</sys_updated_on>
         <template><![CDATA[<div class="movie-list-container">
   
   <div class="movies-container">
-    <div class="movie-container" ng-repeat="movie in c.movies">
+    <div class="movie-container" ng-repeat="movie in c.movies"
+         ng-click="c.openModal(movie)">
       <img class="movie-poster" src="{{movie.poster}}" />
     </div>
   </div>

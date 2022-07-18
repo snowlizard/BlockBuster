@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item/>
+        <catalog_variable>IO:ea2619c02f341110465d50492799b636</catalog_variable>
+        <cleared>true</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-15 05:03:06</sys_created_on>
+        <sys_id>59571d042f341110465d50492799b6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>delivery_address</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_59571d042f341110465d50492799b6eb</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-15 05:03:06</sys_updated_on>
+        <table/>
+        <ui_policy display_value="home delivery is selected show delivery address field">34f615042f341110465d50492799b6bf</ui_policy>
+        <variable>delivery_address</variable>
+        <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+</record_update>
