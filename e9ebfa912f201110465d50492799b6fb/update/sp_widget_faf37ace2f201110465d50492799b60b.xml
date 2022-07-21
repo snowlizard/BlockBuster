@@ -18,6 +18,7 @@
 		else c.movies = c.data.movies;
 	});
 	
+	// --- open modal
 	c.openModal = function(movie) {
 		c.modalInstance = $uibModal.open({
 			templateUrl: 'movieModal',
@@ -32,12 +33,19 @@
 		});
 	}
 	
+	// --- close modal
 	c.closeModal = function(){
 		c.modalInstance.close();
 	}
 	
+	// --- add movie to cart
 	c.addToCart = function(movie){
-		// add to cart
+		c.data.movie = movie.title;
+		c.data.action = 'ADD TO CART';
+		c.server.update().then(function(){
+			c.data.action = undefined;
+			c.data.movie = '';
+		})
 		
 		c.modalInstance.close();
 	}
@@ -96,6 +104,7 @@
 	
 	while(gr.next()){
 		var object = {};
+		object.sys_id = gr.getValue('sys_id');
 		object.poster = gr.getValue('u_poster');
 		object.genre  = gr.getValue('u_genre');
 		object.title  = gr.getValue('u_title');
@@ -109,7 +118,26 @@
 		movies.push(object);
 	}
 	data.movies = movies;
-	// -----------
+	// --- CART LOGIC -----
+	
+	var userID = gs.getUserID();
+	var cart = new sn_sc.CartJS('DEFAULT');
+
+	if(input){
+		if(input.action == 'ADD TO CART'){
+			console.log('movie = ' + input.movie);
+			var item = {
+									'sysparm_id': 'eeb3d5002f341110465d50492799b63c',
+									'sysparm_quantity': '1',
+									'variables':{
+										'select_movies_to_rent': input.movie,
+										'delivery_type': 'in_store'
+								 }};
+
+			var cartDetails = cart.addToCart(item);
+			gs.info(JSON.stringify(cartDetails));
+		}
+	}
 	
 })();]]></script>
         <servicenow>false</servicenow>
@@ -117,14 +145,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-09 06:39:49</sys_created_on>
         <sys_id>faf37ace2f201110465d50492799b60b</sys_id>
-        <sys_mod_count>151</sys_mod_count>
+        <sys_mod_count>245</sys_mod_count>
         <sys_name>Movie list</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_faf37ace2f201110465d50492799b60b</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-20 03:43:28</sys_updated_on>
+        <sys_updated_on>2022-07-21 04:04:24</sys_updated_on>
         <template><![CDATA[<div class="movie-list-container">
   
   <div class="movies-container">
