@@ -6,6 +6,7 @@
   var c = this;
 	
 	c.movies = c.data.movies;
+	var movieData = '';
 	
 	//-- listen for
 	$rootScope.$on('filterGenre', function(e, arg){
@@ -40,7 +41,9 @@
 	
 	// --- add movie to cart
 	c.addToCart = function(movie){
-		c.data.movie = movie.title;
+		if(movieData == '') movieData = movie.title
+		else movieData += ','+ movie.title;
+		c.data.movie = movieData;
 		c.data.action = 'ADD TO CART';
 		c.server.update().then(function(){
 			c.data.action = undefined;
@@ -98,6 +101,9 @@
         <script><![CDATA[(function() {
 	// -- Get movies from server
 	var movies = [];
+	data.cartItemExists = false;
+	var itemID = 'eeb3d5002f341110465d50492799b63c';
+	var cart_item_id = '';
 	
 	var gr = new GlideRecord('x_809069_bbuster_u_cmdb_ci_movie');
 	gr.query();
@@ -122,20 +128,40 @@
 	
 	var userID = gs.getUserID();
 	var cart = new sn_sc.CartJS('DEFAULT');
+	var cartItems = cart.getCartItems();
 
 	if(input){
 		if(input.action == 'ADD TO CART'){
-			console.log('movie = ' + input.movie);
-			var item = {
-									'sysparm_id': 'eeb3d5002f341110465d50492799b63c',
-									'sysparm_quantity': '1',
-									'variables':{
-										'select_movies_to_rent': input.movie,
-										'delivery_type': 'in_store'
-								 }};
+			// if the cart is not empty check to see if the rent movie catalog item
+			// is in the cart.
+			if(cartItems){
+				while(cartItems.next()){
+					if(cartItems.getElement('cat_item') == itemID){
+						cart_item_id = cartItems.sys_id;
+						data.cartItemExists = true;
+					}
+				}
+			}
+			
+			// if not in the cart create a new rent movie item and add to cart
+			if(!data.cartItemExists){
+				var item = {
+						'sysparm_id': itemID,
+						'sysparm_quantity': '1',
+						'variables':{
+						'select_movies_to_rent': input.movie,
+						'delivery_type': 'in_store'
+					}};
 
-			var cartDetails = cart.addToCart(item);
-			gs.info(JSON.stringify(cartDetails));
+			cart.addToCart(item);
+			} else{
+					cart.updateItem({
+						'sysparm_id': itemID,
+						'sysparm_quantity': '1',
+						'variables': {
+						'select_movies_to_rent': input.movie },
+						'delivery_type': 'in_store'}, cart_item_id);
+			}
 		}
 	}
 	
@@ -145,14 +171,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-09 06:39:49</sys_created_on>
         <sys_id>faf37ace2f201110465d50492799b60b</sys_id>
-        <sys_mod_count>245</sys_mod_count>
+        <sys_mod_count>285</sys_mod_count>
         <sys_name>Movie list</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_faf37ace2f201110465d50492799b60b</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-21 04:04:24</sys_updated_on>
+        <sys_updated_on>2022-07-22 02:38:57</sys_updated_on>
         <template><![CDATA[<div class="movie-list-container">
   
   <div class="movies-container">

@@ -9,19 +9,22 @@
   color: $bbuster-orange;&#13;
   overflow: visible !important;&#13;
 }&#13;
-</css>
+&#13;
+section {&#13;
+  background: #36454F;&#13;
+}</css>
         <name>bbuster-theme.css</name>
         <sys_class_name>sp_css</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-06 23:47:03</sys_created_on>
         <sys_id>4bf1cfd52f201110465d50492799b668</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>bbuster-theme.css</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_css_4bf1cfd52f201110465d50492799b668</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-07 02:11:38</sys_updated_on>
+        <sys_updated_on>2022-07-22 01:59:21</sys_updated_on>
     </sp_css>
 </record_update>
