@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
     <catalog_ui_policy_action action="INSERT_OR_UPDATE">
         <catalog_item/>
-        <catalog_variable>IO:8c03d1002f341110465d50492799b65d</catalog_variable>
+        <catalog_variable>IO:f39f41bf2f301110465d50492799b65d</catalog_variable>
         <cleared>false</cleared>
         <disabled>ignore</disabled>
         <field/>
-        <mandatory>true</mandatory>
+        <mandatory>ignore</mandatory>
         <order>100</order>
         <sys_class_name>catalog_ui_policy_action</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-15 04:56:39</sys_created_on>
-        <sys_id>2fd591c02f341110465d50492799b65b</sys_id>
+        <sys_created_on>2022-07-26 20:08:19</sys_created_on>
+        <sys_id>0d00d5bf2f301110465d50492799b6fa</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>select_movies_to_rent</sys_name>
+        <sys_name>u_price</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>catalog_ui_policy_action_2fd591c02f341110465d50492799b65b</sys_update_name>
+        <sys_update_name>catalog_ui_policy_action_0d00d5bf2f301110465d50492799b6fa</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-15 04:56:39</sys_updated_on>
+        <sys_updated_on>2022-07-26 20:08:19</sys_updated_on>
         <table/>
         <ui_policy display_value="No condition default UI Policy">64c511c02f341110465d50492799b60e</ui_policy>
-        <variable>select_movies_to_rent</variable>
+        <variable>u_price</variable>
         <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
-        <visible>ignore</visible>
+        <visible>false</visible>
     </catalog_ui_policy_action>
 </record_update>

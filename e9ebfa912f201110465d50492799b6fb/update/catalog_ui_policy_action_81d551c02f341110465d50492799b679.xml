@@ -20,7 +20,7 @@
         <sys_updated_by>jgonzalez</sys_updated_by>
         <sys_updated_on>2022-07-15 04:56:24</sys_updated_on>
         <table/>
-        <ui_policy display_value="no condition ui policy mandatory, hide location">64c511c02f341110465d50492799b60e</ui_policy>
+        <ui_policy display_value="No condition default UI Policy">64c511c02f341110465d50492799b60e</ui_policy>
         <variable>delivery_type</variable>
         <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
         <visible>ignore</visible>

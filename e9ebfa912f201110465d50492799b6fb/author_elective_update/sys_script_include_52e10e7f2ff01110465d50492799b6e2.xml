@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_809069_bbuster.MovieIDtoTitle</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>recieves a movie sys_id and returns the movie title</description>
+        <name>MovieIDtoTitle</name>
+        <script><![CDATA[var MovieIDtoTitle = Class.create();
+MovieIDtoTitle.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getTitle: function() {
+        // array of movie system ids
+        //var movieList = this.getParameter('sysparm_mList');
+        var titleList = [];
+		
+		gs.log('hello world');
+		return 'hello world';
+    },
+
+    type: 'MovieIDtoTitle'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-26 23:54:45</sys_created_on>
+        <sys_id>52e10e7f2ff01110465d50492799b6e2</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>MovieIDtoTitle</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_script_include_52e10e7f2ff01110465d50492799b6e2</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-27 00:53:15</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sys_script_include_52e10e7f2ff01110465d50492799b6e2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_809069_bbuster.MovieIDtoTitle&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;recieves a movie sys_id and returns the movie title&lt;/description&gt;&lt;name&gt;MovieIDtoTitle&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var MovieIDtoTitle = Class.create();
+MovieIDtoTitle.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getTitle: function() {
+        // array of movie system ids
+        //var movieList = this.getParameter('sysparm_mList');
+        var titleList = [];
+		
+		gs.log('hello world');
+		return 'hello world';
+    },
+
+    type: 'MovieIDtoTitle'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-26 23:54:45&lt;/sys_created_on&gt;&lt;sys_id&gt;52e10e7f2ff01110465d50492799b6e2&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;MovieIDtoTitle&lt;/sys_name&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_52e10e7f2ff01110465d50492799b6e2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-27 00:53:15&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-184279002</payload_hash>
+        <record_name>MovieIDtoTitle</record_name>
+        <reverted_from/>
+        <source>8471fc002fb01110465d50492799b6b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-27 00:53:16</sys_created_on>
+        <sys_id>3941127f2f341110465d50492799b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1823d24c48d0000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-27 00:53:16</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>3141127f5e341110ca3ec239d672f54d</update_guid>
+        <update_guid_history>3141127f5e341110ca3ec239d672f54d:-184279002,6350523fbd341110bb1ca93d244be26d:-1284208314,36ef8abbc4341110ea26e1306fd18188:-543958013,a4ce82bb95341110e9d77677f98f29a8:-1000900570,236e0e7baf341110add3a9b461bac423:383344644,f05e4e7b1f341110aed9188125147712:-1000900570,762e827bd2341110814862fb99620f9a:-216563059,b7cd467bbf341110a9750c037f553650:-1000900570,d59d8e3bd034111030579319c370d490:-1857536131,fbebceb7983411105df976572c4309bc:845939270,998bc6b7ee3411105984431615be1f7d:527653991,ee1aca7f3ff011104b47457d2e1c0607:510293848,e0e30e7f32f01110203669cb09451be8:-297146345</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-27 01:00:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>15fee4979fe14fd09b72e0ae0262ae10</sys_id>
+        <sys_metadata>52e10e7f2ff01110465d50492799b6e2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MovieIDtoTitle</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_script_include_52e10e7f2ff01110465d50492799b6e2</sys_update_name>
+        <sys_update_version display_value="sys_script_include_52e10e7f2ff01110465d50492799b6e2">3941127f2f341110465d50492799b64d</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-27 01:00:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

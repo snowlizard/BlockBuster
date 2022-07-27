@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="movieSetTable" max_length="40" name="x_809069_bbuster_moviesettable" sizeclass="175" type="collection">
+    <element extends="sys_import_set_row" label="movieSetTable" max_length="40" name="x_809069_bbuster_moviesettable" sizeclass="0" type="collection">
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Actors" label="Actors" max_length="233" name="u_actors" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Director(s)" label="Director(s)" max_length="233" name="u_director_s_" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Genre" label="Genre" max_length="100" name="u_genre" type="string"/>

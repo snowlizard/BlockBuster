@@ -52,7 +52,14 @@
 		
 		c.modalInstance.close();
 	}
-};]]></client_script>
+
+	//--- pagination
+	c.pageChange = function(){
+		console.log(this);
+	}
+	
+};
+]]></client_script>
         <controller_as>c</controller_as>
         <css>.movie-list-container{
 	width:100%;
@@ -171,14 +178,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-09 06:39:49</sys_created_on>
         <sys_id>faf37ace2f201110465d50492799b60b</sys_id>
-        <sys_mod_count>285</sys_mod_count>
+        <sys_mod_count>296</sys_mod_count>
         <sys_name>Movie list</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_faf37ace2f201110465d50492799b60b</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-22 02:38:57</sys_updated_on>
+        <sys_updated_on>2022-07-23 22:20:45</sys_updated_on>
         <template><![CDATA[<div class="movie-list-container">
   
   <div class="movies-container">
@@ -188,7 +195,7 @@
     </div>
   </div>
   
-  <uib-pagination total-items="50" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+  <uib-pagination total-items="50" ng-model="currentPage" ng-change="c.pageChanged(this)"></uib-pagination>
 </div>]]></template>
     </sp_widget>
 </record_update>

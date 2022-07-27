@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="DELETE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>true</applies_target_record>
+        <applies_to>set</applies_to>
+        <cat_item/>
+        <cat_variable>IO:8c03d1002f341110465d50492799b65d</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>movie rental limit per rental period</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+
+    var movies = g_form.getValue('select_movies_to_rent').split(',');
+    var titles = [];
+
+    function titleParse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer");
+    }
+
+    if (movies.length > 5) {
+        g_form.addErrorMessage('Movie rentals are limited to 5 per rental period');
+        movies.splice(movies.length - 2);
+
+        var ga = new GlideAjax('MovieIDtoTitle');
+        ga.addParam('sysparm_name', 'getTitle');
+        ga.addParam('sysparm_mList', movies);
+        ga.getXML(titleParse);
+
+        //g_form.addInfoMessage('titles' + titles);
+        //g_form.setValue('select_movies_to_rent', movies);
+    }
+
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-26 20:44:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2b8795b72f701110465d50492799b6d7</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_name>movie rental limit per rental period</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>catalog_script_client_2b8795b72f701110465d50492799b6d7</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-27 00:49:40</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
+        <view/>
+    </catalog_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>catalog_script_client_2b8795b72f701110465d50492799b6d7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="catalog_script_client"&gt;&lt;catalog_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_catalog&gt;true&lt;/applies_catalog&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;applies_req_item&gt;false&lt;/applies_req_item&gt;&lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;&lt;applies_target_record&gt;true&lt;/applies_target_record&gt;&lt;applies_to&gt;set&lt;/applies_to&gt;&lt;cat_item/&gt;&lt;cat_variable&gt;IO:8c03d1002f341110465d50492799b65d&lt;/cat_variable&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;movie rental limit per rental period&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+        return;
+    }
+
+    var movies = g_form.getValue('select_movies_to_rent').split(',');
+    var titles = [];
+
+    function titleParse(response) {
+        var answer = response.responseXML.documentElement.getAttribute("answer");
+    }
+
+    if (movies.length &gt; 5) {
+        g_form.addErrorMessage('Movie rentals are limited to 5 per rental period');
+        movies.splice(movies.length - 2);
+
+        var ga = new GlideAjax('MovieIDtoTitle');
+        ga.addParam('sysparm_name', 'getTitle');
+        ga.addParam('sysparm_mList', movies);
+        ga.getXML(titleParse);
+
+        //g_form.addInfoMessage('titles' + titles);
+        //g_form.setValue('select_movies_to_rent', movies);
+    }
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;catalog_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-26 20:44:15&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;2b8795b72f701110465d50492799b6d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;59&lt;/sys_mod_count&gt;&lt;sys_name&gt;movie rental limit per rental period&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;catalog_script_client_2b8795b72f701110465d50492799b6d7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-27 00:49:40&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;variable_set display_value="Movie variable set"&gt;b3f73b592fa01110465d50492799b635&lt;/variable_set&gt;&lt;view/&gt;&lt;/catalog_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1601797943</payload_hash>
+        <record_name>movie rental limit per rental period</record_name>
+        <reverted_from/>
+        <source>8471fc002fb01110465d50492799b6b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-27 00:49:40</sys_created_on>
+        <sys_id>89709afb2f341110465d50492799b698</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1823d217a7b0000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-27 00:49:40</sys_updated_on>
+        <type>Catalog Client Scripts</type>
+        <update_guid>81709afb6334111073c522af63eaf298</update_guid>
+        <update_guid_history>81709afb6334111073c522af63eaf298:-1601797943,5c209afb84341110fdc4ba404df8235c:1781262121,a33f8abb06341110e23b9664f7992983:-1551131547,480f4e7b4d3411105d644c46f0424244:-1436534011,f24d8ef7a2341110eae6b23aaa3be08e:-1186832251,162dc23be734111066b358ac6d27f5ae:1731539675,8beccef76434111074a1f008a0d1fbb4:-1224267635,fedccef7e23411105bfd87e12a31516f:1731539675,617c46f7e6341110d5adf964646e9ff7:-1392830405,e0bb8ab799341110b752f9d96f14348c:584722896,a45b4a77d2341110a5b00b30bfb99978:-894169310,dcca027f5df01110a7bc035b9971caf8:-274303294,bfaa427f7ef011101fec9fcb1e403905:1808122840,439a0affa2f0111086d2ed472af8be73:-589111200,feb14a7f91f011104a80fad1e2c2433c:-362616460,5411ce3fdef011109ead48c3a3aeb72e:-934604558,b32ffdbb29f01110cc0f9fa7407458fd:-233934840,f87b75f790f01110a73fa039d0800a77:-2041679694,401b75f7b2f01110132b30f2b29f0a73:-497029306,0bcab1b71af011104d100da216d2d316:907189141,95a979770af01110408653dc96bbf660:-512478284,0bf8f17709f01110cf82784beb6ad121:432863729,55d8f5371cf011106984adb5dcb8a613:1547825974,23287df324f01110f0013685fd3d4e37:952553933,cb083537d9f011104637f3d6744eaf98:1950476026,07c739f366f011107bf00cae59441ded:-1671596091,4837b1b32cf0111060adfbf8d88f1dfc:938743461,1796f1b3d1f01110020d3fefccd8e0ac:1903246702,96b5757329f011102a93085f9ffdb8e6:-1733669950,97c4753395f01110840993639be608a4:-670595264,56e3f533f1f01110194f18423263ecbe:-1372959713,88e37533b6f01110c3ccdf437cbe8696:1613426044,84c37dffe1b01110af13637505855a19:1250499290,d4a3fdff06b01110b4a94d013cda8398:-1942902927,b5733dff80b01110ec948f928640f575:-786348352,d9cf91bf0d7011104a34a8fa196a922f:728486824,06bfd5bf27701110be223b9d47e3e4b1:-1278248319,858f51bfd77011105da4949cc0b7b924:187540038,d34f553f1d7011106bd1a6e926241a0b:-1589681851,d4ae957f33701110d2e91c1a96ec51c8:1938671119,dd9e557ff0701110ca2fc2e402f4c89f:715843903,ac7e117f9e701110c01a513a76c2811b:909560744,db2ed53f02701110766bb4c4f1267f7d:-115824446,089d553fbf701110e66925c0740faf1b:-1365400575,575d1dfbaa701110879ee9836d7890cf:-1585354778,d92dddbb717011103ee0d35dd29aa5c9:1611626973,cdfcd9fbfa701110e25efaac7f1ba979:1291359705,ec1c19bb55701110f408c80c869c2c4f:1993233352,7fdb19bbdc7011108e0e678e642fa27d:-1416590258,6c9bd1bb7970111036e983a635d5cbcf:949807407,025bd97b0b701110a68a23e37b10649a:-572490633,87fad97b4c7011102fd6cdb56f4f12aa:232901207,8cda953b2c701110554f6cc1f45c39fe:-1050404395,58d9513b77701110304664e5928f34b3:53118411,d259913b26701110ca69229006e49c2c:297180354,99299df720701110c93484e65d434909:673754694,ccf8d5f76870111079e630158fe645ca:261966526,989891f7e67011101fe71e752996d246:1661581667,8578d1f786701110169d3809bcf0fe1b:836182992,d64851f7a2701110bb17a3208b1f21ec:79311367</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="movie rental limit per rental period">bef05e3f2f341110465d50492799b684</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-27 00:51:58</sys_created_on>
+        <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
+        <sys_id>01f30d73478e4ce88109dbb86f13e890</sys_id>
+        <sys_metadata>2b8795b72f701110465d50492799b6d7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>movie rental limit per rental period</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>catalog_script_client_2b8795b72f701110465d50492799b6d7</sys_update_name>
+        <sys_update_version display_value="catalog_script_client_2b8795b72f701110465d50492799b6d7">89709afb2f341110465d50492799b698</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-27 00:51:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
