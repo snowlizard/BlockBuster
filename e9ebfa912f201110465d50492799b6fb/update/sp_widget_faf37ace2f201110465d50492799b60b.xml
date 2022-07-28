@@ -5,7 +5,12 @@
   /* widget controller */
   var c = this;
 	
+	// for pagination
+	var begIndex = 0;
+	var lastIndex = 15;
+
 	c.movies = c.data.movies;
+	c.mPage = _.slice(c.movies, begIndex, lastIndex);
 	var movieData = '';
 	
 	//-- listen for
@@ -17,6 +22,9 @@
 			})
 		}
 		else c.movies = c.data.movies;
+		begIndex = 0;
+		lastIndex = 15;
+		c.mPage = _.slice(c.movies, begIndex, lastIndex);
 	});
 	
 	// --- open modal
@@ -54,8 +62,20 @@
 	}
 
 	//--- pagination
-	c.pageChange = function(){
-		console.log(this);
+	c.next = function(){
+		if(lastIndex + 10 <= c.movies.length){
+			begIndex += 15;
+			lastIndex += 15;
+			c.mPage = _.slice(c.movies, begIndex, lastIndex);
+		}
+	}
+	
+	c.previous = function(){
+		if(begIndex - 15 <= 0){
+			begIndex  = 0
+			lastIndex = 15;
+			c.mPage = _.slice(c.movies, begIndex, lastIndex);
+		}
 	}
 	
 };
@@ -91,6 +111,10 @@
 .movie-poster{
   width: 100%;
   height:100%;
+}
+
+.divBtn{
+  color: black;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -178,24 +202,35 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-09 06:39:49</sys_created_on>
         <sys_id>faf37ace2f201110465d50492799b60b</sys_id>
-        <sys_mod_count>296</sys_mod_count>
+        <sys_mod_count>326</sys_mod_count>
         <sys_name>Movie list</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_faf37ace2f201110465d50492799b60b</sys_update_name>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-23 22:20:45</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-28 19:07:15</sys_updated_on>
         <template><![CDATA[<div class="movie-list-container">
   
   <div class="movies-container">
-    <div class="movie-container" ng-repeat="movie in c.movies"
+    <div class="movie-container" ng-repeat="movie in c.mPage"
          ng-click="c.openModal(movie)">
       <img class="movie-poster" src="{{movie.poster}}" />
     </div>
   </div>
   
-  <uib-pagination total-items="50" ng-model="currentPage" ng-change="c.pageChanged(this)"></uib-pagination>
+  <div>
+    <div class="btn btn-default divBtn"
+         ng-click="c.previous()">
+      Previous
+    </div>
+    
+    <div class="btn btn-default divBtn"
+         ng-click="c.next()">
+      Next
+    </div>
+  </div>
+
 </div>]]></template>
     </sp_widget>
 </record_update>
