@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_catalog">
+    <m2m_sp_portal_catalog action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>100</order>
+        <sc_catalog display_value="BlockBuster">5835e3592fa01110465d50492799b649</sc_catalog>
+        <sp_portal display_value="BlockBuster">48b003192f201110465d50492799b6c8</sp_portal>
+        <sys_class_name>m2m_sp_portal_catalog</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 21:36:25</sys_created_on>
+        <sys_id>77f0c1f02f051110465d50492799b681</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlockBuster.BlockBuster</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>m2m_sp_portal_catalog_77f0c1f02f051110465d50492799b681</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 21:36:25</sys_updated_on>
+    </m2m_sp_portal_catalog>
+</record_update>

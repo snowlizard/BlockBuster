@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Rent Movie(s)">eeb3d5002f341110465d50492799b63c</sc_cat_item>
+        <sc_category display_value="Hardware Asset">651395bc53231300e321ddeeff7b1221</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-20 00:34:19</sys_created_on>
+        <sys_id>c8d906212fb01110465d50492799b69c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hardware Asset.Rent Movie(s)</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sc_cat_item_category_c8d906212fb01110465d50492799b69c</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-20 00:34:19</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sc_cat_item_category_c8d906212fb01110465d50492799b69c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="Rent Movie(s)">eeb3d5002f341110465d50492799b63c</sc_cat_item><sc_category display_value="Hardware Asset">651395bc53231300e321ddeeff7b1221</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>jgonzalez</sys_created_by><sys_created_on>2022-07-20 00:34:19</sys_created_on><sys_id>c8d906212fb01110465d50492799b69c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Hardware Asset.Rent Movie(s)</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sc_cat_item_category_c8d906212fb01110465d50492799b69c</sys_update_name><sys_updated_by>jgonzalez</sys_updated_by><sys_updated_on>2022-07-20 00:34:19</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-1456108403</payload_hash>
+        <record_name>Hardware Asset.Rent Movie(s)</record_name>
+        <reverted_from/>
+        <source>8471fc002fb01110465d50492799b6b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-20 00:34:19</sys_created_on>
+        <sys_id>40d906212fb01110465d50492799b6a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1821906e7ea0000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-20 00:34:19</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>88d9062147b01110357b0ac5d2c95d9f</update_guid>
+        <update_guid_history>88d9062147b01110357b0ac5d2c95d9f:-1456108403</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Hardware Asset.Rent Movie(s)">790005b02f051110465d50492799b6c7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 21:32:11</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>0c6f50ec1df345328400cc92b69d4c84</sys_id>
+        <sys_metadata>c8d906212fb01110465d50492799b69c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hardware Asset.Rent Movie(s)</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_c8d906212fb01110465d50492799b69c</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_c8d906212fb01110465d50492799b69c">40d906212fb01110465d50492799b6a0</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 21:32:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
