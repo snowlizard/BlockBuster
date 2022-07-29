@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="INSERT_OR_UPDATE">
+        <class_name/>
+        <order>2</order>
+        <sp_column/>
+        <sp_container display_value="Catalog Categories - Container 1">00f7203c2f811110465d50492799b683</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 19:46:57</sys_created_on>
+        <sys_id>84f7203c2f811110465d50492799b68f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_row_84f7203c2f811110465d50492799b68f</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 19:46:57</sys_updated_on>
+    </sp_row>
+</record_update>

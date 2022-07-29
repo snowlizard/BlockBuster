@@ -7,7 +7,7 @@
 	
 	// for pagination
 	var begIndex = 0;
-	var lastIndex = 15;
+	var lastIndex = 9;
 
 	c.movies = c.data.movies;
 	c.mPage = _.slice(c.movies, begIndex, lastIndex);
@@ -23,7 +23,7 @@
 		}
 		else c.movies = c.data.movies;
 		begIndex = 0;
-		lastIndex = 15;
+		lastIndex = 9;
 		c.mPage = _.slice(c.movies, begIndex, lastIndex);
 	});
 	
@@ -63,20 +63,20 @@
 
 	//--- pagination
 	c.next = function(){
-		if(lastIndex + 10 <= c.movies.length){
-			begIndex += 15;
-			lastIndex += 15;
+		if(lastIndex + 9 <= c.movies.length){
+			begIndex += 9;
+			lastIndex += 9;
 			c.mPage = _.slice(c.movies, begIndex, lastIndex);
 		}
 	}
 	
 	c.previous = function(){
-		if(begIndex - 15 <= 0){
+		if(begIndex - 9 <= 0){
 			begIndex  = 0
-			lastIndex = 15;
+			lastIndex = 9;
 		}else{
-			begIndex -= 15;
-			lastIndex -= 15;
+			begIndex -= 9;
+			lastIndex -= 9;
 		}
 		c.mPage = _.slice(c.movies, begIndex, lastIndex);
 	}
@@ -205,14 +205,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-09 06:39:49</sys_created_on>
         <sys_id>faf37ace2f201110465d50492799b60b</sys_id>
-        <sys_mod_count>330</sys_mod_count>
+        <sys_mod_count>332</sys_mod_count>
         <sys_name>Movie list</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_faf37ace2f201110465d50492799b60b</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-29 00:55:54</sys_updated_on>
+        <sys_updated_on>2022-07-29 19:42:51</sys_updated_on>
         <template><![CDATA[<div class="movie-list-container">
   
   <div class="movies-container">
