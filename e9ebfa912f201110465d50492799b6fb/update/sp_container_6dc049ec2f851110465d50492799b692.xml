@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>User Profile - Container 1</name>
+        <order>1</order>
+        <sp_page display_value="b_user_profile">5dc081ec2f851110465d50492799b667</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 02:56:59</sys_created_on>
+        <sys_id>6dc049ec2f851110465d50492799b692</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>User Profile - Container 1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_container_6dc049ec2f851110465d50492799b692</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 02:58:57</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>
