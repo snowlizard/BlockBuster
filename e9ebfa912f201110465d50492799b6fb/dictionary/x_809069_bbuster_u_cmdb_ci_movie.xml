@@ -5,7 +5,7 @@
         <element label="Genre" max_length="100" name="u_genre" type="string"/>
         <element label="Metascore" max_length="40" name="u_metascore" type="string"/>
         <element label="Plot" max_length="1000" name="u_plot" type="string_full_utf8"/>
-        <element label="Poster" max_length="40" name="u_poster" type="url"/>
+        <element label="Poster" max_length="3000" name="u_poster" type="url"/>
         <element label="Rating" max_length="40" name="u_rating" type="string"/>
         <element label="Release Date" max_length="40" name="u_release_date" type="string"/>
         <element display="true" label="Title" max_length="125" name="u_title" type="string_full_utf8"/>

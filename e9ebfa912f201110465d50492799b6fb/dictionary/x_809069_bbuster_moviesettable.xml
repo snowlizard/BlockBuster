@@ -5,7 +5,7 @@
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Genre" label="Genre" max_length="100" name="u_genre" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Metascore" label="Metascore" max_length="40" name="u_metascore" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Plot" label="Plot" max_length="1000" name="u_plot" type="string_full_utf8"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=Poster" label="Poster" max_length="146" name="u_poster" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Poster" label="Poster" max_length="3000" name="u_poster" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Rated" label="Rated" max_length="40" name="u_rated" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Released" label="Released" max_length="40" name="u_released" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Title" label="Title" max_length="40" name="u_title" type="string"/>
