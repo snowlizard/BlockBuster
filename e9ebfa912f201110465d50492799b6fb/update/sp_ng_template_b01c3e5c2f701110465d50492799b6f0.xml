@@ -6,14 +6,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-16 07:04:46</sys_created_on>
         <sys_id>b01c3e5c2f701110465d50492799b6f0</sys_id>
-        <sys_mod_count>93</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>movieModal</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_ng_template_b01c3e5c2f701110465d50492799b6f0</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-21 03:50:35</sys_updated_on>
+        <sys_updated_on>2022-07-29 00:56:34</sys_updated_on>
         <template><![CDATA[<div class="movie-modal panel panel-default">
 
   <div class="panel-heading" style="background:#ffa903;">
@@ -27,7 +27,7 @@
       Director(s): {{modalC.movie.directors}}<br>
   		Actor(s): {{modalC.movie.actors}}<br>
 			Rating: {{modalC.movie.rating}}<br><br>
-    	<div style="height:300px;overflow:scroll">{{modalC.movie.plot}}</div>
+    	<div style="height:300px;overflow:scroll;scrollbar-width:none;">{{modalC.movie.plot}}</div>
     </div>
     <div style="float:right;width:225px;height:300px;">
     	<img src="{{modalC.movie.poster}}" style="width:100%;height:100%;"/>

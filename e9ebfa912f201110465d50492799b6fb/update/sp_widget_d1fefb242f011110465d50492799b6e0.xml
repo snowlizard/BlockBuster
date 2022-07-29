@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	c.company = c.data.table;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.company-container{
+  width:100%;
+  max-width:750px;
+  margin: 0 auto;
+}
+
+.info-body{
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.3em;
+}
+
+.company-info{
+	display: flex;
+  flex-flow: column wrap;
+  width:50%;
+}
+
+.logo-container{
+  width:100%;
+}
+
+.company-logo{
+  max-width: 300px;
+  max-height: 150px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>company_info</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>company_info</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.table = {};
+	
+	//--- Get Company Info
+	var gr = new GlideRecord('core_company');
+	gr.addEncodedQuery('GOTOname=BlockBuster');
+	gr.query();
+	
+	while(gr.next()){
+		data.table.name = gr.getValue('name');
+		data.table.phone= gr.getValue('phone');
+		data.table.stock_symbol = gr.getValue('stock_symbol');
+		data.table.stock_price  = gr.getValue('stock_price');
+		data.table.street = gr.getValue('street');
+		data.table.city   = gr.getValue('city');
+		data.table.zip    = gr.getValue('zip');
+	}
+	
+	var ga = new GlideSysAttachment();
+	var logoGR = new GlideRecord('sys_attachment');
+	logoGR.addEncodedQuery('GOTOfile_name=Blockbuster_logo.svg');
+	logoGR.query();
+	
+	while(logoGR.next()){
+		data.table.image = logoGR.getValue('sys_id');
+	}
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 16:47:53</sys_created_on>
+        <sys_id>d1fefb242f011110465d50492799b6e0</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>company_info</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_widget_d1fefb242f011110465d50492799b6e0</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 18:11:41</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default company-container">
+	<div class="panel-heading">
+    My Company
+  </div>
+  
+  <div class="panel-body info-body">
+    
+    <div class="company-info">
+      <span>Name: {{c.company.name}}</span>
+      <span>Phone: {{c.company.phone}}</span>
+      <span>Stock Symbol: {{c.company.stock_symbol}}</span>
+      <span>Stock Price: {{c.company.stock_price}}</span>
+      <span>Website: <a href="https://www.blockbuster.com/" target="_blank">BlockBuster</a></span>
+    </div>
+    
+    <div class="company-info">
+      <span>Street: {{c.company.street}}</span>
+      <span>City: {{c.company.city}}</span>
+      <span>State: {{c.company.state}}</span>
+      <span>Zip: {{c.company.zip}}</span>
+    </div>
+    
+		<div class="logo-container">
+      <img class="company-logo"
+     			 src="/sys_attachment.do?sys_id={{c.company.image}}" />
+    </div>
+
+  </div>  
+</div>]]></template>
+    </sp_widget>
+</record_update>
