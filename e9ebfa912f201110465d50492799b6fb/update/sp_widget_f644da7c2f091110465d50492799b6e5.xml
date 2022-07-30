@@ -5,15 +5,16 @@
   /* widget controller */
   var c = this;
 	
-	c.incidents = c.data.table;
+	c.records = c.data.table;
+	c.title = c.options.title
 	
-	c.incidentForm = function(incident){
+	c.recordForm = function(record){
 		spModal.open({
 			widget: 'widget-form',
 			size: 'lg',
 			widgetInput: {
-				table: 'incident',
-				sys_id: incident.sys_id
+				table: c.options.record,
+				sys_id: record.sys_id
 			},
 			buttons: []
 		})
@@ -39,27 +40,31 @@
         <docs/>
         <field_list/>
         <has_preview>true</has_preview>
-        <id>user_incidents</id>
+        <id>user_record_list</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>User Incidents</name>
-        <option_schema/>
+        <name>User Records List</name>
+        <option_schema>[{"hint":"name of the table used to get records from","name":"record","section":"Data","default_value":"incident","label":"Record","type":"string"},{"hint":"display field usually the number or title","name":"field1","section":"Data","default_value":"number","label":"field1","type":"string"},{"hint":"choose second field that will display on list at the right end","name":"field2","section":"Data","default_value":"opened_at","label":"field2","type":"string"},{"hint":"Add field used to query record for the current user","name":"user_field","section":"other","default_value":"caller_id","label":"User field","type":"string"},{"hint":"Panel title","name":"title","section":"Data","default_value":"Incidents","label":"title","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
 	
 	// array of requests requested by the current user
 	data.table = [];
+	var table = options.record;
+	var field1 = options.field1;
+	var field2 = options.field2;
+	var user_field  = options.user_field;
 	
-	var gr = new GlideRecord('incident');
-	gr.addQuery('caller_id', gs.getUserID());
+	var gr = new GlideRecord(table);
+	gr.addQuery(user_field, gs.getUserID());
 	gr.query();
 	
 	while(gr.next()){
 		var obj = {};
-		obj.number = gr.getValue('number');
+		obj.field1 = gr.getValue(field1);
+		obj.field2 = gr.getValue(field2);
 		obj.sys_id = gr.getValue('sys_id');
-		obj.opened_at = gr.getValue('opened_at');
 		data.table.push(obj);
 	}
 
@@ -69,25 +74,25 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-30 03:40:21</sys_created_on>
         <sys_id>f644da7c2f091110465d50492799b6e5</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>User Incidents</sys_name>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>User Records List</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_f644da7c2f091110465d50492799b6e5</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-30 03:52:39</sys_updated_on>
+        <sys_updated_on>2022-07-30 22:17:54</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default panel-main">
   <div class="panel-heading">
-    My Incidents
+    {{c.title}}
   </div>
   
 	<ul class="list-group">
     <li class="list-group-item item"
-        ng-repeat="incident in c.incidents"
-        ng-click="c.incidentForm(incident)">
-      <span>{{incident.number}}</span>
-      <span>{{incident.opened_at}}</span>
+        ng-repeat="record in c.records"
+        ng-click="c.recordForm(record)">
+      <span>{{record.field1}}</span>
+      <span>{{record.field2}}</span>
     </li>
   </ul>
 </div>]]></template>

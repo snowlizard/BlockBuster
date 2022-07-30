@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function(spUtil, spModal) {
+  /* widget controller */
+  var c = this;
+	
+	c.requests = c.data.table;
+	
+	c.requestForm = function(request){
+		spModal.open({
+			widget: 'widget-form',
+			size: 'lg',
+			widgetInput: {
+				table: 'sc_request',
+				sys_id: request.sys_id
+			},
+			buttons: []
+		})
+	}
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.panel-heading{
+	background: #ffa903;
+}
+
+.panel-main{
+	border-color: #36454F;
+}
+
+.item{
+  display:flex;
+  justify-content: space-between;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>user_requests</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>User Requests</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	// array of requests requested by the current user
+	data.table = [];
+	
+	var gr = new GlideRecord('sc_request');
+	gr.addQuery('requested_for', gs.getUserID());
+	gr.query();
+	
+	while(gr.next()){
+		var obj = {};
+		obj.number = gr.getValue('number');
+		obj.sys_id = gr.getValue('sys_id');
+		obj.price  = gr.getValue('price');
+		obj.opened_at = gr.getValue('opened_at');
+		data.table.push(obj);
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 02:33:36</sys_created_on>
+        <sys_id>09054ebc2fc51110465d50492799b600</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>User Requests</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_widget_09054ebc2fc51110465d50492799b600</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 03:52:21</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default panel-main">
+  <div class="panel-heading">
+    My Requests
+  </div>
+  
+	<ul class="list-group">
+    <li class="list-group-item item"
+        ng-repeat="request in c.requests"
+        ng-click="c.requestForm(request)">
+      <span>{{request.number}}</span>
+      <span>{{request.opened_at}}</span>
+    </li>
+  </ul>
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sp_widget_09054ebc2fc51110465d50492799b600</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function(spUtil, spModal) {
+  /* widget controller */
+  var c = this;
+	
+	c.requests = c.data.table;
+	
+	c.requestForm = function(request){
+		spModal.open({
+			widget: 'widget-form',
+			size: 'lg',
+			widgetInput: {
+				table: 'sc_request',
+				sys_id: request.sys_id
+			},
+			buttons: []
+		})
+	}
+	
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.panel-heading{
+	background: #ffa903;
+}
+
+.panel-main{
+	border-color: #36454F;
+}
+
+.item{
+  display:flex;
+  justify-content: space-between;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;user_requests&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;User Requests&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+	
+	// array of requests requested by the current user
+	data.table = [];
+	
+	var gr = new GlideRecord('sc_request');
+	gr.addQuery('requested_for', gs.getUserID());
+	gr.query();
+	
+	while(gr.next()){
+		var obj = {};
+		obj.number = gr.getValue('number');
+		obj.sys_id = gr.getValue('sys_id');
+		obj.price  = gr.getValue('price');
+		obj.opened_at = gr.getValue('opened_at');
+		data.table.push(obj);
+	}
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-07-30 02:33:36&lt;/sys_created_on&gt;&lt;sys_id&gt;09054ebc2fc51110465d50492799b600&lt;/sys_id&gt;&lt;sys_mod_count&gt;39&lt;/sys_mod_count&gt;&lt;sys_name&gt;User Requests&lt;/sys_name&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_09054ebc2fc51110465d50492799b600&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-07-30 03:52:21&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="panel panel-default panel-main"&gt;
+  &lt;div class="panel-heading"&gt;
+    My Requests
+  &lt;/div&gt;
+  
+	&lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item item"
+        ng-repeat="request in c.requests"
+        ng-click="c.requestForm(request)"&gt;
+      &lt;span&gt;{{request.number}}&lt;/span&gt;
+      &lt;span&gt;{{request.opened_at}}&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1912326816</payload_hash>
+        <record_name>User Requests</record_name>
+        <reverted_from/>
+        <source>4e8d7cfc2fc11110465d50492799b657</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 03:52:21</sys_created_on>
+        <sys_id>a2071a302f491110465d50492799b6e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1824d3bcdd90000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 03:52:21</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>aa071a30c0491110726af4a1a0217de1</update_guid>
+        <update_guid_history>aa071a30c0491110726af4a1a0217de1:1912326816,5d9696300f491110c56de61664324786:-1535722727,fde3167c0d091110942fc362794918ed:-1640327560,04d3927cd30911109e756fae6e628bd7:-1247643716,03b3de3c94091110087b45d896e13958:-300666904,1263de3cde09111098f81ed63460e3f2:127989516,11535e3cd309111058af44eec4b42d50:1801863431,39431a3cef091110bf37e55f1da9a2fe:-585080199,2d33527ce6091110e5157bc175e360b6:1383148919,b913de3cf6091110a95c8438e98b5dea:758717032,16f2d63c34091110472c9a8799caf5f7:934382471,76e25e3c4a091110b2de2cc77b7d3325:1055146572,54c2da3c95091110e9029d66401b9f0b:1826250402,88a21a3c6f091110ef7adb48d6a7f4e8:1702412380,d782d63cbc091110e24c30b86e8f88d7:1408677754,c1829ef4b7091110b9c3f14172da3f42:1731138888,2ef1daf833091110cda57f438a1c033a:1073844695,21d15ef861091110a59761495ff6d0a4:1109150793,72a19638da091110cbedfcede19b4d32:1568696774,e08112f02509111023772e7b8448377e:1618381594,aed0127826091110c9c1ed49bada2554:1492263466,298e0278160911100e4729c949a10f44:82079870,d88e8a386a0911106db949e1ebd2dc2d:-1955179566,311e8a3861091110da11a92bcfa3ce18:33479590,50dd8638f309111099ea3425ab22d92a:1500224311,1c8d8ef482091110eb6d2fd9a0e1fd68:-1326149846,390d8e34e70911108fb300f6341d881b:945739046,84384eb039091110742981238b5ad906:-1929689323,040806f061091110bd1d387f62fd2ebb:-1741285781,5ee7ce70a70911105aee1c87be2f8dde:-1478305562,21b74a304e091110e9369713a73d733d:1130577624,7797ceb01b0911109cf83fb17ea5980b:1643411491,db77c270d4091110a1d6f570e8b9bf56:-556418357,f796ce70aa0911100ac5e9f9f53eded7:1968633526,0e86c630880911105fb44b2a33641c20:1170392083,3a660e70e5091110109efe32d0e0d2ef:1217392790,80564a30840911109df92c59c9d3d420:1441797832,b6a58270d4091110646fc54b5735442f:-271404595,e675063089091110e4846fe08f3af89a:887683397,01054ebc6ec511109483a8fe2d40a103:713650504</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="User Requests">a9d4d6412fc55110465d50492799b6fb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 22:21:12</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>26cafd5fb3ab4ce69a7315c7478779d1</sys_id>
+        <sys_metadata>09054ebc2fc51110465d50492799b600</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Requests</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_widget_09054ebc2fc51110465d50492799b600</sys_update_name>
+        <sys_update_version display_value="sp_widget_09054ebc2fc51110465d50492799b600">a2071a302f491110465d50492799b6e2</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 22:21:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

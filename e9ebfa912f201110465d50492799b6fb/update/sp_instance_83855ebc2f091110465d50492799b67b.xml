@@ -11,7 +11,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">8d141e7c2f091110465d50492799b635</sp_column>
-        <sp_widget display_value="User Incidents">f644da7c2f091110465d50492799b6e5</sp_widget>
+        <sp_widget display_value="User Records List">f644da7c2f091110465d50492799b6e5</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-30 03:45:50</sys_created_on>

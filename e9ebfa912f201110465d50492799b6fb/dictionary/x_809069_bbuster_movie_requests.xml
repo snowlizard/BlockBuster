@@ -3,7 +3,7 @@
         <element label="comment" max_length="5000" name="comment" type="string"/>
         <element label="Date Added/Declined" max_length="100" name="date_added_declined" type="glide_date"/>
         <element label="Requested by" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
-        <element choice="1" label="State" max_length="40" name="state" type="choice">
+        <element choice="3" default="requested" label="State" max_length="40" name="state" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Added" value="added"/>
                 <element inactive_on_update="false" label="Declined" value="declined"/>
