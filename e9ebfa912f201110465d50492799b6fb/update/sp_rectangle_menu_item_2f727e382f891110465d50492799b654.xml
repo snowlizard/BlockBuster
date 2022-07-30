@@ -12,31 +12,31 @@
         <kb_article/>
         <kb_category/>
         <kb_topic/>
-        <label>FAQ</label>
-        <order>250</order>
+        <label>About</label>
+        <order>200</order>
         <record_script/>
         <sc_cat_item/>
         <sc_category/>
         <short_description/>
-        <sp_page display_value="kb_home">e1c919e4dbd3220099f93691f0b8f535</sp_page>
+        <sp_page display_value="b_about">73d276342f891110465d50492799b6fe</sp_page>
         <sp_rectangle_menu display_value="BlockBuster Menu">bd81f9292f301110465d50492799b675</sp_rectangle_menu>
         <sp_rectangle_menu_item/>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-29 18:20:00</sys_created_on>
-        <sys_id>ecf390782f411110465d50492799b6bb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>FAQ</sys_name>
+        <sys_created_on>2022-07-30 05:52:44</sys_created_on>
+        <sys_id>2f727e382f891110465d50492799b654</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>About</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sp_rectangle_menu_item_ecf390782f411110465d50492799b6bb</sys_update_name>
+        <sys_update_name>sp_rectangle_menu_item_2f727e382f891110465d50492799b654</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-30 05:58:55</sys_updated_on>
+        <sys_updated_on>2022-07-30 05:59:01</sys_updated_on>
         <table/>
-        <type>kb</type>
+        <type>page</type>
         <url/>
         <url_target/>
     </sp_rectangle_menu_item>
-    <sys_translated_text action="delete_multiple" query="documentkey=ecf390782f411110465d50492799b6bb"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=2f727e382f891110465d50492799b654"/>
 </record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="announcement">
+    <announcement action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <click_target/>
+        <details/>
+        <details_link_text/>
+        <details_page/>
+        <details_url/>
+        <dismiss_options>dismissible</dismiss_options>
+        <display_first>false</display_first>
+        <display_style display_value="Normal">704dedd6e7d4030075c2a117c2f6a91b</display_style>
+        <from>2022-07-22 04:57:20</from>
+        <glyph>line-chart</glyph>
+        <glyph_alt_text/>
+        <name>BlockBuster Stock Price</name>
+        <public>true</public>
+        <roles/>
+        <show_for_unauthenticated_users_only>false</show_for_unauthenticated_users_only>
+        <summary>Attention: BlockBuster Stock has just reached an all time high of $10.43!</summary>
+        <sys_class_name>announcement</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 04:58:53</sys_created_on>
+        <sys_id>0fb1e6b82f491110465d50492799b69c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlockBuster Stock Price</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>announcement_0fb1e6b82f491110465d50492799b69c</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 04:58:53</sys_updated_on>
+        <title>Stock Price</title>
+        <to>2022-09-01 04:57:23</to>
+        <type>67eaf134e7a3320075c2a117c2f6a9d2,52fa79f8e763320075c2a117c2f6a991</type>
+    </announcement>
+    <sys_translated_text action="delete_multiple" query="documentkey=0fb1e6b82f491110465d50492799b69c"/>
+</record_update>

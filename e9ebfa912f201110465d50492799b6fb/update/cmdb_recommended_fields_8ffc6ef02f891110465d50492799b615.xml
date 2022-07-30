@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="cmdb_recommended_fields">
+    <cmdb_recommended_fields action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <recommended>u_actors,year,u_title,u_rating,u_genre,u_directors,u_poster,u_plot,u_release_date,u_metascore</recommended>
+        <sys_class_name>cmdb_recommended_fields</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 05:28:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8ffc6ef02f891110465d50492799b615</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_809069_bbuster_u_cmdb_ci_movie</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>cmdb_recommended_fields_8ffc6ef02f891110465d50492799b615</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 05:28:13</sys_updated_on>
+        <table>x_809069_bbuster_u_cmdb_ci_movie</table>
+    </cmdb_recommended_fields>
+</record_update>

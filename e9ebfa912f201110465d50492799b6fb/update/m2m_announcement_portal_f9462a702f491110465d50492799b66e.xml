@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_announcement_portal">
+    <m2m_announcement_portal action="INSERT_OR_UPDATE">
+        <announcement display_value="BlockBuster Stock Price">0fb1e6b82f491110465d50492799b69c</announcement>
+        <order>100</order>
+        <sp_portal display_value="BlockBuster">48b003192f201110465d50492799b6c8</sp_portal>
+        <sys_class_name>m2m_announcement_portal</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 05:23:17</sys_created_on>
+        <sys_id>f9462a702f491110465d50492799b66e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlockBuster Stock Price.BlockBuster</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>m2m_announcement_portal_f9462a702f491110465d50492799b66e</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 05:23:17</sys_updated_on>
+    </m2m_announcement_portal>
+</record_update>
