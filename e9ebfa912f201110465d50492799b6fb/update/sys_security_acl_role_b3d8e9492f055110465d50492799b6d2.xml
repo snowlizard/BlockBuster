@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 19:09:07</sys_created_on>
+        <sys_id>b3d8e9492f055110465d50492799b6d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_809069_bbuster_movie_requests.x_809069_bbuster.movie_requests_user</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_security_acl display_value="x_809069_bbuster_movie_requests">bbd8e9492f055110465d50492799b6cf</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b3d8e9492f055110465d50492799b6d2</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 19:09:07</sys_updated_on>
+        <sys_user_role display_value="x_809069_bbuster.movie_requests_user" name="x_809069_bbuster.movie_requests_user">e3d829092f055110465d50492799b618</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
