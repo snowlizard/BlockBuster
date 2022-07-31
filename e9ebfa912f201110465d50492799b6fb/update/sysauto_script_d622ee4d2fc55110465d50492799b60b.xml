@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 06:00:00</entered_time>
+        <name>new movies requested</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="Julian Gonzalez">2aaafe512f201110465d50492799b61d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2022-07-30 23:19:25</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var gr = new GlideRecord('x_809069_bbuster_movie_requests');
+gr.addEncodedQuery('sys_created_on<javascript:gs.beginningOfToday()');
+gr.query();
+
+if (gr.next()) {
+    gs.eventQueue('x_809069_bbuster.movies.newRequest', "", "");
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 23:45:03</sys_created_on>
+        <sys_id>d622ee4d2fc55110465d50492799b60b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>new movies requested</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sysauto_script_d622ee4d2fc55110465d50492799b60b</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-31 04:08:20</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

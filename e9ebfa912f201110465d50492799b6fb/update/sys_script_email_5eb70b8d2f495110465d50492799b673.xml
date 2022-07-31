@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>newMoviesRequested</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+	
+	var records = [];
+	
+	var gUser = new GlideRecord('sys_user');
+    var gr = new GlideRecord('x_809069_bbuster_movie_requests');
+    gr.addEncodedQuery('sys_created_on<javascript:gs.beginningOfToday()');
+    gr.query();
+	
+	while(gr.next()){
+		var obj = {};
+		obj.title = gr.getValue('title');
+		obj.comment = gr.getValue('comment');
+		obj.requestor = gr.getValue('requested_by');
+		records.push(obj);
+	}
+	
+	template.print('<table style="background:#ea6153;color:white;width:100%;">');
+	template.print('<thead><tr><th>Title</th><th>Requested by</th><th>Comment</th></tr></thead>');
+	records.forEach(function(record){
+		gUser.get(record.requestor);
+		template.print('<tr style="background:white;color:#2b2b2b;">');
+		template.print('<td style="padding:5px;">'+record.title+'</td>');
+		template.print('<td style="padding:5px;">'+gUser.name+'</td>');
+		template.print('<td style="padding:5px;">'+record.comment+'</td>');
+		template.print('</tr>');
+	});
+	template.print('</table>');
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-31 02:04:21</sys_created_on>
+        <sys_id>5eb70b8d2f495110465d50492799b673</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>newMoviesRequested</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_script_email_5eb70b8d2f495110465d50492799b673</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-31 03:00:57</sys_updated_on>
+    </sys_script_email>
+</record_update>
