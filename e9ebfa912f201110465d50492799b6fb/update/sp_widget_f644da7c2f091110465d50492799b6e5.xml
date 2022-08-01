@@ -22,12 +22,12 @@
 	
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>.panel-heading{
-	background: #ffa903;
+        <css>.panel-main{
+	border-color: #36454F;
 }
 
-.panel-main{
-	border-color: #36454F;
+.panel-heading{
+	background: #ffa903;
 }
 
 .item{
@@ -74,20 +74,20 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-30 03:40:21</sys_created_on>
         <sys_id>f644da7c2f091110465d50492799b6e5</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>86</sys_mod_count>
         <sys_name>User Records List</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_f644da7c2f091110465d50492799b6e5</sys_update_name>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-30 22:17:54</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 19:10:31</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default panel-main">
   <div class="panel-heading">
     {{c.title}}
   </div>
   
-	<ul class="list-group">
+  <ul class="list-group">
     <li class="list-group-item item"
         ng-repeat="record in c.records"
         ng-click="c.recordForm(record)">

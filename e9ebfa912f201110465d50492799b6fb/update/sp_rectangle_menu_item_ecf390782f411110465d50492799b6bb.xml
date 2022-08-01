@@ -25,16 +25,16 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 18:20:00</sys_created_on>
         <sys_id>ecf390782f411110465d50492799b6bb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>FAQ</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_rectangle_menu_item_ecf390782f411110465d50492799b6bb</sys_update_name>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-30 05:58:55</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 18:42:06</sys_updated_on>
         <table/>
-        <type>kb</type>
+        <type>page</type>
         <url/>
         <url_target/>
     </sp_rectangle_menu_item>
