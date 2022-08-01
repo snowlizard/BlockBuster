@@ -11,7 +11,7 @@
         <copied_from_name/>
         <description>Flow for processing movie rentals</description>
         <internal_name>movie_rental_process</internal_name>
-        <label_cache>[{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.table_name","label":"2 - Create Record➛Rental History Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.record","label":"2 - Create Record➛Rental History Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.sys_id","label":"1➛renter➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"Service Catalog_1.request_item.requested_for.sys_id","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.table_name","label":"2 - Create Record➛x_809069_bbuster_rental_history Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.record","label":"2 - Create Record➛x_809069_bbuster_rental_history Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_address","label":"1 - Get Catalog Variables➛delivery_address","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_type","label":"1 - Get Catalog Variables➛delivery_type","reference":"","reference_display":"delivery_type","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":100.0},{"label":"In store pick up","value":"in_store","order":100.0},{"label":"Home Delivery","value":"home_delivery","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent","label":"1 - Get Catalog Variables➛select_movies_to_rent","reference":"x_809069_bbuster_u_cmdb_ci_movie","reference_display":"Movie","type":"glide_list","base_type":"glide_list","attributes":{"catalogType":"21","catalogTypeLabel":"List Collector"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter","label":"1 - Get Catalog Variables➛renter","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.user_name","label":"1➛renter➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.name","label":"1 - Get Catalog Variables➛renter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.state","label":"2 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__action_status__","label":"2 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__dont_treat_as_error__","label":"2 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}}]</label_cache>
+        <label_cache>[{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__dont_treat_as_error__","label":"2 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__action_status__","label":"2 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.state","label":"2 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.name","label":"1 - Get Catalog Variables➛renter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.user_name","label":"1➛renter➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter","label":"1 - Get Catalog Variables➛renter","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent","label":"1 - Get Catalog Variables➛select_movies_to_rent","reference":"x_809069_bbuster_u_cmdb_ci_movie","reference_display":"Movie","type":"glide_list","base_type":"glide_list","attributes":{"catalogType":"21","catalogTypeLabel":"List Collector"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_type","label":"1 - Get Catalog Variables➛delivery_type","reference":"","reference_display":"delivery_type","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":100.0},{"label":"In store pick up","value":"in_store","order":100.0},{"label":"Home Delivery","value":"home_delivery","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_address","label":"1 - Get Catalog Variables➛delivery_address","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.record","label":"2 - Create Record➛x_809069_bbuster_rental_history Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.table_name","label":"2 - Create Record➛x_809069_bbuster_rental_history Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"Service Catalog_1.request_item.requested_for.sys_id","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.sys_id","label":"1➛renter➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.record","label":"2 - Create Record➛Rental History Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.table_name","label":"2 - Create Record➛Rental History Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
         <master_snapshot>3bd536152fc59110465d50492799b651</master_snapshot>
         <name>movie rental process</name>
         <natlang/>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c9e6ece42f451110465d50492799b64c</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>movie rental process</sys_name>
         <sys_overrides/>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
@@ -37,7 +37,7 @@
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_hub_flow_c9e6ece42f451110465d50492799b64c</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=c9e6ece42f451110465d50492799b64c"/>
@@ -46,18 +46,18 @@
         <active>true</active>
         <catalog_item/>
         <name/>
-        <run_flow_in>background</run_flow_in>
+        <run_flow_in/>
         <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:06</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8de536152fc59110465d50492799b6f0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
     </sys_flow_catalog_trigger>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=c9e6ece42f451110465d50492799b64c"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=c9e6ece42f451110465d50492799b64c^sys_idNOT IN7b0fa4ec2f451110465d50492799b61c"/>
@@ -70,10 +70,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 01:39:34</sys_created_on>
         <sys_id>7b0fa4ec2f451110465d50492799b61c</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -157,14 +157,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 01:39:34</sys_created_on>
         <sys_id>6f0f20282f451110465d50492799b66f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -238,14 +238,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 01:39:34</sys_created_on>
         <sys_id>6f0fa4ec2f451110465d50492799b615</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -275,10 +275,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:21:03</sys_created_on>
         <sys_id>1c35b6d12fc59110465d50492799b675</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <ui_id>99c3aafa-df27-454e-85eb-c18b322fef6b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1c35b6d12fc59110465d50492799b675"/>
@@ -364,10 +364,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 01:39:34</sys_created_on>
         <sys_id>330fa4ec2f451110465d50492799b622</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <ui_id>532f7c50-f50e-4efb-a516-a2d99cc1ecb3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=330fa4ec2f451110465d50492799b622"/>
@@ -453,10 +453,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 18:58:50</sys_created_on>
         <sys_id>cb103a9d2f859110465d50492799b66f</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <ui_id>160dca3a-26a6-4fa7-826c-62b9c3d0bcd0</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cb103a9d2f859110465d50492799b66f"/>
@@ -493,11 +493,11 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 18:58:50</sys_created_on>
         <sys_id>43103a9d2f859110465d50492799b672</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:18:10</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:16:44</sys_updated_on>
         <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
-        <value>movies={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent}}^state=1^rental_date=fd-scripted^short_description={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.name}} has requested the following movies to be added to the movie catalog.^assignment_group={"display":"BlockBuster ITIL","value":"efa80bcd2f495110465d50492799b6f0"}</value>
+        <value>movies={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent}}^state=1^rental_date=fd-scripted^assignment_group={"display":"BlockBuster ITIL","value":"efa80bcd2f495110465d50492799b6f0"}^user={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter}}</value>
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=cb103a9d2f859110465d50492799b66f^sys_idNOT IN8f103a9d2f859110465d50492799b670"/>
     <sys_hub_input_scripts action="INSERT_OR_UPDATE">
@@ -598,7 +598,7 @@
         <copied_from_name/>
         <description>Flow for processing movie rentals</description>
         <internal_name>movie_rental_process</internal_name>
-        <label_cache>[{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.table_name","label":"2 - Create Record➛Rental History Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.record","label":"2 - Create Record➛Rental History Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.sys_id","label":"1➛renter➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"Service Catalog_1.request_item.requested_for.sys_id","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.table_name","label":"2 - Create Record➛x_809069_bbuster_rental_history Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.record","label":"2 - Create Record➛x_809069_bbuster_rental_history Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_address","label":"1 - Get Catalog Variables➛delivery_address","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_type","label":"1 - Get Catalog Variables➛delivery_type","reference":"","reference_display":"delivery_type","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":100.0},{"label":"In store pick up","value":"in_store","order":100.0},{"label":"Home Delivery","value":"home_delivery","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent","label":"1 - Get Catalog Variables➛select_movies_to_rent","reference":"x_809069_bbuster_u_cmdb_ci_movie","reference_display":"Movie","type":"glide_list","base_type":"glide_list","attributes":{"catalogType":"21","catalogTypeLabel":"List Collector"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter","label":"1 - Get Catalog Variables➛renter","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.user_name","label":"1➛renter➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.name","label":"1 - Get Catalog Variables➛renter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.state","label":"2 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__action_status__","label":"2 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__dont_treat_as_error__","label":"2 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}}]</label_cache>
+        <label_cache>[{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"fc930cbc-d9f3-4184-b3bc-cf0fd9bb398a.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__dont_treat_as_error__","label":"2 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.__action_status__","label":"2 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3a5d9070-a879-4935-83e8-fcae94771cc2.state","label":"2 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.name","label":"1 - Get Catalog Variables➛renter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.user_name","label":"1➛renter➛User ID","reference":"","reference_display":"User ID","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"user_name"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter","label":"1 - Get Catalog Variables➛renter","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent","label":"1 - Get Catalog Variables➛select_movies_to_rent","reference":"x_809069_bbuster_u_cmdb_ci_movie","reference_display":"Movie","type":"glide_list","base_type":"glide_list","attributes":{"catalogType":"21","catalogTypeLabel":"List Collector"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_type","label":"1 - Get Catalog Variables➛delivery_type","reference":"","reference_display":"delivery_type","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":100.0},{"label":"In store pick up","value":"in_store","order":100.0},{"label":"Home Delivery","value":"home_delivery","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.delivery_address","label":"1 - Get Catalog Variables➛delivery_address","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.record","label":"2 - Create Record➛x_809069_bbuster_rental_history Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.table_name","label":"2 - Create Record➛x_809069_bbuster_rental_history Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cac7a221-beb9-49d1-a795-3c042230f039.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"Service Catalog_1.request_item.requested_for.sys_id","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.sys_id","label":"1➛renter➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_user","column_name":"sys_id"},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.record","label":"2 - Create Record➛Rental History Record","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.table_name","label":"2 - Create Record➛Rental History Table","reference":"x_809069_bbuster_rental_history","reference_display":"Rental History","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__action_status__","label":"2 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160dca3a-26a6-4fa7-826c-62b9c3d0bcd0.__dont_treat_as_error__","label":"2 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.state","label":"3 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__action_status__","label":"3 - Wait For Condition➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"99c3aafa-df27-454e-85eb-c18b322fef6b.__dont_treat_as_error__","label":"3 - Wait For Condition➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
         <master>true</master>
         <name>movie rental process</name>
         <natlang/>
@@ -615,7 +615,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3bd536152fc59110465d50492799b651</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -623,7 +623,7 @@
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:01</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=3bd536152fc59110465d50492799b651"/>
@@ -638,10 +638,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:04</sys_created_on>
         <sys_id>a0e536152fc59110465d50492799b6ca</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:06</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:06</sys_updated_on>
         <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -667,7 +667,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -725,14 +725,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:03</sys_created_on>
         <sys_id>90e536152fc59110465d50492799b674</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:03</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -748,7 +748,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -790,7 +790,7 @@
         <next_element/>
         <order>100</order>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -806,14 +806,14 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:01</sys_created_on>
         <sys_id>bfd536152fc59110465d50492799b653</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name/>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:02</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -843,10 +843,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:04</sys_created_on>
         <sys_id>28e536152fc59110465d50492799b6a9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:04</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <ui_id>532f7c50-f50e-4efb-a516-a2d99cc1ecb3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=28e536152fc59110465d50492799b6a9"/>
@@ -932,10 +932,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:04</sys_created_on>
         <sys_id>6ce536152fc59110465d50492799b6b1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:04</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <ui_id>160dca3a-26a6-4fa7-826c-62b9c3d0bcd0</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6ce536152fc59110465d50492799b6b1"/>
@@ -972,11 +972,11 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:04</sys_created_on>
         <sys_id>a8e536152fc59110465d50492799b6b3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:04</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
-        <value>movies={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent}}^state=1^rental_date=fd-scripted^short_description={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter.name}} has requested the following movies to be added to the movie catalog.^assignment_group={"display":"BlockBuster ITIL","value":"efa80bcd2f495110465d50492799b6f0"}</value>
+        <value>movies={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.select_movies_to_rent}}^state=1^rental_date=fd-scripted^assignment_group={"display":"BlockBuster ITIL","value":"efa80bcd2f495110465d50492799b6f0"}^user={{532f7c50-f50e-4efb-a516-a2d99cc1ecb3.renter}}</value>
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=6ce536152fc59110465d50492799b6b1^sys_idNOT INe8e536152fc59110465d50492799b6b2"/>
     <sys_hub_input_scripts action="INSERT_OR_UPDATE">
@@ -1008,10 +1008,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:04</sys_created_on>
         <sys_id>a4e536152fc59110465d50492799b6c7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-31 19:24:04</sys_updated_on>
+        <sys_updated_on>2022-08-01 04:20:04</sys_updated_on>
         <ui_id>99c3aafa-df27-454e-85eb-c18b322fef6b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a4e536152fc59110465d50492799b6c7"/>
