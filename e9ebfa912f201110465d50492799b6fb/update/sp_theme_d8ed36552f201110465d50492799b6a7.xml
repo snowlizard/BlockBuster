@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
     <sp_theme action="INSERT_OR_UPDATE">
-        <css_variables>$bbuster-blue: #1030AD;&#13;
-$bbuster-orange: #ffa903;&#13;
-$white: #FFFFFF;</css_variables>
+        <css_variables>$bbuster-blue: #1030AD !default;&#13;
+$bbuster-orange: #ffa903 !default;&#13;
+$white: #FFFFFF !default;&#13;
+$border-bg: #36454F !default;</css_variables>
         <footer/>
         <footer_fixed>false</footer_fixed>
         <header display_value="BlockBuster Header">ea46ad402f011110465d50492799b61e</header>
@@ -12,13 +13,13 @@ $white: #FFFFFF;</css_variables>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-06 23:27:48</sys_created_on>
         <sys_id>d8ed36552f201110465d50492799b6a7</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>BlockBuster</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_theme_d8ed36552f201110465d50492799b6a7</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-27 16:25:51</sys_updated_on>
+        <sys_updated_on>2022-08-03 17:03:07</sys_updated_on>
     </sp_theme>
 </record_update>
