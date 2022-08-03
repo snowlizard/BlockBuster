@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="DELETE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>shopping-cart</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Cart</label>
+        <order>150</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="bbuster_cart">0ae87ded2f301110465d50492799b606</sp_page>
+        <sp_rectangle_menu display_value="BlockBuster Menu">bd81f9292f301110465d50492799b675</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-19 23:15:02</sys_created_on>
+        <sys_id>3d8735ad2f301110465d50492799b6ac</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Cart</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_3d8735ad2f301110465d50492799b6ac</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 19:38:33</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="DELETE" query="documentkey=3d8735ad2f301110465d50492799b6ac"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>b723b1c0dbb11bc0cbf6d5b0cf961909</instance_id>
+        <instance_name>dev57370</instance_name>
+        <name>sp_rectangle_menu_item_3d8735ad2f301110465d50492799b6ac</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item"><sp_rectangle_menu_item action="INSERT_OR_UPDATE"><active>true</active><color>default</color><condition/><display_1/><display_2/><display_date/><filter/><glyph>shopping-cart</glyph><hint/><kb_article/><kb_category/><kb_topic/><label>Cart</label><order>150</order><record_script/><sc_cat_item/><sc_category/><short_description/><sp_page display_value="bbuster_cart">0ae87ded2f301110465d50492799b606</sp_page><sp_rectangle_menu display_value="BlockBuster Menu">bd81f9292f301110465d50492799b675</sp_rectangle_menu><sp_rectangle_menu_item/><sys_class_name>sp_rectangle_menu_item</sys_class_name><sys_created_by>jgonzalez</sys_created_by><sys_created_on>2022-07-19 23:15:02</sys_created_on><sys_id>3d8735ad2f301110465d50492799b6ac</sys_id><sys_mod_count>4</sys_mod_count><sys_name>Cart</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sp_rectangle_menu_item_3d8735ad2f301110465d50492799b6ac</sys_update_name><sys_updated_by>jgonzalez</sys_updated_by><sys_updated_on>2022-07-29 19:38:33</sys_updated_on><table/><type>page</type><url/><url_target/></sp_rectangle_menu_item><sys_translated_text action="delete_multiple" query="documentkey=3d8735ad2f301110465d50492799b6ac"/></record_update>]]></payload>
+        <payload_hash>893560502</payload_hash>
+        <record_name>Cart</record_name>
+        <reverted_from/>
+        <source>7b09fce42f851110465d50492799b693</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 19:38:33</sys_created_on>
+        <sys_id>0106a0b82f811110465d50492799b605</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1824b77b7370000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 19:38:33</sys_updated_on>
+        <type>Menu Item</type>
+        <update_guid>4906a0b834811110ad3698191b5e3404</update_guid>
+        <update_guid_history>4906a0b834811110ad3698191b5e3404:893560502,76ef75a5e870111034aac0ed7ca76a85:-1567348901,81a8b1ed5a301110bd6fe7555eea16f6:488644222,0cf77dad24301110e7dee22825fb3bd2:-25118744,83a7f5ad803011106af4491f26e91a9e:-1533589483</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Cart">7a99fd1e2f011110465d50492799b6a3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-03 17:34:38</sys_created_on>
+        <sys_db_object display_value="" name="sp_rectangle_menu_item">sp_rectangle_menu_item</sys_db_object>
+        <sys_id>37d59dbbe24543249a340597a5b2e5e9</sys_id>
+        <sys_metadata>3d8735ad2f301110465d50492799b6ac</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cart</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_rectangle_menu_item_3d8735ad2f301110465d50492799b6ac</sys_update_name>
+        <sys_update_version display_value="sp_rectangle_menu_item_3d8735ad2f301110465d50492799b6ac">0106a0b82f811110465d50492799b605</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-03 17:34:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
