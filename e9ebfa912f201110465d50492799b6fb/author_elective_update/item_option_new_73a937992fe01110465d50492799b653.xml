@@ -156,7 +156,7 @@
         <update_guid_history>f7b93bd964e01110c744d39beded5190:-1135913773</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Directors">20c4dd402f341110465d50492799b6dc</sys_audit_delete>
+        <sys_audit_delete display_value="">20c4dd402f341110465d50492799b6dc</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-15 04:51:37</sys_created_on>

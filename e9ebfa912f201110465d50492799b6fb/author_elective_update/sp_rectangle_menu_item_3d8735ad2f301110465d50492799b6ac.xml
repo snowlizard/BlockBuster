@@ -65,7 +65,7 @@
         <update_guid_history>4906a0b834811110ad3698191b5e3404:893560502,76ef75a5e870111034aac0ed7ca76a85:-1567348901,81a8b1ed5a301110bd6fe7555eea16f6:488644222,0cf77dad24301110e7dee22825fb3bd2:-25118744,83a7f5ad803011106af4491f26e91a9e:-1533589483</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Cart">7a99fd1e2f011110465d50492799b6a3</sys_audit_delete>
+        <sys_audit_delete display_value="">7a99fd1e2f011110465d50492799b6a3</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-08-03 17:34:38</sys_created_on>

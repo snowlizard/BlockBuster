@@ -41,7 +41,7 @@
         <update_guid_history>88d9062147b01110357b0ac5d2c95d9f:-1456108403</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Hardware Asset.Rent Movie(s)">790005b02f051110465d50492799b6c7</sys_audit_delete>
+        <sys_audit_delete display_value="">790005b02f051110465d50492799b6c7</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 21:32:11</sys_created_on>

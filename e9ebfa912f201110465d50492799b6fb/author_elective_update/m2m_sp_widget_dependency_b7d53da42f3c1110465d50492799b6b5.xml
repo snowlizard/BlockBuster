@@ -41,7 +41,7 @@
         <update_guid_history>77d53da45b3c11108066d05411a52cb7:184092583</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="movieModal.Movie list">a4f57da42f3c1110465d50492799b6dd</sys_audit_delete>
+        <sys_audit_delete display_value="">a4f57da42f3c1110465d50492799b6dd</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-16 20:33:35</sys_created_on>

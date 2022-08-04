@@ -51,7 +51,7 @@
         <update_guid_history>a6e0c9ecb18511107feae69375e1adfe:157999808,65c049ec738511108088603bb849e36c:-969221760</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="User Profile - Container 1">a63101202fc51110465d50492799b6bd</sys_audit_delete>
+        <sys_audit_delete display_value="">a63101202fc51110465d50492799b6bd</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 02:58:57</sys_created_on>

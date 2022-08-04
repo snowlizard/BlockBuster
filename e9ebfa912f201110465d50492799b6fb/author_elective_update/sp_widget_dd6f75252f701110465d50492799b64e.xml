@@ -1837,7 +1837,7 @@ function isCartValid(cart) {
         <update_guid_history>f864ce29e2701110b7e92c8ec6d84cae:-2124374382,3404c6a56d701110d63097cfc9604006:-647900141,8dc34e69db701110f99a84e6abdb1fda:-2124374382,31030ea5447011106ba9324faa6fb18e:-2088401485,52b2cee56f70111086ba415a69595776:233095414,46a24e2995701110c69e35c248d65ff8:677610679,bd72cee5707011105fadd1a3b388d784:-2088401485,ab810ea5b87011100ea49ddfb24fff69:-255778827,c1610ee59e701110f0bc13ac87b28e20:233095414,655186a58e7011104af051759b6d0be1:-255778827,156f7525b8701110090751f02868a350:2064305019</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="BlackBuster Cart">d3740aa92f701110465d50492799b641</sys_audit_delete>
+        <sys_audit_delete display_value="">d3740aa92f701110465d50492799b641</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-20 00:11:03</sys_created_on>

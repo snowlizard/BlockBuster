@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>5041e8b02f811110465d50492799b680</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="kb_knowledge"&gt;
+    &lt;kb_knowledge action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article_type&gt;wiki&lt;/article_type&gt;
+        &lt;author display_value="Julian Gonzalez"&gt;2aaafe512f201110465d50492799b61d&lt;/author&gt;
+        &lt;can_read_user_criteria/&gt;
+        &lt;cannot_read_user_criteria/&gt;
+        &lt;category/&gt;
+        &lt;cmdb_ci/&gt;
+        &lt;description/&gt;
+        &lt;direct&gt;false&lt;/direct&gt;
+        &lt;disable_commenting&gt;false&lt;/disable_commenting&gt;
+        &lt;disable_suggesting&gt;false&lt;/disable_suggesting&gt;
+        &lt;display_attachments&gt;false&lt;/display_attachments&gt;
+        &lt;flagged&gt;false&lt;/flagged&gt;
+        &lt;helpful_count&gt;0&lt;/helpful_count&gt;
+        &lt;image/&gt;
+        &lt;kb_category display_value="About film"&gt;4ea2e8b42f811110465d50492799b67e&lt;/kb_category&gt;
+        &lt;kb_knowledge_base display_value="BlockBuster KB"&gt;1a3064342f811110465d50492799b6ad&lt;/kb_knowledge_base&gt;
+        &lt;meta/&gt;
+        &lt;meta_description&gt;Horror is a genre of speculative fiction which is intended to frighten, scare, or disgust.[1] Literary&lt;/meta_description&gt;
+        &lt;number&gt;KB0010002&lt;/number&gt;
+        &lt;published&gt;2022-07-29&lt;/published&gt;
+        &lt;rating/&gt;
+        &lt;retired/&gt;
+        &lt;roles/&gt;
+        &lt;short_description&gt;Horror fiction&lt;/short_description&gt;
+        &lt;source/&gt;
+        &lt;sys_class_name&gt;kb_knowledge&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2022-07-29 19:19:10&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;5041e8b02f811110465d50492799b680&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2022-07-29 19:25:36&lt;/sys_updated_on&gt;
+        &lt;sys_view_count&gt;0&lt;/sys_view_count&gt;
+        &lt;taxonomy_topic/&gt;
+        &lt;text&gt;&lt;![CDATA[&lt;p&gt;&lt;strong&gt;Horror&lt;/strong&gt; is a &lt;a title="Genre" href="https://en.wikipedia.org/wiki/Genre" rel="nofollow"&gt;genre&lt;/a&gt; of &lt;a title="Speculative fiction" href="https://en.wikipedia.org/wiki/Speculative_fiction" rel="nofollow"&gt;speculative fiction&lt;/a&gt; which is intended to frighten, scare, or disgust.&lt;sup id="cite_ref-1"&gt;&lt;a href="https://en.wikipedia.org/wiki/Horror_fiction#cite_note-1" rel="nofollow"&gt;[1]&lt;/a&gt;&lt;/sup&gt; Literary historian &lt;a title="J. A. Cuddon" href="https://en.wikipedia.org/wiki/J._A._Cuddon" rel="nofollow"&gt;J. A. Cuddon&lt;/a&gt; defined the horror story as &amp;#34;a piece of fiction in prose of variable length... which shocks, or even frightens the reader, or perhaps induces a feeling of repulsion or loathing&amp;#34;.&lt;sup id="cite_ref-2"&gt;&lt;a href="https://en.wikipedia.org/wiki/Horror_fiction#cite_note-2" rel="nofollow"&gt;[2]&lt;/a&gt;&lt;/sup&gt; Horror intends to create an eerie and frightening atmosphere for the reader. Horror is often divided into the psychological horror and supernatural horror sub-genres. Often the central menace of a work of horror fiction can be interpreted as a &lt;a title="Metaphor" href="https://en.wikipedia.org/wiki/Metaphor" rel="nofollow"&gt;metaphor&lt;/a&gt; for larger fears of a society. Prevalent elements include &lt;a title="Ghost" href="https://en.wikipedia.org/wiki/Ghost" rel="nofollow"&gt;ghosts&lt;/a&gt;, &lt;a title="Demon" href="https://en.wikipedia.org/wiki/Demon" rel="nofollow"&gt;demons&lt;/a&gt;, &lt;a title="Vampire" href="https://en.wikipedia.org/wiki/Vampire" rel="nofollow"&gt;vampires&lt;/a&gt;, &lt;a title="Werewolf" href="https://en.wikipedia.org/wiki/Werewolf" rel="nofollow"&gt;werewolves&lt;/a&gt;, &lt;a title="Ghoul" href="https://en.wikipedia.org/wiki/Ghoul" rel="nofollow"&gt;ghouls&lt;/a&gt;, &lt;a title="Devil" href="https://en.wikipedia.org/wiki/Devil" rel="nofollow"&gt;the Devil&lt;/a&gt;, &lt;a title="Witch" href="https://en.wikipedia.org/wiki/Witch" rel="nofollow"&gt;witches&lt;/a&gt;, &lt;a title="Monster" href="https://en.wikipedia.org/wiki/Monster" rel="nofollow"&gt;monsters&lt;/a&gt;, &lt;a title="Extraterrestrials" href="https://en.wikipedia.org/wiki/Extraterrestrials" rel="nofollow"&gt;extraterrestrials&lt;/a&gt;, &lt;a title="Dystopia" href="https://en.wikipedia.org/wiki/Dystopia" rel="nofollow"&gt;dystopian&lt;/a&gt; and &lt;a title="Post-apocalyptic" href="https://en.wikipedia.org/wiki/Post-apocalyptic" rel="nofollow"&gt;post-apocalyptic&lt;/a&gt; worlds, &lt;a title="Serial killer" href="https://en.wikipedia.org/wiki/Serial_killer" rel="nofollow"&gt;serial killers&lt;/a&gt;, &lt;a title="Cannibalism" href="https://en.wikipedia.org/wiki/Cannibalism" rel="nofollow"&gt;cannibalism&lt;/a&gt;, &lt;a title="Psychopath" href="https://en.wikipedia.org/wiki/Psychopath" rel="nofollow"&gt;psychopaths&lt;/a&gt;, &lt;a title="Cult" href="https://en.wikipedia.org/wiki/Cult" rel="nofollow"&gt;cults&lt;/a&gt;, &lt;a title="Dark magic" href="https://en.wikipedia.org/wiki/Dark_magic" rel="nofollow"&gt;dark magic&lt;/a&gt;, &lt;a title="Satanism" href="https://en.wikipedia.org/wiki/Satanism" rel="nofollow"&gt;satanism&lt;/a&gt;, &lt;a title="Macabre" href="https://en.wikipedia.org/wiki/Macabre" rel="nofollow"&gt;the macabre&lt;/a&gt;, &lt;a title="Graphic violence" href="https://en.wikipedia.org/wiki/Graphic_violence" rel="nofollow"&gt;gore&lt;/a&gt; and &lt;a title="Torture" href="https://en.wikipedia.org/wiki/Torture" rel="nofollow"&gt;torture&lt;/a&gt;.&lt;/p&gt;
+&lt;div id="toc"&gt;&lt;input id="toctogglecheckbox" type="checkbox" /&gt;
+&lt;div&gt;
+&lt;h2 id="mw-toc-heading"&gt; &lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/text&gt;
+        &lt;topic&gt;General&lt;/topic&gt;
+        &lt;use_count&gt;0&lt;/use_count&gt;
+        &lt;valid_to&gt;2100-01-01&lt;/valid_to&gt;
+        &lt;wiki&gt;Horror is a genre of speculative fiction which is intended to frighten, scare, or disgust.[1] Literary historian J. A. Cuddon defined the horror story as "a piece of fiction in prose of variable length... which shocks, or even frightens the reader, or perhaps induces a feeling of repulsion or loathing".[2] Horror intends to create an eerie and frightening atmosphere for the reader. Horror is often divided into the psychological horror and supernatural horror sub-genres. Often the central menace of a work of horror fiction can be interpreted as a metaphor for larger fears of a society. Prevalent elements include ghosts, demons, vampires, werewolves, ghouls, the Devil, witches, monsters, extraterrestrials, dystopian and post-apocalyptic worlds, serial killers, cannibalism, psychopaths, cults, dark magic, satanism, the macabre, gore and torture.
+&lt;/wiki&gt;
+        &lt;workflow_state&gt;published&lt;/workflow_state&gt;
+    &lt;/kb_knowledge&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=5041e8b02f811110465d50492799b680"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 17:12:03</sys_created_on>
+        <sys_id>790ebae21b89d11070eca9b4bd4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010002</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_metadata_link_790ebae21b89d11070eca9b4bd4bcbe2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 17:12:03</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

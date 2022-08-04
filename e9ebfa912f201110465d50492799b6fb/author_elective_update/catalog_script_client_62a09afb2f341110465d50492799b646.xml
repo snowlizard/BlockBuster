@@ -117,7 +117,7 @@
         <update_guid_history>34025e3f22341110b64adef8e2a5848f:335503973,2331de3f48341110a34cca4f9c5db6ec:409465950,e6a0563f97341110395d2568360e2bfd:827073534</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="movie rental limit per rental period">33035ebf2f341110465d50492799b67c</sys_audit_delete>
+        <sys_audit_delete display_value="">33035ebf2f341110465d50492799b67c</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-27 01:01:02</sys_created_on>

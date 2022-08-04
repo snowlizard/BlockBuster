@@ -156,7 +156,7 @@
         <update_guid_history>39a9fbd953e0111049ade201c99a5afe:-564077238</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Actors">54c4dd402f341110465d50492799b6b0</sys_audit_delete>
+        <sys_audit_delete display_value="">54c4dd402f341110465d50492799b6b0</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-15 04:51:36</sys_created_on>

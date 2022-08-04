@@ -156,7 +156,7 @@
         <update_guid_history>6569f7d998e01110e765a127605a3fec:-1471024496,ff59f7d9c5e0111065c52ea9d17c6787:1367457387</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Rating">ccc4dd402f341110465d50492799b682</sys_audit_delete>
+        <sys_audit_delete display_value="">ccc4dd402f341110465d50492799b682</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-15 04:51:35</sys_created_on>

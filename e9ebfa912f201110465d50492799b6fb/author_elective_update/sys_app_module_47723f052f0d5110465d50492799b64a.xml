@@ -65,7 +65,7 @@
         <update_guid_history>8f723f05f30d511019fbd2791087d14c:-1177685976</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Rental Histories">3ea1cc152f4d5110465d50492799b60b</sys_audit_delete>
+        <sys_audit_delete display_value="">3ea1cc152f4d5110465d50492799b60b</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 06:16:42</sys_created_on>

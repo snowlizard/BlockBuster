@@ -51,7 +51,7 @@
         <update_guid_history>e1e1cad677601110c5e42d80ba0357fd:1287022015,e9018296e760111043a7a334691db01c:1087032028,fee04696696011107178379337c50898:1630728982,37b00296956011108f5a197854983509:1955199609,60604696ca6011108ee1fd82ed99ad7d:1588836142,5d40c256f4601110e9a61b0d6d8e67c9:290726644,3a0a687df6a01110fd5c61283a4bac12:700554123</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Index - Container 1">4f76321b2f241110465d50492799b67d</sys_audit_delete>
+        <sys_audit_delete display_value="">4f76321b2f241110465d50492799b67d</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-13 04:03:10</sys_created_on>

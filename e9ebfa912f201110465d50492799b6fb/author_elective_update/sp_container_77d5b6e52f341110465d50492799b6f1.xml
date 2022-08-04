@@ -51,7 +51,7 @@
         <update_guid_history>7fd5b6e538341110a1cecbcd4222fef2:1603480998</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="BlockBuster Cart - Container 1">a1067ae52f341110465d50492799b6ba</sys_audit_delete>
+        <sys_audit_delete display_value="">a1067ae52f341110465d50492799b6ba</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-20 03:47:28</sys_created_on>

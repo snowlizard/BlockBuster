@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>47d1a4342f811110465d50492799b603</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_knowledge">
+    <kb_knowledge action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article_type>wiki</article_type>
+        <author display_value="Julian Gonzalez">2aaafe512f201110465d50492799b61d</author>
+        <can_read_user_criteria/>
+        <cannot_read_user_criteria/>
+        <category/>
+        <cmdb_ci/>
+        <description/>
+        <direct>false</direct>
+        <disable_commenting>false</disable_commenting>
+        <disable_suggesting>false</disable_suggesting>
+        <display_attachments>false</display_attachments>
+        <flagged>false</flagged>
+        <helpful_count>0</helpful_count>
+        <image/>
+        <kb_category display_value="About film">4ea2e8b42f811110465d50492799b67e</kb_category>
+        <kb_knowledge_base display_value="BlockBuster KB">1a3064342f811110465d50492799b6ad</kb_knowledge_base>
+        <meta/>
+        <meta_description>Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing</meta_description>
+        <number>KB0010004</number>
+        <published>2022-07-29</published>
+        <rating/>
+        <retired/>
+        <roles/>
+        <short_description>Comedy</short_description>
+        <source/>
+        <sys_class_name>kb_knowledge</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 19:20:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>47d1a4342f811110465d50492799b603</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 19:25:10</sys_updated_on>
+        <sys_view_count>1</sys_view_count>
+        <taxonomy_topic/>
+        <text/>
+        <topic>General</topic>
+        <use_count>0</use_count>
+        <valid_to>2100-01-01</valid_to>
+        <wiki>Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters.[1] The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a "Society of Youth" and a "Society of the Old".[2] A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter.[3]
+
+Satire and political satire use comedy to portray people or social institutions as ridiculous or corrupt, thus alienating their audience from the object of their humor. Parody subverts popular genres and forms, critiquing those forms without necessarily condemning them.
+
+Other forms of comedy include screwball comedy, which derives its humor largely from bizarre, surprising (and improbable) situations or characters, and black comedy, which is characterized by a form of humor that includes darker aspects of human behavior or human nature. Similarly scatological humor, sexual humor, and race humor create comedy by violating social conventions or taboos in comic ways, which can often be taken as offensive by the subjects of said joke. A comedy of manners typically takes as its subject a particular part of society (usually upper-class society) and uses humor to parody or satirize the behavior and mannerisms of its members. Romantic comedy is a popular genre that depicts burgeoning romance in humorous terms and focuses on the foibles of those who are falling in love. </wiki>
+        <workflow_state>published</workflow_state>
+    </kb_knowledge>
+    <sys_translated_text action="delete_multiple" query="documentkey=47d1a4342f811110465d50492799b603"/>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 17:12:03</sys_created_on>
+        <sys_id>750e32e21b89d11070eca9b4bd4bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010004</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_metadata_link_750e32e21b89d11070eca9b4bd4bcb55</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 17:12:03</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

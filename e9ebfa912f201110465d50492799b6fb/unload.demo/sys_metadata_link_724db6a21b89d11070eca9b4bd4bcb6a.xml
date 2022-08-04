@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>c148f8341bcd151070eca9b4bd4bcbc7</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="x_809069_bbuster_u_cmdb_ci_movie">
+    <x_809069_bbuster_u_cmdb_ci_movie action="INSERT_OR_UPDATE">
+        <asset/>
+        <asset_tag/>
+        <assigned/>
+        <assigned_to/>
+        <assignment_group/>
+        <attestation_score/>
+        <attestation_status>Not Yet Reviewed</attestation_status>
+        <attested>false</attested>
+        <attested_by/>
+        <attested_date/>
+        <attributes/>
+        <business_unit/>
+        <can_print>false</can_print>
+        <category/>
+        <change_control/>
+        <checked_in/>
+        <checked_out/>
+        <comments/>
+        <company/>
+        <correlation_id/>
+        <cost/>
+        <cost_cc>USD</cost_cc>
+        <cost_center/>
+        <delivery_date/>
+        <department/>
+        <discovery_source/>
+        <dns_domain/>
+        <due/>
+        <due_in/>
+        <duplicate_of/>
+        <environment/>
+        <fault_count>0</fault_count>
+        <first_discovered/>
+        <fqdn/>
+        <gl_account/>
+        <install_date/>
+        <install_status>1</install_status>
+        <invoice_number/>
+        <ip_address/>
+        <justification/>
+        <last_discovered/>
+        <lease_id/>
+        <life_cycle_stage/>
+        <life_cycle_stage_status/>
+        <location/>
+        <mac_address/>
+        <maintenance_schedule/>
+        <managed_by/>
+        <managed_by_group/>
+        <manufacturer/>
+        <model_id/>
+        <model_number/>
+        <monitor>false</monitor>
+        <name/>
+        <operational_status>1</operational_status>
+        <order_date/>
+        <owned_by/>
+        <po_number/>
+        <purchase_date/>
+        <schedule/>
+        <serial_number/>
+        <short_description/>
+        <skip_sync>false</skip_sync>
+        <start_date/>
+        <subcategory/>
+        <support_group/>
+        <supported_by/>
+        <sys_class_name>x_809069_bbuster_u_cmdb_ci_movie</sys_class_name>
+        <sys_class_path>/!!/$#</sys_class_path>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-29 20:58:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c148f8341bcd151070eca9b4bd4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-29 20:58:17</sys_updated_on>
+        <u_actors>Meryl Streep, Pierce Brosnan, Amanda Seyfried</u_actors>
+        <u_directors>Phyllida Lloyd</u_directors>
+        <u_genre>Comedy, Musical, Romance</u_genre>
+        <u_metascore>51</u_metascore>
+        <u_plot>Set on a colorful Greek island, the plot serves as a background for a wealth of ABBA songs. A young woman about to be married discovers that any one of three men could be her father. She invites all three to the wedding without telling her mother, Donna Sheridan (Meryl Streep), who was once the lead singer of Donna and the Dynamos. In the meantime, Donna has invited her back-up singers, Rosie Mulligan (Dame Julie Walters) and Tanya Wilkinson (Christine Baranski).</u_plot>
+        <u_poster>https://m.media-amazon.com/images/M/MV5BMTA2MDU0MjM0MzReQTJeQWpwZ15BbWU3MDYwNzgwNzE@._V1_SX300.jpg</u_poster>
+        <u_rating>PG-13</u_rating>
+        <u_release_date>18 Jul 2008</u_release_date>
+        <u_title>Mamma Mia!</u_title>
+        <unverified>false</unverified>
+        <vendor/>
+        <warranty_expiration/>
+        <year>2008</year>
+    </x_809069_bbuster_u_cmdb_ci_movie>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 17:08:51</sys_created_on>
+        <sys_id>724db6a21b89d11070eca9b4bd4bcb6a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mamma Mia!</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_metadata_link_724db6a21b89d11070eca9b4bd4bcb6a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 17:08:51</sys_updated_on>
+        <tablename>x_809069_bbuster_u_cmdb_ci_movie</tablename>
+    </sys_metadata_link>
+</record_update>

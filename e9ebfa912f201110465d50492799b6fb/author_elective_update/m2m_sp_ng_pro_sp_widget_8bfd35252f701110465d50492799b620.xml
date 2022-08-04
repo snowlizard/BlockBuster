@@ -41,7 +41,7 @@
         <update_guid_history>4bfd352544701110e80e29642757de22:-980513664</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="scBasicSelect.BlackBuster Cart">5fceb5652f701110465d50492799b60c</sys_audit_delete>
+        <sys_audit_delete display_value="">5fceb5652f701110465d50492799b60c</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-19 23:46:12</sys_created_on>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>de9164342f811110465d50492799b6f7</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_knowledge">
+    <kb_knowledge action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article_type>wiki</article_type>
+        <author display_value="Julian Gonzalez">2aaafe512f201110465d50492799b61d</author>
+        <can_read_user_criteria/>
+        <cannot_read_user_criteria/>
+        <category/>
+        <cmdb_ci/>
+        <description/>
+        <direct>false</direct>
+        <disable_commenting>false</disable_commenting>
+        <disable_suggesting>false</disable_suggesting>
+        <display_attachments>false</display_attachments>
+        <flagged>false</flagged>
+        <helpful_count>0</helpful_count>
+        <image/>
+        <kb_category display_value="About film">4ea2e8b42f811110465d50492799b67e</kb_category>
+        <kb_knowledge_base display_value="BlockBuster KB">1a3064342f811110465d50492799b6ad</kb_knowledge_base>
+        <meta/>
+        <meta_description>Supernatural horror film is a film genre that combines aspects of horror film and supernatural film.</meta_description>
+        <number>KB0010003</number>
+        <published>2022-07-29</published>
+        <rating/>
+        <retired/>
+        <roles/>
+        <short_description>Supernatural horror film</short_description>
+        <source/>
+        <sys_class_name>kb_knowledge</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 19:19:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de9164342f811110465d50492799b6f7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 19:25:25</sys_updated_on>
+        <sys_view_count>0</sys_view_count>
+        <taxonomy_topic/>
+        <text/>
+        <topic>General</topic>
+        <use_count>0</use_count>
+        <valid_to>2100-01-01</valid_to>
+        <wiki>Supernatural horror film is a film genre that combines aspects of horror film and supernatural film. Supernatural occurrences in such films often include ghosts and demons, and many supernatural horror films have elements of religion. Common themes in the genre are the afterlife, the Devil, and demonic possession. Not all supernatural horror films focus on religion, and they can have "more vivid and gruesome violence".[1] 
+For such films and other media, critics distinguish supernatural horror from psychological horror. Mathias Clasen writes in Why Horror Seduces, "Supernatural horror involves some kind of suspension or breach of physical law, usually embodied in or caused by some kind of supernatural agency such as an uncanny monster or a ghost... psychological horror, on the other hand, does not involve violations of physical law, but features naturalistic (if often implausible) menaces and scenarios."[2] Paul Meehan also distinguishes supernatural horror films from psychological horror, "The threat to societal order comes from something preternatural or anomalous: a haunted house, a curse, or a monster like a vampire or a werewolf."[3]
+
+Charles Derry, writing in Dark Dreams 2.0, contrasted supernatural horror and pseudoscientific horror as "two basic methods of explaining things away" in horror stories. Derry wrote, "Into the supernatural group one could fit all the monsters and horrors that are somehow involved with religions and ritual," highlighting witchcraft, Egyptology and reincarnation, and zombies.[4] Aaron Smuts considers horror "to be a genre with two main sub-types, supernatural horror and realist horror" and that they "have different charms".[5] </wiki>
+        <workflow_state>published</workflow_state>
+    </kb_knowledge>
+    <sys_translated_text action="delete_multiple" query="documentkey=de9164342f811110465d50492799b6f7"/>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 17:12:04</sys_created_on>
+        <sys_id>7d0ebae21b89d11070eca9b4bd4bcbe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010003</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_metadata_link_7d0ebae21b89d11070eca9b4bd4bcbe6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 17:12:04</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -42,7 +42,7 @@
         <update_guid_history>07723f05380d511000171ee19e29305e:1967366660</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_809069_bbuster_rental_history.x_809069_bbuster.rental_history_user">faa18c152f4d5110465d50492799b6e6</sys_audit_delete>
+        <sys_audit_delete display_value="">faa18c152f4d5110465d50492799b6e6</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 06:16:42</sys_created_on>

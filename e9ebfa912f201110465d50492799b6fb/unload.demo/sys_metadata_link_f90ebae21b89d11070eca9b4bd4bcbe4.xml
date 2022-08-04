@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>8d80a8342f811110465d50492799b6b8</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="kb_knowledge"&gt;
+    &lt;kb_knowledge action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article_type&gt;text&lt;/article_type&gt;
+        &lt;author display_value="Julian Gonzalez"&gt;2aaafe512f201110465d50492799b61d&lt;/author&gt;
+        &lt;can_read_user_criteria/&gt;
+        &lt;cannot_read_user_criteria/&gt;
+        &lt;category/&gt;
+        &lt;cmdb_ci/&gt;
+        &lt;description/&gt;
+        &lt;direct&gt;false&lt;/direct&gt;
+        &lt;disable_commenting&gt;false&lt;/disable_commenting&gt;
+        &lt;disable_suggesting&gt;false&lt;/disable_suggesting&gt;
+        &lt;display_attachments&gt;false&lt;/display_attachments&gt;
+        &lt;flagged&gt;false&lt;/flagged&gt;
+        &lt;helpful_count&gt;0&lt;/helpful_count&gt;
+        &lt;image/&gt;
+        &lt;kb_category display_value="About film"&gt;4ea2e8b42f811110465d50492799b67e&lt;/kb_category&gt;
+        &lt;kb_knowledge_base display_value="BlockBuster KB"&gt;1a3064342f811110465d50492799b6ad&lt;/kb_knowledge_base&gt;
+        &lt;meta/&gt;
+        &lt;meta_description&gt;film, also called motion picture or movie, series of still photographs on film, projected in rapid succession&lt;/meta_description&gt;
+        &lt;number&gt;KB0010001&lt;/number&gt;
+        &lt;published&gt;2022-07-29&lt;/published&gt;
+        &lt;rating/&gt;
+        &lt;retired/&gt;
+        &lt;roles/&gt;
+        &lt;short_description&gt;What is a film?&lt;/short_description&gt;
+        &lt;source/&gt;
+        &lt;sys_class_name&gt;kb_knowledge&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2022-07-29 19:17:38&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;8d80a8342f811110465d50492799b6b8&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2022-07-29 19:25:47&lt;/sys_updated_on&gt;
+        &lt;sys_view_count&gt;0&lt;/sys_view_count&gt;
+        &lt;taxonomy_topic/&gt;
+        &lt;text&gt;&lt;![CDATA[&lt;p&gt;&lt;strong&gt;&lt;span id="ref508549"&gt;&lt;/span&gt;film&lt;/strong&gt;, also called &lt;strong&gt;motion picture&lt;/strong&gt; or &lt;strong&gt;movie&lt;/strong&gt;, series of still photographs on film, projected in rapid succession onto a screen by means of light. Because of the optical phenomenon known as &lt;span id="ref524639"&gt;&lt;/span&gt;&lt;a href="https://www.britannica.com/science/persistence-of-vision" rel="nofollow"&gt;persistence of vision&lt;/a&gt;, this gives the &lt;a href="https://www.merriam-webster.com/dictionary/illusion" rel="nofollow"&gt;illusion&lt;/a&gt; of actual, smooth, and continuous movement.&lt;/p&gt;
+&lt;p&gt;Film is a remarkably effective medium in conveying &lt;a href="https://www.britannica.com/art/theatre-art" rel="nofollow"&gt;drama&lt;/a&gt; and especially in the evocation of emotion. The &lt;span id="ref508551"&gt;&lt;/span&gt;&lt;a href="https://www.britannica.com/topic/aesthetics" rel="nofollow"&gt;art&lt;/a&gt; of motion pictures is exceedingly complex, requiring contributions from nearly all the other arts as well as countless technical skills (for example, in &lt;a href="https://www.britannica.com/technology/sound-recording" rel="nofollow"&gt;sound recording&lt;/a&gt;, &lt;a href="https://www.britannica.com/technology/technology-of-photography" rel="nofollow"&gt;photography&lt;/a&gt;, and &lt;a href="https://www.britannica.com/science/optics" rel="nofollow"&gt;optics&lt;/a&gt;). Emerging at the end of the 19th century, this new art form became one of the most popular and influential media of the 20th century and beyond.&lt;/p&gt;
+&lt;p&gt;As a commercial venture, offering fictional narratives to large &lt;span id="ref508565"&gt;&lt;/span&gt;&lt;a href="https://www.britannica.com/topic/audience-communications" rel="nofollow"&gt;audiences&lt;/a&gt; in &lt;span id="ref508564"&gt;&lt;/span&gt;&lt;a href="https://www.britannica.com/art/theatre-art" rel="nofollow"&gt;theatres&lt;/a&gt;, film was quickly recognized as perhaps the first truly mass form of entertainment. Without losing its broad appeal, the medium also developed as a means of artistic expression in such areas as &lt;a href="https://www.britannica.com/art/acting" rel="nofollow"&gt;acting&lt;/a&gt;, &lt;a href="https://www.britannica.com/art/directing" rel="nofollow"&gt;directing&lt;/a&gt;, screenwriting, &lt;a href="https://www.britannica.com/topic/cinematography" rel="nofollow"&gt;cinematography&lt;/a&gt;, costume and set design, and &lt;a href="https://www.britannica.com/art/music" rel="nofollow"&gt;music&lt;/a&gt;.&lt;/p&gt;]]&gt;&lt;/text&gt;
+        &lt;topic&gt;General&lt;/topic&gt;
+        &lt;use_count&gt;0&lt;/use_count&gt;
+        &lt;valid_to&gt;2100-01-01&lt;/valid_to&gt;
+        &lt;wiki/&gt;
+        &lt;workflow_state&gt;published&lt;/workflow_state&gt;
+    &lt;/kb_knowledge&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=8d80a8342f811110465d50492799b6b8"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 17:12:04</sys_created_on>
+        <sys_id>f90ebae21b89d11070eca9b4bd4bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0010001</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_metadata_link_f90ebae21b89d11070eca9b4bd4bcbe4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 17:12:04</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

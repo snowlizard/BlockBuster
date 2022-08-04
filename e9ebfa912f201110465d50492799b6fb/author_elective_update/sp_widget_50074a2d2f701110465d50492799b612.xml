@@ -1837,7 +1837,7 @@ function isCartValid(cart) {
         <update_guid_history>d4074a2d6b7011104f08e35b06d67f13:145669950</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="BlackBuster Cart">2567c66d2f701110465d50492799b6a6</sys_audit_delete>
+        <sys_audit_delete display_value="">2567c66d2f701110465d50492799b6a6</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-20 00:23:46</sys_created_on>

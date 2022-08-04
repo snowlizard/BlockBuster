@@ -156,7 +156,7 @@
         <update_guid_history>595ab71de0e011102759603bb89ba362:1476542639</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Genre">b8c411802f341110465d50492799b636</sys_audit_delete>
+        <sys_audit_delete display_value="">b8c411802f341110465d50492799b636</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-15 04:51:38</sys_created_on>
