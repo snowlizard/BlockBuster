@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_view">
+    <sysrule_view action="DELETE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <condition/>
+        <description/>
+        <device_type>browser</device_type>
+        <match_conditions>ALL</match_conditions>
+        <name>Movies Read only when not new task</name>
+        <order>100</order>
+        <overrides_user_preference>true</overrides_user_preference>
+        <script><![CDATA[(function overrideView(view, is_list) {
+
+	g_form.getValue('movies')
+	answer = null;  // set the new view to answer
+
+})(view, is_list);]]></script>
+        <sys_class_name>sysrule_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 01:47:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>61336db6476511101d73690cd36d43b7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Movies Read only when not new task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sysrule_view_61336db6476511101d73690cd36d43b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:48:19</sys_updated_on>
+        <table>x_809069_bbuster_rental_history</table>
+        <view>Default View</view>
+    </sysrule_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>f3c0e15fdb32b3449df22f17d49619d6</instance_id>
+        <instance_name>dev89311</instance_name>
+        <name>sysrule_view_61336db6476511101d73690cd36d43b7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysrule_view"&gt;&lt;sysrule_view action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;condition/&gt;&lt;description/&gt;&lt;device_type&gt;browser&lt;/device_type&gt;&lt;match_conditions&gt;ALL&lt;/match_conditions&gt;&lt;name&gt;Movies Read only when not new task&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;overrides_user_preference&gt;true&lt;/overrides_user_preference&gt;&lt;script&gt;&lt;![CDATA[(function overrideView(view, is_list) {
+
+	g_form.getValue('movies')
+	answer = null;  // set the new view to answer
+
+})(view, is_list);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sysrule_view&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 01:47:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;61336db6476511101d73690cd36d43b7&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Movies Read only when not new task&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysrule_view_61336db6476511101d73690cd36d43b7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 01:48:19&lt;/sys_updated_on&gt;&lt;table&gt;x_809069_bbuster_rental_history&lt;/table&gt;&lt;view&gt;Default View&lt;/view&gt;&lt;/sysrule_view&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-77685757</payload_hash>
+        <record_name>Movies Read only when not new task</record_name>
+        <reverted_from/>
+        <source>2f6129f2476511101d73690cd36d43ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 01:48:19</sys_created_on>
+        <sys_id>bbe3e5f6476511101d73690cd36d43da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182ec6f65040000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:48:19</sys_updated_on>
+        <type>View Rule</type>
+        <update_guid>b3e3e5f6cc6511106ab6e11c06f1b2da</update_guid>
+        <update_guid_history>b3e3e5f6cc6511106ab6e11c06f1b2da:-77685757,05e325f60b651110039a40af6eea5acd:-327038872,67c365b628651110709d269cb82b3fc0:-77685757,7eb36db6f1651110541afe1b658771bd:1173911640,9db3edb61765111083f052dcbad7de81:-77685757</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 01:49:38</sys_created_on>
+        <sys_db_object display_value="" name="sysrule_view">sysrule_view</sys_db_object>
+        <sys_id>afad0ce318e146bcb9a297fa580d91c9</sys_id>
+        <sys_metadata>61336db6476511101d73690cd36d43b7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Movies Read only when not new task</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent display_value="Rental History">4c72030247ad11101d73690cd36d4327</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sysrule_view_61336db6476511101d73690cd36d43b7</sys_update_name>
+        <sys_update_version display_value="sysrule_view_61336db6476511101d73690cd36d43b7">bbe3e5f6476511101d73690cd36d43da</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:49:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -18,19 +18,19 @@
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="Task" name="task">9d464cb521120110a866589604c20d55</super_class>
+        <super_class display_value="Task" name="task">daa57ea745110110a86630cf9552f345</super_class>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 06:19:26</sys_created_on>
-        <sys_id>eb813ea91b01111070eca9b4bd4bcb1e</sys_id>
+        <sys_id>4c72030247ad11101d73690cd36d4327</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Rental History</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sys_db_object_eb813ea91b01111070eca9b4bd4bcb1e</sys_update_name>
+        <sys_update_name>sys_db_object_4c72030247ad11101d73690cd36d4327</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
         <sys_updated_on>2022-07-31 06:19:26</sys_updated_on>
         <update_access>false</update_access>

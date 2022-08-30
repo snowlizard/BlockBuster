@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Movie Requests" max_length="40" name="x_809069_bbuster_movie_requests" sizeclass="2" type="collection">
+    <element label="Movie Requests" max_length="40" name="x_809069_bbuster_movie_requests" sizeclass="0" type="collection">
         <element label="comment" max_length="5000" name="comment" type="string"/>
         <element label="Date Added/Declined" max_length="100" name="date_added_declined" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true,encode_utf8=false" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Requested by" max_length="32" name="requested_by" reference="sys_user" type="reference" use_dynamic_default="true"/>

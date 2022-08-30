@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_809069_bbuster_movies" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>title</element>
+            <list_id display_value="x_809069_bbuster_movies" element="NULL" name="x_809069_bbuster_movies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9c55d8b92f601110465d50492799b69f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-08 00:28:07</sys_created_on>
+            <sys_id>1855d8b92f601110465d50492799b6a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-08 00:28:07</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>year</element>
+            <list_id display_value="x_809069_bbuster_movies" element="NULL" name="x_809069_bbuster_movies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9c55d8b92f601110465d50492799b69f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-08 00:28:07</sys_created_on>
+            <sys_id>9855d8b92f601110465d50492799b6a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-08 00:28:07</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>genre</element>
+            <list_id display_value="x_809069_bbuster_movies" element="NULL" name="x_809069_bbuster_movies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9c55d8b92f601110465d50492799b69f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-08 00:28:07</sys_created_on>
+            <sys_id>1c55d8b92f601110465d50492799b6a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-08 00:28:07</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>actors</element>
+            <list_id display_value="x_809069_bbuster_movies" element="NULL" name="x_809069_bbuster_movies" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">9c55d8b92f601110465d50492799b69f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-08 00:28:07</sys_created_on>
+            <sys_id>9c55d8b92f601110465d50492799b6a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-08 00:28:07</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_809069_bbuster_movies</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-07-08 00:28:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9c55d8b92f601110465d50492799b69f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_809069_bbuster_movies</sys_name>
+            <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+            <sys_update_name>sys_ui_list_x_809069_bbuster_movies_null</sys_update_name>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-07-08 00:28:07</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

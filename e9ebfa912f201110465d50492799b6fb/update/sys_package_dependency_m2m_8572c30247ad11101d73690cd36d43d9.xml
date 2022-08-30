@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="Task table schema" source="com.glide.task">99464cb521120110a866589604c20d53</dependency>
+        <dependency display_value="Task table schema" source="com.glide.task">d6a57ea745110110a86630cf9552f343</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 06:19:28</sys_created_on>
-        <sys_id>64917ea91b01111070eca9b4bd4bcb19</sys_id>
+        <sys_id>8572c30247ad11101d73690cd36d43d9</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_updated_by>jgonzalez</sys_updated_by>

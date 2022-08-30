@@ -6,7 +6,7 @@
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build>glide-sandiego-12-22-2021__patch1-03-02-2022_03-17-2022_1811.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch0-hotfix1-02-01-2022_02-01-2022_2323.zip</compiler_build>
         <copied_from/>
         <copied_from_name/>
         <description>Flow for processing movie rentals</description>
@@ -36,8 +36,8 @@
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_hub_flow_c9e6ece42f451110465d50492799b64c</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-08-01 19:20:29</sys_updated_on>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-28 00:46:24</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=c9e6ece42f451110465d50492799b64c"/>
@@ -266,7 +266,7 @@
         <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
         <action_type_parent/>
         <comment>Wait for 7 days</comment>
-        <compiled_snapshot/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
         <display_text/>
         <flow display_value="movie rental process">c9e6ece42f451110465d50492799b64c</flow>
         <order>3</order>
@@ -275,10 +275,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:21:03</sys_created_on>
         <sys_id>1c35b6d12fc59110465d50492799b675</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-08-01 17:28:15</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:28:23</sys_updated_on>
         <ui_id>99c3aafa-df27-454e-85eb-c18b322fef6b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1c35b6d12fc59110465d50492799b675"/>
@@ -407,7 +407,7 @@
         <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
         <display_text/>
         <flow display_value="movie rental process">c9e6ece42f451110465d50492799b64c</flow>
         <order>1</order>
@@ -416,10 +416,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-29 01:39:34</sys_created_on>
         <sys_id>330fa4ec2f451110465d50492799b622</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-08-01 17:28:15</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:28:23</sys_updated_on>
         <ui_id>532f7c50-f50e-4efb-a516-a2d99cc1ecb3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=330fa4ec2f451110465d50492799b622"/>
@@ -496,7 +496,7 @@
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
         <display_text/>
         <flow display_value="movie rental process">c9e6ece42f451110465d50492799b64c</flow>
         <order>5</order>
@@ -505,10 +505,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-08-01 17:24:35</sys_created_on>
         <sys_id>3314efa12f411110465d50492799b661</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-08-01 17:28:15</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:28:23</sys_updated_on>
         <ui_id>5c0fb434-74ae-412a-bdf7-77007eae8d44</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3314efa12f411110465d50492799b661"/>
@@ -571,7 +571,7 @@
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
         <display_text/>
         <flow display_value="movie rental process">c9e6ece42f451110465d50492799b64c</flow>
         <order>2</order>
@@ -580,10 +580,10 @@
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 18:58:50</sys_created_on>
         <sys_id>cb103a9d2f859110465d50492799b66f</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-08-01 17:28:15</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-30 01:28:23</sys_updated_on>
         <ui_id>160dca3a-26a6-4fa7-826c-62b9c3d0bcd0</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cb103a9d2f859110465d50492799b66f"/>
@@ -735,7 +735,7 @@
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c9e6ece42f451110465d50492799b64c_request_item_en</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
         <sys_updated_on>2022-07-29 01:39:34</sys_updated_on>
         <url/>
@@ -758,7 +758,7 @@
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c9e6ece42f451110465d50492799b64c_table_name_en</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
         <sys_updated_on>2022-07-29 01:39:34</sys_updated_on>
         <url/>
@@ -772,7 +772,7 @@
         <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c5e536152fc59110465d50492799b6f1","name":"plan","plan_signature":null}}</plan>
         <plan_id>c9e6ece42f451110465d50492799b64c</plan_id>
-        <snapshot>3bd536152fc59110465d50492799b651</snapshot>
+        <snapshot>2b5f1572476511101d73690cd36d4330</snapshot>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-31 19:24:06</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -1502,7 +1502,7 @@
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_3bd536152fc59110465d50492799b651_table_name_en</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
         <sys_updated_on>2022-07-31 19:24:03</sys_updated_on>
         <url/>
@@ -1525,7 +1525,7 @@
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_3bd536152fc59110465d50492799b651_request_item_en</sys_update_name>
         <sys_updated_by>jgonzalez</sys_updated_by>
         <sys_updated_on>2022-07-31 19:24:03</sys_updated_on>
         <url/>
