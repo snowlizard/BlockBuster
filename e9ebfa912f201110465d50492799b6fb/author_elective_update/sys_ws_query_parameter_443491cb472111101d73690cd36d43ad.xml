@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="DELETE">
+        <example_value/>
+        <name>title</name>
+        <required>false</required>
+        <short_description>title of the movie</short_description>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-30 19:18:32</sys_created_on>
+        <sys_id>443491cb472111101d73690cd36d43ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>title</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_443491cb472111101d73690cd36d43ad</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-30 19:18:32</sys_updated_on>
+        <web_service_definition display_value="OMDB API">4114d18b472111101d73690cd36d432c</web_service_definition>
+    </sys_ws_query_parameter>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>f3c0e15fdb32b3449df22f17d49619d6</instance_id>
+        <instance_name>dev89311</instance_name>
+        <name>sys_ws_query_parameter_443491cb472111101d73690cd36d43ad</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter"><sys_ws_query_parameter action="INSERT_OR_UPDATE"><example_value/><name>title</name><required>false</required><short_description>title of the movie</short_description><sys_class_name>sys_ws_query_parameter</sys_class_name><sys_created_by>jgonzalez</sys_created_by><sys_created_on>2022-08-30 19:18:32</sys_created_on><sys_id>443491cb472111101d73690cd36d43ad</sys_id><sys_mod_count>0</sys_mod_count><sys_name>title</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sys_ws_query_parameter_443491cb472111101d73690cd36d43ad</sys_update_name><sys_updated_by>jgonzalez</sys_updated_by><sys_updated_on>2022-08-30 19:18:32</sys_updated_on><web_service_definition display_value="OMDB API">4114d18b472111101d73690cd36d432c</web_service_definition></sys_ws_query_parameter></record_update>]]></payload>
+        <payload_hash>1225888837</payload_hash>
+        <record_name>title</record_name>
+        <reverted_from/>
+        <source>e8c2cf0247ad11101d73690cd36d437f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-30 19:18:32</sys_created_on>
+        <sys_id>ff4415cb472111101d73690cd36d4359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182f030e4e90000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-30 19:18:32</sys_updated_on>
+        <type>Scripted REST Query Parameter</type>
+        <update_guid>3b4415cb95211110e6dd0f80bdd9a059</update_guid>
+        <update_guid_history>3b4415cb95211110e6dd0f80bdd9a059:1225888837</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-30 19:21:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_query_parameter">sys_ws_query_parameter</sys_db_object>
+        <sys_id>64a05abcb2e643c4b79bd531f10f6d90</sys_id>
+        <sys_metadata>443491cb472111101d73690cd36d43ad</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>title</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ws_query_parameter_443491cb472111101d73690cd36d43ad</sys_update_name>
+        <sys_update_version display_value="sys_ws_query_parameter_443491cb472111101d73690cd36d43ad">ff4415cb472111101d73690cd36d4359</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-30 19:21:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
