@@ -6,7 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>jgonzalez</sys_created_by>
             <sys_created_on>2022-07-30 21:01:52</sys_created_on>
-            <sys_id>9fa246012f855110465d50492799b65b</sys_id>
+            <sys_id>4572c30247ad11101d73690cd36d43b7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>state</sys_name>
             <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
@@ -21,20 +21,40 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Requested</label>
+            <language>en</language>
+            <name>x_809069_bbuster_movie_requests</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-08-30 20:46:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6678ad4347a111101d73690cd36d431d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-08-30 20:48:49</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Added</label>
             <language>en</language>
             <name>x_809069_bbuster_movie_requests</name>
-            <sequence/>
+            <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>jgonzalez</sys_created_by>
-            <sys_created_on>2022-07-30 21:02:30</sys_created_on>
+            <sys_created_on>2022-08-30 20:47:07</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>fdc2cecd2f455110465d50492799b62f</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_id>a3882d4347a111101d73690cd36d4300</sys_id>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-07-30 21:02:36</sys_updated_on>
-            <value>added</value>
+            <sys_updated_on>2022-08-30 20:48:51</sys_updated_on>
+            <value>2</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -44,37 +64,17 @@
             <label>Declined</label>
             <language>en</language>
             <name>x_809069_bbuster_movie_requests</name>
-            <sequence/>
+            <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>jgonzalez</sys_created_by>
-            <sys_created_on>2022-07-30 21:04:30</sys_created_on>
+            <sys_created_on>2022-08-30 20:47:17</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f8d2c6012f855110465d50492799b672</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_id>8698a18347a111101d73690cd36d43b2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-07-30 21:04:38</sys_updated_on>
-            <value>declined</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Requested</label>
-            <language>en</language>
-            <name>x_809069_bbuster_movie_requests</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>jgonzalez</sys_created_by>
-            <sys_created_on>2022-07-30 21:01:52</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>c782c6012f855110465d50492799b663</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-07-30 21:02:01</sys_updated_on>
-            <value>requested</value>
+            <sys_updated_on>2022-08-30 20:48:47</sys_updated_on>
+            <value>3</value>
         </sys_choice>
     </sys_choice>
 </record_update>

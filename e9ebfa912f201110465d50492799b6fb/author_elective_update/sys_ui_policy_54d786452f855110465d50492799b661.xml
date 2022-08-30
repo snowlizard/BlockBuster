@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>set default fields to mandtory or readonly</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-30 21:24:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>54d786452f855110465d50492799b661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>set default fields to mandtory or readonly</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ui_policy_54d786452f855110465d50492799b661</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-30 21:24:49</sys_updated_on>
+        <table>x_809069_bbuster_movie_requests</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>f3c0e15fdb32b3449df22f17d49619d6</instance_id>
+        <instance_name>dev89311</instance_name>
+        <name>sys_ui_policy_54d786452f855110465d50492799b661</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;
+    &lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;conditions/&gt;
+        &lt;description/&gt;
+        &lt;global&gt;true&lt;/global&gt;
+        &lt;inherit&gt;false&lt;/inherit&gt;
+        &lt;isolate_script&gt;true&lt;/isolate_script&gt;
+        &lt;model_id/&gt;
+        &lt;model_table/&gt;
+        &lt;on_load&gt;true&lt;/on_load&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;
+        &lt;run_scripts&gt;false&lt;/run_scripts&gt;
+        &lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;
+        &lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;
+        &lt;set_values/&gt;
+        &lt;short_description&gt;set default fields to mandtory or readonly&lt;/short_description&gt;
+        &lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;jgonzalez&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2022-07-30 21:24:49&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;54d786452f855110465d50492799b661&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;set default fields to mandtory or readonly&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_ui_policy_54d786452f855110465d50492799b661&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;jgonzalez&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2022-07-30 21:24:49&lt;/sys_updated_on&gt;
+        &lt;table&gt;x_809069_bbuster_movie_requests&lt;/table&gt;
+        &lt;ui_type&gt;0&lt;/ui_type&gt;
+        &lt;view/&gt;
+    &lt;/sys_ui_policy&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1376045856</payload_hash>
+        <record_name>set default fields to mandtory or readonly</record_name>
+        <reverted_from/>
+        <source>0e72c70247ad11101d73690cd36d43d8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-28 00:46:27</sys_created_on>
+        <sys_id>7192874247ad11101d73690cd36d4355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182e1ea06f30000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-28 00:46:27</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>3192874285ad111065d5c324e97b2755</update_guid>
+        <update_guid_history>3192874285ad111065d5c324e97b2755:1376045856</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-30 20:35:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>177f04e21f4940ab835a7819aa7c5331</sys_id>
+        <sys_metadata>54d786452f855110465d50492799b661</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>set default fields to mandtory or readonly</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent display_value="">8172c30247ad11101d73690cd36d439b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_54d786452f855110465d50492799b661</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_54d786452f855110465d50492799b661">7192874247ad11101d73690cd36d4355</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-30 20:35:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

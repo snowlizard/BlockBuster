@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Movie Requests">f7d8e9492f055110465d50492799b698</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_809069_bbuster_movie_requests">requested_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="requested_by" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>My Requests</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_809069_bbuster_movie_requests</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-01 04:13:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0fce2c6d2f4d9110465d50492799b6a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_app_module_0fce2c6d2f4d9110465d50492799b6a4</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-01 04:13:40</sys_updated_on>
+        <timeline_page/>
+        <title>My Requests</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>f3c0e15fdb32b3449df22f17d49619d6</instance_id>
+        <instance_name>dev89311</instance_name>
+        <name>sys_app_module_0fce2c6d2f4d9110465d50492799b6a4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Movie Requests">f7d8e9492f055110465d50492799b698</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_809069_bbuster_movie_requests">requested_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="requested_by" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>My Requests</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_809069_bbuster_movie_requests</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-01 04:13:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0fce2c6d2f4d9110465d50492799b6a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_app_module_0fce2c6d2f4d9110465d50492799b6a4</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-01 04:13:40</sys_updated_on>
+        <timeline_page/>
+        <title>My Requests</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>]]></payload>
+        <payload_hash>-16619200</payload_hash>
+        <record_name>My Requests</record_name>
+        <reverted_from/>
+        <source>0e72c70247ad11101d73690cd36d43d8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-28 00:46:21</sys_created_on>
+        <sys_id>e092c34247ad11101d73690cd36d43ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182e1e9f1130000001</sys_recorded_at>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-28 00:46:21</sys_updated_on>
+        <type>Module</type>
+        <update_guid>a092c342c3ad111000ca0f4a8c5fd6ca</update_guid>
+        <update_guid_history>a092c342c3ad111000ca0f4a8c5fd6ca:-16619200</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Requests">8a062d8f476111101d73690cd36d43b5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-30 20:35:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>0f317c258ecd4ba5aaeabe764a7b3c41</sys_id>
+        <sys_metadata>0fce2c6d2f4d9110465d50492799b6a4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_app_module_0fce2c6d2f4d9110465d50492799b6a4</sys_update_name>
+        <sys_update_version display_value="sys_app_module_0fce2c6d2f4d9110465d50492799b6a4">e092c34247ad11101d73690cd36d43ca</sys_update_version>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-30 20:35:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

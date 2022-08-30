@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Movie Requests" max_length="40" name="x_809069_bbuster_movie_requests" sizeclass="0" type="collection">
-        <element label="comment" max_length="5000" name="comment" type="string"/>
-        <element label="Date Added/Declined" max_length="100" name="date_added_declined" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true,encode_utf8=false" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Requested by" max_length="32" name="requested_by" reference="sys_user" type="reference" use_dynamic_default="true"/>
-        <element choice="3" default="requested" label="State" max_length="40" name="state" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Added" value="added"/>
-                <element inactive_on_update="false" label="Declined" value="declined"/>
-                <element inactive_on_update="false" label="Requested" value="requested"/>
-            </choice>
-        </element>
-        <element display="true" label="Title" max_length="1000" name="title" type="string_full_utf8"/>
-        <index name="index">
-            <element name="requested_by"/>
-        </index>
+    <element extends="task" label="Movie Requests" max_length="40" name="x_809069_bbuster_movie_requests" type="collection">
+        <element label="Date Added/Declined" max_length="40" name="date_added_declined" type="glide_date"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Requested by" max_length="32" name="requested_by" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element display="true" label="Title" max_length="1000" name="title" type="string"/>
     </element>
 </database>
