@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDd93de29bbd61111072086093075ed629</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e9ebfa912f201110465d50492799b6fb</scope_name>
+        <serialized_content>{"FlowDesigner:FDd93de29bbd61111072086093075ed629":{"$COCollectionField":["Boolean"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDd93de29bbd61111072086093075ed629.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"char\",\"mandatory\":\"false\",\"child_name\":\"charchar\",\"uiUniqueId\":\"62c56f0b-3a49-47b3-af29-8ec6e3ffa978\",\"uiTypeLabel\":\"Array.Boolean\",\"co_type_name\":\"FDd93de29bbd61111072086093075ed629\",\"child_label\":\"charchar\",\"child_type_label\":\"True/False\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.boolean\",\"child_defaultValue\":\"\",\"child_type\":\"boolean\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"bd708079-bbc4-4c00-9ddd-01ebd1eda070\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-08-31 20:25:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9d3de29b476111101d73690cd36d4329</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>FDd93de29bbd61111072086093075ed629</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_complex_object_9d3de29b476111101d73690cd36d4329</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-08-31 20:47:49</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
