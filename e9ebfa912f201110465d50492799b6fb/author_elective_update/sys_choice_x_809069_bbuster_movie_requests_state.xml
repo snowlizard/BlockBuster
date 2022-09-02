@@ -41,40 +41,40 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Approved</label>
-            <language>en</language>
-            <name>x_809069_bbuster_movie_requests</name>
-            <sequence>1</sequence>
-            <synonyms/>
-            <sys_created_by>jgonzalez</sys_created_by>
-            <sys_created_on>2022-08-31 01:04:46</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>3483620347a511101d73690cd36d438f</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-08-31 01:06:02</sys_updated_on>
-            <value>2</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>Review</label>
             <language>en</language>
             <name>x_809069_bbuster_movie_requests</name>
-            <sequence>2</sequence>
+            <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>jgonzalez</sys_created_by>
             <sys_created_on>2022-08-31 01:08:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>a954ae0347a511101d73690cd36d4303</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-08-31 01:09:52</sys_updated_on>
+            <sys_updated_on>2022-09-01 05:05:08</sys_updated_on>
             <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Approved</label>
+            <language>en</language>
+            <name>x_809069_bbuster_movie_requests</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>jgonzalez</sys_created_by>
+            <sys_created_on>2022-08-31 01:04:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3483620347a511101d73690cd36d438f</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>jgonzalez</sys_updated_by>
+            <sys_updated_on>2022-09-01 05:05:08</sys_updated_on>
+            <value>2</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -84,16 +84,16 @@
             <label>Added</label>
             <language>en</language>
             <name>x_809069_bbuster_movie_requests</name>
-            <sequence>3</sequence>
+            <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>jgonzalez</sys_created_by>
             <sys_created_on>2022-08-30 20:47:07</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>a3882d4347a111101d73690cd36d4300</sys_id>
-            <sys_mod_count>7</sys_mod_count>
+            <sys_mod_count>8</sys_mod_count>
             <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-08-31 01:09:52</sys_updated_on>
+            <sys_updated_on>2022-09-01 05:05:08</sys_updated_on>
             <value>4</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -104,16 +104,16 @@
             <label>Declined</label>
             <language>en</language>
             <name>x_809069_bbuster_movie_requests</name>
-            <sequence>4</sequence>
+            <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>jgonzalez</sys_created_by>
             <sys_created_on>2022-08-30 20:47:17</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>8698a18347a111101d73690cd36d43b2</sys_id>
-            <sys_mod_count>6</sys_mod_count>
+            <sys_mod_count>7</sys_mod_count>
             <sys_updated_by>jgonzalez</sys_updated_by>
-            <sys_updated_on>2022-08-31 01:09:52</sys_updated_on>
+            <sys_updated_on>2022-09-01 05:05:08</sys_updated_on>
             <value>5</value>
         </sys_choice>
     </sys_choice>

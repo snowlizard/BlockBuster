@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD9ee427af986111102acb3419a94a3db4</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e9ebfa912f201110465d50492799b6fb</scope_name>
+        <serialized_content>{"FlowDesigner:FD9ee427af986111102acb3419a94a3db4":{"$COCollectionField":["Boolean"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD9ee427af986111102acb3419a94a3db4.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"error\",\"mandatory\":\"false\",\"child_name\":\"error_child0\",\"uiUniqueId\":\"5eb7a778-c106-465b-a3c7-86f040ffe25c\",\"uiTypeLabel\":\"Array.Boolean\",\"co_type_name\":\"FD9ee427af986111102acb3419a94a3db4\",\"child_label\":\"error_child0\",\"child_type_label\":\"True/False\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.boolean\",\"child_type\":\"boolean\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"cfd533b0-dee9-4754-b611-9b063c699130\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-09-01 19:07:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>52e427af476111101d73690cd36d43b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD9ee427af986111102acb3419a94a3db4</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_complex_object_52e427af476111101d73690cd36d43b5</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-09-01 19:07:16</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
