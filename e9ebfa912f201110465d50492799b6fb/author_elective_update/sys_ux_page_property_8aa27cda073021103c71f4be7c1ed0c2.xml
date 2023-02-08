@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description/>
+        <name>chrome_toolbar</name>
+        <page display_value="BlockBuster Agent">08e2b61c073021103c71f4be7c1ed01f</page>
+        <required_translations>[ ]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-05 22:20:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>8aa27cda073021103c71f4be7c1ed0c2</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_page_property_8aa27cda073021103c71f4be7c1ed0c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-05 22:37:38</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_809069_bbuster.08e2b61c073021103c71f4be7c1ed01f.root.chrome_toolbar</unique_name>
+        <value>{}</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="DELETE" query="documentkey=8aa27cda073021103c71f4be7c1ed0c2"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>113c06f2db35ec108aea21c4059619ef</instance_id>
+        <instance_name>dev105456</instance_name>
+        <name>sys_ux_page_property_8aa27cda073021103c71f4be7c1ed0c2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description/><name>chrome_toolbar</name><page display_value="BlockBuster Agent">08e2b61c073021103c71f4be7c1ed01f</page><required_translations>[ ]</required_translations><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-05 22:20:07</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>8aa27cda073021103c71f4be7c1ed0c2</sys_id><sys_mod_count>14</sys_mod_count><sys_name>chrome_toolbar</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sys_ux_page_property_8aa27cda073021103c71f4be7c1ed0c2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-05 22:37:38</sys_updated_on><type>json</type><unique_name>x_809069_bbuster.08e2b61c073021103c71f4be7c1ed01f.root.chrome_toolbar</unique_name><value>{}</value></sys_ux_page_property><sys_translated_text action="delete_multiple" query="documentkey=8aa27cda073021103c71f4be7c1ed0c2"/></record_update>]]></payload>
+        <payload_hash>1579040941</payload_hash>
+        <record_name>chrome_toolbar</record_name>
+        <reverted_from/>
+        <source>bc7036d4073021103c71f4be7c1ed073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-05 22:37:38</sys_created_on>
+        <sys_id>f6a6bc12077021103c71f4be7c1ed04b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18623ba52220000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-05 22:37:38</sys_updated_on>
+        <type>UX Page Property</type>
+        <update_guid>fea6bc124970211021637d168970174a</update_guid>
+        <update_guid_history>fea6bc124970211021637d168970174a:1579040941,3866b0525f702110ab303a345b2cb944:1126202339,2e563c121870211083d1c480ac18c77f:1442527401,2816f8126b7021100cbf0aaeaf8458ef:644130020,9906f812ae7021107351ba71d5b801eb:-542406163,41f5f8de1530211027053425e7c917c0:877584947,62d4f4dee13021109fbe7fd5f1c4e0be:-1308737456,21a4fc9eb730211049438eb2f62f73b6:-24946133,d1d3b89e1e302110144ad30d64628294:-1584724312,16c3b09eaa302110fd2087be8dc21430:-312000021,f393b85ea7302110e3662b95cb823190:192335591,ae83f09e4730211017bc4aeef5fca056:691783703,8943b09ed230211050ed14c8cf48c9e5:-413834897,dea2785ea93021107a34afb3a78c7d6b:1814787215,52a27cda4d302110870d32466ca0b0c4:-442418998</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-05 22:38:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>012126067ff847e28018cbb3a4a258b9</sys_id>
+        <sys_metadata>8aa27cda073021103c71f4be7c1ed0c2</sys_metadata>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_8aa27cda073021103c71f4be7c1ed0c2</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_8aa27cda073021103c71f4be7c1ed0c2">f6a6bc12077021103c71f4be7c1ed04b</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

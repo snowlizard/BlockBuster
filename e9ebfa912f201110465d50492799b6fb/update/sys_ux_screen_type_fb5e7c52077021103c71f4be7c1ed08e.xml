@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type">
+    <sys_ux_screen_type action="INSERT_OR_UPDATE">
+        <description/>
+        <name>lists</name>
+        <sys_class_name>sys_ux_screen_type</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-05 23:11:17</sys_created_on>
+        <sys_id>fb5e7c52077021103c71f4be7c1ed08e</sys_id>
+        <sys_name>lists</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_screen_type_fb5e7c52077021103c71f4be7c1ed08e</sys_update_name>
+    </sys_ux_screen_type>
+    <sys_translated_text action="delete_multiple" query="documentkey=fb5e7c52077021103c71f4be7c1ed08e"/>
+</record_update>

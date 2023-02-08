@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "container_1",
+  "elementLabel" : "Container 1",
+  "propertyValues" : {
+    "ariaRegionHeadingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
+    },
+    "ariaRegionName" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "d356d14b6e293a3020a244b63d278d8f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "single_score_1",
+      "elementLabel" : "Single score 1",
+      "propertyValues" : {
+        "standardFormatData" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showFilterIcon" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "dateFormat" : {
+          "type" : "JSON_LITERAL",
+          "value" : "default"
+        },
+        "showMaximumRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "scoreType" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showFirstGroupAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showForecast" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showZero" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "sortBy" : {
+          "type" : "JSON_LITERAL",
+          "value" : "value"
+        },
+        "showTotalValue" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "dataSources" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "isDatabaseView" : {
+                "type" : "JSON_LITERAL",
+                "value" : false
+              },
+              "allowRealTime" : {
+                "type" : "JSON_LITERAL",
+                "value" : true
+              },
+              "label" : {
+                "type" : "TRANSLATION_LITERAL",
+                "value" : {
+                  "code" : null,
+                  "message" : "Movie",
+                  "comment" : ""
+                }
+              },
+              "sourceType" : {
+                "type" : "JSON_LITERAL",
+                "value" : "table"
+              },
+              "tableOrViewName" : {
+                "type" : "JSON_LITERAL",
+                "value" : "x_809069_bbuster_u_cmdb_ci_movie"
+              },
+              "filterQuery" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "reportSourceSysId" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "id" : {
+                "type" : "JSON_LITERAL",
+                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX3VfY21kYl9jaV9tb3ZpZTE2NzUxOTA2NTI4Nzc="
+              },
+              "dataCategories" : {
+                "type" : "JSON_LITERAL",
+                "value" : [ "trend", "group", "simple" ]
+              }
+            }
+          } ]
+        },
+        "period" : {
+          "type" : "JSON_LITERAL",
+          "value" : "M"
+        },
+        "showChange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "configVersion" : {
+          "type" : "JSON_LITERAL",
+          "value" : "22.1.7"
+        },
+        "showSubAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showSecondGroupAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showMetricLabel" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "headingPosition" : {
+          "type" : "JSON_LITERAL",
+          "value" : "top"
+        },
+        "showHeaderSeparator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showSparkline" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showTarget" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "metrics" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "dataSource" : {
+                "type" : "JSON_LITERAL",
+                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX3VfY21kYl9jaV9tb3ZpZTE2NzUxOTA2NTI4Nzc="
+              },
+              "id" : {
+                "type" : "JSON_LITERAL",
+                "value" : "ZEdGaWJHVjRYemd3T1RBMk9WOWlZblZ6ZEdWeVgzVmZZMjFrWWw5amFWOXRiM1pwWlRFMk56VXhPVEEyTlRJNE56Yz0xNjc1MTkwNjU1NDY2"
+              },
+              "aggregateFunction" : {
+                "type" : "JSON_LITERAL",
+                "value" : "COUNT"
+              },
+              "numberFormat" : {
+                "type" : "JSON_LITERAL",
+                "value" : {
+                  "customFormat" : false
+                }
+              },
+              "axisId" : {
+                "type" : "JSON_LITERAL",
+                "value" : "primary"
+              }
+            }
+          } ]
+        },
+        "showChangeFrom" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "chartSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "headerTitle" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "Movies",
+            "comment" : ""
+          }
+        },
+        "applyDateRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "formats" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "sortByOrder" : {
+          "type" : "JSON_LITERAL",
+          "value" : "desc"
+        },
+        "showThreshold" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showScoreDate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "description" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "movies in database",
+            "comment" : ""
+          }
+        },
+        "trendBy" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "numberOfPeriods" : {
+          "type" : "JSON_LITERAL",
+          "value" : 3
+        },
+        "groupBy" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "title" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showTrend" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "enableRealTimeUpdate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showScoreUpdateTime" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showForecastRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showAbsolutePeriod" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "dataCategory" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "scoreSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : "xxl"
+        },
+        "followFilters" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "useRelativeScoreTime" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "startTime" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showTotalAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showChangePercentage" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showHeader" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "bareBorder" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "dataPassthrough" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showConfidenceBand" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showComment" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "refreshFrequency" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "wrapTitle" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showBorder" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "colorConfig" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "type" : "default"
+          }
+        },
+        "filterConfigurations" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "parFilters" ]
+          }
+        },
+        "showGapPercentage" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "backgroundRefreshInterval" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showDataPassthrough" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "sparklineStyle" : {
+          "type" : "JSON_LITERAL",
+          "value" : "area"
+        },
+        "endTime" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "enableDrilldown" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "d24d53f60350de7a652caf3188a46ed2",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
+    }, {
+      "elementId" : "single_score_2",
+      "elementLabel" : "Pie",
+      "propertyValues" : {
+        "standardFormatData" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showFilterIcon" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "dateFormat" : {
+          "type" : "JSON_LITERAL",
+          "value" : "default"
+        },
+        "showMaximumRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "scoreType" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showFirstGroupAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showForecast" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "legendHorizontalAlignment" : {
+          "type" : "JSON_LITERAL",
+          "value" : "center"
+        },
+        "truncationType" : {
+          "type" : "JSON_LITERAL",
+          "value" : "end"
+        },
+        "showRegisterValue" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "sortBy" : {
+          "type" : "JSON_LITERAL",
+          "value" : "value"
+        },
+        "showTotalValue" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "dataSources" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "isDatabaseView" : {
+                "type" : "JSON_LITERAL",
+                "value" : false
+              },
+              "allowRealTime" : {
+                "type" : "JSON_LITERAL",
+                "value" : true
+              },
+              "label" : {
+                "type" : "TRANSLATION_LITERAL",
+                "value" : {
+                  "code" : null,
+                  "message" : "Movie Requests",
+                  "comment" : ""
+                }
+              },
+              "sourceType" : {
+                "type" : "JSON_LITERAL",
+                "value" : "table"
+              },
+              "tableOrViewName" : {
+                "type" : "JSON_LITERAL",
+                "value" : "x_809069_bbuster_movie_requests"
+              },
+              "filterQuery" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "reportSourceSysId" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "id" : {
+                "type" : "JSON_LITERAL",
+                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3NTE5MDgxOTkzMw=="
+              },
+              "dataCategories" : {
+                "type" : "JSON_LITERAL",
+                "value" : [ "trend", "group", "simple" ]
+              }
+            }
+          } ]
+        },
+        "registerPosition" : {
+          "type" : "JSON_LITERAL",
+          "value" : "bottom"
+        },
+        "period" : {
+          "type" : "JSON_LITERAL",
+          "value" : "M"
+        },
+        "showChange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "configVersion" : {
+          "type" : "JSON_LITERAL",
+          "value" : "22.1.7"
+        },
+        "legendExpandToFit" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showSubAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showRegisterPercentage" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showRegisterOnSameLine" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "legendMaxItemWidth" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showSecondGroupAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showMetricLabel" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showHeaderSeparator" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showSparkline" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showTarget" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showDataLabels" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "metrics" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "MAP_CONTAINER",
+            "container" : {
+              "dataSource" : {
+                "type" : "JSON_LITERAL",
+                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3NTE5MDgxOTkzMw=="
+              },
+              "id" : {
+                "type" : "JSON_LITERAL",
+                "value" : "ZEdGaWJHVjRYemd3T1RBMk9WOWlZblZ6ZEdWeVgyMXZkbWxsWDNKbGNYVmxjM1J6TVRZM05URTVNRGd4T1Rrek13PT0xNjc1MTkwODIxNjQ5"
+              },
+              "aggregateFunction" : {
+                "type" : "JSON_LITERAL",
+                "value" : "COUNT"
+              },
+              "numberFormat" : {
+                "type" : "JSON_LITERAL",
+                "value" : {
+                  "customFormat" : false
+                }
+              },
+              "axisId" : {
+                "type" : "JSON_LITERAL",
+                "value" : "primary"
+              }
+            }
+          } ]
+        },
+        "showChangeFrom" : {
+          "type" : "JSON_LITERAL",
+          "value" : "previous"
+        },
+        "registerOrientation" : {
+          "type" : "JSON_LITERAL",
+          "value" : "horizontal"
+        },
+        "chartSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "headerTitle" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "applyDateRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "formats" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "sortByOrder" : {
+          "type" : "JSON_LITERAL",
+          "value" : "desc"
+        },
+        "showThreshold" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "description" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "trendBy" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "numberOfPeriods" : {
+          "type" : "JSON_LITERAL",
+          "value" : 3
+        },
+        "groupBy" : {
+          "type" : "JSON_LITERAL",
+          "value" : [ {
+            "maxNumberOfGroups" : 10,
+            "numberOfGroupsBasedOn" : "NO_OF_GROUP_BASED_ON_PER_METRIC",
+            "showOthers" : false,
+            "groupBy" : [ {
+              "dataSource" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3NTE5MDgxOTkzMw==",
+              "groupByField" : "state",
+              "isRange" : false,
+              "isChoice" : true,
+              "isPaBucket" : false
+            } ],
+            "disableRanges" : false
+          } ]
+        },
+        "title" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showTrend" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "enableRealTimeUpdate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showRegister" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "showForecastRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showAbsolutePeriod" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "dataCategory" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "dataLabelsType" : {
+          "type" : "JSON_LITERAL",
+          "value" : "both"
+        },
+        "followFilters" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "startTime" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showTotalAggregate" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showChangePercentage" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "maxLabelSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showHeader" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "bareBorder" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "dataPassthrough" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showConfidenceBand" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showComment" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "refreshFrequency" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "wrapTitle" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showBorder" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "colorConfig" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "type" : "default"
+          }
+        },
+        "filterConfigurations" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "parFilters" ]
+          }
+        },
+        "showGapPercentage" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "backgroundRefreshInterval" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "showDataPassthrough" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "endTime" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "enableDrilldown" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "96abe7e38d8790718022c5630a92176c",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "isInline" : null,
+        "items" : [{"element_id":"single_score_1","styles":{"align-self":"center","flex":"none"}},{"element_id":"single_score_2","styles":{"height":"350px","flex":"none","width":"300px"}}],
+        "root" : null,
+        "rules" : null,
+        "styles" : {"flex-direction":"row","align-items":"center","justify-content":"center"},
+        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+        "type" : "flex"
+      },
+      "version" : "3.0.0"
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : {
+    "width" : "100%",
+    "align-self" : "center",
+    "height" : ""
+  }
+} ]</composition>
+        <da_relay_models/>
+        <data>[ ]</data>
+        <description/>
+        <dispatched_events/>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{ }</internal_event_mappings>
+        <layout>{
+  "default" : {
+    "children" : null,
+    "isInline" : null,
+    "items" : [{"element_id":"container_1","styles":{}}],
+    "root" : null,
+    "rules" : null,
+    "styles" : {"flex-direction":"column"},
+    "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+    "type" : "flex"
+  },
+  "version" : "3.0.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>test default</name>
+        <output_prop_mapping/>
+        <props>[ ]</props>
+        <required_translations>[ {
+  "message" : "Movie",
+  "comment" : ""
+}, {
+  "message" : "Movie Requests",
+  "comment" : ""
+}, {
+  "message" : "Movies",
+  "comment" : ""
+}, {
+  "message" : "movies in database",
+  "comment" : ""
+} ]</required_translations>
+        <root_component/>
+        <root_component_config>{ }</root_component_config>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_properties>[ ]</state_properties>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-01-31 18:17:57</sys_created_on>
+        <sys_id>714b422c073c21103c71f4be7c1ed032</sys_id>
+        <sys_name>test default</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_macroponent_714b422c073c21103c71f4be7c1ed032</sys_update_name>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=714b422c073c21103c71f4be7c1ed032"/>
+</record_update>
