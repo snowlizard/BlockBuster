@@ -4,8 +4,8 @@
         <category>page</category>
         <component_dependencies/>
         <composition>[ {
-  "elementId" : "container_1",
-  "elementLabel" : "Container 1",
+  "elementId" : "listContainer",
+  "elementLabel" : "listContainer",
   "propertyValues" : {
     "ariaRegionHeadingLevel" : {
       "type" : "JSON_LITERAL",
@@ -40,8 +40,8 @@
   },
   "overrides" : {
     "composition" : [ {
-      "elementId" : "list_menu_1",
-      "elementLabel" : "List menu 1",
+      "elementId" : "list_menu",
+      "elementLabel" : "List Menu",
       "propertyValues" : {
         "hideListCreation" : {
           "type" : "JSON_LITERAL",
@@ -69,7 +69,7 @@
         },
         "configurationId" : {
           "type" : "JSON_LITERAL",
-          "value" : "d305c0a873601010a0a79329faf6a7cb"
+          "value" : "2bd9140307b021103c71f4be7c1ed048"
         },
         "listMenuOpen" : {
           "type" : "JSON_LITERAL",
@@ -305,8 +305,8 @@
       "items" : [ ],
       "styles" : { }
     }, {
-      "elementId" : "list_1",
-      "elementLabel" : "List 1",
+      "elementId" : "list",
+      "elementLabel" : "list",
       "propertyValues" : {
         "hideUnnecessaryRowSelectors" : {
           "type" : "JSON_LITERAL",
@@ -334,7 +334,7 @@
         },
         "hideColumnReorder" : {
           "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : true
         },
         "hideMenuButton" : {
           "type" : "JSON_LITERAL",
@@ -377,8 +377,10 @@
           "value" : false
         },
         "query" : {
-          "type" : "JSON_LITERAL",
-          "value" : "active=true"
+          "type" : "ELEMENT_BINDING",
+          "binding" : {
+            "address" : [ "list_menu", "conditions" ]
+          }
         },
         "hideFilterPanel" : {
           "type" : "JSON_LITERAL",
@@ -409,11 +411,9 @@
           "value" : ""
         },
         "listTitle" : {
-          "type" : "TRANSLATION_LITERAL",
-          "value" : {
-            "code" : null,
-            "message" : "All Active Tasks",
-            "comment" : ""
+          "type" : "ELEMENT_BINDING",
+          "binding" : {
+            "address" : [ "list_menu", "title" ]
           }
         },
         "fixedQuery" : {
@@ -422,7 +422,7 @@
         },
         "hideDotwalk" : {
           "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : true
         },
         "tiny" : {
           "type" : "JSON_LITERAL",
@@ -430,7 +430,7 @@
         },
         "hideDeclarativeActions" : {
           "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : true
         },
         "hideRange" : {
           "type" : "JSON_LITERAL",
@@ -486,7 +486,7 @@
         },
         "maxColumns" : {
           "type" : "JSON_LITERAL",
-          "value" : null
+          "value" : 0
         },
         "hidePreviousPage" : {
           "type" : "JSON_LITERAL",
@@ -514,15 +514,17 @@
         },
         "hidePanelConditionDelete" : {
           "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : true
         },
         "hidePagination" : {
           "type" : "JSON_LITERAL",
           "value" : false
         },
         "table" : {
-          "type" : "JSON_LITERAL",
-          "value" : "task"
+          "type" : "ELEMENT_BINDING",
+          "binding" : {
+            "address" : [ "list_menu", "table" ]
+          }
         },
         "hideColumnGrouping" : {
           "type" : "JSON_LITERAL",
@@ -608,7 +610,83 @@
           "value" : false
         }
       },
-      "eventMappings" : [ ],
+      "eventMappings" : [ {
+        "eventMappingId" : "clenegghbbaaaaaawkccaahhnccnccnegijj",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#ROW_CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_record_list_con.NOW_RECORD_LIST_CONNECTED#ROW_CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "route" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "form_page"
+                },
+                "fields" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "table" : {
+                      "type" : "EVENT_PAYLOAD_BINDING",
+                      "binding" : {
+                        "address" : [ "table" ]
+                      }
+                    },
+                    "sysId" : {
+                      "type" : "EVENT_PAYLOAD_BINDING",
+                      "binding" : {
+                        "address" : [ "sys_id" ]
+                      }
+                    }
+                  }
+                },
+                "params" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "redirect" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "passiveNavigation" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "title" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : ""
+                },
+                "multiInstField" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "targetRoute" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "external" : null
+              }
+            },
+            "sysId" : "de1f75d5071121103c71f4be7c1ed043"
+          },
+          "operation" : null,
+          "targetId" : "clenegghbbaaaaaawlccaahhnddzyjtkld",
+          "type" : "EVENT"
+        } ]
+      } ],
       "slot" : null,
       "definition" : {
         "id" : "66ee7d86e81f696c9f9be19d8424cc0d",
@@ -629,10 +707,10 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"list_menu_1","styles":{}},{"element_id":"list_1","styles":{}}],
+        "items" : [{"element_id":"list_menu","styles":{"min-width":"100px","width":"150px"}},{"element_id":"list","styles":{"flex":"0 1 auto","margin":"var(--now-static-space--xxs)","margin-left":"5em"}}],
         "root" : null,
         "rules" : null,
-        "styles" : {"flex-direction":"row","display":"flex","grid-template-columns":"1fr 1fr","grid-template-rows":"1fr 1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr","grid-auto-flow":"row","align-items":"stretch","justify-content":"space-around","flex-wrap":"nowrap","gap":"var(--now-static-space--lg)"},
+        "styles" : {"flex-direction":"row","flex-wrap":"nowrap","display":"flex","grid-template-columns":"1fr 1fr","grid-template-rows":"1fr 1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr","align-content":"space-evenly","gap":"var(--now-static-space--3xl)","align-items":"stretch","justify-content":"space-evenly"},
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
         "type" : "flex"
       },
@@ -650,9 +728,72 @@
   "styles" : { }
 } ]</composition>
         <da_relay_models/>
-        <data>[ ]</data>
+        <data>[ {
+  "definition" : {
+    "id" : "e56aae0873231010a0a79329faf6a768",
+    "type" : "CLIENT_STATE"
+  },
+  "dependencies" : { },
+  "elementId" : "list_navigation_information_1",
+  "elementLabel" : "List Navigation Information 1",
+  "eventMappings" : [ {
+    "eventMappingId" : "clencsltpaaaalzccaahhnkcopuiiwn",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_list_con.SN_LIST_NAVIGATION_CLIENT#PARAMS_UPDATE_REQUESTED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_list_con.SN_LIST_NAVIGATION_CLIENT#PARAMS_UPDATE_REQUESTED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "route" : null,
+            "fields" : null,
+            "params" : null,
+            "redirect" : null,
+            "passiveNavigation" : null,
+            "title" : null,
+            "multiInstField" : null,
+            "targetRoute" : null,
+            "external" : null
+          }
+        },
+        "sysId" : "de1f75d5071121103c71f4be7c1ed043"
+      },
+      "operation" : null,
+      "targetId" : "clencsltpaaaamaaccaahhnjjeeeencczeehh",
+      "type" : "EVENT"
+    } ]
+  } ],
+  "inputValues" : {
+    "applicationId" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "tinyUrlId" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "listUrlId" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "readEvaluationMode" : "EAGER"
+} ]</data>
         <description/>
-        <dispatched_events/>
+        <dispatched_events>de1f75d5071121103c71f4be7c1ed043</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
@@ -663,7 +804,7 @@
   "default" : {
     "children" : null,
     "isInline" : null,
-    "items" : [{"element_id":"container_1","styles":{}}],
+    "items" : [{"element_id":"listContainer","styles":{}}],
     "root" : null,
     "rules" : null,
     "styles" : {"flex-direction":"column"},
@@ -676,10 +817,7 @@
         <name>lists default</name>
         <output_prop_mapping/>
         <props>[ ]</props>
-        <required_translations>[ {
-  "message" : "All Active Tasks",
-  "comment" : ""
-} ]</required_translations>
+        <required_translations>[ ]</required_translations>
         <root_component/>
         <root_component_config>{ }</root_component_config>
         <root_component_definition/>

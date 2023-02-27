@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="INSERT_OR_UPDATE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-08 03:15:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>66698043077021103c71f4be7c1ed0ce</sys_id>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>m2m_app_config_theme_66698043077021103c71f4be7c1ed0ce</sys_update_name>
+        <theme display_value="BlockBuster Theme">24ecaa6a077461103c71f4be7c1ed038</theme>
+        <ux_app_configuration display_value="BlockBuster Agent">bfd2b61c073021103c71f4be7c1ed01c</ux_app_configuration>
+    </m2m_app_config_theme>
+</record_update>

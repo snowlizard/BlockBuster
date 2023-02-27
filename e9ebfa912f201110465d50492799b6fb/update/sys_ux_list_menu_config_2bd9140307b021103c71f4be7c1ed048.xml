@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_list_menu_config">
+    <sys_ux_list_menu_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <name>BlockBuster Agent List Menu</name>
+        <sys_class_name>sys_ux_list_menu_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-08 04:28:03</sys_created_on>
+        <sys_id>2bd9140307b021103c71f4be7c1ed048</sys_id>
+        <sys_name>BlockBuster Agent List Menu</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_list_menu_config_2bd9140307b021103c71f4be7c1ed048</sys_update_name>
+    </sys_ux_list_menu_config>
+</record_update>
