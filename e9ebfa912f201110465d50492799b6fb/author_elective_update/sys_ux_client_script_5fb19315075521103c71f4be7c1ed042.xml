@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="testlist default - 3.0.0 preview.">dbb19315075521103c71f4be7c1ed040</macroponent>
+        <name>list_nav/NODE__isHidden</name>
+        <preset/>
+        <required_translations/>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {any} params.imports
+  */
+function evaluateProperty({api}) {
+	return !api.state.listMenuOpen;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-28 03:52:38</sys_created_on>
+        <sys_id>5fb19315075521103c71f4be7c1ed042</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>list_nav/NODE__isHidden</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_client_script_5fb19315075521103c71f4be7c1ed042</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-28 03:52:38</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>113c06f2db35ec108aea21c4059619ef</instance_id>
+        <instance_name>dev105456</instance_name>
+        <name>sys_ux_client_script_5fb19315075521103c71f4be7c1ed042</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="testlist default - 3.0.0 preview."&gt;dbb19315075521103c71f4be7c1ed040&lt;/macroponent&gt;&lt;name&gt;list_nav/NODE__isHidden&lt;/name&gt;&lt;preset/&gt;&lt;required_translations/&gt;&lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {any} params.imports
+  */
+function evaluateProperty({api}) {
+	return !api.state.listMenuOpen;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-02-28 03:52:38&lt;/sys_created_on&gt;&lt;sys_id&gt;5fb19315075521103c71f4be7c1ed042&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;list_nav/NODE__isHidden&lt;/sys_name&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_5fb19315075521103c71f4be7c1ed042&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-02-28 03:52:38&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1599814413</payload_hash>
+        <record_name>list_nav/NODE__isHidden</record_name>
+        <reverted_from/>
+        <source>bc7036d4073021103c71f4be7c1ed073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-28 03:53:13</sys_created_on>
+        <sys_id>b7d15355075521103c71f4be7c1ed0db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186962724dd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-28 03:53:13</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>7fd15355a155211083ec096473a468da</update_guid>
+        <update_guid_history>7fd15355a155211083ec096473a468da:1599814413,f3b19f15f2552110410eb84eaa152717:-481616691,f7b15f15de552110cfffedad1af556b8:1599814413,97b15f1554552110112d93cec5da34cd:-481616691,1bb15f15bb552110ef45dd00ea3059c8:-267183810</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-28 03:53:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>67dc2e84da2647b9bcca940c02913df1</sys_id>
+        <sys_metadata>5fb19315075521103c71f4be7c1ed042</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>list_nav/NODE__isHidden</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_5fb19315075521103c71f4be7c1ed042</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_5fb19315075521103c71f4be7c1ed042">b7d15355075521103c71f4be7c1ed0db</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-28 03:53:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

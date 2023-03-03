@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="Service Operations Workspace">4d69d0ed73c4301045216238edf6a7ea</app_config>
+        <description/>
+        <extension_point/>
+        <fields>table,sysId,pageTitle,pageSubTitle,useDomain</fields>
+        <icon/>
+        <name>testlist default Interceptor</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="testlist default">af819315075521103c71f4be7c1ed0d3</parent_macroponent>
+        <parent_macroponent_composition_element_id>modalContainerViewport</parent_macroponent_composition_element_id>
+        <route_type>interceptor</route_type>
+        <screen_type display_value="Interceptor">9f5b1c8b0b8330106237818393673a6c</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-28 03:51:57</sys_created_on>
+        <sys_id>d191db15075521103c71f4be7c1ed085</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>testlist default Interceptor</sys_name>
+        <sys_package display_value="Problem Management - Service Operations Workspace" source="sn_sow_problem">54a81ee10b11301039dd818393673a5c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_app_route_d191db15075521103c71f4be7c1ed085</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-28 03:51:57</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=d191db15075521103c71f4be7c1ed085"/>
+</record_update>

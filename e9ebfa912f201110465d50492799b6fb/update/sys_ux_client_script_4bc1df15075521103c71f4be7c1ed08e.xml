@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Interceptor default">15c19f15075521103c71f4be7c1ed0cc</macroponent>
+        <name>Navigate to record on create</name>
+        <preset/>
+        <required_translations/>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    const selectedRecordType = api.state.selectedRecordType;
+    const params = {};
+    const fields = {
+        "table": api.context.props.table,
+        "sysId": api.context.props.sysId
+    };
+    helpers.modal.close();
+    // Open in sub-tab
+    if (api.context.props.parentTable !== "" && api.context.props.parentSysId !== "") {
+        let domain = api.data.look_up_records_1.results[0].sys_domain.value;
+        params.query = api.context.props.referencedFieldName+"="+api.context.props.parentSysId+"^"+"sys_domain="+domain+"^"+selectedRecordType.values;
+        api.emit("NAV_ITEM_SELECTED", {
+            "route": "record",
+            "fields": {
+                "table": api.context.props.table, 
+                "sysId": api.context.props.sysId
+            },
+            "params": params,
+            "parent": {
+                "route": "record",
+                "fields": {
+                    "table": api.context.props.parentTable, 
+                    "sysId": api.context.props.parentSysId 
+                }
+            },
+            "redirect": "false",
+            "passiveNavigation": "",
+            "title": "",
+            "multiInstField": "",
+            "external": ""
+        });
+    } else {
+        // Open as main tab
+        params.query = selectedRecordType.values;
+    
+        helpers.navigate.to("record", fields, params);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-28 03:52:53</sys_created_on>
+        <sys_id>4bc1df15075521103c71f4be7c1ed08e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Navigate to record on create</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_client_script_4bc1df15075521103c71f4be7c1ed08e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-28 03:52:53</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>
