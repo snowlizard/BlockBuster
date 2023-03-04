@@ -11,16 +11,19 @@
         <parent_macroponent display_value="Agent Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
         <parent_macroponent_composition_element_id/>
         <route_type>lists</route_type>
-        <screen_type display_value="lists">fb5e7c52077021103c71f4be7c1ed08e</screen_type>
+        <screen_type display_value="lists">84746fa6079521103c71f4be7c1ed0cd</screen_type>
         <sys_class_name>sys_ux_app_route</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-05 23:11:18</sys_created_on>
-        <sys_id>3b5e341a077021103c71f4be7c1ed0a9</sys_id>
+        <sys_created_on>2023-03-04 02:26:44</sys_created_on>
+        <sys_id>507423e6079521103c71f4be7c1ed014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>lists</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sys_ux_app_route_3b5e341a077021103c71f4be7c1ed0a9</sys_update_name>
+        <sys_update_name>sys_ux_app_route_507423e6079521103c71f4be7c1ed014</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:26:44</sys_updated_on>
     </sys_ux_app_route>
-    <sys_translated_text action="delete_multiple" query="documentkey=3b5e341a077021103c71f4be7c1ed0a9"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=507423e6079521103c71f4be7c1ed014"/>
 </record_update>

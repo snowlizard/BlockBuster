@@ -396,21 +396,41 @@
       "styles" : { }
     }, {
       "elementId" : "single_score_2",
-      "elementLabel" : "Pie",
+      "elementLabel" : "Vertical bar",
       "propertyValues" : {
+        "yAxisStyle" : {
+          "type" : "JSON_LITERAL",
+          "value" : "clean"
+        },
         "standardFormatData" : {
           "type" : "JSON_LITERAL",
           "value" : null
         },
+        "yAxisShowGrid" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
         "showFilterIcon" : {
           "type" : "JSON_LITERAL",
           "value" : true
+        },
+        "yAxisPosition" : {
+          "type" : "JSON_LITERAL",
+          "value" : "bottom"
         },
         "dateFormat" : {
           "type" : "JSON_LITERAL",
           "value" : "default"
         },
         "showMaximumRange" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showLegend" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "showOverlappingLabels" : {
           "type" : "JSON_LITERAL",
           "value" : false
         },
@@ -430,13 +450,9 @@
           "type" : "JSON_LITERAL",
           "value" : "center"
         },
-        "truncationType" : {
+        "yAxisFrom" : {
           "type" : "JSON_LITERAL",
-          "value" : "end"
-        },
-        "showRegisterValue" : {
-          "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : null
         },
         "sortBy" : {
           "type" : "JSON_LITERAL",
@@ -477,7 +493,7 @@
               },
               "filterQuery" : {
                 "type" : "JSON_LITERAL",
-                "value" : null
+                "value" : "sys_created_onONThis week@javascript:gs.beginningOfThisWeek()@javascript:gs.endOfThisWeek()"
               },
               "reportSourceSysId" : {
                 "type" : "JSON_LITERAL",
@@ -485,7 +501,7 @@
               },
               "id" : {
                 "type" : "JSON_LITERAL",
-                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3NTE5MDgxOTkzMw=="
+                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3Nzg4MTU4Nzk1Mg=="
               },
               "dataCategories" : {
                 "type" : "JSON_LITERAL",
@@ -494,9 +510,9 @@
             }
           } ]
         },
-        "registerPosition" : {
+        "yAxisTitle" : {
           "type" : "JSON_LITERAL",
-          "value" : "bottom"
+          "value" : null
         },
         "period" : {
           "type" : "JSON_LITERAL",
@@ -518,13 +534,13 @@
           "type" : "JSON_LITERAL",
           "value" : false
         },
-        "showRegisterPercentage" : {
+        "chartVariation" : {
           "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : null
         },
-        "showRegisterOnSameLine" : {
+        "dataLabelPosition" : {
           "type" : "JSON_LITERAL",
-          "value" : false
+          "value" : "middle"
         },
         "legendMaxItemWidth" : {
           "type" : "JSON_LITERAL",
@@ -561,11 +577,11 @@
             "container" : {
               "dataSource" : {
                 "type" : "JSON_LITERAL",
-                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3NTE5MDgxOTkzMw=="
+                "value" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3Nzg4MTU4Nzk1Mg=="
               },
               "id" : {
                 "type" : "JSON_LITERAL",
-                "value" : "ZEdGaWJHVjRYemd3T1RBMk9WOWlZblZ6ZEdWeVgyMXZkbWxsWDNKbGNYVmxjM1J6TVRZM05URTVNRGd4T1Rrek13PT0xNjc1MTkwODIxNjQ5"
+                "value" : "ZEdGaWJHVjRYemd3T1RBMk9WOWlZblZ6ZEdWeVgyMXZkbWxsWDNKbGNYVmxjM1J6TVRZM056ZzRNVFU0TnprMU1nPT0xNjc3ODgxNTg5NjA2"
               },
               "aggregateFunction" : {
                 "type" : "JSON_LITERAL",
@@ -588,17 +604,17 @@
           "type" : "JSON_LITERAL",
           "value" : "previous"
         },
-        "registerOrientation" : {
-          "type" : "JSON_LITERAL",
-          "value" : "horizontal"
-        },
         "chartSize" : {
           "type" : "JSON_LITERAL",
           "value" : null
         },
         "headerTitle" : {
-          "type" : "JSON_LITERAL",
-          "value" : null
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "Weekly Movie Requests",
+            "comment" : ""
+          }
         },
         "applyDateRange" : {
           "type" : "JSON_LITERAL",
@@ -616,9 +632,17 @@
           "type" : "JSON_LITERAL",
           "value" : false
         },
-        "description" : {
+        "xAxisTitle" : {
           "type" : "JSON_LITERAL",
           "value" : null
+        },
+        "description" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "State of movie requested made for the current week.",
+            "comment" : ""
+          }
         },
         "trendBy" : {
           "type" : "JSON_LITERAL",
@@ -635,30 +659,33 @@
             "numberOfGroupsBasedOn" : "NO_OF_GROUP_BASED_ON_PER_METRIC",
             "showOthers" : false,
             "groupBy" : [ {
-              "dataSource" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3NTE5MDgxOTkzMw==",
+              "dataSource" : "dGFibGV4XzgwOTA2OV9iYnVzdGVyX21vdmllX3JlcXVlc3RzMTY3Nzg4MTU4Nzk1Mg==",
               "groupByField" : "state",
               "isRange" : false,
               "isChoice" : true,
               "isPaBucket" : false
-            } ],
-            "disableRanges" : false
+            } ]
           } ]
         },
         "title" : {
           "type" : "JSON_LITERAL",
           "value" : null
         },
+        "xAxisTruncationType" : {
+          "type" : "JSON_LITERAL",
+          "value" : "end"
+        },
         "showTrend" : {
           "type" : "JSON_LITERAL",
           "value" : false
         },
+        "showStackedValues" : {
+          "type" : "JSON_LITERAL",
+          "value" : "none"
+        },
         "enableRealTimeUpdate" : {
           "type" : "JSON_LITERAL",
           "value" : false
-        },
-        "showRegister" : {
-          "type" : "JSON_LITERAL",
-          "value" : true
         },
         "showForecastRange" : {
           "type" : "JSON_LITERAL",
@@ -671,10 +698,6 @@
         "dataCategory" : {
           "type" : "JSON_LITERAL",
           "value" : null
-        },
-        "dataLabelsType" : {
-          "type" : "JSON_LITERAL",
-          "value" : "both"
         },
         "followFilters" : {
           "type" : "JSON_LITERAL",
@@ -692,15 +715,23 @@
           "type" : "JSON_LITERAL",
           "value" : false
         },
-        "maxLabelSize" : {
+        "yAxisTo" : {
           "type" : "JSON_LITERAL",
           "value" : null
+        },
+        "xAxisWrapLabels" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
         },
         "showHeader" : {
           "type" : "JSON_LITERAL",
           "value" : true
         },
         "bareBorder" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "yAxisHidden" : {
           "type" : "JSON_LITERAL",
           "value" : false
         },
@@ -725,6 +756,10 @@
           "value" : false
         },
         "showBorder" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        },
+        "showLegendValue" : {
           "type" : "JSON_LITERAL",
           "value" : false
         },
@@ -752,6 +787,14 @@
           "type" : "JSON_LITERAL",
           "value" : false
         },
+        "xAxisMaxLabelSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : 100
+        },
+        "legendPosition" : {
+          "type" : "JSON_LITERAL",
+          "value" : "bottom"
+        },
         "endTime" : {
           "type" : "JSON_LITERAL",
           "value" : null
@@ -764,7 +807,7 @@
       "eventMappings" : [ ],
       "slot" : null,
       "definition" : {
-        "id" : "96abe7e38d8790718022c5630a92176c",
+        "id" : "23051643b7e03010097cb81cde11a910",
         "type" : "MACROPONENT"
       },
       "overrides" : null,
@@ -782,7 +825,7 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"single_score_1","styles":{"align-self":"center","flex":"none"}},{"element_id":"single_score_2","styles":{"height":"350px","flex":"none","width":"300px"}}],
+        "items" : [{"element_id":"single_score_1","styles":{"align-self":"center","flex":"none"}},{"element_id":"single_score_2","styles":{"height":"250px"}}],
         "root" : null,
         "rules" : null,
         "styles" : {"flex-direction":"row","align-items":"center","justify-content":"center"},
@@ -943,6 +986,12 @@
   "message" : "Movies",
   "comment" : ""
 }, {
+  "message" : "State of movie requested made for the current week.",
+  "comment" : ""
+}, {
+  "message" : "Weekly Movie Requests",
+  "comment" : ""
+}, {
   "message" : "movies in database",
   "comment" : ""
 } ]</required_translations>
@@ -955,11 +1004,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-01-31 18:17:57</sys_created_on>
         <sys_id>714b422c073c21103c71f4be7c1ed032</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>test default</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_ux_macroponent_714b422c073c21103c71f4be7c1ed032</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-03 22:14:17</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=714b422c073c21103c71f4be7c1ed032"/>
 </record_update>

@@ -4,13 +4,13 @@
         <app_config display_value="BlockBuster Agent">bfd2b61c073021103c71f4be7c1ed01c</app_config>
         <description/>
         <event_mappings>[ {
-  "eventMappingId" : "clencugffnaaaameccaahhnmiiqeerxim",
+  "eventMappingId" : "cletcszreaaaaylccahhommvbaaaeef",
   "isConfiguration" : false,
   "offRowStorageId" : null,
-  "sourceEventApiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+  "sourceEventApiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_94746fa6079521103c71f4be7c1ed0cf",
   "sourceEventCorrelationId" : null,
   "sourceEventDefinition" : {
-    "apiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+    "apiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_94746fa6079521103c71f4be7c1ed0cf",
     "id" : null,
     "type" : "UXEVENT"
   },
@@ -84,11 +84,11 @@
       "sysId" : "8b82bf18e5276c8e423b6e4e0889b463"
     },
     "operation" : null,
-    "targetId" : "clencugffmaaaamdccaahhnggjjcckzeffi",
+    "targetId" : "cletcszreaaaaykccahhoeeqggddwahh",
     "type" : "EVENT"
   } ]
 } ]</event_mappings>
-        <macroponent display_value="lists default">bb5e7c52077021103c71f4be7c1ed092</macroponent>
+        <macroponent display_value="lists default">94746fa6079521103c71f4be7c1ed0cf</macroponent>
         <macroponent_config>{
   "label" : {
     "type" : "TRANSLATION_LITERAL",
@@ -129,19 +129,22 @@
         <required_translations>[ ]</required_translations>
         <rollback_screen/>
         <screen_condition/>
-        <screen_type display_value="lists">fb5e7c52077021103c71f4be7c1ed08e</screen_type>
+        <screen_type display_value="lists">84746fa6079521103c71f4be7c1ed0cd</screen_type>
         <sys_class_name>sys_ux_screen</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2023-02-05 23:11:18</sys_created_on>
+        <sys_created_on>2023-03-04 02:26:44</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>bb5e341a077021103c71f4be7c1ed0a1</sys_id>
+        <sys_id>58746fa6079521103c71f4be7c1ed0d1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>lists default</sys_name>
         <sys_overrides/>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sys_ux_screen_bb5e341a077021103c71f4be7c1ed0a1</sys_update_name>
+        <sys_update_name>sys_ux_screen_58746fa6079521103c71f4be7c1ed0d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:37:06</sys_updated_on>
     </sys_ux_screen>
-    <sys_translated_text action="delete_multiple" query="documentkey=bb5e341a077021103c71f4be7c1ed0a1"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=58746fa6079521103c71f4be7c1ed0d1"/>
 </record_update>

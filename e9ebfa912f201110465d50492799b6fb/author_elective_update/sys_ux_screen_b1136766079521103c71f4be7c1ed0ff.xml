@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="BlockBuster Agent">bfd2b61c073021103c71f4be7c1ed01c</app_config>
+        <description/>
+        <event_mappings/>
+        <macroponent display_value="form">25136766079521103c71f4be7c1ed0fc</macroponent>
+        <macroponent_config>{ }</macroponent_config>
+        <name>form</name>
+        <order>0</order>
+        <parent_macroponent display_value="Agent Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="lists">fb5e7c52077021103c71f4be7c1ed08e</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-04 02:20:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b1136766079521103c71f4be7c1ed0ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>form</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_screen_b1136766079521103c71f4be7c1ed0ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:20:50</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=b1136766079521103c71f4be7c1ed0ff"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>113c06f2db35ec108aea21c4059619ef</instance_id>
+        <instance_name>dev105456</instance_name>
+        <name>sys_ux_screen_b1136766079521103c71f4be7c1ed0ff</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="BlockBuster Agent">bfd2b61c073021103c71f4be7c1ed01c</app_config><description/><event_mappings/><macroponent display_value="form">25136766079521103c71f4be7c1ed0fc</macroponent><macroponent_config>{ }</macroponent_config><name>form</name><order>0</order><parent_macroponent display_value="Agent Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="lists">fb5e7c52077021103c71f4be7c1ed08e</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-03-04 02:20:50</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b1136766079521103c71f4be7c1ed0ff</sys_id><sys_mod_count>0</sys_mod_count><sys_name>form</sys_name><sys_overrides/><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sys_ux_screen_b1136766079521103c71f4be7c1ed0ff</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-03-04 02:20:50</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=b1136766079521103c71f4be7c1ed0ff"/></record_update>]]></payload>
+        <payload_hash>-65237234</payload_hash>
+        <record_name>form</record_name>
+        <reverted_from/>
+        <source>bc7036d4073021103c71f4be7c1ed073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-04 02:20:50</sys_created_on>
+        <sys_id>7113a766079521103c71f4be7c1ed002</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186aa6c01ec0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:20:50</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>b913a7660b95211078c311cc07fd2601</update_guid>
+        <update_guid_history>b913a7660b95211078c311cc07fd2601:-65237234</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-04 02:24:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>7ceabd2d8d234628975125cea4baf240</sys_id>
+        <sys_metadata>b1136766079521103c71f4be7c1ed0ff</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>form</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_b1136766079521103c71f4be7c1ed0ff</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_b1136766079521103c71f4be7c1ed0ff">7113a766079521103c71f4be7c1ed002</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:24:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

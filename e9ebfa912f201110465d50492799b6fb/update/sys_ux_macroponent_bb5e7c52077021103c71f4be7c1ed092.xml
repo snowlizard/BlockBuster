@@ -430,7 +430,7 @@
         },
         "hideDeclarativeActions" : {
           "type" : "JSON_LITERAL",
-          "value" : true
+          "value" : false
         },
         "hideRange" : {
           "type" : "JSON_LITERAL",
@@ -814,7 +814,7 @@
   "version" : "3.0.0"
 }</layout>
         <macroponent_dependencies/>
-        <name>lists default</name>
+        <name>lists</name>
         <output_prop_mapping/>
         <props>[ ]</props>
         <required_translations>[ ]</required_translations>
@@ -827,11 +827,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-05 23:11:18</sys_created_on>
         <sys_id>bb5e7c52077021103c71f4be7c1ed092</sys_id>
-        <sys_name>lists default</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>lists</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_ux_macroponent_bb5e7c52077021103c71f4be7c1ed092</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:24:22</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=bb5e7c52077021103c71f4be7c1ed092"/>
 </record_update>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="BlockBuster Agent">bfd2b61c073021103c71f4be7c1ed01c</app_config>
+        <description/>
+        <event_mappings>[ {
+  "eventMappingId" : "clencugffnaaaameccaahhnmiiqeerxim",
+  "isConfiguration" : false,
+  "offRowStorageId" : null,
+  "sourceEventApiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+  "sourceEventCorrelationId" : null,
+  "sourceEventDefinition" : {
+    "apiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+    "id" : null,
+    "type" : "UXEVENT"
+  },
+  "sourceEventSysId" : null,
+  "targets" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_canvas_core.NAV_ITEM_SELECTED",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "route" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "route" ]
+            }
+          },
+          "fields" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "fields" ]
+            }
+          },
+          "params" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "params" ]
+            }
+          },
+          "redirect" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "redirect" ]
+            }
+          },
+          "passiveNavigation" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "passiveNavigation" ]
+            }
+          },
+          "title" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "title" ]
+            }
+          },
+          "multiInstField" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "multiInstField" ]
+            }
+          },
+          "targetRoute" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "targetRoute" ]
+            }
+          },
+          "external" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "external" ]
+            }
+          }
+        }
+      },
+      "sysId" : "8b82bf18e5276c8e423b6e4e0889b463"
+    },
+    "operation" : null,
+    "targetId" : "clencugffmaaaamdccaahhnggjjcckzeffi",
+    "type" : "EVENT"
+  } ]
+} ]</event_mappings>
+        <macroponent display_value="lists default">bb5e7c52077021103c71f4be7c1ed092</macroponent>
+        <macroponent_config>{
+  "label" : {
+    "type" : "TRANSLATION_LITERAL",
+    "value" : {
+      "code" : null,
+      "message" : "",
+      "comment" : ""
+    }
+  },
+  "bare" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  },
+  "scrollable" : {
+    "type" : "JSON_LITERAL",
+    "value" : "y"
+  },
+  "headerLevel" : {
+    "type" : "JSON_LITERAL",
+    "value" : "1"
+  },
+  "headingOnlyVisibleToScreenReaders" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "interceptNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "propagateNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  }
+}</macroponent_config>
+        <name>lists</name>
+        <order>0</order>
+        <parent_macroponent display_value="Agent Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="lists">fb5e7c52077021103c71f4be7c1ed08e</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-05 23:11:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb5e341a077021103c71f4be7c1ed0a1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>lists</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_screen_bb5e341a077021103c71f4be7c1ed0a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:24:20</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=bb5e341a077021103c71f4be7c1ed0a1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>113c06f2db35ec108aea21c4059619ef</instance_id>
+        <instance_name>dev105456</instance_name>
+        <name>sys_ux_screen_bb5e341a077021103c71f4be7c1ed0a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="BlockBuster Agent">bfd2b61c073021103c71f4be7c1ed01c</app_config><description/><event_mappings>[ {
+  "eventMappingId" : "clencugffnaaaameccaahhnmiiqeerxim",
+  "isConfiguration" : false,
+  "offRowStorageId" : null,
+  "sourceEventApiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+  "sourceEventCorrelationId" : null,
+  "sourceEventDefinition" : {
+    "apiName" : "x_809069_bbuster.NAV_ITEM_SELECTED_RELAY_bb5e7c52077021103c71f4be7c1ed092",
+    "id" : null,
+    "type" : "UXEVENT"
+  },
+  "sourceEventSysId" : null,
+  "targets" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_canvas_core.NAV_ITEM_SELECTED",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "route" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "route" ]
+            }
+          },
+          "fields" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "fields" ]
+            }
+          },
+          "params" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "params" ]
+            }
+          },
+          "redirect" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "redirect" ]
+            }
+          },
+          "passiveNavigation" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "passiveNavigation" ]
+            }
+          },
+          "title" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "title" ]
+            }
+          },
+          "multiInstField" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "multiInstField" ]
+            }
+          },
+          "targetRoute" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "targetRoute" ]
+            }
+          },
+          "external" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "external" ]
+            }
+          }
+        }
+      },
+      "sysId" : "8b82bf18e5276c8e423b6e4e0889b463"
+    },
+    "operation" : null,
+    "targetId" : "clencugffmaaaamdccaahhnggjjcckzeffi",
+    "type" : "EVENT"
+  } ]
+} ]</event_mappings><macroponent display_value="lists default">bb5e7c52077021103c71f4be7c1ed092</macroponent><macroponent_config>{
+  "label" : {
+    "type" : "TRANSLATION_LITERAL",
+    "value" : {
+      "code" : null,
+      "message" : "",
+      "comment" : ""
+    }
+  },
+  "bare" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  },
+  "scrollable" : {
+    "type" : "JSON_LITERAL",
+    "value" : "y"
+  },
+  "headerLevel" : {
+    "type" : "JSON_LITERAL",
+    "value" : "1"
+  },
+  "headingOnlyVisibleToScreenReaders" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "interceptNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "propagateNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  }
+}</macroponent_config><name>lists</name><order>0</order><parent_macroponent display_value="Agent Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="lists">fb5e7c52077021103c71f4be7c1ed08e</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-05 23:11:18</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bb5e341a077021103c71f4be7c1ed0a1</sys_id><sys_mod_count>1</sys_mod_count><sys_name>lists</sys_name><sys_overrides/><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sys_ux_screen_bb5e341a077021103c71f4be7c1ed0a1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-03-04 02:24:20</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=bb5e341a077021103c71f4be7c1ed0a1"/></record_update>]]></payload>
+        <payload_hash>-528553946</payload_hash>
+        <record_name>lists</record_name>
+        <reverted_from/>
+        <source>bc7036d4073021103c71f4be7c1ed073</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-04 02:24:21</sys_created_on>
+        <sys_id>41e3a7a6079521103c71f4be7c1ed012</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186aa6f39200000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:24:21</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>89e3a7a65c9521109e7b4f203ddd2911</update_guid>
+        <update_guid_history>89e3a7a65c9521109e7b4f203ddd2911:-528553946,db1f3599251121106bf4d86512182e86:-1862982428,5aa0da9972512110990f2f1c35b4917f:0,db1f3599251121106bf4d86512182e86:-1862982428,488745122db0211053e400c3ad665396:-477126991,775e341a4e702110e6422411a33798a4:-1447765151</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-04 02:24:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>069034f506b64f7580b424b7ad98f0e1</sys_id>
+        <sys_metadata>bb5e341a077021103c71f4be7c1ed0a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>lists</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_bb5e341a077021103c71f4be7c1ed0a1</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_bb5e341a077021103c71f4be7c1ed0a1">41e3a7a6079521103c71f4be7c1ed012</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 02:24:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

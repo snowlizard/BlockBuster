@@ -65,6 +65,52 @@
   "isNonDestructive" : false,
   "items" : [ ],
   "styles" : { }
+}, {
+  "elementId" : "poster",
+  "elementLabel" : "Poster",
+  "propertyValues" : {
+    "fit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "contain"
+    },
+    "src" : {
+      "type" : "DATA_OUTPUT_BINDING",
+      "binding" : {
+        "address" : [ "record", "form", "fields", "u_poster", "value" ]
+      }
+    },
+    "height" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "15fe506403f8a98575b6df59008ea8f1",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
+  "isHidden" : {
+    "type" : "CLIENT_TRANSFORM_SCRIPT",
+    "script" : {
+      "apiVersion" : "2.0.0",
+      "controllerElementId" : null,
+      "inlineScript" : null,
+      "scriptSysId" : "6cc7bfa607d521103c71f4be7c1ed0d2",
+      "target" : null
+    }
+  },
+  "isHero" : false,
+  "preset" : {
+    "controllerElementId" : "record",
+    "disabledEventTargetIds" : [ ],
+    "id" : "fb915bf1bad80b3097b5b2c76b35b215"
+  },
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : { }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
@@ -261,12 +307,12 @@
   "default" : {
     "children" : null,
     "isInline" : null,
-    "items" : [{"element_id":"form_1","styles":{"padding":"var(--now-static-space--lg)"}}],
+    "items" : [{"element_id":"form_1","styles":{"padding":"var(--now-static-space--lg)","flex":"1 0 auto","width":""}},{"element_id":"poster","styles":{"width":"400px","height":"","margin":"var(--now-static-space--lg)","align-self":"flex-start"}}],
     "root" : null,
     "rules" : null,
-    "styles" : {"overflow-x":"auto","width":"100%","height":"100%","display":"grid","grid-template-rows":"max-content max-content max-content minmax(0px, 1fr)","grid-template-columns":"1fr"},
+    "styles" : {"overflow-x":"auto","width":"100%","height":"100%","display":"flex","grid-template-rows":"max-content max-content max-content minmax(0px, 1fr)","grid-template-columns":"1fr","grid-auto-flow":"row","flex-direction":"row","justify-content":"center"},
     "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
-    "type" : "grid"
+    "type" : "flex"
   },
   "version" : "3.0.0"
 }</layout>
@@ -412,11 +458,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-27 22:47:39</sys_created_on>
         <sys_id>77eb8a51075121103c71f4be7c1ed004</sys_id>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>form_page default</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_ux_macroponent_77eb8a51075121103c71f4be7c1ed004</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 03:56:29</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=77eb8a51075121103c71f4be7c1ed004"/>
 </record_update>
