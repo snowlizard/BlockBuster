@@ -405,12 +405,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>91ad66aa077461103c71f4be7c1ed0f1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>BlockBuster Colors</sys_name>
         <sys_overrides/>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_ux_style_91ad66aa077461103c71f4be7c1ed0f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-04 07:07:20</sys_updated_on>
         <type>core</type>
     </sys_ux_style>
 </record_update>

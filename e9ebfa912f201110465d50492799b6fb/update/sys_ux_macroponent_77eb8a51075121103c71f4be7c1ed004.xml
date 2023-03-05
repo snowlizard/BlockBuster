@@ -4,68 +4,6 @@
         <category>page</category>
         <component_dependencies/>
         <composition>[ {
-  "elementId" : "form_1",
-  "elementLabel" : "Form 1",
-  "propertyValues" : {
-    "scrollableHost" : {
-      "type" : "JSON_LITERAL",
-      "value" : null
-    },
-    "inRecordPageTab" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "isSectionMenuHidden" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "isSectionTitleHidden" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "isRemovePaddingLeft" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "disableCollapse" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "isContextMenuHidden" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "isFormOptionsHidden" : {
-      "type" : "JSON_LITERAL",
-      "value" : false
-    },
-    "inUiBuilder" : {
-      "type" : "JSON_LITERAL",
-      "value" : true
-    }
-  },
-  "eventMappings" : [ ],
-  "slot" : null,
-  "definition" : {
-    "id" : "cdf8d604a3fda59e69ccd6dd407263d6",
-    "type" : "MACROPONENT"
-  },
-  "overrides" : null,
-  "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : null
-  },
-  "isHero" : false,
-  "preset" : {
-    "controllerElementId" : "record",
-    "disabledEventTargetIds" : [ ],
-    "id" : "187b98f917f400e17ab765dee8b4fb04"
-  },
-  "extensionPoints" : [ ],
-  "isNonDestructive" : false,
-  "items" : [ ],
-  "styles" : { }
-}, {
   "elementId" : "poster",
   "elementLabel" : "Poster",
   "propertyValues" : {
@@ -111,6 +49,164 @@
   "isNonDestructive" : false,
   "items" : [ ],
   "styles" : { }
+}, {
+  "elementId" : "container_1",
+  "elementLabel" : "Container 1",
+  "propertyValues" : {
+    "ariaRegionHeadingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
+    },
+    "ariaRegionName" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "d356d14b6e293a3020a244b63d278d8f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "form",
+      "elementLabel" : "Form",
+      "propertyValues" : {
+        "scrollableHost" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "inRecordPageTab" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "isSectionMenuHidden" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "isSectionTitleHidden" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "isRemovePaddingLeft" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "disableCollapse" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "isContextMenuHidden" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "isFormOptionsHidden" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "inUiBuilder" : {
+          "type" : "JSON_LITERAL",
+          "value" : true
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : "",
+      "definition" : {
+        "id" : "cdf8d604a3fda59e69ccd6dd407263d6",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "preset" : {
+        "controllerElementId" : "record",
+        "disabledEventTargetIds" : [ ],
+        "id" : "187b98f917f400e17ab765dee8b4fb04"
+      },
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
+    }, {
+      "elementId" : "action_bar_1",
+      "elementLabel" : "Action bar 1",
+      "propertyValues" : {
+        "daClientActionContract" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "fixedButtonNumber" : {
+          "type" : "JSON_LITERAL",
+          "value" : 0
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "6759357892ba1957c0a25d74e5d2a4a4",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "preset" : {
+        "controllerElementId" : "record",
+        "disabledEventTargetIds" : [ ],
+        "id" : "2def2c8299bd8376a39d3adfdb576b66"
+      },
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "isInline" : null,
+        "items" : [{"element_id":"action_bar_1","styles":{"padding":"var(--now-static-space--lg)","flex":"none","align-self":"flex-end","width":"100%"}},{"element_id":"form","styles":{"flex":"1 0 auto","width":"100%","align-self":"flex-start","min-width":"100%"}}],
+        "root" : null,
+        "rules" : null,
+        "styles" : {"flex-direction":"column"},
+        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+        "type" : "flex"
+      },
+      "version" : "3.0.0"
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : {
+    "flex" : "none"
+  }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
@@ -307,10 +403,10 @@
   "default" : {
     "children" : null,
     "isInline" : null,
-    "items" : [{"element_id":"form_1","styles":{"padding":"var(--now-static-space--lg)","flex":"1 0 auto","width":""}},{"element_id":"poster","styles":{"width":"400px","height":"","margin":"var(--now-static-space--lg)","align-self":"flex-start"}}],
+    "items" : [{"element_id":"container_1","styles":{}},{"element_id":"poster","styles":{"width":"400px","height":"","margin":"var(--now-static-space--lg)","align-self":"flex-start"}}],
     "root" : null,
     "rules" : null,
-    "styles" : {"overflow-x":"auto","width":"100%","height":"100%","display":"flex","grid-template-rows":"max-content max-content max-content minmax(0px, 1fr)","grid-template-columns":"1fr","grid-auto-flow":"row","flex-direction":"row","justify-content":"center"},
+    "styles" : {"overflow-x":"auto","width":"100%","height":"100%","display":"flex","grid-template-rows":"max-content max-content max-content minmax(0px, 1fr)","grid-template-columns":"1fr","grid-auto-flow":"row","flex-direction":"row","justify-content":"center","flex-wrap":"nowrap","gap":"var(--now-static-space--xxs)","padding":"var(--now-static-space--sm)"},
     "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
     "type" : "flex"
   },
@@ -458,14 +554,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-02-27 22:47:39</sys_created_on>
         <sys_id>77eb8a51075121103c71f4be7c1ed004</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>form_page default</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sys_ux_macroponent_77eb8a51075121103c71f4be7c1ed004</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-03-04 03:56:29</sys_updated_on>
+        <sys_updated_on>2023-03-05 07:27:50</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=77eb8a51075121103c71f4be7c1ed004"/>
 </record_update>
