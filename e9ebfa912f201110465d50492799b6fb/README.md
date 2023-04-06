@@ -24,6 +24,7 @@ If you find yourself unable to import your repository due to the presence of fil
    2.2 Activate/install all required dependencies
    2.3 Re-import the application from source control
    Currently listed dependencies:
-   * Task table schema
    * System Import Sets
+   * Service Management Basics
    * Configuration Management (CMDB)
+   * Task table schema

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description/>
+        <name>chrome_header</name>
+        <page display_value="Critic Space">482cf3ff97316110d6e77f200153afee</page>
+        <required_translations>[ ]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 21:54:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>da2cf7ff97316110d6e77f200153affe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_header</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_page_property_da2cf7ff97316110d6e77f200153affe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 21:54:11</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_809069_bbuster.482cf3ff97316110d6e77f200153afee.root.chrome_header</unique_name>
+        <value>{"privatePage":{"userPrefsEnabled":false,"searchEnabled":false,"currentScreenLinkConfiguration":{},"globalTools":{"collapsingMenuId":0,"primaryItems":[],"secondaryItems":[]}},"publicPage":{"menuEnabled":false,"searchEnabled":false,"logoRoute":{},"actionButtons":[]}}</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="DELETE" query="documentkey=da2cf7ff97316110d6e77f200153affe"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sys_ux_page_property_da2cf7ff97316110d6e77f200153affe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description/><name>chrome_header</name><page display_value="Critic Space">482cf3ff97316110d6e77f200153afee</page><required_translations>[ ]</required_translations><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-04-01 21:54:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>da2cf7ff97316110d6e77f200153affe</sys_id><sys_mod_count>0</sys_mod_count><sys_name>chrome_header</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sys_ux_page_property_da2cf7ff97316110d6e77f200153affe</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-04-01 21:54:11</sys_updated_on><type>json</type><unique_name>x_809069_bbuster.482cf3ff97316110d6e77f200153afee.root.chrome_header</unique_name><value>{"privatePage":{"userPrefsEnabled":false,"searchEnabled":false,"currentScreenLinkConfiguration":{},"globalTools":{"collapsingMenuId":0,"primaryItems":[],"secondaryItems":[]}},"publicPage":{"menuEnabled":false,"searchEnabled":false,"logoRoute":{},"actionButtons":[]}}</value></sys_ux_page_property><sys_translated_text action="delete_multiple" query="documentkey=da2cf7ff97316110d6e77f200153affe"/></record_update>]]></payload>
+        <payload_hash>159591552</payload_hash>
+        <record_name>chrome_header</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 21:54:12</sys_created_on>
+        <sys_id>262c3bff97316110d6e77f200153af01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1873ed04fb70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 21:54:12</sys_updated_on>
+        <type>UX Page Property</type>
+        <update_guid>6a2c3bffb73161100dcbc9b724787300</update_guid>
+        <update_guid_history>6a2c3bffb73161100dcbc9b724787300:159591552</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 21:58:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>1131d492b912496787f66cb13311b239</sys_id>
+        <sys_metadata>da2cf7ff97316110d6e77f200153affe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_header</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_da2cf7ff97316110d6e77f200153affe</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_da2cf7ff97316110d6e77f200153affe">262c3bff97316110d6e77f200153af01</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 21:58:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

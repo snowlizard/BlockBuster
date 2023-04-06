@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="DELETE">
+        <active>true</active>
+        <custom_icon/>
+        <default_route_type/>
+        <description/>
+        <encode_query_string>false</encode_query_string>
+        <icon/>
+        <landing_path>home</landing_path>
+        <name>Critic Space</name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 21:54:02</sys_created_on>
+        <sys_id>4c2cf3ff97316110d6e77f200153afeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Critic Space</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_ux_app_config_4c2cf3ff97316110d6e77f200153afeb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 21:54:02</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="DELETE" query="documentkey=4c2cf3ff97316110d6e77f200153afeb"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sys_ux_app_config_4c2cf3ff97316110d6e77f200153afeb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config"><sys_ux_app_config action="INSERT_OR_UPDATE"><active>true</active><custom_icon/><default_route_type/><description/><encode_query_string>false</encode_query_string><icon/><landing_path>home</landing_path><name>Critic Space</name><prefetch_limits/><sys_class_name>sys_ux_app_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-04-01 21:54:02</sys_created_on><sys_id>4c2cf3ff97316110d6e77f200153afeb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Critic Space</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sys_ux_app_config_4c2cf3ff97316110d6e77f200153afeb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-04-01 21:54:02</sys_updated_on></sys_ux_app_config><sys_translated_text action="delete_multiple" query="documentkey=4c2cf3ff97316110d6e77f200153afeb"/></record_update>]]></payload>
+        <payload_hash>1367944131</payload_hash>
+        <record_name>Critic Space</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 21:54:02</sys_created_on>
+        <sys_id>802cf3ff97316110d6e77f200153afee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1873ed0293c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 21:54:02</sys_updated_on>
+        <type>UX App Configuration</type>
+        <update_guid>c42cf3fff231611019b333b41731b6ed</update_guid>
+        <update_guid_history>c42cf3fff231611019b333b41731b6ed:1367944131</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-01 21:57:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_config">sys_ux_app_config</sys_db_object>
+        <sys_id>702115481fc0484196d738f547bdf881</sys_id>
+        <sys_metadata>4c2cf3ff97316110d6e77f200153afeb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Critic Space</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sys_ux_app_config_4c2cf3ff97316110d6e77f200153afeb</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_config_4c2cf3ff97316110d6e77f200153afeb">802cf3ff97316110d6e77f200153afee</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-01 21:57:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
