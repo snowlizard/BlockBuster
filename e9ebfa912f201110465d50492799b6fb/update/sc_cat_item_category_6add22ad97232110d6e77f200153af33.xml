@@ -3,16 +3,16 @@
         <sc_cat_item display_value="Rent Movie(s)">eeb3d5002f341110465d50492799b63c</sc_cat_item>
         <sc_category display_value="Movies">e80e34302f051110465d50492799b660</sc_category>
         <sys_class_name>sc_cat_item_category</sys_class_name>
-        <sys_created_by>jgonzalez</sys_created_by>
-        <sys_created_on>2022-07-29 21:32:11</sys_created_on>
-        <sys_id>790005b02f051110465d50492799b6d8</sys_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-20 16:15:35</sys_created_on>
+        <sys_id>6add22ad97232110d6e77f200153af33</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Movies.Rent Movie(s)</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
-        <sys_update_name>sc_cat_item_category_790005b02f051110465d50492799b6d8</sys_update_name>
-        <sys_updated_by>jgonzalez</sys_updated_by>
-        <sys_updated_on>2022-07-29 21:32:11</sys_updated_on>
+        <sys_update_name>sc_cat_item_category_6add22ad97232110d6e77f200153af33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-20 16:15:35</sys_updated_on>
     </sc_cat_item_category>
 </record_update>

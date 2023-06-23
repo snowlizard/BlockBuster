@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="DELETE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph/>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Home</label>
+        <order>50</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="b_index">3e0a687d2fa01110465d50492799b60d</sp_page>
+        <sp_rectangle_menu display_value="BlockBuster Menu">bd81f9292f301110465d50492799b675</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-20 00:31:41</sys_created_on>
+        <sys_id>8d298aed2f701110465d50492799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_8d298aed2f701110465d50492799b6bb</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-20 00:31:41</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="DELETE" query="documentkey=8d298aed2f701110465d50492799b6bb"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sp_rectangle_menu_item_8d298aed2f701110465d50492799b6bb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph/>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Home</label>
+        <order>50</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="b_index">3e0a687d2fa01110465d50492799b60d</sp_page>
+        <sp_rectangle_menu display_value="BlockBuster Menu">bd81f9292f301110465d50492799b675</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-20 00:31:41</sys_created_on>
+        <sys_id>8d298aed2f701110465d50492799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_8d298aed2f701110465d50492799b6bb</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-20 00:31:41</sys_updated_on>
+        <table/>
+        <type>page</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=8d298aed2f701110465d50492799b6bb"/>
+</record_update>]]></payload>
+        <payload_hash>-1661457691</payload_hash>
+        <record_name>Home</record_name>
+        <reverted_from/>
+        <source>e255ec8197712110d6e77f200153af69</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-23 17:13:09</sys_created_on>
+        <sys_id>8e85640597712110d6e77f200153af59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1870f75c4cb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-23 17:13:09</sys_updated_on>
+        <type>Menu Item</type>
+        <update_guid>4e856405e27121107c6ec54fd7f5ab59</update_guid>
+        <update_guid_history>4e856405e27121107c6ec54fd7f5ab59:-1661457691</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Home">bf13ce46976b2110d6e77f200153afd5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:25:52</sys_created_on>
+        <sys_db_object display_value="" name="sp_rectangle_menu_item">sp_rectangle_menu_item</sys_db_object>
+        <sys_id>0c06004634fe4bac882051af7ad64ed1</sys_id>
+        <sys_metadata>8d298aed2f701110465d50492799b6bb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_rectangle_menu_item_8d298aed2f701110465d50492799b6bb</sys_update_name>
+        <sys_update_version display_value="sp_rectangle_menu_item_8d298aed2f701110465d50492799b6bb">8e85640597712110d6e77f200153af59</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:25:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

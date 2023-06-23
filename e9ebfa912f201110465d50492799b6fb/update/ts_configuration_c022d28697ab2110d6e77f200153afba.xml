@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ts_configuration">
+    <ts_configuration action="INSERT_OR_UPDATE">
+        <applies_to>0</applies_to>
+        <format>v4</format>
+        <index_group/>
+        <sys_class_name>ts_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 03:31:44</sys_created_on>
+        <sys_id>c022d28697ab2110d6e77f200153afba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_809069_bbuster_u_cmdb_ci_movie</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>ts_configuration_c022d28697ab2110d6e77f200153afba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 03:31:44</sys_updated_on>
+        <table>x_809069_bbuster_u_cmdb_ci_movie</table>
+    </ts_configuration>
+</record_update>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_taxonomy">
+    <m2m_sp_portal_taxonomy action="DELETE">
+        <active>true</active>
+        <order>100</order>
+        <sp_portal display_value="BlockBuster">48b003192f201110465d50492799b6c8</sp_portal>
+        <sys_class_name>m2m_sp_portal_taxonomy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 04:18:00</sys_created_on>
+        <sys_id>dacc524297eb2110d6e77f200153affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlockBuster.IT Staff</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>m2m_sp_portal_taxonomy_dacc524297eb2110d6e77f200153affa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 04:18:00</sys_updated_on>
+        <taxonomy display_value="IT Staff">3a2e9b6d97e32110d6e77f200153af13</taxonomy>
+    </m2m_sp_portal_taxonomy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>m2m_sp_portal_taxonomy_dacc524297eb2110d6e77f200153affa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_taxonomy"><m2m_sp_portal_taxonomy action="INSERT_OR_UPDATE"><active>true</active><order>100</order><sp_portal display_value="BlockBuster">48b003192f201110465d50492799b6c8</sp_portal><sys_class_name>m2m_sp_portal_taxonomy</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-06-22 04:18:00</sys_created_on><sys_id>dacc524297eb2110d6e77f200153affa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>BlockBuster.IT Staff</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>m2m_sp_portal_taxonomy_dacc524297eb2110d6e77f200153affa</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-06-22 04:18:00</sys_updated_on><taxonomy display_value="IT Staff">3a2e9b6d97e32110d6e77f200153af13</taxonomy></m2m_sp_portal_taxonomy></record_update>]]></payload>
+        <payload_hash>-701265587</payload_hash>
+        <record_name>BlockBuster.IT Staff</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 04:18:00</sys_created_on>
+        <sys_id>5ecc524297eb2110d6e77f200153affc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188e152ceae0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 04:18:00</sys_updated_on>
+        <type>Portal Taxonomy</type>
+        <update_guid>92cc524206eb2110e8629de4625812fc</update_guid>
+        <update_guid_history>92cc524206eb2110e8629de4625812fc:-701265587</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="BlockBuster.IT Staff">73dc5a4297eb2110d6e77f200153afad</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 04:18:22</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_portal_taxonomy">m2m_sp_portal_taxonomy</sys_db_object>
+        <sys_id>7d3c0f3d88244566bf4f776ca3ae5144</sys_id>
+        <sys_metadata>dacc524297eb2110d6e77f200153affa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlockBuster.IT Staff</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>m2m_sp_portal_taxonomy_dacc524297eb2110d6e77f200153affa</sys_update_name>
+        <sys_update_version display_value="m2m_sp_portal_taxonomy_dacc524297eb2110d6e77f200153affa">5ecc524297eb2110d6e77f200153affc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 04:18:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

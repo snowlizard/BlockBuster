@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="angular-truncate">09e1f1416712220023c82e08f585ef1e</sp_dependency>
+        <sp_widget display_value="BB Menu">3931ca82976b2110d6e77f200153afc3</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:17:32</sys_created_on>
+        <sys_id>3d310206976b2110d6e77f200153afb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>angular-truncate.BB Menu</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_3d310206976b2110d6e77f200153afb7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:17:32</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>m2m_sp_widget_dependency_3d310206976b2110d6e77f200153afb7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="angular-truncate">09e1f1416712220023c82e08f585ef1e</sp_dependency><sp_widget display_value="BB Menu">3931ca82976b2110d6e77f200153afc3</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-06-22 02:17:32</sys_created_on><sys_id>3d310206976b2110d6e77f200153afb7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>angular-truncate.BB Menu</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>m2m_sp_widget_dependency_3d310206976b2110d6e77f200153afb7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-06-22 02:17:32</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>-1160953514</payload_hash>
+        <record_name>angular-truncate.BB Menu</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:17:32</sys_created_on>
+        <sys_id>b1310206976b2110d6e77f200153afba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188e0e486120000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:17:32</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>f5310206606b2110208630e33408b9b9</update_guid>
+        <update_guid_history>f5310206606b2110208630e33408b9b9:-1160953514</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="angular-truncate.BB Menu">1e3ac64e976b2110d6e77f200153afcd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:56:53</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>404c9f17e6c34a48b09d986d7ebe3a51</sys_id>
+        <sys_metadata>3d310206976b2110d6e77f200153afb7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>angular-truncate.BB Menu</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_3d310206976b2110d6e77f200153afb7</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_3d310206976b2110d6e77f200153afb7">b1310206976b2110d6e77f200153afba</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:56:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

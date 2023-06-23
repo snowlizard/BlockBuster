@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 03:10:06</sys_created_on>
+        <sys_id>bf3dca0297ab2110d6e77f200153af38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>todoPageUtils</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_scope_privilege_bf3dca0297ab2110d6e77f200153af38</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 03:10:06</sys_updated_on>
+        <target_name>todoPageUtils</target_name>
+        <target_scope display_value="Employee Center Core">3d1da2705b021200a4656ede91f91ab6</target_scope>
+        <target_type>sys_script_include</target_type>
+    </sys_scope_privilege>
+</record_update>

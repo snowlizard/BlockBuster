@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Rent Movie(s)">eeb3d5002f341110465d50492799b63c</sc_cat_item>
+        <sc_category display_value="Movies">e80e34302f051110465d50492799b660</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 21:32:11</sys_created_on>
+        <sys_id>790005b02f051110465d50492799b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Movies.Rent Movie(s)</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sc_cat_item_category_790005b02f051110465d50492799b6d8</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 21:32:11</sys_updated_on>
+    </sc_cat_item_category>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sc_cat_item_category_790005b02f051110465d50492799b6d8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Rent Movie(s)">eeb3d5002f341110465d50492799b63c</sc_cat_item>
+        <sc_category display_value="Movies">e80e34302f051110465d50492799b660</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-29 21:32:11</sys_created_on>
+        <sys_id>790005b02f051110465d50492799b6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Movies.Rent Movie(s)</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sc_cat_item_category_790005b02f051110465d50492799b6d8</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-29 21:32:11</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>]]></payload>
+        <payload_hash>1224267310</payload_hash>
+        <record_name>Movies.Rent Movie(s)</record_name>
+        <reverted_from/>
+        <source>e255ec8197712110d6e77f200153af69</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-23 17:13:04</sys_created_on>
+        <sys_id>f485e00597712110d6e77f200153afa6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1870f75b28f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-23 17:13:04</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>b485e00566712110a0e6918c60620ca6</update_guid>
+        <update_guid_history>b485e00566712110a0e6918c60620ca6:1224267310</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Movies.Rent Movie(s)">09992a6997232110d6e77f200153aff1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-20 15:56:55</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>198868d2b73842428e66f01264c5dcc1</sys_id>
+        <sys_metadata>790005b02f051110465d50492799b6d8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Movies.Rent Movie(s)</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_790005b02f051110465d50492799b6d8</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_790005b02f051110465d50492799b6d8">f485e00597712110d6e77f200153afa6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-20 15:56:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

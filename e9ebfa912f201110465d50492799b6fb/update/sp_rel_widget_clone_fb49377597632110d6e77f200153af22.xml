@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="Copy of Header Menu">af49377597632110d6e77f200153af1b</child>
+        <cloned>2023-06-21 16:23:45</cloned>
+        <last_validated>2023-06-21 16:23:45</last_validated>
+        <parent display_value="Header Menu">5ef595c1cb12020000f8d856634c9c6e</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($scope, spUtil, $rootScope, $timeout, spAriaUtil, spGtd, $window, i18n) {
+	$scope.collapse = function() {
+		$rootScope.$emit('sp-navbar-collapse');
+	}
+	$scope.loadingIndicator = $rootScope.loadingIndicator;
+	$scope.cartItemCount = 0;
+	$scope.wishlistItemCount = 0;
+	$scope.itemAddedTooltipOpen = false;
+	$scope.toursTooltipEnabled = true;
+	$scope.accessibilityEnabled = spAriaUtil.g_accessibility === "true";
+	$scope.$on("$sp.service_catalog.cart.count", function($evt, count) {
+		$scope.cartItemCount = count;
+	});
+	$scope.$on("$sp.service_catalog.wishlist.count", function($evt, count) {
+		$scope.wishlistItemCount = count;
+	});
+	var cancelTooltipPromise;
+	$scope.$on("$sp.service_catalog.cart.add_item", function() {
+		$timeout.cancel(cancelTooltipPromise);
+		$scope.itemAddedTooltipOpen = true;
+		cancelTooltipPromise = $timeout(function() {
+			$scope.itemAddedTooltipOpen = false;
+		}, 3000);
+	});
+	$scope.$on('sp_loading_indicator', function(e, value) {
+		$scope.loadingIndicator = value;
+	});
+	$scope.toggleCart = function() {
+		$timeout.cancel(cancelTooltipPromise);
+		$scope.itemAddedTooltipOpen = false;
+		$timeout(function() {
+			$("#cart-dropdown").dropdown("toggle");
+		});
+	};
+	$scope.toggleTours = function() {
+		var action = $scope.toursTooltipEnabled ? 'disable' : 'enable';
+		$scope.toursTooltipEnabled = $scope.toursTooltipEnabled ? false : true;
+		$('[data-toggle-second="tooltip"]').tooltip(action);
+		if(action == 'disable')
+			$('[data-toggle-second="tooltip"]').tooltip('hide');
+	}
+	$scope.onToursItemBlur = function() {
+		$('[data-toggle-second="tooltip"]').tooltip('enable');
+		$scope.toursTooltipEnabled = true;
+	}
+	// PRB1108244: visibleItems array is used to improve keyboard nav
+	// in menu, refresh it as needed
+	$scope.$watch('data.menu.items', function() {
+		$scope.visibleItems = [];
+		if ($scope.data.menu.items) {
+			for (var i in $scope.data.menu.items) {
+				var item = $scope.data.menu.items[i];
+				if (item.items || (item.scriptedItems &amp;&amp; item.scriptedItems.count != 0))
+					$scope.visibleItems.push(item);
+			}
+		}
+	}, true);
+  $scope.$on('sp-menu-update-tours', function(event, tours) {
+    $scope.data.showTours = $scope.data.showTours &amp;&amp; !spUtil.isMobile();
+    if ($scope.data.showTours === false) {
+			$scope.data.guidedTours = null;
+			return;
+	}
+    var guidedToursLabel = 'Guided Tours';
+    $scope.data.guidedTours = {
+		label: guidedToursLabel,
+		collection: []
+	};
+    $scope.tooltipTours = tours.length === 1 ? i18n.getMessage('This page currently has 1 tour') : i18n.getMessage('This page currently has {0} tours').withValues([tours.length])
+    if (tours.length &gt; 0) {
+      $scope.data.guidedTours.collection = tours.map(function(t) {
+        return {
+          title:  t.name,
+          id: t.id,
+          clicked: function() {
+            spGtd.launch(t.id);
+          }
+        };
+      });
+    }
+  });
+	// Get list of record watchers
+	var record_watchers = [];
+	if ($scope.data.menu.items) {
+		for(var i in $scope.data.menu.items) {
+			var item = $scope.data.menu.items[i];
+			if (item.type == 'scripted') {
+				if (item.scriptedItems.record_watchers)
+					record_watchers = record_watchers.concat(item.scriptedItems.record_watchers);
+			}
+			if (item.type == 'filtered') {
+				record_watchers.push({'table':item.table,'filter':item.filter});
+			}
+		}
+	}
+	// Init record watchers
+	for (var y in record_watchers){
+		var watcher = record_watchers[y];
+		spUtil.recordWatch($scope, watcher.table, watcher.filter);
+	}
+  $rootScope.$broadcast('sp-header-loaded');
+}]]&gt;&lt;/client_script&gt;&lt;controller_as/&gt;&lt;css&gt;.header-loader {
+	float: left;
+  	width: 24px;
+  	position: relative;
+  	top: 24px;
+}
+
+.cart-dropdown, .wishlist-menu, .gtd-dropdown-container .empty-dropdown {
+  width: 350px;
+  padding: 0;
+  z-index: 1000;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+
+  ul {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .subtotal {
+    display: block;
+  }
+
+  .item-image {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-width:100%;
+    height:auto;
+  }
+  label, p {
+    padding: 0;
+    margin: 0;
+  }
+  .media {
+    padding: 0;
+    margin: 0;
+  }
+  .media-left &amp;gt; a {
+    display: block;
+    width: 48px;
+    max-width: 48px;
+  }
+  .media-body {
+    label {
+      font-weight: bold;
+    }
+  }
+  li.media {
+    border-top: 1px solid #cccccc;
+    padding: 1rem;
+  }
+  .panel {
+    margin: 0;
+  }
+  .panel .panel-body {
+    padding: 0;
+  }
+  .btn-clear {
+		color: #333;
+    background-color: #fff;
+  }
+  p.quantity-price {
+    padding-top: 0.5rem;
+    span {
+      color: $text-muted;
+      padding-right: 0.5rem;
+    }
+  }
+  .align-right {
+  	text-align: right;
+  }
+}
+
+
+
+.item-added-tooltip, wishlist-item-added-tooltip {
+  width: 184px;
+  font-size: 14px;
+}
+
+.open &amp;gt; .dropdown-menu {
+	padding: 0.5rem 0.2rem !important;
+}
+
+.gtd-dropdown-container {
+  .empty-tour-content{
+    text-align: center;
+    margin:40px 20px;
+  }
+  .dropdown-menu li {
+    a {
+      cursor: pointer;
+    }
+    min-width: 20em;
+  }
+  .label-as-badge{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    padding: 0px;
+    padding-top: 2px;
+  }
+  .badge-container {
+    display: inline-block;
+    width: 12px;
+  }
+}
+
+@media  (max-width: 845px) and (min-width: 768px)  {
+	.header-menu-item ul {
+		right: auto;
+		left: auto;
+	}
+}
+@media (max-width: 767px) {
+	.empty-dropdown {
+		width: auto !important;
+	}
+}
+&lt;/css&gt;&lt;data_table&gt;sp_instance_menu&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;title&lt;/field_list&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function(scope, elem) {
+		function isMDScreenSize() {
+		return window.matchMedia('(max-width: 992px)').matches;
+	}
+	
+	var KEY = {
+		TAB : 9,
+		ENTER : 13,
+		ESC : 27,
+		SPACE_BAR : 32,
+		LEFT : 37,
+		UP : 38,
+		RIGHT : 39,
+		DOWN : 40
+	}
+
+	$('.navbar').on('keydown','[role="menuitem"]:visible',function(e) {
+		var mdScreenSize = isMDScreenSize();
+		var target = e.target;
+		if (target.localName == 'a') {
+			var currentMenuItem = $(target).parents('li').first();
+			var parentUL = currentMenuItem.parents('ul').first();
+			
+			var menuItem = currentMenuItem;
+			var targetInSubmenu = !currentMenuItem.is('.header-menu-item');
+			if (targetInSubmenu) {
+				menuItem = $(target).parents('li.header-menu-item').first();
+			}
+			
+			if (mdScreenSize &amp;&amp; e.keyCode == KEY.RIGHT) {
+				if ($(target).is('.dropdown-toggle') || $(target).is('[data-toggle="dropdown"]')) { // Target is a main menu item with sub-menu
+					e.preventDefault();
+					e.stopPropagation();
+					currentMenuItem.addClass('open');
+					$('&gt; a:visible', menuItem).attr("aria-expanded", "true");
+					currentMenuItem.find('.dropdown-menu a:visible').first().focus();
+				}
+			} else if (mdScreenSize &amp;&amp; e.keyCode == KEY.LEFT) {
+				if (parentUL.is('.dropdown-menu')) { // Target is a sub-menu item
+					parentUL.parents('.header-menu-item').first().removeClass('open').find('&gt; a:visible').first().focus();
+					$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+				}
+			} else if ((mdScreenSize &amp;&amp; e.keyCode == KEY.UP) || (!mdScreenSize &amp;&amp; e.keyCode == KEY.LEFT)) {
+				handleFocus(false, e, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu);
+			} else if((mdScreenSize &amp;&amp; e.keyCode == KEY.DOWN) || (!mdScreenSize &amp;&amp; e.keyCode == KEY.RIGHT)) {
+				handleFocus(true, e, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu);
+			}
+			if(e.keyCode == KEY.TAB) {
+				$(target).parents('li').removeClass('open');
+				$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+			}
+		}
+	});
+	
+	function handleFocus(next, event, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu) {
+		event.preventDefault();
+		
+		if (targetInSubmenu) {
+			var itemsInSubmenu = parentUL.find('li.visible');
+			var firstSubmenuItem = itemsInSubmenu.first();
+			var lastSubmenuItem = itemsInSubmenu.last();
+		}
+		var allMenuItems = $('li.header-menu-item:visible', '.navbar');
+		var firstMenuItem = allMenuItems.first();
+		var lastMenuItem = allMenuItems.last();
+
+		if (!mdScreenSize) {
+			currentMenuItem.removeClass('open');
+			$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+
+			if (targetInSubmenu)
+				menuItem.removeClass('open');
+		} else {
+			event.stopPropagation();
+			if (!targetInSubmenu) {
+				menuItem.removeClass('open');
+				$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+			}
+		}
+
+		var indexMenuItem = allMenuItems.index(menuItem);
+		var targetMenuItem = next ? allMenuItems.eq(indexMenuItem + 1) : allMenuItems.eq(indexMenuItem - 1);
+		var menuItemToFocus = targetMenuItem.length ? targetMenuItem : next ? firstMenuItem: lastMenuItem; //enable circular navigation
+
+		if (mdScreenSize &amp;&amp; targetInSubmenu) {
+			targetMenuItem = next ? currentMenuItem.nextAll('li:visible').first() : currentMenuItem.prevAll('li:visible').first();
+			menuItemToFocus = targetMenuItem.length ? targetMenuItem : next ? firstSubmenuItem: lastSubmenuItem; //enable circular navigation
+		}
+		menuItemToFocus.find('a').focus();
+	}
+	
+	$(elem).on('click', '[data-toggle="dropdown"]', function(e) {
+		var $target = $(e.target);
+		setTimeout(function() {
+			$('.dropdown-menu a:visible', $target.parents('.header-menu-item')).first().focus();
+		}, 0);
+	})
+
+	setTimeout(function(){
+		$('[data-toggle-second="tooltip"]').tooltip();
+	});
+}]]&gt;&lt;/link&gt;&lt;name&gt;Header Menu&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function(){
+	// build menus
+	var menu_id = $sp.getValue('sys_id'); // instance sys_id
+	data.menu = {};
+	data.menu.items = $sp.getMenuItems(menu_id);
+	data.isLoggedIn = GlideSession.get().isLoggedIn();
+	data.guidedTours = {};
+	// Show tours only if gtd's sp sys property is set
+	data.showTours = (gs.getProperty('com.snc.guided_tours.sp.enable') === 'true') &amp;&amp; data.isLoggedIn;
+	if (!data.showTours) {
+	data.guidedTours = null;
+	}
+	var catalogArr = ($sp.getCatalogs().value + "").split(",");
+
+	catalogArr.forEach(function(catalog) {
+		data.showWishlist = data.showWishlist || new sn_sc.Catalog(catalog).isWishlistEnabled();
+	});
+	if (data.isLoggedIn) {
+		if (options.enable_wishlist &amp;&amp; data.showWishlist)
+			data.wishlistWidget = $sp.getWidget("sc_wishlist_cart", {wishlistTemplate: "small_wishlist.html", auto_update_wishlist:options.auto_update_wishlist});
+		if (options.enable_cart) {
+			if (gs.getProperty("glide.sc.portal.use_cart_v2_header", "false") === "true")
+				data.cartWidget = $sp.getWidget("sc-shopping-cart-v2", {cartTemplate: "small_shopping_cart_v2.html", auto_update_cart:options.auto_update_cart});
+			else
+				data.cartWidget = $sp.getWidget("sc-shopping-cart", {cartTemplate: "small_shopping_cart.html", auto_update_cart:options.auto_update_cart});
+		}
+	}
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-09-02 22:41:30&lt;/sys_created_on&gt;&lt;sys_id&gt;5ef595c1cb12020000f8d856634c9c6e&lt;/sys_id&gt;&lt;sys_mod_count&gt;598&lt;/sys_mod_count&gt;&lt;sys_name&gt;Header Menu&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Core" source="com.glide.service-portal"&gt;b6de29e0a9e0211076daa554cb57d9c0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_5ef595c1cb12020000f8d856634c9c6e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-13 15:15:05&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;ul class="nav navbar-nav" aria-label="${Header}" role="menubar"&gt;
+  &lt;div class="header-loader" ng-class="{'invisible': !loadingIndicator}"&gt;
+    &lt;div class="hidden-xs hidden-sm sp-loading-indicator la-sm"&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length &gt; 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation"&gt;&lt;/li&gt;
+&lt;!-- Wishlist menu --&gt;
+  &lt;li ng-if="options.enable_wishlist &amp;&amp; data.isLoggedIn &amp;&amp; data.showWishlist" ng-show="!accessibilityEnabled" class="dropdown hidden-xs header-menu-item" role="presentation"&gt;
+  	&lt;a role="menuitem" href="javascript:void(0)"
+       data-toggle="dropdown"
+       id="wishlist-menu"
+       title="${Your Wish List currently has} {{wishlistItemCount}} ${items}"
+       aria-label="${Wish List}"&gt;
+      &lt;span ng-bind-html="'${Wish List}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="wishlistItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{wishlistItemCount}}&lt;/span&gt;
+		&lt;/a&gt;
+    &lt;div class="dropdown-menu wishlist-menu custom-drop-down"&gt;
+      &lt;sp-widget widget="data.wishlistWidget"&gt;&lt;/sp-widget&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="options.enable_wishlist &amp;&amp; data.isLoggedIn &amp;&amp; data.showWishlist" class="dropdown" ng-class="{'visible-xs': !accessibilityEnabled}" role="presentation"&gt;
+  	&lt;a href="?id=sc_wishlist"
+       title="${Your Wish List currently has} {{wishlistItemCount}} ${items}"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       class="toggle-dropdown"
+       role="menuitem"
+       aria-label="${Your Wish List currently has} {{wishlistItemCount}} ${items}"&gt;
+      &lt;span ng-bind-html="'${Wish List}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="wishlistItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{wishlistItemCount}}&lt;/span&gt;
+		&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- Shopping cart stuff --&gt;
+ &lt;li ng-if="::options.enable_cart &amp;&amp; data.isLoggedIn" ng-show="::!accessibilityEnabled" class="dropdown hidden-xs header-menu-item" role="presentation"&gt;
+  	&lt;a href
+       data-toggle="dropdown"
+       id="cart-dropdown"
+       uib-tooltip-template="'item-added-tooltip.html'"
+       tooltip-placement="bottom"
+       tooltip-trigger="'none'"
+       tooltip-is-open="$parent.itemAddedTooltipOpen"
+       title="${Your shopping cart currently has} {{cartItemCount}} ${items}"
+       aria-label="${Shopping cart}"
+       role="menuitem"&gt;
+    	&lt;i class="fa fa-shopping-cart" aria-hidden="true"&gt;&lt;/i&gt;
+      &lt;span ng-bind-html="'${Cart}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="cartItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{cartItemCount}}&lt;/span&gt;
+		&lt;/a&gt;
+    &lt;div class="dropdown-menu cart-dropdown custom-drop-down"&gt;
+      &lt;sp-widget widget="data.cartWidget"&gt;&lt;/sp-widget&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="::options.enable_cart &amp;&amp; data.isLoggedIn" class="dropdown header-menu-item" ng-class="::{'visible-xs': !accessibilityEnabled}"  role="presentation"&gt;
+  	&lt;a ng-href="?id=sc_cart"
+       ng-click="collapse()"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       data-original-title="${Your shopping cart currently has} {{cartItemCount}} ${items}"
+       class="toggle-dropdown"
+       role="menuitem"
+       aria-label="${Your shopping cart currently has} {{cartItemCount}} ${items}"&gt;
+    	&lt;i class="fa fa-shopping-cart" aria-hidden="true"&gt;&lt;/i&gt;
+      &lt;span ng-bind-html="'${Cart}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="cartItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{cartItemCount}}&lt;/span&gt;
+	&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="data.isLoggedIn &amp;&amp; data.guidedTours" class="dropdown header-menu-item gtd-dropdown-container" role="presentation"&gt;
+    &lt;a href
+       data-toggle="dropdown"
+       id="tour-dropdown"
+       data-placement="bottom"
+       data-toggle-second="tooltip"
+       ng-click="toggleTours()"
+       ng-blur="onToursItemBlur()"
+       data-original-title="{{tooltipTours}}"
+       aria-label="{{data.guidedTours.label}}"
+       role="menuitem"&gt;
+      &lt;span ng-bind-html="'${Tours}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span class='badge-container' ng-if="data.guidedTours.collection.length &gt; 0"&gt;
+        &lt;span aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;
+          &amp;nbsp;
+       &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div ng-if="data.guidedTours.collection.length &lt; 1" class="dropdown-menu empty-dropdown"&gt;
+      &lt;div class="panel ng-scope"&gt;
+       &lt;div class="panel-body"&gt;
+        &lt;div class="empty-tour-content"&gt;
+         &lt;div class="h4"&gt;${You have no tours on this page}&lt;/div&gt;
+         &lt;p&gt;${Tours appear when your administrator creates them on specific pages}&lt;/p&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul ng-if="data.guidedTours.collection.length &gt; 0" class="dropdown-menu"
+        role="menu" aria-label="${Tours}"&gt;
+      &lt;li role="presentation" ng-repeat="mi in data.guidedTours.collection"
+          class="ng-scope dropdown-menu-line"&gt;
+        &lt;a role="menuitem" href title="{{::mi.title}}" target="{{::mi.target}}" ng-click="mi.clicked()"&gt;
+          {{::mi.title | characters:60}}
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-21 16:23:45</sys_created_on>
+        <sys_id>fb49377597632110d6e77f200153af22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>af49377597632110d6e77f200153af1b</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_fb49377597632110d6e77f200153af22</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-21 16:23:45</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>

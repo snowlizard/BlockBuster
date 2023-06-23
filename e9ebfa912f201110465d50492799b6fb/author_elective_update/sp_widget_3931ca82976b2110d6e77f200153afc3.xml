@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope, spUtil, $rootScope, $timeout, spAriaUtil, spGtd, $window, i18n) {
+	$scope.collapse = function() {
+		$rootScope.$emit('sp-navbar-collapse');
+	}
+	$scope.loadingIndicator = $rootScope.loadingIndicator;
+	$scope.cartItemCount = 0;
+	$scope.wishlistItemCount = 0;
+	$scope.itemAddedTooltipOpen = false;
+	$scope.toursTooltipEnabled = true;
+	$scope.accessibilityEnabled = spAriaUtil.g_accessibility === "true";
+	$scope.$on("$sp.service_catalog.cart.count", function($evt, count) {
+		$scope.cartItemCount = count;
+	});
+	$scope.$on("$sp.service_catalog.wishlist.count", function($evt, count) {
+		$scope.wishlistItemCount = count;
+	});
+	var cancelTooltipPromise;
+	$scope.$on("$sp.service_catalog.cart.add_item", function() {
+		$timeout.cancel(cancelTooltipPromise);
+		$scope.itemAddedTooltipOpen = true;
+		cancelTooltipPromise = $timeout(function() {
+			$scope.itemAddedTooltipOpen = false;
+		}, 3000);
+	});
+	$scope.$on('sp_loading_indicator', function(e, value) {
+		$scope.loadingIndicator = value;
+	});
+	$scope.toggleCart = function() {
+		$timeout.cancel(cancelTooltipPromise);
+		$scope.itemAddedTooltipOpen = false;
+		$timeout(function() {
+			$("#cart-dropdown").dropdown("toggle");
+		});
+	};
+
+	// PRB1108244: visibleItems array is used to improve keyboard nav
+	// in menu, refresh it as needed
+	$scope.$watch('data.menu.items', function() {
+		$scope.visibleItems = [];
+		if ($scope.data.menu.items) {
+			for (var i in $scope.data.menu.items) {
+				var item = $scope.data.menu.items[i];
+				if (item.items || (item.scriptedItems && item.scriptedItems.count != 0))
+					$scope.visibleItems.push(item);
+			}
+		}
+	}, true);
+
+	// Get list of record watchers
+	var record_watchers = [];
+	if ($scope.data.menu.items) {
+		for(var i in $scope.data.menu.items) {
+			var item = $scope.data.menu.items[i];
+			if (item.type == 'scripted') {
+				if (item.scriptedItems.record_watchers)
+					record_watchers = record_watchers.concat(item.scriptedItems.record_watchers);
+			}
+			if (item.type == 'filtered') {
+				record_watchers.push({'table':item.table,'filter':item.filter});
+			}
+		}
+	}
+	// Init record watchers
+	for (var y in record_watchers){
+		var watcher = record_watchers[y];
+		spUtil.recordWatch($scope, watcher.table, watcher.filter);
+	}
+  $rootScope.$broadcast('sp-header-loaded');
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.header-loader {
+	float: left;
+  	width: 24px;
+  	position: relative;
+  	top: 24px;
+}
+
+.cart-dropdown, .wishlist-menu, .gtd-dropdown-container .empty-dropdown {
+  width: 350px;
+  padding: 0;
+  z-index: 1000;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+
+  ul {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .subtotal {
+    display: block;
+  }
+
+  .item-image {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-width:100%;
+    height:auto;
+  }
+  label, p {
+    padding: 0;
+    margin: 0;
+  }
+  .media {
+    padding: 0;
+    margin: 0;
+  }
+  .media-left &gt; a {
+    display: block;
+    width: 48px;
+    max-width: 48px;
+  }
+  .media-body {
+    label {
+      font-weight: bold;
+    }
+  }
+  li.media {
+    border-top: 1px solid #cccccc;
+    padding: 1rem;
+  }
+  .panel {
+    margin: 0;
+  }
+  .panel .panel-body {
+    padding: 0;
+  }
+  .btn-clear {
+		color: #333;
+    background-color: #fff;
+  }
+  p.quantity-price {
+    padding-top: 0.5rem;
+    span {
+      color: $text-muted;
+      padding-right: 0.5rem;
+    }
+  }
+  .align-right {
+  	text-align: right;
+  }
+}
+
+
+
+.item-added-tooltip, wishlist-item-added-tooltip {
+  width: 184px;
+  font-size: 14px;
+}
+
+.open &gt; .dropdown-menu {
+	padding: 0.5rem 0.2rem !important;
+}
+
+.gtd-dropdown-container {
+  .empty-tour-content{
+    text-align: center;
+    margin:40px 20px;
+  }
+  .dropdown-menu li {
+    a {
+      cursor: pointer;
+    }
+    min-width: 20em;
+  }
+  .label-as-badge{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    padding: 0px;
+    padding-top: 2px;
+  }
+  .badge-container {
+    display: inline-block;
+    width: 12px;
+  }
+}
+
+@media  (max-width: 845px) and (min-width: 768px)  {
+	.header-menu-item ul {
+		right: auto;
+		left: auto;
+	}
+}
+@media (max-width: 767px) {
+	.empty-dropdown {
+		width: auto !important;
+	}
+}
+</css>
+        <data_table>sp_instance_menu</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>title</field_list>
+        <has_preview>true</has_preview>
+        <id>bb_menu</id>
+        <internal>false</internal>
+        <link><![CDATA[function(scope, elem) {
+		function isMDScreenSize() {
+		return window.matchMedia('(max-width: 992px)').matches;
+	}
+	
+	var KEY = {
+		TAB : 9,
+		ENTER : 13,
+		ESC : 27,
+		SPACE_BAR : 32,
+		LEFT : 37,
+		UP : 38,
+		RIGHT : 39,
+		DOWN : 40
+	}
+
+	$('.navbar').on('keydown','[role="menuitem"]:visible',function(e) {
+		var mdScreenSize = isMDScreenSize();
+		var target = e.target;
+		if (target.localName == 'a') {
+			var currentMenuItem = $(target).parents('li').first();
+			var parentUL = currentMenuItem.parents('ul').first();
+			
+			var menuItem = currentMenuItem;
+			var targetInSubmenu = !currentMenuItem.is('.header-menu-item');
+			if (targetInSubmenu) {
+				menuItem = $(target).parents('li.header-menu-item').first();
+			}
+			
+			if (mdScreenSize && e.keyCode == KEY.RIGHT) {
+				if ($(target).is('.dropdown-toggle') || $(target).is('[data-toggle="dropdown"]')) { // Target is a main menu item with sub-menu
+					e.preventDefault();
+					e.stopPropagation();
+					currentMenuItem.addClass('open');
+					$('> a:visible', menuItem).attr("aria-expanded", "true");
+					currentMenuItem.find('.dropdown-menu a:visible').first().focus();
+				}
+			} else if (mdScreenSize && e.keyCode == KEY.LEFT) {
+				if (parentUL.is('.dropdown-menu')) { // Target is a sub-menu item
+					parentUL.parents('.header-menu-item').first().removeClass('open').find('> a:visible').first().focus();
+					$('> a:visible', menuItem).attr("aria-expanded", "false");
+				}
+			} else if ((mdScreenSize && e.keyCode == KEY.UP) || (!mdScreenSize && e.keyCode == KEY.LEFT)) {
+				handleFocus(false, e, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu);
+			} else if((mdScreenSize && e.keyCode == KEY.DOWN) || (!mdScreenSize && e.keyCode == KEY.RIGHT)) {
+				handleFocus(true, e, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu);
+			}
+			if(e.keyCode == KEY.TAB) {
+				$(target).parents('li').removeClass('open');
+				$('> a:visible', menuItem).attr("aria-expanded", "false");
+			}
+		}
+	});
+	
+	function handleFocus(next, event, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu) {
+		event.preventDefault();
+		
+		if (targetInSubmenu) {
+			var itemsInSubmenu = parentUL.find('li.visible');
+			var firstSubmenuItem = itemsInSubmenu.first();
+			var lastSubmenuItem = itemsInSubmenu.last();
+		}
+		var allMenuItems = $('li.header-menu-item:visible', '.navbar');
+		var firstMenuItem = allMenuItems.first();
+		var lastMenuItem = allMenuItems.last();
+
+		if (!mdScreenSize) {
+			currentMenuItem.removeClass('open');
+			$('> a:visible', menuItem).attr("aria-expanded", "false");
+
+			if (targetInSubmenu)
+				menuItem.removeClass('open');
+		} else {
+			event.stopPropagation();
+			if (!targetInSubmenu) {
+				menuItem.removeClass('open');
+				$('> a:visible', menuItem).attr("aria-expanded", "false");
+			}
+		}
+
+		var indexMenuItem = allMenuItems.index(menuItem);
+		var targetMenuItem = next ? allMenuItems.eq(indexMenuItem + 1) : allMenuItems.eq(indexMenuItem - 1);
+		var menuItemToFocus = targetMenuItem.length ? targetMenuItem : next ? firstMenuItem: lastMenuItem; //enable circular navigation
+
+		if (mdScreenSize && targetInSubmenu) {
+			targetMenuItem = next ? currentMenuItem.nextAll('li:visible').first() : currentMenuItem.prevAll('li:visible').first();
+			menuItemToFocus = targetMenuItem.length ? targetMenuItem : next ? firstSubmenuItem: lastSubmenuItem; //enable circular navigation
+		}
+		menuItemToFocus.find('a').focus();
+	}
+	
+	$(elem).on('click', '[data-toggle="dropdown"]', function(e) {
+		var $target = $(e.target);
+		setTimeout(function() {
+			$('.dropdown-menu a:visible', $target.parents('.header-menu-item')).first().focus();
+		}, 0);
+	})
+
+	setTimeout(function(){
+		$('[data-toggle-second="tooltip"]').tooltip();
+	});
+}]]></link>
+        <name>BB Menu</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function(){
+	// build menus
+	var menu_id = $sp.getValue('sys_id'); // instance sys_id
+	data.menu = {};
+	data.menu.items = $sp.getMenuItems(menu_id);
+	data.isLoggedIn = gs.isLoggedIn();
+
+	//data.typeahead = $sp.getWidget('typeahead-search', options.typeahead_search);
+
+	var catalogArr = ($sp.getCatalogs().value + "").split(",");
+
+	catalogArr.forEach(function(catalog) {
+		data.showWishlist = data.showWishlist || new sn_sc.Catalog(catalog).isWishlistEnabled();
+	});
+	if (data.isLoggedIn) {
+		if (options.enable_wishlist && data.showWishlist)
+			data.wishlistWidget = $sp.getWidget("sc_wishlist_cart", {wishlistTemplate: "small_wishlist.html", auto_update_wishlist:options.auto_update_wishlist});
+		if (options.enable_cart) {
+			if (gs.getProperty("glide.sc.portal.use_cart_v2_header", "false") === "true")
+				data.cartWidget = $sp.getWidget("sc-shopping-cart-v2", {cartTemplate: "small_shopping_cart_v2.html", auto_update_cart:options.auto_update_cart});
+			else
+				data.cartWidget = $sp.getWidget("sc-shopping-cart", {cartTemplate: "small_shopping_cart.html", auto_update_cart:options.auto_update_cart});
+		}
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:17:32</sys_created_on>
+        <sys_id>3931ca82976b2110d6e77f200153afc3</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>BB Menu</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_widget_3931ca82976b2110d6e77f200153afc3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:52:50</sys_updated_on>
+        <template><![CDATA[<ul class="nav navbar-nav" aria-label="${Header}" role="menubar">
+  <div class="header-loader" ng-class="{'invisible': !loadingIndicator}">
+    <div class="hidden-xs hidden-sm sp-loading-indicator la-sm">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length > 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation"></li>
+	
+  <li class="search-widget header-menu-item w">
+   	<widget id="typeahead-search"></widget>
+	</li>
+  
+  <!-- Wishlist menu -->
+  <li ng-if="options.enable_wishlist && data.isLoggedIn && data.showWishlist" ng-show="!accessibilityEnabled" class="dropdown hidden-xs header-menu-item" role="presentation">
+  	<a role="menuitem" href="javascript:void(0)"
+       data-toggle="dropdown"
+       id="wishlist-menu"
+       title="${Your Wish List currently has} {{wishlistItemCount}} ${items}"
+       aria-label="${Wish List}">
+      <span ng-bind-html="'${Wish List}'" aria-hidden="true"></span>
+      <span ng-if="wishlistItemCount > 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count">{{wishlistItemCount}}</span>
+		</a>
+    <div class="dropdown-menu wishlist-menu custom-drop-down">
+      <sp-widget widget="data.wishlistWidget"></sp-widget>
+    </div>
+  </li>
+  <li ng-if="options.enable_wishlist && data.isLoggedIn && data.showWishlist" class="dropdown" ng-class="{'visible-xs': !accessibilityEnabled}" role="presentation">
+  	<a href="?id=sc_wishlist"
+       title="${Your Wish List currently has} {{wishlistItemCount}} ${items}"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       class="toggle-dropdown"
+       role="menuitem"
+       aria-label="${Your Wish List currently has} {{wishlistItemCount}} ${items}">
+      <span ng-bind-html="'${Wish List}'" aria-hidden="true"></span>
+      <span ng-if="wishlistItemCount > 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count">{{wishlistItemCount}}</span>
+		</a>
+  </li>
+  <!-- Shopping cart stuff -->
+ <li ng-if="::options.enable_cart && data.isLoggedIn" ng-show="::!accessibilityEnabled" class="dropdown hidden-xs header-menu-item" role="presentation">
+  	<a href
+       data-toggle="dropdown"
+       id="cart-dropdown"
+       uib-tooltip-template="'item-added-tooltip.html'"
+       tooltip-placement="bottom"
+       tooltip-trigger="'none'"
+       tooltip-is-open="$parent.itemAddedTooltipOpen"
+       title="${Your shopping cart currently has} {{cartItemCount}} ${items}"
+       aria-label="${Shopping cart}"
+       role="menuitem">
+    	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <span ng-bind-html="'${Cart}'" aria-hidden="true"></span>
+      <span ng-if="cartItemCount > 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count">{{cartItemCount}}</span>
+		</a>
+    <div class="dropdown-menu cart-dropdown custom-drop-down">
+      <sp-widget widget="data.cartWidget"></sp-widget>
+    </div>
+  </li>
+  <li ng-if="::options.enable_cart && data.isLoggedIn" class="dropdown header-menu-item" ng-class="::{'visible-xs': !accessibilityEnabled}"  role="presentation">
+  	<a ng-href="?id=sc_cart"
+       ng-click="collapse()"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       data-original-title="${Your shopping cart currently has} {{cartItemCount}} ${items}"
+       class="toggle-dropdown"
+       role="menuitem"
+       aria-label="${Your shopping cart currently has} {{cartItemCount}} ${items}">
+    	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <span ng-bind-html="'${Cart}'" aria-hidden="true"></span>
+      <span ng-if="cartItemCount > 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count">{{cartItemCount}}</span>
+	</a>
+  </li>
+</ul>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sp_widget_3931ca82976b2110d6e77f200153afc3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($scope, spUtil, $rootScope, $timeout, spAriaUtil, spGtd, $window, i18n) {
+	$scope.collapse = function() {
+		$rootScope.$emit('sp-navbar-collapse');
+	}
+	$scope.loadingIndicator = $rootScope.loadingIndicator;
+	$scope.cartItemCount = 0;
+	$scope.wishlistItemCount = 0;
+	$scope.itemAddedTooltipOpen = false;
+	$scope.toursTooltipEnabled = true;
+	$scope.accessibilityEnabled = spAriaUtil.g_accessibility === "true";
+	$scope.$on("$sp.service_catalog.cart.count", function($evt, count) {
+		$scope.cartItemCount = count;
+	});
+	$scope.$on("$sp.service_catalog.wishlist.count", function($evt, count) {
+		$scope.wishlistItemCount = count;
+	});
+	var cancelTooltipPromise;
+	$scope.$on("$sp.service_catalog.cart.add_item", function() {
+		$timeout.cancel(cancelTooltipPromise);
+		$scope.itemAddedTooltipOpen = true;
+		cancelTooltipPromise = $timeout(function() {
+			$scope.itemAddedTooltipOpen = false;
+		}, 3000);
+	});
+	$scope.$on('sp_loading_indicator', function(e, value) {
+		$scope.loadingIndicator = value;
+	});
+	$scope.toggleCart = function() {
+		$timeout.cancel(cancelTooltipPromise);
+		$scope.itemAddedTooltipOpen = false;
+		$timeout(function() {
+			$("#cart-dropdown").dropdown("toggle");
+		});
+	};
+
+	// PRB1108244: visibleItems array is used to improve keyboard nav
+	// in menu, refresh it as needed
+	$scope.$watch('data.menu.items', function() {
+		$scope.visibleItems = [];
+		if ($scope.data.menu.items) {
+			for (var i in $scope.data.menu.items) {
+				var item = $scope.data.menu.items[i];
+				if (item.items || (item.scriptedItems &amp;&amp; item.scriptedItems.count != 0))
+					$scope.visibleItems.push(item);
+			}
+		}
+	}, true);
+
+	// Get list of record watchers
+	var record_watchers = [];
+	if ($scope.data.menu.items) {
+		for(var i in $scope.data.menu.items) {
+			var item = $scope.data.menu.items[i];
+			if (item.type == 'scripted') {
+				if (item.scriptedItems.record_watchers)
+					record_watchers = record_watchers.concat(item.scriptedItems.record_watchers);
+			}
+			if (item.type == 'filtered') {
+				record_watchers.push({'table':item.table,'filter':item.filter});
+			}
+		}
+	}
+	// Init record watchers
+	for (var y in record_watchers){
+		var watcher = record_watchers[y];
+		spUtil.recordWatch($scope, watcher.table, watcher.filter);
+	}
+  $rootScope.$broadcast('sp-header-loaded');
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.header-loader {
+	float: left;
+  	width: 24px;
+  	position: relative;
+  	top: 24px;
+}
+
+.cart-dropdown, .wishlist-menu, .gtd-dropdown-container .empty-dropdown {
+  width: 350px;
+  padding: 0;
+  z-index: 1000;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+
+  ul {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .subtotal {
+    display: block;
+  }
+
+  .item-image {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-width:100%;
+    height:auto;
+  }
+  label, p {
+    padding: 0;
+    margin: 0;
+  }
+  .media {
+    padding: 0;
+    margin: 0;
+  }
+  .media-left &amp;gt; a {
+    display: block;
+    width: 48px;
+    max-width: 48px;
+  }
+  .media-body {
+    label {
+      font-weight: bold;
+    }
+  }
+  li.media {
+    border-top: 1px solid #cccccc;
+    padding: 1rem;
+  }
+  .panel {
+    margin: 0;
+  }
+  .panel .panel-body {
+    padding: 0;
+  }
+  .btn-clear {
+		color: #333;
+    background-color: #fff;
+  }
+  p.quantity-price {
+    padding-top: 0.5rem;
+    span {
+      color: $text-muted;
+      padding-right: 0.5rem;
+    }
+  }
+  .align-right {
+  	text-align: right;
+  }
+}
+
+
+
+.item-added-tooltip, wishlist-item-added-tooltip {
+  width: 184px;
+  font-size: 14px;
+}
+
+.open &amp;gt; .dropdown-menu {
+	padding: 0.5rem 0.2rem !important;
+}
+
+.gtd-dropdown-container {
+  .empty-tour-content{
+    text-align: center;
+    margin:40px 20px;
+  }
+  .dropdown-menu li {
+    a {
+      cursor: pointer;
+    }
+    min-width: 20em;
+  }
+  .label-as-badge{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    padding: 0px;
+    padding-top: 2px;
+  }
+  .badge-container {
+    display: inline-block;
+    width: 12px;
+  }
+}
+
+@media  (max-width: 845px) and (min-width: 768px)  {
+	.header-menu-item ul {
+		right: auto;
+		left: auto;
+	}
+}
+@media (max-width: 767px) {
+	.empty-dropdown {
+		width: auto !important;
+	}
+}
+&lt;/css&gt;&lt;data_table&gt;sp_instance_menu&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;title&lt;/field_list&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;bb_menu&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function(scope, elem) {
+		function isMDScreenSize() {
+		return window.matchMedia('(max-width: 992px)').matches;
+	}
+	
+	var KEY = {
+		TAB : 9,
+		ENTER : 13,
+		ESC : 27,
+		SPACE_BAR : 32,
+		LEFT : 37,
+		UP : 38,
+		RIGHT : 39,
+		DOWN : 40
+	}
+
+	$('.navbar').on('keydown','[role="menuitem"]:visible',function(e) {
+		var mdScreenSize = isMDScreenSize();
+		var target = e.target;
+		if (target.localName == 'a') {
+			var currentMenuItem = $(target).parents('li').first();
+			var parentUL = currentMenuItem.parents('ul').first();
+			
+			var menuItem = currentMenuItem;
+			var targetInSubmenu = !currentMenuItem.is('.header-menu-item');
+			if (targetInSubmenu) {
+				menuItem = $(target).parents('li.header-menu-item').first();
+			}
+			
+			if (mdScreenSize &amp;&amp; e.keyCode == KEY.RIGHT) {
+				if ($(target).is('.dropdown-toggle') || $(target).is('[data-toggle="dropdown"]')) { // Target is a main menu item with sub-menu
+					e.preventDefault();
+					e.stopPropagation();
+					currentMenuItem.addClass('open');
+					$('&gt; a:visible', menuItem).attr("aria-expanded", "true");
+					currentMenuItem.find('.dropdown-menu a:visible').first().focus();
+				}
+			} else if (mdScreenSize &amp;&amp; e.keyCode == KEY.LEFT) {
+				if (parentUL.is('.dropdown-menu')) { // Target is a sub-menu item
+					parentUL.parents('.header-menu-item').first().removeClass('open').find('&gt; a:visible').first().focus();
+					$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+				}
+			} else if ((mdScreenSize &amp;&amp; e.keyCode == KEY.UP) || (!mdScreenSize &amp;&amp; e.keyCode == KEY.LEFT)) {
+				handleFocus(false, e, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu);
+			} else if((mdScreenSize &amp;&amp; e.keyCode == KEY.DOWN) || (!mdScreenSize &amp;&amp; e.keyCode == KEY.RIGHT)) {
+				handleFocus(true, e, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu);
+			}
+			if(e.keyCode == KEY.TAB) {
+				$(target).parents('li').removeClass('open');
+				$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+			}
+		}
+	});
+	
+	function handleFocus(next, event, mdScreenSize, menuItem, currentMenuItem, parentUL, targetInSubmenu) {
+		event.preventDefault();
+		
+		if (targetInSubmenu) {
+			var itemsInSubmenu = parentUL.find('li.visible');
+			var firstSubmenuItem = itemsInSubmenu.first();
+			var lastSubmenuItem = itemsInSubmenu.last();
+		}
+		var allMenuItems = $('li.header-menu-item:visible', '.navbar');
+		var firstMenuItem = allMenuItems.first();
+		var lastMenuItem = allMenuItems.last();
+
+		if (!mdScreenSize) {
+			currentMenuItem.removeClass('open');
+			$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+
+			if (targetInSubmenu)
+				menuItem.removeClass('open');
+		} else {
+			event.stopPropagation();
+			if (!targetInSubmenu) {
+				menuItem.removeClass('open');
+				$('&gt; a:visible', menuItem).attr("aria-expanded", "false");
+			}
+		}
+
+		var indexMenuItem = allMenuItems.index(menuItem);
+		var targetMenuItem = next ? allMenuItems.eq(indexMenuItem + 1) : allMenuItems.eq(indexMenuItem - 1);
+		var menuItemToFocus = targetMenuItem.length ? targetMenuItem : next ? firstMenuItem: lastMenuItem; //enable circular navigation
+
+		if (mdScreenSize &amp;&amp; targetInSubmenu) {
+			targetMenuItem = next ? currentMenuItem.nextAll('li:visible').first() : currentMenuItem.prevAll('li:visible').first();
+			menuItemToFocus = targetMenuItem.length ? targetMenuItem : next ? firstSubmenuItem: lastSubmenuItem; //enable circular navigation
+		}
+		menuItemToFocus.find('a').focus();
+	}
+	
+	$(elem).on('click', '[data-toggle="dropdown"]', function(e) {
+		var $target = $(e.target);
+		setTimeout(function() {
+			$('.dropdown-menu a:visible', $target.parents('.header-menu-item')).first().focus();
+		}, 0);
+	})
+
+	setTimeout(function(){
+		$('[data-toggle-second="tooltip"]').tooltip();
+	});
+}]]&gt;&lt;/link&gt;&lt;name&gt;BB Menu&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function(){
+	// build menus
+	var menu_id = $sp.getValue('sys_id'); // instance sys_id
+	data.menu = {};
+	data.menu.items = $sp.getMenuItems(menu_id);
+	data.isLoggedIn = gs.isLoggedIn();
+
+	//data.typeahead = $sp.getWidget('typeahead-search', options.typeahead_search);
+
+	var catalogArr = ($sp.getCatalogs().value + "").split(",");
+
+	catalogArr.forEach(function(catalog) {
+		data.showWishlist = data.showWishlist || new sn_sc.Catalog(catalog).isWishlistEnabled();
+	});
+	if (data.isLoggedIn) {
+		if (options.enable_wishlist &amp;&amp; data.showWishlist)
+			data.wishlistWidget = $sp.getWidget("sc_wishlist_cart", {wishlistTemplate: "small_wishlist.html", auto_update_wishlist:options.auto_update_wishlist});
+		if (options.enable_cart) {
+			if (gs.getProperty("glide.sc.portal.use_cart_v2_header", "false") === "true")
+				data.cartWidget = $sp.getWidget("sc-shopping-cart-v2", {cartTemplate: "small_shopping_cart_v2.html", auto_update_cart:options.auto_update_cart});
+			else
+				data.cartWidget = $sp.getWidget("sc-shopping-cart", {cartTemplate: "small_shopping_cart.html", auto_update_cart:options.auto_update_cart});
+		}
+	}
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-22 02:17:32&lt;/sys_created_on&gt;&lt;sys_id&gt;3931ca82976b2110d6e77f200153afc3&lt;/sys_id&gt;&lt;sys_mod_count&gt;35&lt;/sys_mod_count&gt;&lt;sys_name&gt;BB Menu&lt;/sys_name&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_3931ca82976b2110d6e77f200153afc3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-22 02:52:50&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;ul class="nav navbar-nav" aria-label="${Header}" role="menubar"&gt;
+  &lt;div class="header-loader" ng-class="{'invisible': !loadingIndicator}"&gt;
+    &lt;div class="hidden-xs hidden-sm sp-loading-indicator la-sm"&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;li ng-repeat="item in visibleItems" ng-class="{dropdown: item.items.length &gt; 0, 'header-menu-item': true}" ng-include="'menuTemplate'" role="presentation"&gt;&lt;/li&gt;
+	
+  &lt;li class="search-widget header-menu-item w"&gt;
+   	&lt;widget id="typeahead-search"&gt;&lt;/widget&gt;
+	&lt;/li&gt;
+  
+  &lt;!-- Wishlist menu --&gt;
+  &lt;li ng-if="options.enable_wishlist &amp;&amp; data.isLoggedIn &amp;&amp; data.showWishlist" ng-show="!accessibilityEnabled" class="dropdown hidden-xs header-menu-item" role="presentation"&gt;
+  	&lt;a role="menuitem" href="javascript:void(0)"
+       data-toggle="dropdown"
+       id="wishlist-menu"
+       title="${Your Wish List currently has} {{wishlistItemCount}} ${items}"
+       aria-label="${Wish List}"&gt;
+      &lt;span ng-bind-html="'${Wish List}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="wishlistItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{wishlistItemCount}}&lt;/span&gt;
+		&lt;/a&gt;
+    &lt;div class="dropdown-menu wishlist-menu custom-drop-down"&gt;
+      &lt;sp-widget widget="data.wishlistWidget"&gt;&lt;/sp-widget&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="options.enable_wishlist &amp;&amp; data.isLoggedIn &amp;&amp; data.showWishlist" class="dropdown" ng-class="{'visible-xs': !accessibilityEnabled}" role="presentation"&gt;
+  	&lt;a href="?id=sc_wishlist"
+       title="${Your Wish List currently has} {{wishlistItemCount}} ${items}"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       class="toggle-dropdown"
+       role="menuitem"
+       aria-label="${Your Wish List currently has} {{wishlistItemCount}} ${items}"&gt;
+      &lt;span ng-bind-html="'${Wish List}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="wishlistItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{wishlistItemCount}}&lt;/span&gt;
+		&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- Shopping cart stuff --&gt;
+ &lt;li ng-if="::options.enable_cart &amp;&amp; data.isLoggedIn" ng-show="::!accessibilityEnabled" class="dropdown hidden-xs header-menu-item" role="presentation"&gt;
+  	&lt;a href
+       data-toggle="dropdown"
+       id="cart-dropdown"
+       uib-tooltip-template="'item-added-tooltip.html'"
+       tooltip-placement="bottom"
+       tooltip-trigger="'none'"
+       tooltip-is-open="$parent.itemAddedTooltipOpen"
+       title="${Your shopping cart currently has} {{cartItemCount}} ${items}"
+       aria-label="${Shopping cart}"
+       role="menuitem"&gt;
+    	&lt;i class="fa fa-shopping-cart" aria-hidden="true"&gt;&lt;/i&gt;
+      &lt;span ng-bind-html="'${Cart}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="cartItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{cartItemCount}}&lt;/span&gt;
+		&lt;/a&gt;
+    &lt;div class="dropdown-menu cart-dropdown custom-drop-down"&gt;
+      &lt;sp-widget widget="data.cartWidget"&gt;&lt;/sp-widget&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="::options.enable_cart &amp;&amp; data.isLoggedIn" class="dropdown header-menu-item" ng-class="::{'visible-xs': !accessibilityEnabled}"  role="presentation"&gt;
+  	&lt;a ng-href="?id=sc_cart"
+       ng-click="collapse()"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       data-original-title="${Your shopping cart currently has} {{cartItemCount}} ${items}"
+       class="toggle-dropdown"
+       role="menuitem"
+       aria-label="${Your shopping cart currently has} {{cartItemCount}} ${items}"&gt;
+    	&lt;i class="fa fa-shopping-cart" aria-hidden="true"&gt;&lt;/i&gt;
+      &lt;span ng-bind-html="'${Cart}'" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span ng-if="cartItemCount &gt; 0" aria-hidden="true" class="label label-as-badge label-primary sp-navbar-badge-count"&gt;{{cartItemCount}}&lt;/span&gt;
+	&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1009733391</payload_hash>
+        <record_name>BB Menu</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:52:51</sys_created_on>
+        <sys_id>0b490a0e976b2110d6e77f200153af82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188e104d7c20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:52:51</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>cf490a0ea46b2110cc3ac00c6a60a381</update_guid>
+        <update_guid_history>cf490a0ea46b2110cc3ac00c6a60a381:1009733391,1419cacaa06b211078baef054e18e09c:-1042070394,1ff8820e8c6b2110e37161886f6670d5:1870614318,cae8820ea56b21102e5257878201ce56:1100552276,d5d84eca0c6b211063e4a568ce5cc3bc:1870614318,a5c8cacaf86b2110dcf613bc67311fc0:737093336,7b9882caa26b211085e3f11c6d4f3064:-1417156393,e67842ca6f6b21101abb76e95420772b:-446748998,d65882ca9c6b2110fef7ab74510e4f5d:-1203425689,a05802ca916b2110ca85506ca90aba01:-1607455646,862802ca846b211023593b1529437b2e:-446748998,82088a8a426b211047eaa2c0655c902a:-248963104,16f7068ae06b211055f0a6162491907f:1312452715,6de742ca966b211099481f4f353cb535:-785424355,52d742cab66b21103e170bdcb2fa8523:83554621,9ac7868aca6b21100b43d50a98c26c3f:864143334,80c7c68ae46b211035c7423d31b05a8a:520640638,5b97c28a9c6b21107d111c66d7419a6d:-1479688231,47870e8a7d6b21109ec3f4e7d1410518:-1969976209,9667068ac66b211012e2f23c02e84d92:-417535621,3347c24acc6b21109142215044efeeae:1914830668,6337464a516b2110a493a9e27637efa8:1162161076,a437068a606b2110083126adc8e7e637:1063793213,fc170a0ac46b21103e862abb34befd8c:-874373640,c5368a0ab86b2110ac6143e4b8880cc9:-970579013,ef16c60a1f6b21100fe4aaad617fe4ee:1640025771,4bf58a0aa46b2110207c31faf72574ac:-70817385,4d058e863f6b211055e9f50e3156b678:-99927837,cf944286146b21107d3b8a8a93eb0ca5:-70817385,bce34286666b2110175d6d8a9a47189f:877334862,0eb30e46556b2110788f4fcb5730eca2:368765484,81a2c2460b6b2110ef9bbff4ecd2bf27:221727360,46420246a56b21109057508ab13ebb8a:1271168571,3622c206f96b21106fbe34706b395edd:-466264020,bfb14606a56b2110318e6b860b47e1fc:1171436722,39310206e26b2110247a07bd2642dcb6:-1721826157</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="BB Menu">1a3ac64e976b2110d6e77f200153afd3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 02:56:54</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>42cf44416a3948a08918cbc9bd0b0040</sys_id>
+        <sys_metadata>3931ca82976b2110d6e77f200153afc3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BB Menu</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_widget_3931ca82976b2110d6e77f200153afc3</sys_update_name>
+        <sys_update_version display_value="sp_widget_3931ca82976b2110d6e77f200153afc3">0b490a0e976b2110d6e77f200153af82</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 02:56:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>hr</category>
+        <client_script><![CDATA[function escHeaderController($rootScope, $scope, $window, spUtil, $location, $uibModal, cabrillo, $timeout, i18n, spContextManager, snAnalytics) {
+    var c = this;
+
+    // Events fired from/to $rootScope for responsive mobile view.
+    c.SHOW_MOBILE_MEGA_MENU = 'showMobileMegaMenu';
+    c.SHOW_MOBILE_MENU_ON_DESKTOP = 'showMobileMenuOnDesktop';
+    c.TOGGLE_MOBILE_MENU_VISIBILITY = 'toggleMobileMenuVisibility';
+    c.INITIAL_TIMEOUT = 500;
+    $rootScope.isHeaderInMobileView = false;
+	
+	$('body').on('click', function (e) {
+		$('[data-toggle=tooltip]').each(function () {
+			if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.tooltip').has(e.target).length === 0) {
+				$(this).tooltip('hide');
+			}
+		});
+	});
+	
+    c.evaluateSearchWidgetVisibility = function () {
+        if (c.data.hideSearchOnHomepage) {
+            var currentUrl = $location.url();
+            var params = $location.search();
+
+            // hide on home page
+            if ((params && params.id && params.id === c.data.dashboardSuffix) || (params && !params.id && currentUrl.includes(c.data.portalSuffix))) {
+              $scope.showSearchBar = false;
+              $scope.showViewAsHeader = false;
+            } else
+              $scope.showSearchBar = true;
+            // show ViewAs header on viewAsPages  
+            if ((params && params.id && currentUrl.includes("ec_view_as")))
+              $scope.showViewAsHeader = true;
+        }
+    };
+
+    function addDeferScript(src,callback) {
+      var s = document.createElement('script');
+      s.setAttribute('src',src);
+      s.setAttribute('defer', true);
+      s.onload=callback;
+      document.body.appendChild(s);
+    }
+
+    if(c.data.isPersonalizedAnswer) {
+      addDeferScript("/scripts/app-ex-integrated-answers-components/app-ex-integrated-answers-components.min.js");
+    }
+
+    $scope.$on('sp_loading_indicator', function(e, value) {
+        $scope.loadingIndicator = value;
+        // Evaluate search bar visibility once the page has completed loading.
+        if(!value)
+            c.evaluateSearchWidgetVisibility();
+    });
+
+    $scope.showSearchBar = true;
+    $scope.userID = $scope.user.sys_id;
+    $scope.todosPopupId = c.data.isMobile ? '#popup_todos_mobile' : '';
+    $scope.casesPopupId = c.data.isMobile ? '#popup_cases_mobile' : '';
+    $scope.popupType = c.data.isMobile ? 'collapse' : 'dropdown';
+    $scope.expanded = false;
+    $scope.isMobileViewOnDesktopExpanded = false;
+    $scope.loadingIndicator = $rootScope.loadingIndicator;
+    $scope.cartItemCount = 0;
+
+    /* Below 2 scope variables (showMobileMenuOnDesktop, showMobileMegaMenu) have counterparts in EC Navigation widget also.
+     So whenever we set these variables, make sure to emit an event on rootScope to update them in the former widget as well. */
+
+    // Determines whether to show mobile view on desktop due to oveflow of items in sub navigation bar of header.
+    $scope.showMobileMenuOnDesktop = false;
+    // Used to hide global navigation tools on mobile while showing mega menu topics in right panel.
+    $scope.showMobileMegaMenu = false;
+
+    c.todoCountTranslation = i18n.format(c.data.todoCountLabel, String(c.data.todoCount));
+    c.toursTranslation = "${Tours}";
+
+    c.MOBILE_DEVICE_SCREEN_WIDTH = 767;
+    $scope.mobileDevice = $scope.mobileDevice || c.data.isMobile || ($window.innerWidth <= c.MOBILE_DEVICE_SCREEN_WIDTH);
+
+    if (cabrillo.isNative())
+        $scope.isViewNative = true;
+
+    // initially for first load, if the calculated width is in mobile view then update
+    // isHeaderInMobileView so that Employee Center Navigation widget also goes into mobile mode
+    $scope.$watch("mobileDevice", function() {
+      $rootScope.isHeaderInMobileView = $scope.mobileDevice;
+      $rootScope.$broadcast('isHeaderInMobileView', $scope.mobileDevice);
+    }); 
+
+    $scope.$watch('isMobileViewOnDesktopExpanded', function (oldVal, newVal) {
+      if (oldVal && !newVal) {
+         $timeout(c.registerClickEventHanlderOnCart, c.INITIAL_TIMEOUT);
+      }
+    });
+
+    c.registerClickEventHanlderOnCart = function  () {
+       $('a#cart-dropdown').on('click', function (event) {
+          if ($window.innerWidth > c.MOBILE_DEVICE_SCREEN_WIDTH && $scope.isMobileViewOnDesktopExpanded) {
+             $location.search({id: 'sc_cart'});
+             $scope.toggleMobileMenuVisibility();
+          }
+       });
+    }
+
+    $scope.$on("$sp.service_catalog.cart.count", function ($evt, count) {
+        $scope.cartItemCount = count;
+    });
+
+    $scope.$on("$locationChangeSuccess", function (event, data) {
+        if (c.data.isMobile) {
+            if ($('div#popup_todos_mobile').is(":visible"))
+                $('li > a#todos_popup').click();
+            else if ($('div#popup_cases_mobile').is(":visible"))
+                $('li > a#cases_popup').click();
+        } else {
+            $('li.open > a#cases_popup').click();
+            $('li.open > a#todos_popup').click();
+        }
+    });
+
+    c.processWatchers = function (watcher) {
+        setTimeout($scope.reloadHeader, 20);
+    };
+
+    /* Record Watchers */
+    if (c.data.recordWatchers && c.data.recordWatchers.length > 0) {
+        angular.forEach(c.data.recordWatchers, function (watcher) {
+            spUtil.recordWatch($scope, watcher.table, watcher.filter, c.processWatchers);
+        });
+    }
+
+    $scope.reloadHeader = function (actionName) {
+        c.data.action = actionName || c.data.ACTION_TODO_COUNT;
+        if (c.data.action == c.data.ACTION_TODO_COUNT)
+            c.server.get({
+                action: c.data.action
+            }).then(function (resp) {
+                c.data.todoCount = resp.data.todoCount;
+                c.todoCountTranslation = i18n.format(c.data.todoCountLabel, String(c.data.todoCount));
+            });
+        else
+            c.server.update();
+    };
+
+    $scope.openLogin = function () {
+        $scope.modalInstance = $uibModal.open({
+            templateUrl: 'modalLogin',
+            scope: $scope
+        });
+    };
+
+    $rootScope.$on("update.searchpage", function (e, searchPage) {
+        $scope.searchPage = searchPage;
+    });
+
+    $rootScope.$on('sp.avatar_changed', function () {
+        $scope.userID = '';
+        $timeout(function () {
+            $scope.userID = $scope.user.sys_id;
+        });
+    });
+
+    $rootScope.$on(c.SHOW_MOBILE_MENU_ON_DESKTOP, function (event, showMobileMenuOnDesktop) {
+      if (!(showMobileMenuOnDesktop || $scope.mobileDevice) && $scope.showMobileMenuOnDesktop) {
+        $scope.isMobileViewOnDesktopExpanded = false;
+      }
+      $scope.showMobileMenuOnDesktop = showMobileMenuOnDesktop || $scope.mobileDevice;
+    });
+
+    $rootScope.$on(c.SHOW_MOBILE_MEGA_MENU, function (event, showMobileMegaMenu) {
+       $scope.showMobileMegaMenu = showMobileMegaMenu;
+    });
+
+    $timeout(function() {
+      $scope.calulatedNavbarWidth();
+      resizeObserverForTopNav();
+    },c.INITIAL_TIMEOUT);
+
+    function resizeObserverForTopNav() {
+      var headerSearch = document.querySelector(".header-search");
+      var navbarBrand = document.querySelector(".navbar-brand-logo > img");
+      var navbarRight = document.querySelector(".navbar-right > div"); 
+      //fix for firefox/chrome on cmd + text zoom increase
+      if(window.ResizeObserver) {
+        var resizeObserver = new ResizeObserver(function(entries) {
+          if(entries) {
+            $scope.calulatedNavbarWidth();
+          }
+        });
+
+        if(headerSearch)
+          resizeObserver.observe(headerSearch);
+
+        if(navbarBrand)
+          resizeObserver.observe(navbarBrand);
+
+        if(navbarRight)
+          resizeObserver.observe(navbarRight);
+      }
+    }
+
+    $scope.toggleMobileMenuVisibility = function (event) {
+      if (event) {
+         event.stopPropagation();
+      }
+      $scope.isMobileViewOnDesktopExpanded = !$scope.isMobileViewOnDesktopExpanded;
+      $scope.expanded = false;
+      $scope.showMobileMegaMenu = false;
+      $rootScope.$emit(c.SHOW_MOBILE_MEGA_MENU, false);
+    };
+
+    $rootScope.$on(c.TOGGLE_MOBILE_MENU_VISIBILITY, function() {
+       $scope.toggleMobileMenuVisibility();
+    });
+
+    $scope.handleMobileViewClick = function (event) {
+      if ($(event.target).text() !== c.toursTranslation) {
+        event.stopPropagation();
+      }
+    };
+
+    $scope.isHomepage = function () {
+        if (!$scope.page.id)
+            return true;
+
+        if ($scope.page.id == $scope.portal.homepage_dv)
+            return true;
+
+        return false;
+    };
+
+    c.evaluateSearchWidgetVisibility();
+
+    //remove nested ul to fix screen reader issue
+    $timeout(function () {
+        var cartToursWrapper = $('.navbar-header .v' + scope.data.top.menu.sys_id);
+
+        if (!cartToursWrapper.length)
+            return;
+
+        var menu = cartToursWrapper.parent().parent();
+        var menuItems = cartToursWrapper.children();
+        menu.append(menuItems);
+        cartToursWrapper.parent().remove();
+    }, 1000);
+	
+	$scope.$on('sn_lp.giveFeedbackModalOpen', function() {
+		$scope.toggleMobileMenuVisibility();
+	});
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@mixin -link-hover {&#13;
+  cursor: pointer;&#13;
+  background-color: darken($navbar-inverse-bg, 5%);&#13;
+  border-radius: $border-radius-base;&#13;
+  color: $navbar-inverse-link-hover-color;&#13;
+}&#13;
+&#13;
+@mixin -link-focus {&#13;
+  outline: 1.5px solid $navbar-inverse-link-color;&#13;
+  border: none;&#13;
+  border-radius: $border-radius-base;&#13;
+  box-shadow: inset 0 0 0 0.1rem #fff;&#13;
+  background-color: darken($navbar-inverse-bg, 10%);&#13;
+  color: $navbar-inverse-link-hover-color;&#13;
+}&#13;
+&#13;
+@mixin -focus-visible-mouse-ua {&#13;
+  border: none;&#13;
+  outline: none;&#13;
+  box-shadow: none;&#13;
+}&#13;
+&#13;
+@mixin -focus-visible-keyboard-ua {&#13;
+  outline: 1.5px solid $navbar-inverse-link-color;&#13;
+  border: none;&#13;
+  border-radius: $border-radius-base;&#13;
+  box-shadow: inset 0 0 0 0.1rem #fff;&#13;
+}&#13;
+&#13;
+.navbar-inverse {&#13;
+  margin-bottom: 0px;&#13;
+  border-radius: 0px;&#13;
+  background-color: $navbar-inverse-bg;&#13;
+&#13;
+  .navbar-header {&#13;
+    &amp;.nav-container {&#13;
+      width: 100%;&#13;
+      display: flex;&#13;
+      flex-wrap: wrap;&#13;
+      justify-content: end;&#13;
+      &#13;
+      .sub-navbar-overflow-entry-button {&#13;
+        position: relative;&#13;
+        float: right;&#13;
+        margin: 1.3rem 1.5rem 1.3rem 0;&#13;
+        padding: .9rem 1rem;&#13;
+        background-color: transparent;&#13;
+        background-image: none;&#13;
+        border: .1rem solid transparent;&#13;
+        border-radius: .4rem;&#13;
+        border-color: rgba(255, 255, 255, .25);&#13;
+&#13;
+        .label {&#13;
+          float: right;&#13;
+          margin-right: -.5rem;&#13;
+          margin-top: -.7rem;&#13;
+          padding: .2em .5em .2em;&#13;
+        }&#13;
+&#13;
+        .label-as-badge {&#13;
+          font-size: 1.2rem;&#13;
+          position: relative;&#13;
+          top: -$sp-space--xxs;&#13;
+          left: $sp-space--xxs;&#13;
+          padding: $sp-space--xxs 5px;&#13;
+          margin-left: 0;&#13;
+          background-color: $btn-danger-bg;&#13;
+          color: $text-white;&#13;
+        }&#13;
+&#13;
+        .icon-bar {&#13;
+          display: block;&#13;
+          width: 2.2rem;&#13;
+          height: .2rem;&#13;
+          border-radius: .1rem;&#13;
+          background-color: #fff;&#13;
+        }&#13;
+&#13;
+        .icon-bar+.icon-bar {&#13;
+          margin-top: .4rem;&#13;
+        }&#13;
+&#13;
+        &amp;.close-icon-visible {&#13;
+          margin-bottom: 0;&#13;
+          padding: 0.6rem 1rem;&#13;
+        }&#13;
+&#13;
+        .fa.fa-close {&#13;
+          vertical-align: -6%;&#13;
+          font-size: 20px;&#13;
+          width: 22px;&#13;
+          color: $navbar-inverse-link-color;&#13;
+        }&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .gt-menu-item&gt;a,&#13;
+    .gt-menu-item&gt;div&gt;ul&gt;li&gt;a,&#13;
+    .navbar-nav&gt;li&gt;a {&#13;
+      &amp;:hover {&#13;
+        @include -link-hover;&#13;
+      }&#13;
+&#13;
+      &amp;:focus {&#13;
+        @include -link-focus;&#13;
+      }&#13;
+&#13;
+      &amp;:focus:not(:focus-visible) {&#13;
+        @include -focus-visible-mouse-ua;&#13;
+      }&#13;
+&#13;
+      &amp;:focus-visible {&#13;
+        @include -focus-visible-keyboard-ua;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .mobile-view-on-desktop {&#13;
+      top: 60px;&#13;
+      position: absolute;&#13;
+      right: 0;&#13;
+      z-index: 999;&#13;
+      min-height: 600px;&#13;
+      max-width: 400px;&#13;
+      background-color: $navbar-inverse-bg;&#13;
+      box-shadow: 5px 5px 5px $navbar-inverse-link-color;&#13;
+      color: $navbar-inverse-link-color;&#13;
+&#13;
+      .mobile-view-navbar {&#13;
+        list-style: none;&#13;
+        padding: 0 8px;&#13;
+        margin: 0;&#13;
+        display: flex;&#13;
+        flex-direction: column;&#13;
+        border-top: 1px solid darken($navbar-inverse-link-color, 45%);&#13;
+&#13;
+        .main-header-items {&#13;
+          padding-inline-start: 0.4rem !important;&#13;
+          padding-inline-end: 0.4rem !important;&#13;
+          list-style: none;&#13;
+          padding-top: 11px;&#13;
+          margin: 0;&#13;
+          display: flex;&#13;
+          flex-direction: column;&#13;
+&#13;
+          &amp;&gt;li&gt;div&gt;ul {&#13;
+            width: 100%;&#13;
+&#13;
+            &amp;&gt;li {&#13;
+              width: 100%;&#13;
+&#13;
+              &amp;&gt;a&gt;span {&#13;
+&#13;
+                &amp;:hover {&#13;
+                  @include -link-hover;&#13;
+                }&#13;
+&#13;
+                &amp;:focus {&#13;
+                  @include -link-focus;&#13;
+                }&#13;
+&#13;
+                &amp;:focus:not(:focus-visible) {&#13;
+                  @include -focus-visible-mouse-ua;&#13;
+                }&#13;
+&#13;
+                &amp;:focus-visible {&#13;
+                  @include -focus-visible-keyboard-ua;&#13;
+                }&#13;
+              }&#13;
+            }&#13;
+          }&#13;
+&#13;
+          &amp;&gt;li&gt;a, &amp;&gt;ul&gt;li&gt;a {&#13;
+            display: block;&#13;
+            padding: $sp-space--md;&#13;
+&#13;
+            &amp;:hover {&#13;
+              @include -link-hover;&#13;
+&#13;
+              &amp;&gt;a {&#13;
+                color: $navbar-inverse-link-hover-color;&#13;
+              }&#13;
+            }&#13;
+&#13;
+            &amp;:focus {&#13;
+              @include -link-focus;&#13;
+            }&#13;
+&#13;
+            &amp;:focus:not(:focus-visible) {&#13;
+              @include -focus-visible-mouse-ua;&#13;
+            }&#13;
+&#13;
+            &amp;:focus-visible {&#13;
+              @include -focus-visible-keyboard-ua;&#13;
+            }&#13;
+&#13;
+            // Cart, tours, and Wishlist (Mobile View)&#13;
+            .nav.navbar-nav {&#13;
+              display: flex;&#13;
+              flex-direction: column;&#13;
+            }&#13;
+          }&#13;
+        }&#13;
+&#13;
+        .mobile-mega-menu-entry {&#13;
+          margin: 0 -8px;&#13;
+        }&#13;
+&#13;
+        .separator {&#13;
+          margin: 20px -8px;&#13;
+          border-top: 1px solid darken($navbar-inverse-link-color, 30%);&#13;
+        }&#13;
+&#13;
+        li&gt;a {&#13;
+          color: $navbar-inverse-link-color;&#13;
+&#13;
+          &amp;:hover,&#13;
+          &amp;:focus {&#13;
+            color: #fff !important;&#13;
+            background-color: transparent;&#13;
+          }&#13;
+&#13;
+          &amp;:focus {&#13;
+            box-shadow: inset 0 0 0 0.1rem #fff;&#13;
+            outline: 1.5px solid $navbar-inverse-link-color;&#13;
+            border: none;&#13;
+            border-radius: 4px;&#13;
+          }&#13;
+&#13;
+          &amp;:focus:not(:focus-visible) {&#13;
+            border: none;&#13;
+            outline: none;&#13;
+            box-shadow: none;&#13;
+          }&#13;
+&#13;
+          &amp;:focus-visible {&#13;
+            box-shadow: inset 0 0 0 0.1rem #fff;&#13;
+            outline: 1.5px solid $navbar-inverse-link-color;&#13;
+            border: none;&#13;
+            border-radius: 4px;&#13;
+          }&#13;
+        }&#13;
+&#13;
+        li.user-name {&#13;
+          margin: 0 0.4rem 0 0.4rem;&#13;
+&#13;
+          &amp;&gt;a {&#13;
+            display: block;&#13;
+            padding: 0 $sp-space--md;&#13;
+            height: $sp-space--xl * 2;&#13;
+&#13;
+            &amp;&gt;span.navbar-avatar {&#13;
+              line-height: $sp-space--sm * 7;&#13;
+            }&#13;
+&#13;
+            &amp;&gt;span:not(.navbar-avatar) {&#13;
+              line-height: 4.5rem;&#13;
+            }&#13;
+          }&#13;
+&#13;
+          &amp;:hover {&#13;
+            @include -link-hover;&#13;
+&#13;
+            &amp;&gt;a {&#13;
+              color: $navbar-inverse-link-hover-color;&#13;
+            }&#13;
+          }&#13;
+&#13;
+          &amp;:focus {&#13;
+            @include -link-focus;&#13;
+          }&#13;
+&#13;
+          &amp;:focus:not(:focus-visible) {&#13;
+            @include -focus-visible-mouse-ua;&#13;
+          }&#13;
+&#13;
+          &amp;:focus-visible {&#13;
+            @include -focus-visible-keyboard-ua;&#13;
+          }&#13;
+        }&#13;
+      }&#13;
+&#13;
+      .impersonate-and-logout {&#13;
+        div&gt;ul&gt;li:first-child {&#13;
+          &amp; &gt; a {&#13;
+            display: none;&#13;
+          }&#13;
+&#13;
+          ul.dropdown-menu {&#13;
+            width: 400px;&#13;
+            display: block;&#13;
+            z-index: inherit;&#13;
+            background-color: $navbar-inverse-bg;&#13;
+            box-shadow: none;&#13;
+            border-radius: 0;&#13;
+            padding-left: 2px;&#13;
+            padding-bottom: 16px;&#13;
+&#13;
+            li&gt;a {&#13;
+              margin: 0 $sp-space--md 0 $sp-space--md;&#13;
+              padding: $sp-space--md;&#13;
+&#13;
+              &amp;:hover {&#13;
+                @include -link-hover;&#13;
+&#13;
+                &amp;&gt;a {&#13;
+                  color: $navbar-inverse-link-hover-color;&#13;
+                }&#13;
+              }&#13;
+&#13;
+              &amp;:focus {&#13;
+                @include -link-focus;&#13;
+&#13;
+                &amp;&gt;a {&#13;
+                  border: none;&#13;
+                  box-shadow: none;&#13;
+                }&#13;
+              }&#13;
+&#13;
+              &amp;:focus:not(:focus-visible) {&#13;
+                @include -focus-visible-mouse-ua;&#13;
+              }&#13;
+&#13;
+              &amp;:focus-visible {&#13;
+                @include -focus-visible-keyboard-ua;&#13;
+              }&#13;
+            }&#13;
+&#13;
+            li:first-child {&#13;
+              display: none;&#13;
+            }&#13;
+          }&#13;
+        }&#13;
+&#13;
+        div&gt;ul&gt;li&gt;a {&#13;
+          margin: 0 $sp-space--md 0 $sp-space--md;&#13;
+          padding: $sp-space--md;&#13;
+&#13;
+          &amp;:hover {&#13;
+            @include -link-hover;&#13;
+&#13;
+            &amp;&gt;a {&#13;
+              color: $navbar-inverse-link-hover-color;&#13;
+            }&#13;
+          }&#13;
+&#13;
+          &amp;:focus {&#13;
+            @include -link-focus;&#13;
+&#13;
+            &amp;&gt;a {&#13;
+              border: none;&#13;
+              box-shadow: none;&#13;
+            }&#13;
+          }&#13;
+&#13;
+          &amp;:focus:not(:focus-visible) {&#13;
+            @include -focus-visible-mouse-ua;&#13;
+          }&#13;
+&#13;
+          &amp;:focus-visible {&#13;
+            @include -focus-visible-keyboard-ua;&#13;
+          }&#13;
+        }&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .mobile-view-on-desktop.search-visible {&#13;
+      top: 113px;&#13;
+      position: absolute;&#13;
+      right: 0;&#13;
+      width: 100%;&#13;
+      /* To prevent Mega menu panel in hamburger view from growing beyond footer */&#13;
+      max-height: 100vh;&#13;
+      overflow-y: auto;&#13;
+      z-index: 999;&#13;
+      padding: 10px 0px;&#13;
+      margin-bottom: 10px;&#13;
+    }&#13;
+&#13;
+    .navbar-brand {&#13;
+      margin: 0;&#13;
+      margin-right: auto;&#13;
+      height: 60px;&#13;
+      padding: $sp-logo-margin-y 0px 10px $sp-logo-margin-x;&#13;
+      &#13;
+      img,&#13;
+      span {&#13;
+        margin: 0;&#13;
+        display: block;&#13;
+        max-height: $sp-logo-max-height;&#13;
+        max-width: $sp-logo-max-width;&#13;
+        position: relative;&#13;
+        top: 50%;&#13;
+        -webkit-transform: translateY(-50%);&#13;
+        -ms-transform: translateY(-50%);&#13;
+        transform: translateY(-50%);&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .navbar-right .dropdown-menu&gt;li&gt;a {&#13;
+      &amp;:hover {&#13;
+        @include -link-hover;&#13;
+      }&#13;
+&#13;
+      &amp;:focus {&#13;
+        @include -link-focus;&#13;
+      }&#13;
+&#13;
+      &amp;:focus:not(:focus-visible) {&#13;
+        @include -focus-visible-mouse-ua;&#13;
+      }&#13;
+&#13;
+      &amp;:focus-visible {&#13;
+        @include -focus-visible-keyboard-ua;&#13;
+      }&#13;
+    }&#13;
+  }&#13;
+&#13;
+  .dropdown-menu&gt;li&gt;a {&#13;
+    color: $navbar-inverse-link-color;&#13;
+  }&#13;
+&#13;
+  .dropdown-toggle:focus {&#13;
+    outline: thin dotted;&#13;
+    outline: 5px auto -webkit-focus-ring-color;&#13;
+  }&#13;
+&#13;
+  .sub-navbar {&#13;
+    background-color: $sp-navbar-divider-color;&#13;
+    border: none;&#13;
+    width: 100%;&#13;
+&#13;
+    #cart-dropdown,&#13;
+    #wishlist-menu {&#13;
+      display: none;&#13;
+&#13;
+      ~* {&#13;
+        display: none !important;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .navbar-nav&gt;li&gt;a[href="?id=sc_cart"],&#13;
+    .navbar-nav&gt;li&gt;a[href="?id=sc_wishlist"] {&#13;
+      display: none !important;&#13;
+    }&#13;
+&#13;
+    .gtd-dropdown-container {&#13;
+      display: none;&#13;
+    }&#13;
+&#13;
+    .open&gt;a,&#13;
+    .open&gt;a:focus {&#13;
+      background-color: darken($sp-navbar-divider-color, 8%);&#13;
+    }&#13;
+&#13;
+    #cart-dropdown {&#13;
+      display: none;&#13;
+&#13;
+      :after {&#13;
+        content: "\f0d7";&#13;
+        vertical-align: baseline;&#13;
+        width: auto;&#13;
+        height: auto;&#13;
+        border: none;&#13;
+        margin-left: 5px !important;&#13;
+        display: inline-block;&#13;
+        font: normal normal normal 14px/1 FontAwesome;&#13;
+        font-size: inherit;&#13;
+        text-rendering: auto;&#13;
+        -webkit-font-smoothing: antialiased;&#13;
+        -moz-osx-font-smoothing: grayscale;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .dropdown-menu {&#13;
+      background-color: $sp-navbar-divider-color;&#13;
+&#13;
+      &gt;li&gt;a:hover,&#13;
+        &gt;li&gt;a:focus {&#13;
+          background-color: darken($sp-navbar-divider-color, 8%);&#13;
+      }&#13;
+    }&#13;
+  }&#13;
+&#13;
+  .dropdown-menu {&#13;
+    background-color: rgba($navbar-inverse-bg, 0.97);&#13;
+    border: none;&#13;
+&#13;
+    &amp;.case-menu {&#13;
+      right: 0;&#13;
+      left: auto;&#13;
+      padding: 0;&#13;
+      width: 450px;&#13;
+      background: $color-lightest;&#13;
+      overflow-y: hidden;&#13;
+    }&#13;
+  }&#13;
+&#13;
+  &gt;.open&gt;a:hover,&#13;
+    &gt;.open&gt;a:focus {&#13;
+      background-color: darken($navbar-invese-bg, 8%);&#13;
+  }&#13;
+&#13;
+  .fa-caret-down {&#13;
+    vertical-align: middle;&#13;
+    margin-top: 2px;&#13;
+  }&#13;
+&#13;
+  .caret:before {&#13;
+    content: "\f0d7";&#13;
+  }&#13;
+&#13;
+  .caret {&#13;
+    vertical-align: baseline;&#13;
+    width: auto;&#13;
+    height: auto;&#13;
+    border: none;&#13;
+    margin-left: 5px !important;&#13;
+    display: inline-block;&#13;
+    font: normal normal normal 14px/1 FontAwesome;&#13;
+    font-size: inherit;&#13;
+    text-rendering: auto;&#13;
+    -webkit-font-smoothing: antialiased;&#13;
+    -moz-osx-font-smoothing: grayscale;&#13;
+  }&#13;
+&#13;
+  .label-as-badge {&#13;
+    font-size: 1.2rem;&#13;
+    position: relative;&#13;
+    top: -$sp-space--sm;&#13;
+    left: -$sp-space--xxs;&#13;
+    padding: 1px 5px;&#13;
+    margin-left: 0;&#13;
+    background-color: $btn-danger-bg;&#13;
+    color: $text-white;&#13;
+  }&#13;
+&#13;
+  .navbar {&#13;
+    transition: 250ms opacity ease-in-out;&#13;
+    -webkit-transition: 250ms opacity ease-in-out;&#13;
+    border: 0;&#13;
+  }&#13;
+&#13;
+  .navbar-fade {&#13;
+    opacity: 0.4;&#13;
+  }&#13;
+&#13;
+  .navbar-collapse {&#13;
+    padding-right: 0px;&#13;
+  }&#13;
+&#13;
+  .case-menu {&#13;
+    div#widget-tabs-2 {&#13;
+      border: none;&#13;
+&#13;
+      &gt;.panel-heading {&#13;
+        border: none;&#13;
+        border-bottom: 1px solid $border;&#13;
+      }&#13;
+    }&#13;
+  }&#13;
+&#13;
+  ul.nav.navbar-nav {&#13;
+&#13;
+    // Hiding the loading indicator from Header Menu base system widget&#13;
+    div.header-loader {&#13;
+      display: none;&#13;
+    }&#13;
+&#13;
+    li.sp-loading-indicator {&#13;
+      padding-top: $sp-space--sm * 3;&#13;
+      margin-top: $sp-space--xxs;&#13;
+    }&#13;
+  }&#13;
+&#13;
+  #more-items-dropdown {&#13;
+    overflow: visible;&#13;
+  }&#13;
+&#13;
+  .cart-dropdown,&#13;
+  .wishlist-menu,&#13;
+  .gtd-dropdown-container .empty-dropdown {&#13;
+    width: 350px;&#13;
+    padding: 0;&#13;
+    z-index: 1000;&#13;
+    border-top-left-radius: 4px !important;&#13;
+    border-top-right-radius: 4px !important;&#13;
+&#13;
+    ul {&#13;
+      max-height: 300px;&#13;
+      overflow: auto;&#13;
+    }&#13;
+&#13;
+    .subtotal {&#13;
+      display: block;&#13;
+    }&#13;
+&#13;
+    .item-image {&#13;
+      padding: 0;&#13;
+      margin: 0;&#13;
+      text-align: center;&#13;
+      max-width: 100%;&#13;
+      height: auto;&#13;
+    }&#13;
+&#13;
+    label,&#13;
+    p {&#13;
+      padding: 0;&#13;
+      margin: 0;&#13;
+    }&#13;
+&#13;
+    .media {&#13;
+      padding: 0;&#13;
+      margin: 0;&#13;
+    }&#13;
+&#13;
+    .media-left&gt;a {&#13;
+      display: block;&#13;
+      width: 48px;&#13;
+      max-width: 48px;&#13;
+    }&#13;
+&#13;
+    .media-body {&#13;
+      label {&#13;
+        font-weight: bold;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    li.media {&#13;
+      border-top: 1px solid #cccccc;&#13;
+      padding: 1rem;&#13;
+    }&#13;
+&#13;
+    .panel {&#13;
+      margin: 0;&#13;
+    }&#13;
+&#13;
+    .panel .panel-body {&#13;
+      padding: 0;&#13;
+    }&#13;
+&#13;
+    .btn-clear {&#13;
+      color: #333;&#13;
+      background-color: #fff;&#13;
+    }&#13;
+&#13;
+    p.quantity-price {&#13;
+      padding-top: 0.5rem;&#13;
+&#13;
+      span {&#13;
+        color: $text-muted;&#13;
+        padding-right: 0.5rem;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .align-right {&#13;
+      text-align: right;&#13;
+    }&#13;
+  }&#13;
+&#13;
+&#13;
+  .item-added-tooltip,&#13;
+  wishlist-item-added-tooltip {&#13;
+    width: 184px;&#13;
+    font-size: 14px;&#13;
+  }&#13;
+&#13;
+  .gtd-dropdown-container {&#13;
+    .empty-tour-content {&#13;
+      text-align: center;&#13;
+      margin: 40px 20px;&#13;
+    }&#13;
+&#13;
+    .dropdown-menu li {&#13;
+      a {&#13;
+        cursor: pointer;&#13;
+      }&#13;
+&#13;
+      min-width: 20em;&#13;
+    }&#13;
+&#13;
+    .label-as-badge {&#13;
+      width: 12px;&#13;
+      height: 12px;&#13;
+      display: inline-block;&#13;
+      padding: 0px;&#13;
+      padding-top: 2px;&#13;
+    }&#13;
+&#13;
+    .badge-container {&#13;
+      display: inline-block;&#13;
+      width: 12px;&#13;
+    }&#13;
+  }&#13;
+&#13;
+}&#13;
+&#13;
+@media screen and (min-width: 768px) {&#13;
+  .navbar-inverse {&#13;
+    .navbar-right&gt;.navbar-nav&gt;div {&#13;
+      float: left;&#13;
+    }&#13;
+&#13;
+    .navbar-right {&#13;
+      display: flex;&#13;
+      flex-direction: row-reverse;&#13;
+      margin-right: 10px;&#13;
+&#13;
+      &gt;ul {&#13;
+        display: -webkit-box;&#13;
+        display: -moz-box;&#13;
+        display: box;&#13;
+&#13;
+        -moz-box-orient: horizontal;&#13;
+        box-orient: horizontal;&#13;
+        -webkit-box-orient: horizontal;&#13;
+      }&#13;
+&#13;
+      .navbar-nav&gt;li&gt;a {&#13;
+        padding-right: 10px;&#13;
+        padding-left: 10px;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .navbar-avatar {&#13;
+      margin-top: -7px;&#13;
+    }&#13;
+&#13;
+    a#todos_popup {&#13;
+      padding-left: 0px;&#13;
+    }&#13;
+&#13;
+    .navbar-nav .open .dropdown-menu&gt;li&gt;a {&#13;
+      margin: 0 $sp-space--sm 0 $sp-space--sm;&#13;
+      padding: 10px 20px;&#13;
+    }&#13;
+&#13;
+    .navbar-header {&#13;
+      position: relative;&#13;
+&#13;
+      .dropdown-toggle {&#13;
+        height: 60px;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .temp-mobile {&#13;
+      display: inline-block;&#13;
+    }&#13;
+&#13;
+    .sub-navbar {&#13;
+      display: flex;&#13;
+      padding-left: 0;&#13;
+    }&#13;
+&#13;
+    .sub-navbar--mobile-view {&#13;
+      .navigation--xs {&#13;
+        display: none;&#13;
+      }&#13;
+    }&#13;
+  }&#13;
+}&#13;
+&#13;
+.header-search-mobile {&#13;
+  margin: 1.3rem 1rem;&#13;
+  width: 100%;&#13;
+}&#13;
+&#13;
+// Search bar styles in the header (Should always be in the center)&#13;
+.header-search {&#13;
+  margin: 1.3rem 1rem;&#13;
+  width: 100%;&#13;
+  max-width: 600px;&#13;
+  min-width: 250px;&#13;
+&#13;
+  @media (max-width: 1920px) and (min-width: 1441px) {&#13;
+    max-width: 600px;&#13;
+  }&#13;
+&#13;
+  @media (max-width: 1440px) and (min-width: 1025px) {&#13;
+    max-width: 450px;&#13;
+  }&#13;
+&#13;
+  @media (max-width: 1024px) and (min-width: 768px) {&#13;
+    max-width: 350px;&#13;
+  }&#13;
+}&#13;
+&#13;
+@media all and (-ms-high-contrast: none),&#13;
+  (-ms-high-contrast: active) {&#13;
+    .navbar-inverse {&#13;
+      .mobile-top-navigation {&#13;
+        .mobile-view-on-desktop {&#13;
+          .main-header-items {&#13;
+            padding-left: .4rem;&#13;
+          }&#13;
+        }&#13;
+      }&#13;
+    }&#13;
+}&#13;
+&#13;
+@media (min-width : 320px) and (max-width : 767px) {&#13;
+  .navbar-inverse {&#13;
+    .dropdown-menu.case-menu {&#13;
+      width: 100%;&#13;
+    }&#13;
+&#13;
+    .navbar-toggle {&#13;
+      border-color: rgba(255, 255, 255, .25);&#13;
+    }&#13;
+&#13;
+    .navbar-toggle:focus {&#13;
+      -webkit-box-shadow: 0rem 0rem 0.5rem #1f8476&#13;
+    }&#13;
+&#13;
+    .navbar-nav {&#13;
+      display: block;&#13;
+      margin: 0;&#13;
+&#13;
+      .open .dropdown-menu&gt;li&gt;a {&#13;
+        padding: 5px 30px;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .sub-navbar {&#13;
+      padding: 0px 0px;&#13;
+    }&#13;
+&#13;
+    .upper-collapse {&#13;
+      width: 100%;&#13;
+      padding-bottom: 0px;&#13;
+    }&#13;
+&#13;
+    .navbar-collapse {&#13;
+      padding-top: 0px;&#13;
+      padding-left: 0px;&#13;
+      overflow: hidden;&#13;
+&#13;
+      ul {&#13;
+        margin: 0;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .navbar-header.nav-container {&#13;
+      .mobile-view-on-desktop {&#13;
+        min-width: 100%;&#13;
+        // max-width: 100%; is needed for 400% zoom-level in WCAG resolution&#13;
+        max-width: 100%;&#13;
+&#13;
+        .impersonate-and-logout {&#13;
+          div&gt;ul&gt;li:first-child {&#13;
+            height: auto;&#13;
+          }&#13;
+        }&#13;
+      }&#13;
+&#13;
+      &gt;ul {&#13;
+        display: inline-block;&#13;
+        padding: 10px 10px 0 0;&#13;
+        float: right;&#13;
+        margin: 0;&#13;
+      }&#13;
+&#13;
+      &gt;li {&#13;
+        display: inline-block;&#13;
+      }&#13;
+    }&#13;
+&#13;
+    .height-adjust {&#13;
+      padding: 10px 0px;&#13;
+      margin-bottom: 10px;&#13;
+    }&#13;
+&#13;
+    .popup-edit {&#13;
+      background: $color-lightest;&#13;
+      position: fixed;&#13;
+      top: 0;&#13;
+      height: 100%;&#13;
+      margin-top: 0;&#13;
+      max-height: 100%;&#13;
+      width: 100%&#13;
+    }&#13;
+&#13;
+    .navbar-collapse-label {&#13;
+      float: right;&#13;
+      margin-right: -5px;&#13;
+      margin-top: -7px;&#13;
+    }&#13;
+&#13;
+    button&gt;span.label {&#13;
+      padding: .2em .5em .2em;&#13;
+    }&#13;
+  }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>bb_header</id>
+        <internal>false</internal>
+        <link><![CDATA[function escHeaderLink(scope, element, attrs, controller) {
+    $(element).on('click', 'a.navbar-brand', function (e) {
+        scope.expanded = false;
+    });
+    //defaults for calulating width of components
+    var DEFAULT_SEARCH_SIZE = scope.showSearchBar ? 600 : 0;
+    var DEFAULT_RIGHT_NAVIGATION_SIZE = 400;
+    var DEFAULT_LOGO_SIZE  = 300;
+
+    //added these to scope so that these can be potentially used in controller
+    scope.navbarRightSize = 0;
+    scope.navbarRightFinalSize = 0
+    scope.navbarRightTop = 0;
+    scope.navbarSearchSize = 0;
+    scope.navbarSearchFinalSize = 0
+    scope.navbarSearchTop = 0;
+    scope.navLogoFinalSize = 0;
+
+    $(element).on('click.nav', '.navbar-collapse.in', function (e) {
+        var target = $(e.target);
+        if (target.is('a') && !target.hasClass("dropdown-toggle") && target.siblings('.dropdown-menu').length == 0) {
+            // collapse mobile nav if clicked an anchor that isn't a dropdown toggle
+            scope.expanded = false;
+            return;
+        }
+
+        // if neither target nor parent is an anchor or the parent anchor is a dropdown-toggle, do nothing
+        if (!target.parent().is('a') || target.parent().hasClass("dropdown-toggle") || target.parent().siblings('.dropdown-menu').length > 0)
+            return;
+
+        // collapse mobile nav if target is part of a submenu
+        if (target.parents("ul.dropdown-menu").length > 0) {
+            scope.expanded = false;
+            return;
+        }
+
+        // collapse mobile nav is target is part of the dropdown
+        if (target.parents("div.navbar-collapse").length > 0)
+            scope.expanded = false;
+    });
+    $(element).on('keydown', '.dropdown-menu > .header-menu-item', function (e) {
+        var target = e.target;
+        if (target.localName === 'a') {
+            if (e.keyCode === 37 || e.keyCode === 39) {
+                e.preventDefault();
+                $(target).parents('li').removeClass('open');
+                $(target).parents('li').find('a').focus();
+            } else if (e.keyCode === 9) {
+                $(target).parents('li').removeClass('open');
+            }
+        }
+    });
+
+  $('body').click(function (event) {
+      if ($(event.target).text() !== controller.toursTranslation && scope.isMobileViewOnDesktopExpanded)
+         scope.toggleMobileMenuVisibility();
+   });
+
+  // Closing mobile navigation menu after hitting Tab key on Logout option to focus on next DOM element on the page.
+  $(document).on('keydown', '.impersonate-and-logout > div > ul > li > a[href*="logout"]', function (keyDownEvent) {
+     var TAB_KEY_VALUE = 'Tab';
+
+     if (keyDownEvent.key === TAB_KEY_VALUE  && !keyDownEvent.shiftKey && scope.mobileDevice) {
+        scope.$applyAsync(function () {
+         scope.toggleMobileMenuVisibility();
+        });
+     }
+  });
+
+  // this is for the fact that the impersonate and logout widget has hardcoded mobile size, and for screen width
+  // greater than 767 pixel, the impersonate and dropdown li has tabindex -1, hence handling that case to close menu.
+  $(document).on('keydown', '.impersonate-and-logout > div > ul > li', function (keyDownEvent) {
+    var TAB_KEY_VALUE = 'Tab';
+    var dropdownItems = $('.impersonate-and-logout > div > ul > li > a + ul > li > a');
+    if (dropdownItems.length > 0) {
+    //Close mega menu only if focus is at the last element of the menu and tab key is entered
+        if (document.activeElement === dropdownItems[dropdownItems.length - 1]) {
+            if (keyDownEvent.key === TAB_KEY_VALUE  && !keyDownEvent.shiftKey && (scope.mobileDevice || scope.showMobileMenuOnDesktop)) {
+                scope.$applyAsync(function() {
+                    scope.toggleMobileMenuVisibility();
+               });
+            }
+        }
+    }
+  });
+
+  // Helper function to handle the arrow key navigation in the header
+	function handleKeyPressEvents(e) {
+		var target = e.target;
+		var querySelector;
+		if($(this).hasClass('gt-menu-item'))
+			querySelector = 'li.gt-menu-item';
+
+		// Only Side arrow keys should work for gt-menu-item and only vertical arrow keys should work for header-nav-item
+		if(querySelector === 'li.gt-menu-item' && !(e.keyCode === 37 || e.keyCode === 39 || e.keyCode === 9))
+				return;
+		else if($(this).parents('.header-nav-item').length !== 0 && !(e.keyCode === 38 || e.keyCode === 40))
+				return;
+
+		//desktop view prework
+		var currentMenuItem = $(target).parents('li');
+		var parentUL = currentMenuItem.parents('ul');
+		var allMenuItems = parentUL.children(querySelector);
+		var firstMenuItem = allMenuItems.first();
+		var lastMenuItem = allMenuItems.last();
+		var menuItemToFocus;
+
+		if(querySelector === 'li.gt-menu-item') {
+			if(e.keyCode === 9) {
+				$(target).parents('li').removeClass('open');
+				return;
+			}
+			else {
+				e.preventDefault();
+				currentMenuItem.removeClass('open');
+			}
+		}
+
+		//mobile view navigation prework
+		var items = [];
+		var selectors = [];
+		selectors.push('li.main-header-item>a'); //main header items -> Employee Center Header widget
+		selectors.push('li.header-menu-item>a#tour-dropdown'); // Tour drop down -> EC Menu widget
+		selectors.push('li.user-name>a'); // User Name -> Employee Center Header widget
+		selectors.push('.impersonate-and-logout > div > ul > li > a + ul > li > a'); // Logout/Impersonate -> Profile with Drop Down widget
+		selectors.push('.impersonate-and-logout li.visible-xs-block>a');
+		for (var i = 0; i < selectors.length; i++) {
+		    //Dont include hidden profile button
+			if(selectors[i] === '.impersonate-and-logout > div > ul > li > a + ul > li > a'){
+				items.push($(selectors[i]).slice(1).get());
+			}
+			else{
+				items.push($(selectors[i]).get());
+			}
+		}
+		items = [].concat.apply([], items);
+
+		//mobile view navigation starts
+		if ($(target).parents('.header-nav-item').length) {
+			var index = items.indexOf($(':focus').get(0));
+			if (e.keyCode === 40) {
+				e.preventDefault();
+				index = index + 1;
+			}
+			else if(e.keyCode === 38) {
+				e.preventDefault();
+				if (index === 0) {
+					$('.mega-menu-item').filter(':visible').last().focus();
+				}
+				index = index - 1;
+			}
+			if (index < items.length && index >= 0)
+				items[index].focus();
+		} //else if desktop view
+		else if (target.localName === 'a') {
+			if(e.keyCode === 37) {
+				var previousMenuItem = currentMenuItem.prevAll(querySelector);
+				currentMenuItem.prevAll(querySelector).first();
+				//enable circular navigation
+				menuItemToFocus = previousMenuItem.length ? previousMenuItem : lastMenuItem;
+				menuItemToFocus.find('a').focus();
+			} else if(e.keyCode === 39) {
+				var nextMenuItem = currentMenuItem.nextAll(querySelector).first();
+				//enable circular navigation
+				menuItemToFocus = nextMenuItem.length ? nextMenuItem : firstMenuItem;
+				menuItemToFocus.find('a').focus();
+			}
+		}
+	}
+
+	// Handler to focus the first element of More Items dropdown on pressing Space/Enter/Down Arrow key.
+	$(element).on('keydown', '#more-items-button', function(e) {
+		if(e.keyCode === 32 || e.keyCode === 13 || e.keyCode === 40) {
+			e.preventDefault();
+			var target = e.target;
+			var moreItemsDropdown = '#more-items-dropdown';
+			$(target).click();
+			$(moreItemsDropdown).find('li.header-menu-item a:first').focus();
+		}
+	});
+
+	// Capturing the arrow key navigation in mega menu for both desktop and mobile view
+	$(element).on('keydown','.gt-menu-item, .header-nav-item', handleKeyPressEvents);
+
+  /*
+   * this is the method, which calculates the navbar component total width,
+   * the main logic is that when the navbar wraps for text zoom or for normal case,
+   * the top increases from 0, and then the mobile view is triggered.
+   * It also takes care of edge cases, with and without the searchbar
+  */
+  scope.calulatedNavbarWidth = function(inDigest) {
+    //if the text zoom level is less than 100% then falling back to normal mobileDevice calculation
+    var currentFontSize  = parseInt($('body').css('font-size'));
+    var constantOffset = 50;
+    var flexOffsetWidth = constantOffset * (currentFontSize / 16);
+    if(currentFontSize < 16) {
+      scope.$apply(function() {
+        scope.mobileDevice = controller.data.isMobile || (window.innerWidth <= controller.MOBILE_DEVICE_SCREEN_WIDTH);
+      });
+      return;
+    }
+    var headerSearch = angular.element(".header-search");
+    var navbarBrand = angular.element(".navbar-brand-logo > img");
+    var navbarRight = angular.element(".navbar-right > div");
+    var totalNavbarSize = 0;
+    if(headerSearch && headerSearch.length >= 1 && scope.navbarSearchTop == 0) {
+      var tempSearchSize = scope.navbarSearchSize;
+      scope.navbarSearchSize = headerSearch[headerSearch.length - 1].offsetWidth
+      scope.navbarSearchTop = headerSearch[headerSearch.length - 1].clientTop;
+      if(headerSearch[headerSearch.length - 1].clientTop > 0) {
+        scope.navbarSearchFinalSize = tempSearchSize !== 0 ? tempSearchSize : DEFAULT_SEARCH_SIZE;
+      }
+      else {
+        scope.navbarSearchFinalSize = scope.navbarSearchSize;
+      }
+    }
+    if(navbarBrand && navbarBrand.length >= 1)
+      scope.navLogoFinalSize = navbarBrand[navbarBrand.length - 1].offsetWidth;
+    if(navbarRight && navbarRight.length >= 1 && scope.navbarRightTop == 0) {
+      var tempSize = scope.navbarRightSize;
+      scope.navbarRightSize = navbarRight[navbarRight.length - 1].offsetWidth
+      scope.navbarRightTop = navbarRight[navbarRight.length - 1].clientTop;
+      if(navbarRight[navbarRight.length - 1].clientTop > 0) {
+        scope.navbarRightFinalSize = tempSize !== 0 ? tempSize : DEFAULT_RIGHT_NAVIGATION_SIZE;
+      }
+      else {
+        scope.navbarRightFinalSize = scope.navbarRightSize;
+      }
+    }
+    totalNavbarSize += scope.navLogoFinalSize !== 0 ? scope.navLogoFinalSize : DEFAULT_LOGO_SIZE;
+    totalNavbarSize += scope.navbarSearchFinalSize !== 0 ? scope.navbarSearchFinalSize : DEFAULT_SEARCH_SIZE;
+    totalNavbarSize += scope.navbarRightFinalSize !== 0 ? scope.navbarRightFinalSize : DEFAULT_RIGHT_NAVIGATION_SIZE;
+    //if it has gone to two lines, simply go for mobileView
+    var navBarFitsInViewport = (totalNavbarSize > (window.innerWidth - flexOffsetWidth));
+    if(inDigest) {
+      scope.mobileDevice = navBarFitsInViewport || controller.data.isMobile || (window.innerWidth <= controller.MOBILE_DEVICE_SCREEN_WIDTH);
+    }
+    else {
+      scope.$apply(function () {
+        // update current scope based on the new innerWidth and let angular update the view.
+        scope.mobileDevice = navBarFitsInViewport || controller.data.isMobile || (window.innerWidth <= controller.MOBILE_DEVICE_SCREEN_WIDTH);
+      });
+    }
+  }
+
+
+   $(window).resize(function(e) {
+    if(e.type == 'resize') {
+      scope.calulatedNavbarWidth();
+    }
+  });
+
+   // This helper returns a function, that, as long as it continues to be invoked, will not
+   // be triggered. The function will be called after it stops being called for
+   // N milliseconds. If `immediate` is passed, trigger the function on the
+   // leading edge, instead of the trailing.
+   function debounce(func, wait, immediate) {
+      var timeout;
+      return function () {
+         var context = this,
+            args = arguments;
+         var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+         };
+         var callNow = immediate && !timeout;
+         clearTimeout(timeout);
+         timeout = setTimeout(later, wait);
+         if (callNow) func.apply(context, args);
+      };
+   }
+}]]></link>
+        <name>BB Header</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	    var isPerfWidgetEnabled = (gs.getSession().isImpersonating() || gs.hasRole('admin')) && gs.getProperty("sn_ex_sp_perf_tools.enable_perf_widget", 'true') == 'true';
+			if (isPerfWidgetEnabled)
+				data.perfWidget = $sp.getWidget('performance_indicator');
+	
+    data.ACTION_TODO_COUNT = 'update_todo_count';
+    data.ACTION_LOAD_CASES = 'load_cases';
+    data.isMobile = gs.isMobile();
+    data.isFavoritesEnabled = $sp.getValue('enable_favorites') == 'true';
+    data.isPersonalizedAnswer = GlidePluginManager().isActive("com.sn_app_ex_integrated_answers");
+	  
+    if (data.isFavoritesEnabled) {
+        var favoriteApi = new sn_ex_sp.FavoriteAPI();
+        var qsConfig = $sp.getValue('quick_start_config');
+        var favoriteIcon = favoriteApi.getFavoriteIcon(qsConfig);
+        data.favoriteIcon = favoriteIcon.checkIcon;
+    }
+
+    //Load To-dos count
+    if (!input || input.action == data.ACTION_TODO_COUNT) {
+        var myTodosCountObject = new sn_hr_sp.todoPageUtils().getMyTodosCount();
+        data.todoCount = myTodosCountObject.todoCount;
+        data.todoCountLabel = gs.getMessage("{0} to-dos remaining");
+        data.recordWatchers = myTodosCountObject.recordWatchers;
+
+        // avoid consecutive calls 
+        if (input)
+            return;
+    }
+
+    data.isHrCoreActive = GlidePluginManager().isActive("com.sn_hr_core");
+    if (data.isHrCoreActive && gs.getProperty('sn_hr_core.esc.create_hrprofile.override', 'true') === "true") {
+        // HR Profile
+        var hrProfileGr = new GlideRecord('sn_hr_core_profile');
+        hrProfileGr.addQuery('user', gs.getUserID());
+        hrProfileGr.setLimit(1);
+        hrProfileGr.query();
+        if (!hrProfileGr.hasNext() && gs.getUserID() && new GlideRecord('sys_user').get(gs.getUserID())) {
+            hrProfileGr.setValue('user', gs.getUserID());
+            hrProfileGr.insert();
+        }
+    }
+
+    // check for listening posts voluntary feedback
+    data.voluntarySurveyIsActive = false;
+    data.isListeningPostsActive = GlidePluginManager().isActive("sn_lp");
+    if (data.isListeningPostsActive) {
+        var pulseUtils = new sn_lp.PulseUserCriteriaEvaluation();
+        data.voluntarySurvey = pulseUtils.getActiveVoluntarySurvey && pulseUtils.getActiveVoluntarySurvey();
+
+        if (data.voluntarySurvey && data.voluntarySurvey.next()) {
+            data.voluntarySurveyIsActive = true;
+        }
+    }
+
+    // populate the 'data' object
+    data.link = '?id=hri_user_profile&sys_id=' + gs.getUserID();
+
+    // Defines the support queue ID that will be linked to by the Live Chat link in header
+    data.login_page = $sp.getValue('login_page');
+
+    //Initialize menu objects
+    data.sub = {};
+    data.top = {};
+    var menu = $sp.getValue("sp_rectangle_menu");
+    data.sub.menu = $sp.getWidgetFromInstance(menu);
+    data.escNavigation = $sp.getWidget("employee-center-navigation");
+
+    //Copy sub menu to top menu, we want cart up top and menu items in the sub nav
+    data.top.menu = JSON.parse(JSON.stringify(data.sub.menu));
+
+    //Fetching My Items menu item sys_id
+    var configOptions = JSON.parse((data.top.menu && data.top.menu.options && data.top.menu.options.widget_parameters) || '{}');
+    data.moreItemsSysId = (configOptions.enable_more_items && configOptions.enable_more_items.sysId) || '';
+    var subMenu = data.sub.menu;
+    var moreItems;
+    if (subMenu && subMenu.data) {
+        subMenu.data.replace = true;
+        // Hide login if menu already has link to login
+        data.hasLogin = false;
+        var subMenuDataItems = (subMenu.data.menu && subMenu.data.menu.items) || [];
+        for (var i in subMenuDataItems) {
+            var item = subMenuDataItems[i];
+            if (item.sys_id === data.moreItemsSysId)
+                moreItems = item;
+            if (item.type === 'page' && item.sp_page === data.login_page)
+                data.hasLogin = true;
+        }
+    }
+
+    if (moreItems && moreItems.items)
+        data.moreItems = moreItems.items;
+    if (moreItems && data.moreItems && moreItems.label) {
+        // Removing items with no label
+        data.moreItems = data.moreItems.filter(function(moreItem) {
+            return moreItem.label;
+        });
+
+        // Truncating label of items exceeding 60 character limit
+        data.moreItems.forEach(function(moreItem) {
+            moreItem.shortLabel = (moreItem.label.length > 60) ? (moreItem.label.substring(0, 60) + '...') : moreItem.label;
+        });
+    }
+
+    data.hideSearchOnHomepage = configOptions.exclude_search_on_homepage ? configOptions.exclude_search_on_homepage.value : false;
+    data.showRequests = configOptions.enable_requests ? configOptions.enable_requests.value : true;
+    data.showTodos = configOptions.enable_tasks ? configOptions.enable_tasks.value : true;
+    if (data.hideSearchOnHomepage) {
+        data.homepage = $sp.getValue('homepage');
+        var gr = new GlideRecord('sp_page');
+        gr.get(data.homepage);
+        data.dashboardSuffix = gr.getValue("id");
+        data.portalSuffix = $sp.getPortalRecord().getDisplayValue("url_suffix");
+    }
+
+    data.showMoreItems = (moreItems && moreItems.label && data.moreItems && configOptions.enable_more_items) ? (data.moreItems.length > 0 && configOptions.enable_more_items.value) : false;
+    if (data.showMoreItems)
+        data.moreItemsTitle = data.moreItems.length === 1 ? data.moreItems[0].shortLabel : moreItems.label;
+
+    // Analytics
+    data.analyticsSupportEnabled = new GlidePluginManager().isActive('com.sn_content_analytics') && new GlidePluginManager().isActive('com.sn_content_delivery') && !sn_cd.cd_ContentDelivery.isContentPreview($sp);
+
+    //Clean up items that don't belong
+    if (subMenu) {
+        if (subMenu.data) {
+            subMenu.data.cartWidget = {};
+            subMenu.data.showTours = false;
+        }
+        if (subMenu.options) {
+            subMenu.options.enable_cart = false;
+        }
+    }
+    if (data.top.menu && data.top.menu.data && data.top.menu.data.menu && data.top.menu.data.menu.items)
+        data.top.menu.data.menu.items = [];
+
+    var typeAheadOptions = {};
+    typeAheadOptions.refresh_page_on_search_submission = false;
+    typeAheadOptions.title = gs.getMessage("Search");
+    if ($sp.isAISearchEnabled())
+        typeAheadOptions.disable_all_suggestions = ($sp.getParameter('disableAllSuggestions') == 'true');
+
+    data.typeahead = $sp.getWidget('typeahead-search', typeAheadOptions);
+    data.loginWidget = $sp.getWidgetFromInstance('login-modal');
+    data.avatarDropDown = $sp.getWidget('profile-with-drop-down', {
+        "profile_url": data.link,
+        "show_xs_avatar": false
+    });
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>true</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 03:04:00</sys_created_on>
+        <sys_id>d6dbc2ce976b2110d6e77f200153afd8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>BB Header</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_header_footer_d6dbc2ce976b2110d6e77f200153afd8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 03:04:31</sys_updated_on>
+        <template><![CDATA[<!-- Nav bar menu items starts-->
+<nav class="navbar-inverse" aria-label="Primary" role="navigation" ng-if="!showViewAsHeader">
+
+  <!-- Piece above searchbar -->
+  <div class="clearfix">
+    <div class="navbar-header nav-container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" ng-if="::!portal.logo" href="?id={{::portal.homepage_dv}}" aria-label="{{::portal.title}}"><span>{{::portal.title}}</span></a>
+	    <a class="navbar-brand navbar-brand-logo"
+           ng-if="::portal.logo" href="?id={{::portal.homepage_dv}}"
+           aria-label="{{::portal.title}} - ${Home Page}"
+           data-toggle="tooltip"
+           data-placement="bottom"
+           data-title="{{::portal.title}} - ${Home Page}">
+        <img ng-src="{{::portal.logo}}" alt="{{::portal.title}} - ${Home Page}"/>
+      </a>
+
+      <!-- Search Bar Desktop -->
+      <div ng-class="mobileDevice ? 'header-search-mobile' : 'header-search'" ng-if="showSearchBar && !mobileDevice">
+        <sp-widget widget="data.typeahead"></sp-widget>
+      </div>
+
+      <!-- Mobile Navigation View -->
+      <div class="mobile-top-navigation" ng-if="showMobileMenuOnDesktop || mobileDevice">
+        <!-- Toggle Button (Hamburger Menu for Mobile View) -->
+        <button type="button" 
+                class="sub-navbar-overflow-entry-button"
+                ng-class="isMobileViewOnDesktopExpanded ? 'close-icon-visible' : ''"
+                aria-label="{{isMobileViewOnDesktopExpanded ? '${Hide menu primary navigation}' : '${Show menu primary navigation}'}}" 
+                data-toggle="tooltip"
+                data-placement="auto bottom"
+                data-original-title="{{isMobileViewOnDesktopExpanded ? '${Hide Menu}' : '${Show Menu}'}}"
+                ng-click="toggleMobileMenuVisibility($event)">
+          <div ng-if="!isMobileViewOnDesktopExpanded">
+             <span class="label label-as-badge label-primary">{{data.todoCount + data.requestCount + cartItemCount}}</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </div>
+          <i class="fa fa-close" ng-if="isMobileViewOnDesktopExpanded"></i>
+        </button>
+
+        <div class="mobile-view-on-desktop"
+             ng-class="mobileDevice && showSearchBar ? 'search-visible' : ''"
+             ng-show="isMobileViewOnDesktopExpanded"
+             ng-click="handleMobileViewClick($event)"
+             role="presentation">
+            <div class="height-adjust">
+               <ul class="mobile-view-navbar">
+                 <!-- Mega Menu & Login functionality (Mobile View) -->
+                 <li class="mobile-mega-menu-entry">
+                    <sp-widget widget="data.escNavigation"></sp-widget>
+                    <ul ng-if="::(!user.logged_in && page.id != portal.login_page_dv && !data.hasLogin)" class="nav navbar-nav">
+                       <li><a href ng-click="openLogin()">${Login}</a></li>
+                    </ul>
+                 </li>
+                 <li>
+                   <ul class="main-header-items header-nav-item" ng-if="!showMobileMegaMenu" role="menu">
+                     <li class="main-header-item" ng-if="data.showTodos" role="menuitem">
+                       <a href="?id=hrm_todos_page" id="todos_mobile" aria-label="${My Tasks}, {{data.todoCountTranslation}}">
+                         <span ng-bind-html="'${My Tasks}'" aria-hidden="true"></span>
+                         <span ng-show="data.todoCount" class="label label-as-badge label-primary">{{data.todoCount}}</span>
+                       </a>
+                     </li>
+                     <li class="main-header-item" ng-if="data.showRequests" role="menuitem">
+                       <a href="?id=my_requests" id="requests_mobile" aria-label="${My Requests}">
+                        <span ng-bind-html="'${My Requests}'" aria-hidden="true"></span>
+                        <span ng-show="data.requestCount" class="label label-as-badge label-primary">{{data.requestCount}}</span>
+                       </a>
+                     </li>
+                     <li class="main-header-item" ng-if="data.isFavoritesEnabled" role="menuitem">
+                       <a href="?id=favorites_list" id="favorites_mobile" aria-label="${My Favorites}">
+                        <span ng-bind-html="'${My Favorites}'" aria-hidden="true"></span>
+                       </a>
+                     </li>
+                     <li class="main-header-item" ng-if="data.showMoreItems" ng-repeat="item in data.moreItems" role="menuitem" tabindex="0">
+                       <a ng-if="item.label !== item.shortLabel"
+                          href="{{item.href}}"
+                          data-toggle="tooltip"
+                          data-placement="bottom"
+                          data-original-title="${{{item.label}}}"
+                          aria-label="${{{item.label}}}"
+                          tabindex="-1">
+                          <span ng-bind-html="'${' + item.shortLabel + '}'" aria-hidden="true"></span>
+                       </a>
+                       <a ng-if="item.label === item.shortLabel"
+                          href="{{item.href}}"
+                          aria-label="${{{item.label}}}">
+                          <span ng-bind-html="'${' + item.shortLabel + '}'" aria-hidden="true"></span>
+                       </a>
+                     </li>
+                     <!-- Cart, tours, and Wishlist (Mobile View) -->
+                     <li role="menuitem">
+                        <sp-widget widget="data.top.menu" id="menu_item"></sp-widget>
+                     </li>
+                   </ul>
+                 </li>
+                 <li class="separator" ng-if="!showMobileMegaMenu"></li>
+                 <li class="m-l-sm main-header-item" role="menuitem"  ng-if="c.data.voluntarySurveyIsActive">
+                   <widget id="listening_posts_give_feedback_mega_menu"></widget>
+                 </li>
+                 <li class="separator" ng-if="!showMobileMegaMenu && c.data.voluntarySurveyIsActive"></li>
+                 <!-- User Profile -->
+                 <li class="m-t-sm m-b-sm header-nav-item user-name" ng-if="!showMobileMegaMenu" tabindex="0">
+                    <a href="{{data.link}}" ng-class="getClass(data.link)" aria-label="{{user.name}} ${profile}" tabindex="-1">
+                      <span class="navbar-avatar"><sn-avatar class="avatar-small-medium" show-presence="false" primary="user.sys_id" /></span>
+                      <span>{{user.name}}</span>
+                    </a>
+                 </li>
+               </ul>
+               <!-- Avatar (User profile Dropdown) with only Impersonate & Logout options -->
+               <div class="impersonate-and-logout header-nav-item" ng-if="!showMobileMegaMenu">
+                 <sp-widget widget="data.avatarDropDown"></sp-widget>
+               </div>
+          </div>
+        </div>
+      </div>
+
+      <div ng-class="mobileDevice ? 'header-search-mobile' : 'header-search'" ng-if="showSearchBar && mobileDevice">
+        <sp-widget widget="data.typeahead"></sp-widget>
+      </div>
+      
+      <!-- Header Navbar -->
+      <div ng-if="!(showMobileMenuOnDesktop || mobileDevice)" class="navbar-right">
+        <div class="height-adjust">
+          <ul class="nav navbar-nav" role="menubar" aria-orientation="horizontal">
+            <li class="hidden-xs sp-loading-indicator la-sm" ng-class="{'invisible': !loadingIndicator}">
+               <div></div>
+               <div></div>
+               <div></div>
+            </li>
+            <li class="gt-menu-item" role="presentation" ng-if="data.showTodos">
+              <a href="?id=hrm_todos_page" ng-class="getClass('?id=hrm_todos_page')" id="todos_link"  aria-label="${My Tasks}, {{c.todoCountTranslation}}" role="menuitem">
+                <span ng-bind-html="'${My Tasks}'"></span>
+                <span ng-show="data.todoCount" class="label label-as-badge label-primary">{{data.todoCount}}</span>
+              </a>
+            </li>
+            <li class="gt-menu-item" role="presentation" ng-if="data.showRequests">
+              <a href="?id=my_requests" id="cases_popup" aria-label="${My Requests}" role="menuitem"> <!-- TODO: Link for requests -->
+                <span ng-bind-html="'${My Requests}'" aria-hidden="true"></span>
+                <span ng-show="data.requestCount" class="label label-as-badge label-primary">{{data.requestCount}}</span>
+              </a>
+            </li>
+            <li class="gt-menu-item" role="presentation" ng-if="data.isFavoritesEnabled">
+               <a href="?id=favorites_list" id="favorites" aria-label="${My favorites}" role="menuitem" 
+                  data-toggle="tooltip" title="${My favorites}" data-placement="bottom"> 
+                 <i class="fa icon" ng-class="data.favoriteIcon"></i>      
+           	   </a>         
+            </li>
+            <li class="gt-menu-item" id="more-items" role="presentation" ng-if="data.showMoreItems">
+              <a ng-if="(data.moreItems.length === 1) && (data.moreItems[0].label !== data.moreItems[0].shortLabel)"
+                 href="{{data.moreItems[0].href}}"
+                 target="{{data.moreItems[0].url_target}}"
+                 data-toggle="tooltip"
+                 data-placement="bottom"
+                 data-original-title="${{{data.moreItems[0].label}}}"
+                 aria-label="${{{data.moreItems[0].label}}}"
+                 role="menuitem">
+                <span ng-bind-html="'${' + data.moreItemsTitle + '}'" aria-hidden="true"></span>
+              </a>
+              <a ng-if="(data.moreItems.length === 1) && (data.moreItems[0].label === data.moreItems[0].shortLabel)"
+                 href="{{data.moreItems[0].href}}"
+                 target="{{data.moreItems[0].url_target}}"
+                 aria-label="${{{data.moreItems[0].label}}}"
+                 role="menuitem">
+                <span ng-bind-html="'${' + data.moreItemsTitle + '}'" aria-hidden="true"></span>
+              </a>
+              <a href
+                 ng-if="data.moreItems.length > 1"
+                 id="more-items-button"
+                 data-toggle="dropdown"
+                 data-target="more-items-dropdown"
+                 data-placement="bottom"
+                 aria-label="${{{data.moreItemsTitle}}}"
+                 role="menuitem">
+                <span ng-bind-html="'${' + data.moreItemsTitle + '}'" aria-hidden="true"></span>
+                <i class="fa collapse-margin m-l-xs fa-caret-down"></i>
+              </a>
+              <ul id="more-items-dropdown" ng-if="data.moreItems.length > 1" class="dropdown-menu"
+                  role="menu" aria-label="${{{data.moreItemsTitle}}}">
+                <li role="presentation"
+                    ng-repeat="item in data.moreItems"
+                    class="ng-scope dropdown-menu-line header-menu-item">
+                  <a ng-if="item.label !== item.shortLabel"
+                     href="{{item.href}}"
+                     target="{{item.url_target}}"
+                     data-toggle="tooltip"
+                     data-placement="bottom"
+                     data-original-title="${ {{item.label}} }"
+                     aria-label="{{item.label}}"
+                     role="menuitem">
+                    <span ng-bind-html="'${' + item.shortLabel + '}'" aria-hidden="true"></span>
+                  </a>
+                  <a ng-if="item.label === item.shortLabel"
+                     href="{{item.href}}"
+                     target="{{item.url_target}}"
+                     aria-label="{{item.label}}"
+                     role="menuitem">
+                    <span ng-bind-html="'${' + item.shortLabel + '}'" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Avatar and its drop down (Desktop) -->
+            <li class="avatar-drop-down gt-menu-item" role="menuitem">
+              <sp-widget widget="data.avatarDropDown" id="avatar_drop_down" ></sp-widget>
+            </li>
+            <!-- Cart, tours, and Wishlist -->
+            <li class="gt-menu-item">
+            	<sp-widget widget="data.top.menu" id="menu_item"></sp-widget>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- LP Voluntary Feedback Widget-->
+    <div ng-if="!(showMobileMenuOnDesktop || mobileDevice) && c.data.voluntarySurveyIsActive">
+      <widget id="listening_posts_voluntary_feedback"></widget>
+    </div>
+    
+  </div>
+  
+  <!-- Sub Navbar on Desktop -->
+  <div class="navbar-collapse sub-navbar clearfix collapse collapsed hidden-xs"
+       ng-class="{ 'in': expanded, 'collapsed': !expanded, 'sub-navbar--mobile-view': showMobileMenuOnDesktop }">
+    <div>
+      <sp-widget widget="data.escNavigation"></sp-widget>
+      <ul ng-if="::(!user.logged_in && page.id != portal.login_page_dv && !data.hasLogin)" class="nav navbar-nav">
+        <li><a href ng-click="openLogin()">${Login}</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Analytics -->
+  <div ng-if="data.analyticsSupportEnabled">
+    <widget id="cda-site-analytics" options="{'enable_logging': false}"></widget>
+  </div>
+</nav>
+
+
+<nav class="navbar-inverse" aria-label="Primary" role="navigation" ng-if="showViewAsHeader">
+    <div class="clearfix">
+      <div class="navbar-header nav-container">
+
+      <!-- Logo -->
+        <a class="navbar-brand" ng-if="::!portal.logo" href="?id=ec_view_as_search&viewAs=true" aria-label="${Employee Center View As Home}"><span>${Employee Center View As Home}</span></a>
+        <a class="navbar-brand navbar-brand-logo "
+           ng-if="::portal.logo" href="?id=ec_view_as_search&viewAs=true"
+           aria-label="{{::portal.title}}${ - View As Home Page}"
+           data-toggle="tooltip"
+           data-placement="bottom"
+           data-title="{{::portal.title}}${ - View As Home}">
+        <img ng-src="{{::portal.logo}}" alt="{{::portal.title}}${ - View As Home Page}"/>
+      </a>
+      </div>
+  </div>
+</nav>
+
+
+<sp-widget widget="c.data.perfWidget"></sp-widget>]]></template>
+    </sp_header_footer>
+</record_update>

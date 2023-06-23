@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item/>
+        <catalog_variable>IO:f39f41bf2f301110465d50492799b65d</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-26 20:08:19</sys_created_on>
+        <sys_id>0d00d5bf2f301110465d50492799b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_price</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_0d00d5bf2f301110465d50492799b6fa</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-26 20:08:19</sys_updated_on>
+        <table/>
+        <ui_policy display_value="No condition default UI Policy">64c511c02f341110465d50492799b60e</ui_policy>
+        <variable>u_price</variable>
+        <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>catalog_ui_policy_action_0d00d5bf2f301110465d50492799b6fa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item/>
+        <catalog_variable>IO:f39f41bf2f301110465d50492799b65d</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>jgonzalez</sys_created_by>
+        <sys_created_on>2022-07-26 20:08:19</sys_created_on>
+        <sys_id>0d00d5bf2f301110465d50492799b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_price</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_0d00d5bf2f301110465d50492799b6fa</sys_update_name>
+        <sys_updated_by>jgonzalez</sys_updated_by>
+        <sys_updated_on>2022-07-26 20:08:19</sys_updated_on>
+        <table/>
+        <ui_policy display_value="No condition default UI Policy">64c511c02f341110465d50492799b60e</ui_policy>
+        <variable>u_price</variable>
+        <variable_set display_value="Movie variable set">b3f73b592fa01110465d50492799b635</variable_set>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>]]></payload>
+        <payload_hash>-543100462</payload_hash>
+        <record_name>u_price</record_name>
+        <reverted_from/>
+        <source>e255ec8197712110d6e77f200153af69</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-23 17:12:59</sys_created_on>
+        <sys_id>a775600597712110d6e77f200153af26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1870f759da50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-23 17:12:59</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>677560055f712110a8e25c30241baa26</update_guid>
+        <update_guid_history>677560055f712110a8e25c30241baa26:-543100462</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="u_price">49b5684597712110d6e77f200153af4c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-03-23 17:13:54</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>0228378938044750816e0222454a0c40</sys_id>
+        <sys_metadata>0d00d5bf2f301110465d50492799b6fa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_price</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_0d00d5bf2f301110465d50492799b6fa</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_0d00d5bf2f301110465d50492799b6fa">a775600597712110d6e77f200153af26</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-03-23 17:13:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

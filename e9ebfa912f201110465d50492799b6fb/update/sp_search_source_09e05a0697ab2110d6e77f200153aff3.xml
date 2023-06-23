@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_search_source">
+    <sp_search_source action="INSERT_OR_UPDATE">
+        <advanced_typeahead_config>false</advanced_typeahead_config>
+        <condition/>
+        <data_fetch_script><![CDATA[(function(query) {
+  var results = [];
+  /* Calculate your results here. */
+  
+  return results;
+})(query);]]></data_fetch_script>
+        <display_fields>u_title,u_plot,u_release_date,u_metascore</display_fields>
+        <enable_typeahead>true</enable_typeahead>
+        <facet_generation_script><![CDATA[(function(query, facetService, searchResults) {
+	/* Calculate your facets here using facetService */
+	/* var stateFacet = facetService.createFacet('State', 'state'); */
+	/* stateFacet.addFacetItem('Facet Item Label', '123'); */
+
+})(query, facetService, searchResults);]]></facet_generation_script>
+        <id>cmdb_movies_search</id>
+        <is_scripted_source>false</is_scripted_source>
+        <name>Search movies</name>
+        <page/>
+        <pagination_supported>true</pagination_supported>
+        <primary_display_field>u_title</primary_display_field>
+        <roles/>
+        <search_page_template><![CDATA[<div>
+  <a href="?id=form&sys_id={{item.sys_id}}&table={{item.table}}" class="h4 text-primary m-b-sm block">
+    <span ng-bind-html="highlight(item.primary, data.q)"></span>
+  </a>
+  <span class="text-muted" ng-repeat="f in item.fields">
+    <span class="m-l-xs m-r-xs" ng-if="!$first"> &middot; </span>
+    {{f.label}}: <span ng-bind-html="highlight(f.display_value, data.q)"></span>
+  </span>
+</div>]]></search_page_template>
+        <source_table>x_809069_bbuster_u_cmdb_ci_movie</source_table>
+        <sys_class_name>sp_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-22 03:26:35</sys_created_on>
+        <sys_id>09e05a0697ab2110d6e77f200153aff3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Search movies</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_search_source_09e05a0697ab2110d6e77f200153aff3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-22 03:29:17</sys_updated_on>
+        <typeahead_glyph/>
+        <typeahead_template/>
+    </sp_search_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=09e05a0697ab2110d6e77f200153aff3"/>
+</record_update>
