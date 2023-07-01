@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	c.link = 'https://' + c.data.instance + '.service-now.com/blockbuster' +
+		'?id=sc_category&catalog_id=';
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.container{
+  width:100%;
+  display:flex;
+  flex-flow: row wrap;
+}
+.catalog{
+	display:flex;
+  flex-direction: row wrap;
+	color: #fff;
+  margin: 1em;
+  padding:1em;
+}
+
+.user_image{
+  max-width:80px;
+}
+
+.heading{
+	display: flex;
+  align-items: center;
+	float: left;
+  margin-right: 5px;
+}
+
+.catalog-body{
+  display: flex;
+  flex-flow: column wrap;
+  width: 200px;
+}
+
+div &gt; a {
+	color: #fff;
+}
+
+div &gt; a:hover{
+	color:gray;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>sc_catalogs</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Catalogs</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	data.instance = gs.getProperty('instance_name');
+	data.catalogs = [];
+	
+	var grCatalog = new GlideRecord('sc_catalog');
+	grCatalog.query();
+	
+	while(grCatalog.next()){
+		data.catalogs.push({
+			title  : grCatalog.getValue('title'),
+			desc   : grCatalog.getValue('description'),
+			img    : grCatalog.getDisplayValue('desktop_image'),
+			sys_id : grCatalog.getUniqueValue()
+		});
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-23 01:59:38</sys_created_on>
+        <sys_id>ddb687d697232110d6e77f200153aff1</sys_id>
+        <sys_mod_count>104</sys_mod_count>
+        <sys_name>Catalogs</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_widget_ddb687d697232110d6e77f200153aff1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-28 03:08:29</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="catalog" ng-repeat="catalog in data.catalogs">
+		<a href="{{c.link}}{{catalog.sys_id}}">
+    	<div class="heading">
+      	<img class="user_image" id="{{catalog.img}}" src="{{catalog.img}}"/>
+      </div>
+			<div class="catalog-body">
+      	<span>{{catalog.title}}</span>
+      	<span>{{catalog.desc}}</span>
+      </div>
+    </a>
+	</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

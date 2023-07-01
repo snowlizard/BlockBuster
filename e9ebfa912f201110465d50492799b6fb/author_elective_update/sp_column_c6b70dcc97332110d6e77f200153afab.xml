@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="2">86b70dcc97332110d6e77f200153afa9</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-28 03:14:10</sys_created_on>
+        <sys_id>c6b70dcc97332110d6e77f200153afab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_column_c6b70dcc97332110d6e77f200153afab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-28 03:14:10</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sp_column_c6b70dcc97332110d6e77f200153afab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="2">86b70dcc97332110d6e77f200153afa9</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-06-28 03:14:10</sys_created_on><sys_id>c6b70dcc97332110d6e77f200153afab</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sp_column_c6b70dcc97332110d6e77f200153afab</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-06-28 03:14:10</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-1274403735</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-28 03:14:10</sys_created_on>
+        <sys_id>02b70dcc97332110d6e77f200153afad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188fffe87640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-28 03:14:10</sys_updated_on>
+        <type>Column</type>
+        <update_guid>46b70dcc9f332110921034077d3391ac</update_guid>
+        <update_guid_history>46b70dcc9f332110921034077d3391ac:-1274403735</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">dc68c14097732110d6e77f200153af04</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-28 03:17:04</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>0b180898d98c4a14a16d71f7ce904424</sys_id>
+        <sys_metadata>c6b70dcc97332110d6e77f200153afab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_column_c6b70dcc97332110d6e77f200153afab</sys_update_name>
+        <sys_update_version display_value="sp_column_c6b70dcc97332110d6e77f200153afab">02b70dcc97332110d6e77f200153afad</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-28 03:17:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
