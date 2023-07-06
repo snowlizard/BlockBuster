@@ -14,25 +14,38 @@
   justify-content: center !important;&#13;
 }&#13;
 &#13;
-section {&#13;
-  background: #36454F;&#13;
-}&#13;
-&#13;
 a#tour-dropdown {&#13;
   display: none&#13;
+}&#13;
+&#13;
+.main-menu{&#13;
+  height: 100%;&#13;
+}&#13;
+&#13;
+.h2{&#13;
+  color: #000;&#13;
+}&#13;
+&#13;
+.catalog-item-name{&#13;
+  color: #fff;&#13;
+  text-decoration: none !important;&#13;
+}&#13;
+&#13;
+.item-price{&#13;
+  color:#515151;&#13;
 }</css>
         <name>bbuster-theme.css</name>
         <sys_class_name>sp_css</sys_class_name>
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-06 23:47:03</sys_created_on>
         <sys_id>4bf1cfd52f201110465d50492799b668</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>bbuster-theme.css</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_css_4bf1cfd52f201110465d50492799b668</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-24 05:16:43</sys_updated_on>
+        <sys_updated_on>2023-07-04 19:14:25</sys_updated_on>
     </sp_css>
 </record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>bb_catalog - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="bb_catalog">2f9d2c4297772110d6e77f200153afaf</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-04 06:29:28</sys_created_on>
+        <sys_id>01fda08297772110d6e77f200153af3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bb_catalog - Container 2</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_container_01fda08297772110d6e77f200153af3e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-04 06:29:28</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sp_container_01fda08297772110d6e77f200153af3e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>bb_catalog - Container 2</name><order>2</order><sp_page display_value="bb_catalog">2f9d2c4297772110d6e77f200153afaf</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-04 06:29:28</sys_created_on><sys_id>01fda08297772110d6e77f200153af3e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>bb_catalog - Container 2</sys_name><sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package><sys_policy/><sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope><sys_update_name>sp_container_01fda08297772110d6e77f200153af3e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-04 06:29:28</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-266327003</payload_hash>
+        <record_name>bb_catalog - Container 2</record_name>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-04 06:29:28</sys_created_on>
+        <sys_id>81fde88297772110d6e77f200153aff7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1891f9779aa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-04 06:29:28</sys_updated_on>
+        <type>Container</type>
+        <update_guid>c5fde8820377211056bf2226187e87f6</update_guid>
+        <update_guid_history>c5fde8820377211056bf2226187e87f6:-266327003</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="bb_catalog - Container 2">0e6e24c297772110d6e77f200153af2b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-04 06:31:27</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>01b76bb96d6e478480f6528a7e278f10</sys_id>
+        <sys_metadata>01fda08297772110d6e77f200153af3e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bb_catalog - Container 2</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_container_01fda08297772110d6e77f200153af3e</sys_update_name>
+        <sys_update_version display_value="sp_container_01fda08297772110d6e77f200153af3e">81fde88297772110d6e77f200153aff7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-04 06:31:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

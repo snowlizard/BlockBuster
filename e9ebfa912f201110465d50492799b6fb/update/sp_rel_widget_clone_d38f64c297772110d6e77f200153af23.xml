@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="BB Categories">1b8f64c297772110d6e77f200153af1d</child>
+        <cloned>2023-07-04 06:36:26</cloned>
+        <last_validated>2023-07-04 06:36:26</last_validated>
+        <parent display_value="SC Categories">4c03cba0cb11020000f8d856634c9ce1</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;sc&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope, $location, $timeout, $window, $document, $rootScope, spUtil, spAriaUtil, i18n, urlTools) {
+    var c = this;
+
+    loadPage();
+
+    function loadPage() {
+        $scope.selectedCatalog = c.data.catalogSelectorArr[c.data.selectedCatalogIndex];
+        $scope.hideCategoryWidgetInXS = (c.options.hide_xs == 'true');
+        if (c.data.categoryId) {
+            if (!$scope.hideCategoryWidgetInXS)
+                $scope.hideCategoryWidgetInXS = true;
+        } else {
+            if ($scope.hideCategoryWidgetInXS)
+                $scope.hideCategoryWidgetInXS = false;
+        }
+        handleToolTip();
+
+        $(document).on('keydown', '.select2-focusser', function(e) {
+            if (e.which === 40 || e.which === 38) {
+                $(this).closest(".select2-container").siblings('select:enabled').select2('open');
+            }
+        });
+
+    }
+
+    function handleToolTip() {
+        $timeout(function() {
+            $(".group-item").each(function(index) {
+                var span = $(this).find(".category");
+                if (span &amp;&amp; span[0] &amp;&amp; span.width() &gt;= span[0].scrollWidth) {
+                    $(this).removeAttr("title");
+                    $(this).removeAttr("data-original-title");
+                }
+            });
+        }, 100);
+    }
+
+    $scope.changeCatalog = function(selectedCatalog) {
+        window.GlideWebAnalytics.trackEvent("Service Catalog", "Catalog Browse", "Catalog Filter Changed");
+        $timeout(function() {
+            if (selectedCatalog &amp;&amp; selectedCatalog.hasOwnProperty("value")) {
+                $location.search('catalog_id', selectedCatalog.value ? selectedCatalog.value : -1);
+                $location.search('sys_id', null);
+                $location.search('spa', null);
+            }
+        });
+    }
+
+    $scope.getCategoryAriaLabel = function(category) {
+        var label = c.data.messages.category + ' ' + category.title + ' ';
+        if (c.options.omit_badges != 'true' &amp;&amp; c.data.largeDataSet != 'true') {
+            label += c.data.messages.containing + ' ' + category.totalCount + ' ';
+            if (category.totalCount == 1)
+                label += c.data.messages.item;
+            else
+                label += c.data.messages.items;
+        }
+        return label;
+    }
+
+    $scope.handleKeyPressOnCategory = function($event, category) {
+        var currentElement = $($event.currentTarget);
+        var allCategories = currentElement.closest('ul.category-list').find('.group-item');
+        var index = -1;
+        if (allCategories.length &gt; 0) {
+            index = allCategories.index(currentElement);
+        }
+        //Add stopPropagation and preventDefault only for up/down/right/left arrow keys
+        switch ($event.which) {
+            case 40: // bottom key
+                $event.stopPropagation();
+                $event.preventDefault();
+                if (index + 1 &lt; allCategories.length) {
+                    allCategories.get(index).setAttribute('tabindex', '-1');
+                    allCategories.get(index + 1).setAttribute('tabindex', '0');
+                    allCategories.get(index + 1).focus();
+                }
+                break;
+            case 38: // top key
+                $event.stopPropagation();
+                $event.preventDefault();
+                if (index &gt; 0) {
+                    allCategories.get(index).setAttribute('tabindex', '-1');
+                    allCategories.get(index - 1).setAttribute('tabindex', '0');
+                    allCategories.get(index - 1).focus();
+                }
+                break;
+            case 37: // Left key
+                $event.stopPropagation();
+                $event.preventDefault();
+                if (category.showChildren) {
+                    $scope.displayChildren($event, category);
+                } else {
+                    var parentSubcategory = currentElement.closest('ul.sub-category-list');
+                    if (parentSubcategory) {
+                        var closestParent = parentSubcategory.parent('li').find('.group-item');
+                        if (closestParent &amp;&amp; closestParent.length &gt; 0) {
+                            currentElement.attr('tabindex', -1);
+                            closestParent.get(0).setAttribute('tabindex', 0);
+                            closestParent.get(0).focus();
+                        }
+                    }
+                }
+                break;
+            case 39: //right key
+                $event.stopPropagation();
+                $event.preventDefault();
+                if (!category.showChildren) {
+                    $scope.displayChildren($event, category);
+                } else if (category.subcategories &amp;&amp; category.subcategories.length &gt; 0) {
+                    var closestChild = currentElement.next().find('.group-item');
+                    if (closestChild &amp;&amp; closestChild.length &gt; 0)
+                        currentElement.attr('tabindex', -1);
+                    closestChild.get(0).setAttribute('tabindex', 0);
+                    closestChild.get(0).focus();
+                }
+                break;
+        }
+    }
+
+    spUtil.getPreference('glide.ui.accessibility', function(value) {
+        if (value == "true")
+            $scope.tabindex = 0;
+        else
+            $scope.tabindex = -1;
+    });
+    $scope.displayChildren = function($event, category) {
+        $event.stopPropagation();
+        if (!category || !category.subcategories || category.subcategories.length === 0) {
+            return;
+        }
+        category.showChildren = !category.showChildren;
+        var currentElement = $($event.currentTarget);
+        currentElement.closest('.list-group-item').attr('aria-expanded', category.showChildren);
+        handleToolTip();
+    };
+
+    $scope.toggleSubCategories = function(val) {
+        toggleSubCategories(c.data.categoriesList, val);
+    };
+
+    function toggleSubCategories(categories, val) {
+        categories.forEach(function(category) {
+            category.showChildren = val;
+            if (category.subcategories &amp;&amp; category.subcategories.length &gt; 0) {
+                toggleSubCategories(category.subcategories, val);
+            }
+        });
+    }
+
+    $scope.loadMore = function() {
+        c.data.new_limit = c.data.limit + (c.options.number_of_categories_to_load || 15);
+        c.data.more_msg = c.data.pleaseWait;
+        var categoryDiffCounter = c.data.visibleCategories;
+        c.server.update().then(function() {
+            handleToolTip();
+            if (!c.data.showMore)
+                $('.sc_category_treeitem_0').focus();
+            else {
+                //post-digest handling to ensure that 'show more' button is visible in the window
+                $scope.$$postDigest(function() {
+                    var showMoreBtn = angular.element('#show-more-btn');
+                    if (showMoreBtn &amp;&amp; showMoreBtn.offset()) {
+                        var scrollPosn = showMoreBtn.offset().top;
+                        $("html, body").animate({
+                            scrollTop: scrollPosn
+                        });
+                    }
+                });
+            }
+            categoryDiffCounter = c.data.visibleCategories - categoryDiffCounter;
+            i18n.getMessages(["Fetched", "additional {0}"], function(msgs) {
+                var categoryMsg = i18n.format(msgs["additional {0}"], c.options.title);
+                var concatMsg = msgs["Fetched"] + " " + categoryDiffCounter + " " + categoryMsg;
+                spAriaUtil.sendLiveMessage(concatMsg);
+            });
+        });
+    };
+
+    $scope.categorySelected = function($event, category) {
+        var s = {
+            'id': c.data.page || 'sc_category',
+            'sys_id': category.sys_id,
+            'catalog_id': c.data.catalog_id,
+            'spa': 1
+        };
+        c.data.categoryId = category.sys_id;
+        $rootScope.$broadcast('$sp.service_catalog.category.selected', s);
+        $location.search(s);
+        loadPage();
+        $scope.displayChildren($event, category);
+
+    };
+
+    var listenerForBrowseCategories = $scope.$on("$sp.service_catelog.show.categories_widget", function() {
+        $scope.hideCategoryWidgetInXS = false;
+    });
+
+    $scope.hideBrowseCategory = function() {
+        $scope.hideCategoryWidgetInXS = true;
+        $rootScope.$broadcast("$sp.service_catelog.show.items_widget", {
+            setFocusOnAllCategsLink: true
+        });
+    }
+
+    $scope.$on("$destroy", function() {
+        listenerForBrowseCategories();
+        locationChangeSuccessListener();
+        locationURLChangeWatcher();
+        destroyTooltips();
+    });
+	//Destroy the sticky tooltips of category
+    function destroyTooltips() {
+        var tooltips = $("body &gt; .tooltip");
+        if (tooltips.length != 0)
+            tooltips.remove();
+    }
+
+    $scope.isTouchDevice = function() {
+        return ('ontouchstart' in $window);
+    }
+
+    $scope.getCategoryPadding = function(categoryLevel) {
+        if (categoryLevel &gt;= 4)
+            categoryLevel = 4;
+        return 15 * categoryLevel + "px";
+    }
+
+    // Location change handler for back/forward buttons
+    var locationChangeSuccessListener = $rootScope.$on('$locationChangeSuccess', function() {
+        $rootScope.actualLocation = $location.absUrl();
+    });
+
+    var locationURLChangeWatcher = $rootScope.$watch(function() {
+        return $location.absUrl()
+    }, function(newLocation, oldLocation) {
+        if ($rootScope.actualLocation === newLocation) {
+            var urlParts = urlTools.parseQueryString(newLocation);
+            if ((urlParts.id === 'sc_category' || urlParts.id === c.data.page) &amp;&amp; urlParts.spa == '1' &amp;&amp; urlParts.sys_id != c.data.categoryId) {
+                var categoryInfo = {
+                    'sys_id': urlParts.sys_id,
+                    'catalog_id': urlParts.catalog_id
+                };
+                c.data.categoryId = urlParts.sys_id;
+                $rootScope.$broadcast('$sp.service_catalog.category.selected', categoryInfo);
+                loadPage();
+            }
+        }
+    });
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;$sp-space--xxs: 2px !default;
+		.category-widget {
+			border: 1px solid $panel-inner-border;
+
+			.category-list {
+			.fa {
+			margin-right: 5px;
+			}
+			.l-h-1_6x {
+			line-height: 1.6em;
+			}
+			a {
+			width: 100%;
+			vertical-align: middle;
+			display: inline-block;
+			}
+			.list-group {
+			margin-bottom: 0;
+			}
+			.list-group-item {
+			padding: 0;
+			border: 0;
+			}
+			.group-item {
+			padding: 10px 15px;
+			border-left: 3px solid transparent !important;
+			}
+			.group-item-default {
+			&amp;amp;:hover, &amp;amp;:focus {
+			background-color: darken($panel-default-heading-bg, 2%);
+			}
+			}
+			.group-item-primary {
+			&amp;amp;:hover, &amp;amp;:focus {
+			border-left: 3px solid $primary !important;
+			border-right: 3px solid transparent !important;//For high contrast mode on windows
+			border-top: none;
+			border-bottom: none;
+			}
+			}
+			.group-item-success {
+			&amp;amp;:hover {
+			background-color: lighten($panel-success-heading-bg, 3%)
+			}
+			}
+			.group-item-info {
+			&amp;amp;:hover, &amp;amp;:focus {
+			background-color: lighten($panel-info-heading-bg, 3%)
+			}
+			}
+			.group-item-warning {
+			&amp;amp;:hover, &amp;amp;:focus {
+			background-color: $panel-warning-heading-bg
+			}
+			}
+			.group-item-danger {
+			&amp;amp;:hover, &amp;amp;:focus {
+			background-color: lighten($panel-danger-heading-bg, 3%)
+			}
+			}
+
+			.list-bg-default {
+			background-color: $panel-default-heading-bg;
+			}
+			.list-bg-primary {
+			background-color: lighten($panel-info-heading-bg, 6%);
+			}
+			.list-bg-success {
+			background-color: lighten($panel-success-heading-bg, 6%);
+			}
+			.list-bg-info {
+			background-color: lighten($panel-info-heading-bg, 6%);
+			}
+			.list-bg-warning {
+			background-color: lighten($panel-warning-heading-bg, 3%);
+			}
+			.list-bg-danger {
+			background-color: lighten($panel-danger-heading-bg, 6%);
+			}
+			}
+			}
+			.panel-primary .badge {
+			background-color: $primary;
+			color: $badge-color;
+			}
+			.panel-default .badge {
+			background-color: $panel-default-text;
+			color: $badge-color;
+			}
+			.panel-success .badge {
+			background-color:  $panel-success-text;
+			color: $badge-color;
+			}
+			.panel-info .badge {
+			background-color: $panel-info-text;
+			color: $badge-color;
+			}
+			.panel-warning .badge {
+			background-color: $panel-warning-text;
+			color: $badge-color;
+			}
+			.panel-danger .badge {
+			background-color: $panel-danger-text;
+			color: $badge-color;
+			}
+			.category-list .badge {
+			text-align: right;
+			}
+			.text-active {
+			color: $link-color;
+			border-left: 3px solid $primary;
+			font-weight: bold;
+			}
+			.text-default {
+			color: $text-muted;
+			}
+			.close-button {
+			padding: $sp-space--xxs;
+			}
+
+			.btn-link {
+			color: $brand-primary-darker;
+			}
+
+			.panel &amp;gt; .list-group:last-child .list-group-item:last-child, .panel &amp;gt; .panel-collapse &amp;gt; .list-group:last-child .list-group-item:last-child {
+			border-bottom-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			}
+
+		&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data&gt;{"options" :&amp;#13;
+			{&amp;#13;
+			"hide_xs" : false&amp;#13;
+			}&amp;#13;
+			}&lt;/demo_data&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;color&lt;/field_list&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+    init = function() {
+        var isOpen = false;
+        scope.$evalAsync(function() {
+            element.on("select2-open", function() {
+                isOpen = true;
+                element.parent().find(".select2-focusser").attr("aria-expanded", isOpen);
+            });
+            element.on("select2-close", function() {
+                isOpen = false;
+                element.parent().find(".select2-focusser").attr("aria-expanded", isOpen);
+            });
+        });
+
+        setTimeout(function() {
+            var select2Focusser = element.parent().find(".select2-focusser");
+            var select2Results = element.parent().find("ul.select2-results");
+            select2Focusser.attr("aria-expanded", isOpen);
+            select2Focusser.attr("aria-owns", select2Results.attr("id"));
+            select2Results.attr("aria-labelledby", "catalog_title");
+        }, 500);
+    };
+    init();
+}]]&gt;&lt;/link&gt;&lt;name&gt;SC Categories&lt;/name&gt;&lt;option_schema&gt;[{"name":"hide_xs","default_value":false,"section":"Behavior","label":"Hide at XS","type":"boolean"},{"name":"omit_badges","section":"Behavior","default_value":"true","label":"Omit badges (may impact performance for large items in categories)","type":"boolean"},{"name":"check_can_view","default_value":"true","section":"Behavior","label":"Check canView per item","type":"boolean"},{"hint":"Choose between a flattened and a nested category structure (Nested may impact performance for large items in categories)","name":"category_layout","section":"Presentation","default_value":"Nested","label":"Category Layout","type":"choice","choices":[{"label":"Flat","value":"Flat"},{"label":"Nested","value":"Nested"}]},{"displayValue":"Page","name":"page","section":"Data","label":"page","type":"reference","value":"sp_page","ed":{"reference":"sp_page"}},{"hint":"Number of categories to load on page load","name":"number_of_categories_to_load","section":"Data","default_value":"15","label":"Number of categories to load","type":"integer"}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles&gt;snc_external,snc_internal&lt;/roles&gt;&lt;script&gt;&lt;![CDATA[(function() {
+
+    var catalog_id = $sp.getParameter("catalog_id") ? $sp.getParameter("catalog_id") + "" : "-1";
+    var catalogSelectorArr = [{
+        value: "-1",
+        displayValue: gs.getMessage("All")
+    }];
+    data.selectedCatalogIndex = catalog_id == -1 ? 0 : -1;
+    data.visibleCategories = 0;
+    var catalogIDs = $sp.getCatalogs().value + "";
+    var catalogs = catalogIDs.split(",");
+    var isCatalogAccessibleViaPortal = catalog_id == -1 ? true : false;
+    catalogs.forEach(function(catalogSysId) {
+        if (catalog_id == catalogSysId) {
+            isCatalogAccessibleViaPortal = true;
+        }
+    });
+
+    var counter = 1;
+    catalogs.forEach(function(catalogSysId) {
+        var catalog = new sn_sc.Catalog(catalogSysId);
+        var catalogObj = {
+            value: catalogSysId,
+            displayValue: catalog.getTitle()
+        };
+        if (catalog.canView()) {
+            if (catalog_id === catalogSysId) {
+                data.selectedCatalogIndex = counter;
+            }
+            catalogSelectorArr.push(catalogObj);
+            counter++;
+        }
+    });
+    data.catalogSelectorArr = catalogSelectorArr;
+
+    data.catalog_id = catalog_id ? catalog_id : "-1";
+    data.showMoreMsg = gs.getMessage("Show More {0}", options.title);
+    data.pleaseWait = gs.getMessage("Please wait... fetching {0}", options.title);
+    var categoryId = JSUtil.nil($sp.getParameter('sys_id')) ? "" : $sp.getParameter('sys_id') + "";
+    data.categoryId = categoryId;
+    var catalogIDs = (data.catalog_id &amp;&amp; data.catalog_id !== "-1") ? data.catalog_id : $sp.getCatalogs().value + "";
+    var viewType = '';
+    var checkCanView = false;
+    var showBadge = false;
+    var nestedLayout = (options.category_layout !== "Flat");
+    var dynamicCategory = false;
+
+    var catalogArr = catalogIDs.split(",");
+    var catalogs = [];
+    catalogArr.forEach(function(catalogSysId) {
+        var catalog = new sn_sc.Catalog(catalogSysId);
+        if (catalog.canView()) {
+            catalogs.push(catalogSysId);
+        }
+    });
+
+    data.categoryId = categoryId;
+    var msg = data.messages = {};
+    msg.catalogTitle = options.catalog_title ? gs.getMessage(options.catalog_title) : gs.getMessage('Catalogs');
+    msg.category = gs.getMessage("category");
+    msg.selected = gs.getMessage("selected");
+    msg.containing = gs.getMessage("containing");
+    msg.item = gs.getMessage("item");
+    msg.items = gs.getMessage("items");
+    msg.expand = gs.getMessage("Expand");
+    msg.collapse = gs.getMessage("Collapse");
+
+    data.largeDataSet = gs.getProperty("glide.sc.largeSet.optimization.enable", "false");
+    if (data.largeDataSet == 'true')
+        nestedLayout = false;
+
+    if (options.page) {
+        var page = new GlideRecord('sp_page');
+        if (page.get(options.page))
+            data.page = page.id + '';
+    }
+    checkCanView = String(options.check_can_view) == 'true';
+    showBadge = String(options.omit_badges) == 'false';
+
+    if (!isCatalogAccessibleViaPortal) {
+        return;
+    }
+    data.categoriesList = [];
+    var categoriesInPage = options.number_of_categories_to_load || 15;
+    data.limit = categoriesInPage;
+
+    if (input &amp;&amp; input.new_limit) {
+        data.limit = input.new_limit;
+    }
+
+    if (input &amp;&amp; input.categoriesList)
+        data.categoriesList = input.categoriesList.slice(); //Copy the input array
+
+    if (input &amp;&amp; input.startWindow) {
+        data.endWindow = input.endWindow;
+    } else {
+        data.startWindow = 0;
+        data.endWindow = 0;
+    }
+
+    while (data.categoriesList.length &lt; data.limit + 1) {
+        data.startWindow = data.endWindow;
+        data.endWindow = data.endWindow + categoriesInPage;
+        var catGr = queryCategory(catalogs, nestedLayout, dynamicCategory, data.startWindow, data.endWindow);
+        if (!catGr.hasNext())
+            break;
+        fetchCategories(catGr, data.categoriesList);
+    }
+
+    if (data.categoriesList.length &gt; 0) {
+        data.categoriesList[0].isFirstCategory = true;
+    }
+
+    if (data.categoriesList.length &gt; data.limit)
+        data.showMore = true;
+    else
+        data.showMore = false;
+
+    for (var i = 0; i &lt; data.limit; i++) {
+        if (data.categoriesList[i].totalCount &gt; 0) {
+            data.visibleCategories++;
+        }
+    }
+
+    data.more_msg = gs.getMessage("Showing {0} categories", data.visibleCategories + "" || categoriesInPage);
+
+
+    function fetchCategories(categoriesGr, categories) {
+        while (categoriesGr.next()) {
+            var categoryJS = new sn_sc.CatCategory(categoriesGr.getUniqueValue() + '');
+            if (!categoryJS.canView())
+                continue;
+
+            var categoryDetails = getCategoryDetails(categoryJS, 0);
+            categoryDetails.sys_id = categoriesGr.getUniqueValue();
+            categories.push(categoryDetails);
+        }
+    }
+
+    function queryCategory(catalogs, nestedLayout, dynamicCategory, startWindow, endWindow) {
+        var categoriesGr = new GlideRecord('sc_category');
+        categoriesGr.addQuery("sc_catalog", catalogs);
+        if (!dynamicCategory)
+            categoriesGr.addQuery("sys_class_name", "sc_category");
+        categoriesGr.addActiveQuery();
+        categoriesGr.orderBy('order');
+        categoriesGr.orderBy('title');
+        if (nestedLayout)
+            categoriesGr.addNullQuery("parent");
+        categoriesGr.chooseWindow(startWindow, endWindow);
+        categoriesGr.query();
+        return categoriesGr;
+    }
+
+    function getItemCount(categoryJS) {
+        if (showBadge)
+            return checkCanView ? categoryJS.getViewableItemsCount(true) : categoryJS.getItemsCount(true);
+        else
+            return categoryJS.hasVisibleItem(true, checkCanView) ? 1 : 0;
+    }
+
+    function getCategoryDetails(categoryJS, level) {
+        var categoryDetails = {};
+        var showChildren = false;
+        if (!categoryJS) {
+            return categoryDetails;
+        }
+        categoryDetails.title = categoryJS.getTitle();
+        categoryDetails.level = level;
+        categoryDetails.description = categoryJS.getDescription();
+        categoryDetails.full_description = categoryJS.getFullDescription();
+        categoryDetails.icon = categoryJS.getIconSRC();
+        categoryDetails.header_icon = categoryJS.getHeaderIconSRC();
+        categoryDetails.homepage_image = categoryJS.getHomepageImageSRC();
+        categoryDetails.sys_id = categoryJS.getID();
+        categoryDetails.showChildren = (categoryDetails.sys_id === categoryId);
+        categoryDetails.catalog = {
+            "sys_id": categoryJS.getCatalog(),
+            "title": new sn_sc.Catalog(categoryJS.getCatalog()).getTitle()
+        }
+        categoryDetails.count = categoryDetails.totalCount = ((data.largeDataSet != 'true') ? getItemCount(categoryJS) : 1);
+        if (catalog_id == -1 &amp;&amp; catalogSelectorArr.length &gt; 2)
+            categoryDetails.catalog_tooltip = gs.getMessage("[{0}]", categoryDetails.catalog.title);
+        else
+            categoryDetails.catalog_tooltip = '';
+
+        var subCategoryCounts = 0;
+        if (nestedLayout) {
+            var subcategories = categoryJS.getViewableSubCategories();
+            if (subcategories.length == 0) {
+                categoryDetails.subcategories = [];
+            } else {
+                categoryDetails.subcategories = [];
+                subcategories.forEach(function(subCategory) {
+                    var subCategoryJS = new sn_sc.CatCategory(subCategory.sys_id + '');
+                    var category = getCategoryDetails(subCategoryJS, level + 1);
+                    categoryDetails.totalCount = categoryDetails.totalCount + category.totalCount;
+                    categoryDetails.subcategories.push(category);
+                    categoryDetails.showChildren = categoryDetails.showChildren || category.showChildren;
+                });
+            }
+        } else {
+            categoryDetails.totalCount = categoryDetails.count;
+        }
+        return categoryDetails;
+    }
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-07-14 00:18:49&lt;/sys_created_on&gt;&lt;sys_id&gt;4c03cba0cb11020000f8d856634c9ce1&lt;/sys_id&gt;&lt;sys_mod_count&gt;679&lt;/sys_mod_count&gt;&lt;sys_name&gt;SC Categories&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Service Catalog (do not activate...see plugin description)" source="com.glide.service-portal.service-catalog"&gt;451fad24a9e0211076daa554cb57d90d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_4c03cba0cb11020000f8d856634c9ce1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-26 05:11:14&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;section aria-label="${Service Catalog categories}"&gt;
+  &lt;div ng-if="c.data.catalogSelectorArr.length &gt; 2" ng-class="{'hidden-xs' : hideCategoryWidgetInXS}" class="panel panel-{{::options.color}} category-widget no-border"&gt;
+  &lt;div class="panel-primary panel-heading"&gt;
+    &lt;h2 class="h4 panel-title"&gt;
+      {{::data.messages.catalogTitle}}
+    &lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;ul class="list-group category-list" id="catalog_title" data-label="Catalogs" aria-label="{{::data.messages.catalogTitle}}"&gt;
+    &lt;li class="list-group-item text-overflow-ellipsis" ng-include="'catalog-template.html'"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;script type="text/ng-template" id="catalog-template.html"&gt;
+  &lt;select class="sc-basic-select" aria-label="{{::data.messages.catalogTitle}}" ng-change="changeCatalog(selectedCatalog)" sn-focus="true" ng-model="selectedCatalog" ng-options="catalog.displayValue for catalog in c.data.catalogSelectorArr track by catalog.value"&gt;&lt;/select&gt;
+&lt;/script&gt;
+
+&lt;div ng-class="{'hidden-xs' : hideCategoryWidgetInXS}" class="panel panel-{{::options.color}} category-widget no-border"&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;h2 class="h4 panel-title"&gt;
+      &lt;span class="pull-right visible-xs" &gt;
+      	&lt;i class="fa fa-times-circle close-button" ng-click="hideBrowseCategory()" tabindex="0" data-original-title="${Close category explorer}" data-toggle="tooltip" data-placement="bottom"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+      &lt;span ng-if="::options.glyph"&gt;
+        &lt;fa name="{{::options.glyph}}"&gt;&lt;/fa&gt;
+      &lt;/span&gt;{{::options.title}}&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;ul class="list-group category-list" role="tree" data-label="Catalog filters" aria-label="{{::options.title}}"&gt;
+    &lt;li role="{{category.subcategories.length &gt; 0 ? 'treeitem': 'none'}}" 
+        class="list-group-item text-overflow-ellipsis" 
+        ng-if="category.totalCount &gt; 0" ng-include="'category-template.html'"
+        ng-repeat="category in data.categoriesList | limitTo: data.limit track by category.sys_id"&gt; 
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="panel-footer text-center" ng-if="data.showMore"&gt;
+    &lt;button class="text-center btn-link" ng-click="loadMore()" id="show-more-btn"&gt;{{::data.showMoreMsg}}&lt;/button&gt;
+    &lt;div class="text-muted text-center"&gt;
+      {{data.more_msg}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type="text/ng-template" id="category-template.html"&gt;
+	&lt;div ng-click="categorySelected($event, category)"
+  	ng-keydown="handleKeyPressOnCategory($event, category)"
+	sn-focus="category.sys_id == data.categoryId"
+	ng-enabled="category.totalCount &gt; 0"
+    role="treeitem" 
+    aria-current ="{{category.sys_id == data.categoryId}}"
+    ng-class="{true: 'text-active', false: ''}[category.sys_id == data.categoryId]"
+    tabindex="{{category.isFirstCategory ? '0' : '-1'}}"
+    class="group-item group-item-primary pointer sc_category_treeitem_{{::data.categoriesList.indexOf(category)}}" data-ng-attr-style="padding-left:{{getCategoryPadding(category.level + 1)}}"
+    title="{{::category.title}} {{::category.catalog_tooltip}}"
+    data-toggle="{{!isTouchDevice() ? 'tooltip' : undefined}}"
+    data-placement="top"
+    data-container="body"
+    data-ng-attr-aria-label="{{getCategoryAriaLabel(category)}}"
+    ng-attr-aria-expanded="{{category.subcategories.length &gt; 0 &amp;&amp; category.totalCount &gt; category.count ? category.showChildren : undefined}}"&gt;
+    &lt;div role="none"&gt;
+    	&lt;i ng-if="::category.subcategories.length &gt; 0 &amp;&amp; category.totalCount &gt; category.count" 
+      	class="l-h-1_6x pull-left fa collapse-icon" 
+        data-toggle="tooltip"
+        data-placement="right"
+        data-original-title="{{category.showChildren ? data.messages.collapse : data.messages.expand}}"
+        ng-class="{true: 'fa-minus-square-o', false: 'fa-plus-square-o'}[category.showChildren]"
+        ng-click="displayChildren($event, category)"&gt;
+  		&lt;/i&gt;
+      &lt;span class="badge pull-right pointer" ng-if="options.omit_badges != 'true' &amp;&amp; data.largeDataSet != 'true'"&gt;{{::category.totalCount}}&lt;/span&gt;
+      &lt;span class="block text-overflow-ellipsis category" id="{{::category.sys_id}}"&gt;{{::category.title}}&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+ 	&lt;ul class="list-group sub-category-list list-bg-primary" role="group" aria-label="{{category.title}} ${subcategories}" ng-if="category.showChildren &amp;&amp; category.subcategories.length &gt; 0" ng-class="{true: 'no-indent', false: ''}[category.level &gt; 2]"&gt;
+  	&lt;li role="{{category.subcategories.length &gt; 0 ? 'treeitem': 'none'}}"  
+    	class="list-group-item text-overflow-ellipsis" 
+      ng-include="'category-template.html'" 
+      ng-repeat="category in category.subcategories track by category.sys_id" 
+      ng-if="category.totalCount &gt; 0"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/script&gt;
+&lt;/section&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-04 06:36:26</sys_created_on>
+        <sys_id>d38f64c297772110d6e77f200153af23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1b8f64c297772110d6e77f200153af1d</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_d38f64c297772110d6e77f200153af23</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-04 06:36:26</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>

@@ -5,7 +5,7 @@
   /* widget controller */
   var c = this;
 	c.link = 'https://' + c.data.instance + '.service-now.com/blockbuster' +
-		'?id=sc_category&catalog_id=';
+		'?id=bb_catalog&catalog_id=';
 	
 };]]></client_script>
         <controller_as>c</controller_as>
@@ -17,7 +17,6 @@
 .catalog{
 	display:flex;
   flex-direction: row wrap;
-	color: #fff;
   margin: 1em;
   padding:1em;
 }
@@ -44,7 +43,7 @@ div &gt; a {
 }
 
 div &gt; a:hover{
-	color:gray;
+	color: #ffa903;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -82,14 +81,14 @@ div &gt; a:hover{
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-06-23 01:59:38</sys_created_on>
         <sys_id>ddb687d697232110d6e77f200153aff1</sys_id>
-        <sys_mod_count>104</sys_mod_count>
+        <sys_mod_count>110</sys_mod_count>
         <sys_name>Catalogs</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_widget_ddb687d697232110d6e77f200153aff1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-28 03:08:29</sys_updated_on>
+        <sys_updated_on>2023-07-04 06:41:59</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="catalog" ng-repeat="catalog in data.catalogs">
 		<a href="{{c.link}}{{catalog.sys_id}}">

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="BB BreadCrumbs">d8759f8e97bf2110d6e77f200153afac</child>
+        <cloned>2023-07-04 18:41:14</cloned>
+        <last_validated>2023-07-04 18:41:14</last_validated>
+        <parent display_value="breadcrumbs">0fb269305b3212000d7ec7ad31f91ae2</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope, $rootScope, spUtil) {
+	var c = this;
+	c.expanded = !spUtil.isMobile();
+	c.expand = function() {
+		c.expanded = true;
+	};
+
+	var deregister = $rootScope.$on("sp.update.breadcrumbs", function(e, list) {
+		c.breadcrumbs = list;
+	});
+
+	$scope.$on('$destroy', function(){
+		deregister();
+	});
+
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.nav {
+  overflow:hidden;
+  li {
+    padding: 10px 7px;
+
+    &amp;gt; span {
+      &amp;gt; a {
+          display: inline;
+      }
+
+      &amp;gt; i {
+          padding-left: 15px;
+      }
+    }
+  }
+  &amp;amp;::before, &amp;amp;::after {
+    content: none;
+  }
+}
+
+.a-disabled {
+  cursor: default;
+  color: $sp-disabled-breadcrumb;
+  font-weight: bold;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;breadcrumbs&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;breadcrumbs&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles&gt;snc_external,snc_internal&lt;/roles&gt;&lt;script/&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2016-04-12 21:39:53&lt;/sys_created_on&gt;&lt;sys_id&gt;0fb269305b3212000d7ec7ad31f91ae2&lt;/sys_id&gt;&lt;sys_mod_count&gt;48&lt;/sys_mod_count&gt;&lt;sys_name&gt;breadcrumbs&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Core" source="com.glide.service-portal"&gt;b6de29e0a9e0211076daa554cb57d9c0&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_0fb269305b3212000d7ec7ad31f91ae2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-02-03 10:28:14&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div aria-label="${Page breadcrumbs}" role="navigation" class="breadcrumbs"&gt;
+&lt;ul class="nav nav-pills nav-sm"&gt;
+  &lt;li&gt;
+    &lt;span&gt;&lt;a ng-href="?id={{portal.homepage_dv}}"&gt;${Home}&lt;/a&gt;
+      &lt;i aria-hidden="true" class="fa fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="!c.expanded &amp;amp;&amp;amp; c.breadcrumbs &amp;amp;&amp;amp; c.breadcrumbs.length &gt; 2"&gt;
+    &lt;span&gt;&lt;a ng-click="c.expand()"&gt;&lt;i class="fa fa-ellipsis-h" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;i aria-hidden="true" class="fa fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li ng-if="!c.breadcrumbs"&gt;&lt;span style="display: inline;" class="a-disabled" aria-current="page"&gt;{{page.title}}&lt;/span&gt;&lt;/li&gt;
+  &lt;li ng-if="c.expanded || ((c.breadcrumbs.length &gt; 2  &amp;amp;&amp;amp; $index &gt; c.breadcrumbs.length-3) || (c.breadcrumbs.length &lt;= 2))" ng-repeat="item in c.breadcrumbs track by $index" &gt;
+    &lt;span&gt;&lt;a ng-if="!$last" ng-href="{{item.url}}"&gt;{{item.label}}&lt;/a&gt;
+      &lt;span class="a-disabled" ng-if="$last" aria-current="page"&gt;{{item.label}}&lt;/span&gt;
+      &lt;i aria-hidden="true" ng-if="!$last" class="fa fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-04 18:41:14</sys_created_on>
+        <sys_id>907597ce97bf2110d6e77f200153aff2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d8759f8e97bf2110d6e77f200153afac</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_907597ce97bf2110d6e77f200153aff2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-04 18:41:14</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>

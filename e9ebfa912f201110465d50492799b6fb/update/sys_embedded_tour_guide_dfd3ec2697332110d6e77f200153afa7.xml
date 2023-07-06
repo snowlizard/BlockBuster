@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_tour_guide">
+    <sys_embedded_tour_guide action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_parameters/>
+        <autolaunch_order>0</autolaunch_order>
+        <context>blockbuster?id=b_index&amp;gtd_portal_title=BlockBuster&amp;gtd_page_title=Index</context>
+        <description/>
+        <has_concl>false</has_concl>
+        <has_intro>false</has_intro>
+        <name>BlockBuster Tour</name>
+        <options/>
+        <roles/>
+        <sp_page display_value="b_index">3e0a687d2fa01110465d50492799b60d</sp_page>
+        <sp_portal display_value="BlockBuster">48b003192f201110465d50492799b6c8</sp_portal>
+        <status>draft</status>
+        <sys_class_name>sys_embedded_tour_guide</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-05 19:02:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dfd3ec2697332110d6e77f200153afa7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BlockBuster Tour</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sys_embedded_tour_guide_dfd3ec2697332110d6e77f200153afa7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-05 19:02:21</sys_updated_on>
+        <tour_id>TOUR0000007</tour_id>
+        <type>service_portal</type>
+    </sys_embedded_tour_guide>
+</record_update>

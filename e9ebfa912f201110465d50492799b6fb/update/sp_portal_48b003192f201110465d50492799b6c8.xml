@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
     <sp_portal action="INSERT_OR_UPDATE">
         <css_variables>$brand-primary:#428bca;
-$body-bg:#fff;
+$body-bg:#3a3a3a;
 $state-success-text:#5cb85c;
 $sp-homepage-bg:#fff;
 $sp-navbar-divider-color:#ffa903;
-$text-color:#717171;
+$text-color:#F5F5F5;
 $sp-logo-margin-y:.5rem;
 $navbar-inverse-link-hover-color:#ffa903;
-$panel-bg:#fff;
+$panel-bg:#779BBB;
 $brand-success:#5cb85c;
 $navbar-inverse-bg:#1030AD;
 $brand-warning:#f0ad4e;
@@ -17,9 +17,9 @@ $sp-tagline-color:#717171;
 $navbar-inverse-link-color:#ffffff;
 $brand-info:#5bc0de;
 $link-color:#428bca;
-$sp-logo-margin-x:1rem;
-$btn-default-bg:#fff;
-$text-muted:#979797;
+$sp-logo-margin-x:1.5rem;
+$btn-default-bg:#ffffff;
+$text-muted:#515151;
 </css_variables>
         <dark_theme/>
         <default>false</default>
@@ -35,8 +35,8 @@ $text-muted:#979797;
         <notfound_page/>
         <quick_start_config/>
         <sc_catalog/>
-        <sc_catalog_page/>
-        <sc_category_page/>
+        <sc_catalog_page display_value="catalogs">14de07de97232110d6e77f200153afee</sc_catalog_page>
+        <sc_category_page display_value="bb_catalog">2f9d2c4297772110d6e77f200153afaf</sc_category_page>
         <search_application/>
         <search_results_configuration/>
         <sp_chat_queue/>
@@ -45,14 +45,14 @@ $text-muted:#979797;
         <sys_created_by>jgonzalez</sys_created_by>
         <sys_created_on>2022-07-06 23:41:05</sys_created_on>
         <sys_id>48b003192f201110465d50492799b6c8</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>80</sys_mod_count>
         <sys_name>BlockBuster</sys_name>
         <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
         <sys_update_name>sp_portal_48b003192f201110465d50492799b6c8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-22 03:23:22</sys_updated_on>
+        <sys_updated_on>2023-07-04 19:13:08</sys_updated_on>
         <theme display_value="BlockBuster">d8ed36552f201110465d50492799b6a7</theme>
         <title>BlockBuster</title>
         <ts_index_group/>
