@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">2d9ffc7f97043110d6e77f200153af4b</sp_column>
+        <sp_widget display_value="Report">e41aa2d29f0222008252baac757fcfce</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-22 04:31:33</sys_created_on>
+        <sys_id>619f38bf97043110d6e77f200153afc7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_instance_619f38bf97043110d6e77f200153afc7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-22 04:37:17</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"report_id": {
+		"value": "6a64543b97403110d6e77f200153affc",
+		"displayValue": "Movies by rating"
+	},
+	"show_title": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=619f38bf97043110d6e77f200153afc7"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</application>
+        <file_path/>
+        <instance_id>c584fd6fdb26dd183050ac44d49619b5</instance_id>
+        <instance_name>dev141962</instance_name>
+        <name>sp_instance_619f38bf97043110d6e77f200153afc7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;2d9ffc7f97043110d6e77f200153af4b&lt;/sp_column&gt;&lt;sp_widget display_value="Report"&gt;e41aa2d29f0222008252baac757fcfce&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-22 04:31:33&lt;/sys_created_on&gt;&lt;sys_id&gt;619f38bf97043110d6e77f200153afc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="BlockBuster" source="x_809069_bbuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BlockBuster"&gt;e9ebfa912f201110465d50492799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_619f38bf97043110d6e77f200153afc7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-22 04:37:17&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"report_id": {
+		"value": "6a64543b97403110d6e77f200153affc",
+		"displayValue": "Movies by rating"
+	},
+	"show_title": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=619f38bf97043110d6e77f200153afc7"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1951135004</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>01e5248597712110d6e77f200153af16</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-22 04:37:17</sys_created_on>
+        <sys_id>6de041f397443110d6e77f200153afa6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1897be33e150000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-22 04:37:17</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>25e041f33a443110b1817ff6797e25a6</update_guid>
+        <update_guid_history>25e041f33a443110b1817ff6797e25a6:-1951135004,0beffcff64043110639d08cc0b46e305:-1710080957,c9af7cbfee043110ba951aacab93a700:-1951135004,b59f38bfb2043110fd064da18c5779c8:-101682822</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a7b1c93797443110d6e77f200153af1f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-22 04:40:58</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>97be9e031822497aa5b4071459692b24</sys_id>
+        <sys_metadata>619f38bf97043110d6e77f200153afc7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_scope_delete display_value="">0e7f2327022e4c7896f52a3227ab6644</sys_scope_delete>
+        <sys_update_name>sp_instance_619f38bf97043110d6e77f200153afc7</sys_update_name>
+        <sys_update_version display_value="sp_instance_619f38bf97043110d6e77f200153afc7">6de041f397443110d6e77f200153afa6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-22 04:40:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

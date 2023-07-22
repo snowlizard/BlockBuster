@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.container{
+  color: #000 !important;
+	display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content:center;
+}
+
+.widget-cont{
+	min-width:400px;
+  margin:1em;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>my_reports</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>My Reports</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	// Build Query - grab user groups
+	data.query = 'user_idDYNAMIC90d1921e5f510100a9ad2572f2b477fe';
+	
+	var groups = gs.getUser().getMyGroups();
+	groups.forEach(function(group){
+		data.query += '^ORgroup_id=' + group;
+	});
+	
+	// Init reports array
+	data.reports = [];
+	
+	
+	var grReport = new GlideRecord('sys_report_users_groups');
+	grReport.addEncodedQuery(data.query);
+	grReport.query();
+	
+	while(grReport.next()){
+		var report_id = grReport.getValue('report_id');
+		var grRep = new GlideRecord('sys_report');
+		if(grRep.get(report_id)){
+			data.reports.push({
+				id    : report_id,
+				type  : grRep.getValue('type'),
+				title : grRep.getValue('title'),
+				table : grRep.getValue('table'),
+				filter: grRep.getValue('filter')
+			});	
+		}
+			
+	}
+	
+	// Array of widgets
+	data.reportWidgets = [];
+	
+	// Report widget cannot show list type
+	// report use data table widget instead
+	data.reports.forEach(function(report){
+		if(report.type == 'list' && gs.tableExists(report.table)){
+		data.reportWidgets.push(
+			$sp.getWidget('widget-data-table', {
+				table: report.table,
+				title: report.title,
+				filter: report.filter
+			}))
+		} else {
+			data.reportWidgets.push(
+				$sp.getWidget('report', {
+					report_id: report.id,
+					widget_parameters: JSON.stringify({"report_id": {
+									"value": report.id,
+									"displayValue": "Report 1"
+								},
+								"show_title": {
+									"value": "true",
+									"displayValue": "true"
+								}
+							})
+				}))
+		}
+	});
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-22 01:17:41</sys_created_on>
+        <sys_id>fd3350f797403110d6e77f200153af64</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>My Reports</sys_name>
+        <sys_package display_value="BlockBuster" source="x_809069_bbuster">e9ebfa912f201110465d50492799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BlockBuster">e9ebfa912f201110465d50492799b6fb</sys_scope>
+        <sys_update_name>sp_widget_fd3350f797403110d6e77f200153af64</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-22 05:01:44</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div ng-repeat="widget in data.reportWidgets">
+    <div class="widget-cont">
+			<sp-widget style="width:100%;" widget="widget"></sp-widget>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
